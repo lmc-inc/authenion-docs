@@ -35,6 +35,8 @@ h4,
 h5,
 h6 {
   font-family: "Nunito", sans-serif;
+  font-size: 28px;
+  font-weight: 990;
 }
 
 /*--------------------------------------------------------------
@@ -157,6 +159,10 @@ h6 {
    display: block;
    margin-left: auto;
    margin-right: auto;   
+   border-bottom: solid 2px #68b8eb;
+   border-left: solid 2px #68b8eb;
+   border-top: solid 2px #23f346fc;
+   border-right: solid 2px #23f346fc;
 }
 
 .col-images-texts {
@@ -165,7 +171,11 @@ h6 {
    height: 25px;
    display: block;
    margin-left: auto;
-   margin-right: auto;   
+   margin-right: auto;
+   border-bottom: solid 2px #68b8eb;
+   border-left: solid 2px #68b8eb;
+   border-top: solid 2px #23f346fc;
+   border-right: solid 2px #23f346fc;
 }
 
 .col-images-texts-startstop {
@@ -189,12 +199,14 @@ h6 {
 .div-table {
   display: table;         
   width: auto;         
-  background-color: #7d98db;
+  background-color: #183a50;
   border-spacing: 20px; /* cellspacing:poor IE support for  this */
   text-align: justify;
   border-radius: 50px 20px 65px 20px;
   margin-left: auto;
   margin-right: auto;
+  border-bottom: solid 4px #23f346fc;
+  border-left: solid 4px #23f346fc;
 }
 
 .div-table-row {
@@ -207,11 +219,11 @@ h6 {
   float: left; /* fix for  buggy browsers */
   display: table-column;         
   width: 150px;         
-  background-color: #7d98db;
+  #background-color: #75bfff;
   align:left;
   font-size: 13px;
   font-family: "Nunito", sans-serif;
-  font-weight: 900;
+  font-weight: 990;
   color: #fff;
   text-align: left;
 }
@@ -227,6 +239,144 @@ h6 {
   color: #fff;
   text-align: justify;
 }
+
+.div-table2 {
+  display: table;         
+  width: auto;         
+  background-color: #183a50;
+  border-spacing: 20px; /* cellspacing:poor IE support for  this */
+  text-align: justify;
+  border-radius: 20px 8px 20px 8px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: solid 4px #23f346fc;
+  border-left: solid 4px #23f346fc;
+}
+
+.div-table2-row {
+  display: table-row;
+  width: auto;
+
+}
+
+.div-table2-col1 {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;         
+  width: 150px;         
+  #background-color: #75bfff;
+  align:left;
+  font-size: 13px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 990;
+  color: #fff;
+  text-align: left;
+}
+
+.div-table2-col1-sub {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;         
+  width: 150px;         
+  #background-color: #75bfff;
+  align:left;
+  font-size: 13px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+}
+
+.div-table2-col2 {
+  float: right; /* fix for  buggy browsers */
+  display: table-column;         
+  width: 400px; 
+  #background-color: #d7e9fd;
+  align:right;
+  font-size: 12px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-align: justify;
+}
+
+
+.div-table3 {
+  display: table;         
+         
+  background-color: #b3cee8;
+  border-spacing: 20px; /* cellspacing:poor IE support for  this */
+  text-align: justify;
+  border-radius: 10px 5px 10px 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: solid 2px #183a50;
+  border-left: solid 2px #183a50;
+
+}
+
+.div-table3-row {
+  display: table-row;
+  width: auto;
+
+}
+
+.div-table3-col {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;      
+  width: 510px;
+  #background-color: #b3cee8;
+  align:left;
+  font-size: 12px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: #35383a;
+  text-align: center-left;
+  
+}
+
+.div-table4 {
+  display: table;         
+  width: auto;         
+  background-color: #b3cee8;
+  border-spacing: 20px; /* cellspacing:poor IE support for  this */
+  text-align: justify;
+  border-radius: 20px 10px 20px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: solid 3px #183a50;
+  border-left: solid 3px #183a50;
+}
+
+.div-table4-row {
+  display: table-row;
+  width: auto;
+
+}
+
+.div-table4-col1 {
+  float: left; /* fix for  buggy browsers */
+  display: table-column;         
+  width: 150px;         
+  #background-color: #75bfff;
+  align:left;
+  font-size: 13px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 990;
+  color: #35383a;
+  text-align: left;
+}
+.div-table4-col2 {
+  float: right; /* fix for  buggy browsers */
+  display: table-column;         
+  width: 400px; 
+  #background-color: #75bfff;
+  align:right;
+  font-size: 12px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  color: #35383a;
+  text-align: justify;
+}
+
 
 
 /*--------------------------------------------------------------
