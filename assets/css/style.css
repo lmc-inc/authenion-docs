@@ -1,10 +1,3 @@
-/**
-* Template Name: NiceAdmin - v2.5.0
-* Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -159,10 +152,10 @@ h6 {
    display: block;
    margin-left: auto;
    margin-right: auto;   
-   border-bottom: solid 3px #68b8eb;
-   border-left: solid 3px #68b8eb;
-   border-top: solid 3px #23f346fc;
-   border-right: solid 3px #23f346fc;
+   border-bottom: solid 2px #68b8eb;
+   border-left: solid 2px #68b8eb;
+   border-top: solid 2px #23f346fc;
+   border-right: solid 2px #23f346fc;
 }
 
 .col-images-texts {
@@ -172,10 +165,10 @@ h6 {
    display: block;
    margin-left: auto;
    margin-right: auto;
-   border-bottom: solid 3px #68b8eb;
-   border-left: solid 3px #68b8eb;
-   border-top: solid 3px #23f346fc;
-   border-right: solid 3px #23f346fc;
+   border-bottom: solid 2px #68b8eb;
+   border-left: solid 2px #68b8eb;
+   border-top: solid 2px #23f346fc;
+   border-right: solid 2px #23f346fc;
 }
 
 .col-images-texts-startstop {
@@ -219,7 +212,6 @@ h6 {
   float: left; /* fix for  buggy browsers */
   display: table-column;         
   width: 150px;         
-  #background-color: #75bfff;
   align:left;
   font-size: 13px;
   font-family: "Nunito", sans-serif;
@@ -231,7 +223,6 @@ h6 {
   float: right; /* fix for  buggy browsers */
   display: table-column;         
   width: 400px; 
-  #background-color: #d7e9fd;
   align:right;
   font-size: 12px;
   font-family: "Nunito", sans-serif;
@@ -263,7 +254,6 @@ h6 {
   float: left; /* fix for  buggy browsers */
   display: table-column;         
   width: 150px;         
-  #background-color: #75bfff;
   align:left;
   font-size: 13px;
   font-family: "Nunito", sans-serif;
@@ -276,7 +266,6 @@ h6 {
   float: left; /* fix for  buggy browsers */
   display: table-column;         
   width: 150px;         
-  #background-color: #75bfff;
   align:left;
   font-size: 13px;
   font-family: "Nunito", sans-serif;
@@ -289,7 +278,6 @@ h6 {
   float: right; /* fix for  buggy browsers */
   display: table-column;         
   width: 400px; 
-  #background-color: #d7e9fd;
   align:right;
   font-size: 12px;
   font-family: "Nunito", sans-serif;
@@ -323,7 +311,6 @@ h6 {
   float: left; /* fix for  buggy browsers */
   display: table-column;      
   width: 510px;
-  #background-color: #b3cee8;
   align:left;
   font-size: 12px;
   font-family: "Nunito", sans-serif;
@@ -342,8 +329,8 @@ h6 {
   border-radius: 20px 10px 20px 10px;
   margin-left: auto;
   margin-right: auto;
-  border-bottom: solid 3px grey;
-  border-left: solid 3px grey;
+  border-bottom: solid 3px #183a50;
+  border-left: solid 3px #183a50;
 }
 
 .div-table4-row {
@@ -356,7 +343,6 @@ h6 {
   float: left; /* fix for  buggy browsers */
   display: table-column;         
   width: 150px;         
-  #background-color: #75bfff;
   align:left;
   font-size: 13px;
   font-family: "Nunito", sans-serif;
@@ -368,7 +354,6 @@ h6 {
   float: right; /* fix for  buggy browsers */
   display: table-column;         
   width: 400px; 
-  #background-color: #75bfff;
   align:right;
   font-size: 12px;
   font-family: "Nunito", sans-serif;
