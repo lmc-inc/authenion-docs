@@ -179,27 +179,27 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
          <li>
-            <a href="components-alerts.html">
+          <a href="#Supported Operating Systems">
               <i class="bi bi-circle"></i><span>	Supported Operating Systems </span>
             </a>
           </li>
           <li>
-            <a href="components-accordion.html">
+            <a href="#Linux User requirements">
               <i class="bi bi-circle"></i><span>	Linux User requirements in the Authenion Server</span>
             </a>
           </li>
           <li>
-            <a href="components-badges.html">
+            <a href="#Supported Java environment">
               <i class="bi bi-circle"></i><span>Supported Java environment </span>
             </a>
           </li>
           <li>
-            <a href="components-breadcrumbs.html">
+            <a href="#Minimum Hardware requirements">
               <i class="bi bi-circle"></i><span>Minimum Hardware requirements </span>
             </a>
           </li>
           <li>
-            <a href="components-buttons.html">
+            <a href="#Recommended Hardware requirements">
               <i class="bi bi-circle"></i><span>Recommended Hardware requirements</span>
             </a>
           </li>
@@ -223,22 +223,22 @@
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
+            <a href="#Enterprise Deployement Model">
               <i class="bi bi-circle"></i><span>Enterprise Deployement Model</span>
             </a>
           </li>
           <li>
-            <a href="forms-editors.html">
+            <a href="#What can I do with Authenion">
               <i class="bi bi-circle"></i><span>What can i do with Authenion?</span>
             </a>
           </li>
           <li>
-            <a href="forms-validation.html">
+            <a href="#How does Authenion work">
               <i class="bi bi-circle"></i><span>How does Authenion work?</span>
             </a>
           </li> 
           <li>
-            <a href="forms-editors.html">
+            <a href="#What can I Configure with Authenion">
               <i class="bi bi-circle"></i><span>What can I Configure with Authenion?</span>
             </a>
           </li>
@@ -431,29 +431,34 @@
                 <h4><b>System Requirements</b></h4>
 				<p class="col-para">The following requirements should be met for Authenion deployment and configuration. Authenion qualifies & certifies the following configurations that they are compatible with the product. Authenion supports IPv4 addressing. </p>
 				<ul class="col-para-bulletpoints">
+          <a style="padding: 38px" name="Supported Operating Systems"></a>
                 <li><p class="col-sub-headings-sub"><b>Supported Operating Systems</b></p></li>
 					<p class="col-para-bulletpoints">
 					&emsp;▪	Red Hat Enterprise Linux 7 & above<br>
 					&emsp;▪	CentOS 7 & above<br>
 					&emsp;▪	Oracle Enterprise Linux 7 & above <br>
 					</p>
+          <a style="padding: 38px" name="Linux User requirements"></a>
 				<li><p class="col-sub-headings-sub"><b>Linux User requirements in the Authenion Server</b></p></li>
 					<p class="col-para-bulletpoints">
 					&emsp;▪	Create a Linux user in the name of ‘appuser’ to execute Authenion scripts.<br>
 					&emsp;▪	The 'appuser' should have Read/Write privileges to the Authenion deployment package.<br>
 					&emsp;▪ Authenion should be installed in the ‘/home/appuser’ directory.<br>
 					</p>
+          <a style="padding: 38px" name="Supported Java environment"></a>
 				<li><p class="col-sub-headings-sub"><b>Supported Java environment</b></p></li>
 					<p class="col-para-bulletpoints">
 					&emsp;▪	OpenJDK 11<br>
 					&emsp;▪	Oracle Java SE Development Kit 11 LTS / Oracle Java SE Runtime Environment (Server JRE) 8<br>
 					</p>
+          <a style="padding: 38px" name="Minimum Hardware requirements"></a>
 				<li><p class="col-sub-headings-sub"><b>Minimum Hardware requirements</b></p></li>
 					<p class="col-para-bulletpoints">
 					&emsp;▪	2 CPU/Cores recommended<br>
 					&emsp;▪	2 GB of RAM<br>
 					&emsp;▪	15 GB available space<br>
 					</p>
+          <a style="padding: 38px" name="Recommended Hardware requirements"></a>
 				<li><p class="col-sub-headings-sub"><b>Recommended Hardware requirements</b></p></li>
 					<p class="col-para-bulletpoints">
 					&emsp;▪	4 CPU/Cores recommended<br>
@@ -467,7 +472,7 @@
 			<!-- ### GETTING STARTED ### -->
 			<div>
                 <h4><b>Getting Started</b></h4><br>
-				
+                <a  style="padding:32px" name="Enterprise Deployement Model"></a>
 				<p class="col-sub-headings"><b>1. Enterprise Deployment Model</b></p>
 				<p class="col-para">Authenion supports a Gateway architecture for its protected Oracle applications. In this model, the traffic is initially directed to Authenion. Authenion grants or denies access by redirecting the traffic to Authentication providers.</p>
 				<ul class="col-para-bulletpoints">
@@ -476,6 +481,7 @@
 				</ul>
 				<img src="assets/img/deploymentmodel.png" alt="" class="col-images-ui"><br><br>
 				
+        <a style="padding:32px" name="What can I do with Authenion"></a>
 				<br><p class="col-sub-headings"><b>2. What can I do with Authenion?</b></p>
 				<p class="col-para">Authenion is a light-weight product that allows you to enable a secure Single Sign-On solution for your Oracle Enterprise applications.</p>
 				<p class="col-para">The main functionalities are:</p>
@@ -486,6 +492,7 @@
 				</ul>
 				<br>
 				
+        <a style="padding:32px" name="How does Authenion work"></a>
 				<p class="col-sub-headings"><b>3. How does Authenion work?</b></p>
 				<p class="col-para">Authenion acts as the gateway to your Oracle Enterprise Applications and capture user requests & delegate it to your Identity Provider (IdP) for authentication.</p>
 				
@@ -507,6 +514,7 @@
 				</ol>
 				<br>
 				
+        <a style="padding:32px" name="What can I Configure with Authenion"></a>
 				<p class="col-sub-headings"><b>4. What can I Configure with Authenion?</b></p>
 				<p class="col-para">Authenion includes a wide range of configuration features from its user interface (administrative console). The following are the configuration we can perform in Authenion through its UI.</p>
 				
