@@ -638,7 +638,7 @@
 					<p class="col-sub-headings"><b>5. What can I Configure with Authenion?</b></p>
 					<p class="col-para">Authenion includes a wide range of configuration features from its user interface (administrative console). The following are the configuration we can perform in Authenion through its UI.</p>
 
-					<div class="div-table">
+					<!-- <div class="div-table">
 						<div class="div-table-row">
 							<div class="div-table-col1">Applications</div>
 							<div class="div-table-col2">Application you are protecting with Authenion</div>
@@ -667,7 +667,118 @@
 							<div class="div-table-col1">Authenion Instance</div>
 							<div class="div-table-col2">Authenion plug-in responsible for transferring the configuration data from UI to authenion server and vice versa. The default port is ‘8090’ & uses ‘https’.</div>
 						</div>
-					</div>
+					</div> -->
+					<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5" border="1px solid #c0c5c9">
+					
+						<tr>
+								  <th class="symcomponent" >System component</th>
+								  <th class="symcomponent">Requirements</th>
+					  </tr>
+				
+				   <!--Applications-->  
+				   <tbody class="tbody">
+						  <tr>
+							  <td>
+								  <p>Applications</p>
+							  </td>
+							  
+								  <td>
+									  <ul>
+										  <li class="li">Application you are protecting with Authenion</li>
+										  
+									  </ul>
+								  </td>
+							  
+						  </tr>
+					<!--OIDC Configurations-->
+						  <tr>
+							  <td>
+								  <p>OIDC Configurations</p>
+							  </td>
+							  <td>
+								  
+									  <ul>
+										  <li class="li">Openid Connect provider / Identity Provider setup.</li>
+									
+									  </ul>
+								  
+							  </td>
+						  </tr>
+  
+					  <!--Virtual Servers-->
+					  <tr>
+						  <td>
+							  <p>Virtual Servers</p>
+						  </td>
+						  <td>
+							  
+								  <ul>
+									  <li class="li">Application domain or hostname for a gateway architecture</li>
+								  </ul>
+							  
+						  </td>
+					  </tr>
+  
+					  <!--Application Hosts-->
+					  <tr>
+						  <td>
+							  <p>Application Hosts</p>
+						  </td>
+						  <td>
+							  
+								  <ul>
+									  <li class="li">Target Applications or backend application server details</li>
+					
+								  </ul>
+							  
+						  </td>
+					  </tr>
+  
+					  <!--Resources-->
+					  <tr>
+						  <td>
+							  <p>Resources</p>
+						  </td>
+						  <td>
+							  
+								  <ul>
+									  <li class="li">URI components of the protected applications</li>
+									  
+								  </ul>
+							  
+						  </td>
+					  </tr>
+					  <!--Header Mapping-->
+					  <tr>
+						  <td>
+							  <p>Header Mapping</p>
+						  </td>
+						  <td>
+							  
+								  <ul>
+									  <li class="li">HTTP-Headers (user data) that needs to be forwarded to the protected applications</li>
+									  
+								  </ul>
+							  
+						  </td>
+					  </tr>
+
+					  <!--Authenion Instance-->
+					  <tr>
+						<td>
+							<p>Authenion Instance</p>
+						</td>
+						<td>
+							
+								<ul>
+									<li class="li">Authenion plug-in responsible for transferring the configuration data from UI to authenion server and vice versa. The default port is ‘8090’ & uses ‘https’.</li>
+									
+								</ul>
+							
+						</td>
+					</tr>
+				  </tbody> 
+				  </table>
 					<br><br><br>
 				</div>
 
@@ -702,7 +813,7 @@
 					</ol>
 
 					<!-- TABLE2 -->
-					<div class="div-table2">
+					<!-- <div class="div-table2">
 						<div class="div-table2-row">
 							<div class="div-table2-col1">Distribution ZIP file</div>
 							<div class="div-table2-col2">Download & extract the distribution zip into the installation directory <b>‘/home/appuser’</b> in your Linux server</div>
@@ -719,7 +830,69 @@
 						<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- deploy</div>
 						<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- logs</div>
 						<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- server</div>
-					</div>
+					</div> -->
+
+					<!-- install Authenion -->
+					<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5" border="1px solid #c0c5c9">
+					
+						<tr>
+								  <th class="symcomponent" >System component</th>
+								  <th class="symcomponent">Requirements</th>
+					  </tr>
+				
+				   <!--Applications-->  
+				   <tbody class="tbody">
+						  <tr>
+							  <td>
+								  <p>Distribution ZIP file</p>
+							  </td>
+							  
+								  <td>
+									  <ul>
+										  <li class="li">Download & extract the distribution zip into the installation directory <b>‘/home/appuser’</li>
+										  
+									  </ul>
+								  </td>
+							  
+						  </tr>
+					<!--File system after extraction-->
+						  <tr>
+							  <td>
+								  <p>File system after extraction</p>
+							  </td>
+							  <td>
+								  
+									  <ul>
+										  <li class="li">&lt;authenion_install_dir&gt;:&nbsp;&nbsp;<i>/home/appuser/authenion-2.0/authenion/</i></li>
+									
+									  </ul>
+								  
+							  </td>
+						  </tr>
+  
+					  <!--Directory Structure-->
+					  <tr>
+						  <td>
+							  <p>Directory Structure</p>
+						  </td>
+						  <td>
+							  
+								  <ul>
+									  <li class="li"> authenion</b></li>
+									  <li class="li" style="margin-left:25px;"> config</li>
+									  <li class="li" style="margin-left:25px";> logs</li>
+									  <li class="li">authenion-2.0</li>
+									  <li class="li" style="margin-left:25px;"> bin</li>
+									  <li class="li" style="margin-left:25px;"> deploy</li>
+                                      <li class="li" style="margin-left:25px;"> server</li>
+								  </ul>
+							  
+						  </td>
+					  </tr>
+  
+					 
+				  </tbody> 
+				  </table>
 					<br><br>
 
 
