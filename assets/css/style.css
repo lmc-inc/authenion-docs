@@ -382,6 +382,11 @@ h6 {
 }
 .systemrequiremetable td{
   border: 1px solid #c0c5c9;
+  font-size: 13.5px;
+    font-family: "Nunito", sans-serif;
+    color: #636161;
+    line-height: 1.7;
+    text-align: justify;
 }
 .symcomponent {
   border: 1px solid #c0c5c9;
