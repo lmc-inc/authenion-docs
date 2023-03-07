@@ -387,6 +387,7 @@ h6 {
     color: #636161;
     line-height: 1.7;
     text-align: justify;
+    list-style-type: circle;
 }
 .symcomponent {
   border: 1px solid #c0c5c9;
