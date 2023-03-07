@@ -380,6 +380,15 @@ h6 {
   color: #35383a;
   text-align: justify;
 }
+.systemrequiremetable td{
+  border: 1px solid #c0c5c9;
+}
+.symcomponent {
+  border: 1px solid #c0c5c9;
+  background-color: #e0e2e4;
+}
+ 
+
 
 
 

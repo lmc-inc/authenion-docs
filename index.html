@@ -431,7 +431,113 @@
 				<div>
 					<h4><b>System Requirements</b></h4>
 					<p class="col-para">The following requirements should be met for Authenion deployment and configuration. Authenion qualifies & certifies the following configurations that they are compatible with the product. Authenion supports IPv4 addressing. </p>
-					<ul class="col-para-bulletpoints">
+					<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5" border="1px solid #c0c5c9">
+					
+					  <tr>
+							    <th class="symcomponent">System component</th>
+                                <th class="symcomponent">Requirements</th>
+                    </tr>
+					
+					
+                 <!--Supported Operating Systems-->  
+				 <tbody class="tbody">
+						<tr>
+							<td>
+                                <p>Supported Operating Systems</p>
+                            </td>
+							
+								<td>
+									<ul>
+										<li class="li">Red Hat Enterprise Linux 7 & above</li>
+										<li class="li">CentOS 7 & above</li>
+										<li class="li">Oracle Enterprise Linux 7 & above</li>
+									</ul>
+								</td>
+							
+						</tr>
+                  <!--Linux User requirements in the Authenion Server-->
+						<tr>
+							<td>
+                                <p>Linux User requirements in the Authenion Server</p>
+                            </td>
+							<td>
+								
+									<ul>
+										<li class="li">Create a Linux user in the name of ‘appuser’ to execute Authenion scripts.</li>
+										<li class="li">The 'appuser' should have Read/Write privileges to the Authenion deployment package.</li>
+										<li class="li">Authenion should be installed in the ‘/home/appuser’ directory.</li>
+									</ul>
+								
+							</td>
+						</tr>
+
+					<!--Supported Java environment-->
+					<tr>
+						<td>
+							<p>Supported Java environment</p>
+						</td>
+						<td>
+							
+								<ul>
+									<li class="li">OpenJDK 11</li>
+									<li class="li">Oracle Java SE Development Kit 11 LTS / Oracle Java SE Runtime Environment (Server JRE) 8</li>
+								</ul>
+							
+						</td>
+					</tr>
+
+					<!--Minimum Hardware requirements-->
+					<tr>
+						<td>
+							<p>Minimum Hardware requirements</p>
+						</td>
+						<td>
+							
+								<ul>
+									<li class="li">2 CPU/Cores recommended</li>
+									<li class="li">2 GB of RAM</li>
+									<li class="li">15 GB available space</li>
+								</ul>
+							
+						</td>
+					</tr>
+
+					<!--Recommended Hardware requirements-->
+					<tr>
+						<td>
+							<p>Recommended Hardware requirements</p>
+						</td>
+						<td>
+							
+								<ul>
+									<li class="li">4 CPU/Cores recommended</li>
+									<li class="li">4 GB of RAM</li>
+									<li class="li">30 GB available space</li>
+								</ul>
+							
+						</td>
+					</tr>
+					<!--Port requirements-->
+					<tr>
+						<td>
+							<p>Port requirements</p>
+						</td>
+						<td>
+							
+								<ul>
+									<li class="li">Authenion Sync&emsp;&emsp;-&emsp;HTTPS, TCP - 8090</li>
+									<li class="li">Authenion Engine&emsp;&nbsp;-&emsp;HTTPS, TCP - 3000</li>
+								</ul>
+							
+						</td>
+					</tr>
+				</tbody> 
+				</table>
+				<br>
+				<br>
+				
+			
+					<!-- <ul class="col-para-bulletpoints">
 						<a style="padding: 38px" name="Supported Operating Systems"></a>
 						<li><p class="col-sub-headings-sub"><b>Supported Operating Systems</b></p></li>
 						<p class="col-para-bulletpoints">
@@ -473,7 +579,7 @@
 							&emsp;▪	Authenion Engine&emsp;&nbsp;-&emsp;HTTPS, TCP - 3000<br>
 						</p>
 						<br>
-					</ul>
+					</ul> -->
 				</div>
 
 				<!-- ### GETTING STARTED ### -->
