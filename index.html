@@ -877,13 +877,13 @@
 						  <td>
 							  
 								  <ul>
-									  <li class="li"> authenion</b></li>
-									  <li class="li" style="margin-left:25px;"> config</li>
-									  <li class="li" style="margin-left:25px";> logs</li>
 									  <li class="li">authenion-2.0</li>
-									  <li class="li" style="margin-left:25px;"> bin</li>
-									  <li class="li" style="margin-left:25px;"> deploy</li>
-                                      <li class="li" style="margin-left:25px;"> server</li>
+									  <li class="li" style="margin-left:10px;list-style-type: none"> - authenion</b></li>
+									  <li class="li" style="margin-left:30px;list-style-type: none"> - bin</li>
+									  <li class="li" style="margin-left:30px;list-style-type: none"> - config</li>
+									  <li class="li" style="margin-left:30px;list-style-type: none"> - deploy</li>
+									  <li class="li" style="margin-left:30px;list-style-type: none"> - logs</li>
+                                      <li class="li" style="margin-left:30px;list-style-type: none"> - server</li>
 								  </ul>
 							  
 						  </td>
@@ -1047,7 +1047,6 @@
 							<p class="col-para">The OIDC configuration page allows you to connect with your Identity Provider / OIDC Token Provider. This configuration includes details such as Token Providers OAuth/OIDC endpoints, Authenion Client registration details, Claims to get from the Token Provider. It includes additional configuration for Authenion such as Authenion Instance, Domain & Session duration configurations.</p>
 
 							<image>
-								<br><br>
 
 								<p class="col-sub-headings-sub"><b>Adding OIDC Configuration</b></p>
 								<ol class="col-para-bulletpoints">
@@ -1460,9 +1459,7 @@
 										<li><p class="col-para-bulletpoints">Click Virtual Servers in the sidebar menu.</p></li>
 										<li><p class="col-para-bulletpoints">Click the “+ New Virtual Server” button in the Virtual Servers page. </p></li>
 										<li><p class="col-para-bulletpoints">Enter the following details to create a Virtual Server for your application.  </p></li>
-									<p>
-										For example, 	
-									</p>
+										<p class="col-para-bulletpoints"><b>For example:</b></p>
 									</p>
 									<!-- table ### -->
 									<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5">
@@ -1533,7 +1530,280 @@
 									<li><p class="col-para-bulletpoints">Click Save to complete the virtual server configuration </p></li>
 						    <!-- IMAGE SHOULD BE HERE -->
 								</div>
-			
+								<br>
+
+								<!-- Application Hosts -->	
+								<div>
+									<a style="padding: 35px" name="Application Hosts"></a>
+									   <p class="col-sub-headings"><b>7. Application Hosts </b></p>
+										<p class="col-para">Applications Hosts are the target applications or the backend application servers that Authenion is protecting through a
+											gateway architecture. These target application’s access requests are validated by Authenion before they are forwarded. </p>
+											<!-- IMAGE SHOULD BE HERE -->
+											<h6 style="font-size: 15px;color: #4e4f50;">
+												Adding Application Hosts
+                                             </h6>
+										<ol class="col-para-bulletpoints">
+											<li><p class="col-para-bulletpoints">Click Application Hosts in the sidebar menu. </p></li>
+											<li><p class="col-para-bulletpoints">Click the “+New Application Host” button in the Application Hosts page. </p></li>
+											<li><p class="col-para-bulletpoints">Enter the following details to create an Application Host for your target application server  </p></li>
+											<p class="col-para-bulletpoints"><b>For example:</b></p>
+										</p>
+										<!-- table ### -->
+										<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5">
+											<tr>
+											   <th class="symcomponent" >System component</th>
+											  <th class="symcomponent">Requirements</th>
+											</tr>
+					 
+											<tbody class="tbody">
+											 <!-- ID-->  
+											 <tr>
+												<td>
+												   <p>ID </p>
+											   </td>
+												  <td>
+													<ul>
+													  <li class="li">1 (Unique ID) </li>
+													 </ul>
+												   </td>
+												 </tr>
+										   <!--Name-->  
+												  <tr>
+													  <td>
+														 <p>Name</p>
+													 </td>
+														<td>
+														  <ul>
+															<li class="li">ApexBackend </li>
+														   </ul>
+														 </td>
+													   </tr>
+											 <!--Host -->  
+														 <tr>
+															 <td>
+															 <p>Host </p>
+															  </td>
+															  <td>
+															   <ul>
+																 <li class="li">apex.example.com:8443 &emsp;&emsp;(protected application/webserver details)</li>
+															   </ul>
+															 </td>
+														 </tr>
+											<!--Use SSL-->  
+														 <tr>
+															<td>
+															   <p>Use SSL </p>
+															 </td>
+																 <td>
+																<ul>
+																 <li class="li">checkbox&emsp;&emsp;&emsp;(HTTP or HTTPS)</li>
+																 </ul>
+															  </td>
+															 </tr>	
+										</tbody> 
+									 </table>
+										<br />
+										<li><p class="col-para-bulletpoints">Click Save to complete the application host configuration.
+										</p></li>
+								<!-- IMAGE SHOULD BE HERE -->
+									</div>
+									<br>
+									
+									<!-- Header Mappings  -->	
+								<div>
+									<a style="padding: 35px" name="Header Mapping"></a>
+									   <p class="col-sub-headings"><b>8. Header Mappings </b></p>
+										<p class="col-para">Header Mappings sends the User attributes to the target application post authentication. The target application will use
+											them for validation purposes. The Header Mappings will receive the user attributes from the Claims which are sent by the
+											Token Provider. Once the claims re received, it is then made available as HTTP-Headers to the target applications. </p>
+											<!-- IMAGE SHOULD BE HERE -->
+											<h6 style="font-size: 15px;color: #4e4f50;">
+												Adding Header Mapping 
+                                             </h6>
+										<ol class="col-para-bulletpoints">
+											<li><p class="col-para-bulletpoints">Click Header Mappings in the sidebar menu.  </p></li>
+											<li><p class="col-para-bulletpoints">Click the “+New Header Mapping” button in the Header Mappings page.  </p></li>
+											<li><p class="col-para-bulletpoints">Enter the following details to create a header mapping for your target application.   </p></li>
+											<p class="col-para-bulletpoints"><b>For example:</b></p>
+										</p>
+										<!-- table ### -->
+										<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5">
+											<tr>
+											   <th class="symcomponent" >System component</th>
+											  <th class="symcomponent">Requirements</th>
+											</tr>
+					 
+											<tbody class="tbody">
+											 <!-- ID-->  
+											 <tr>
+												<td>
+												   <p>ID </p>
+											   </td>
+												  <td>
+													<ul>
+													  <li class="li">1 (Unique ID) </li>
+													 </ul>
+												   </td>
+												 </tr>
+										   <!--Name-->  
+												  <tr>
+													  <td>
+														 <p>Name</p>
+													 </td>
+														<td>
+														  <ul>
+															<li class="li">ApexHeaders</li>
+														   </ul>
+														 </td>
+													   </tr>
+											 <!--App Header -->  
+														 <tr>
+															 <td>
+															 <p>App Header  </p>
+															  </td>
+															  <td>
+															   <ul>
+																 <li class="li">OIDC Claim</li>
+															   </ul>
+															 </td>
+														 </tr>
+											<!--USER_NAME-->  
+														 <tr>
+															<td>
+															   <p>USER_NAME</p>
+															 </td>
+																 <td>
+																<ul>
+																 <li class="li">username</li>
+																 </ul>
+															  </td>
+															 </tr>	
+															 <!--USER_MAIL -->  
+														 <tr>
+															<td>
+															   <p>USER_MAIL </p>
+															 </td>
+																 <td>
+																<ul>
+																 <li class="li">email</li>
+																 </ul>
+															  </td>
+															 </tr>	
+										</tbody> 
+									 </table>
+										<br />
+										<li><p class="col-para-bulletpoints">Click Save to complete the Header Mappings  configuration. 
+										</p></li>
+								       <!-- IMAGE SHOULD BE HERE -->
+									</div>
+									<br>
+									
+								<!-- Resources  -->	
+								<div>
+									<a style="padding: 35px" name="Resources"></a>
+									   <p class="col-sub-headings"><b>9. Resources </b></p>
+										<p class="col-para">Resources are the components/URI of the applications. The resources can be mapped as either protected or excluded
+											resources in an application. Each application should have at least one protected & excluded resources configured to it. </p>
+											<!-- IMAGE SHOULD BE HERE -->
+											<h6 style="font-size: 15px;color: #4e4f50;">
+												Adding Resources
+                                             </h6>
+										<ol class="col-para-bulletpoints">
+											<li><p class="col-para-bulletpoints">Click Resources in the sidebar menu.   </p></li>
+											<li><p class="col-para-bulletpoints">Click the “+New Resource” button in the Resources page.  </p></li>
+											<li><p class="col-para-bulletpoints">Enter the following details to create a Resources for your target application.    </p></li>
+											<p class="col-para-bulletpoints"><b>For example:</b></p>
+										</p>
+										<!-- table ### -->
+										<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5">
+											<tr>
+											   <th class="symcomponent" >System component</th>
+											  <th class="symcomponent">Requirements</th>
+											</tr>
+					 
+											<tbody class="tbody">
+											 <!-- ID-->  
+											 <tr>
+												<td>
+												   <p>ID </p>
+											   </td>
+												  <td>
+													<ul>
+													  <li class="li">1 (Unique ID) </li>
+													 </ul>
+												   </td>
+												 </tr>
+										   <!--Name-->  
+												  <tr>
+													  <td>
+														 <p>Name</p>
+													 </td>
+														<td>
+														  <ul>
+															<li class="li">ApexResources</li>
+														   </ul>
+														 </td>
+													   </tr>
+											 <!--Resource Path -->  
+														 <tr>
+															 <td>
+															 <p>Resource Path</p>
+															  </td>
+															  <td>
+															   <ul>
+																 <li class="li">/apex&emsp;(Resource path starts with a ‘/’. Multiple resource paths can be added)</Resource> </li>
+															   </ul>
+															 </td>
+														 </tr>
+											</tbody> 
+									 </table>
+										<br />
+										<li><p class="col-para-bulletpoints">Click Save to complete the Header Mappings  configuration. 
+										</p></li>
+								       <!-- IMAGE SHOULD BE HERE -->
+									</div>
+									<br>
+									<br>
+
+							<!--Authenion Status -->	
+								<div>
+									<a style="padding: 35px" name="Authenion Status"></a>
+									   <p class="col-sub-headings"><b>10. Authenion Status </b></p>
+										<p class="col-para">Resources are the components/URI of the applications. The resources can be mapped as either protected or excluded
+											resources in an application. Each application should have at least one protected & excluded resources configured to it. </p>
+											<ol class="col-para-bulletpoints">
+												<li><p class="col-para-bulletpoints">Click Authenion Status in the sidebar menu to view the status of your Authenion application.  </p></li>	
+										<!-- IMAGE SHOULD BE HERE -->
+											</div>
+											<br>
+
+							<!--Export -->	
+								<div>
+									<a style="padding: 35px" name="Export"></a>
+									   <p class="col-sub-headings"><b>11. Export </b></p>
+										<p class="col-para">The Export button is a quick operation that lets you download the current configurations from the UI. The exported data
+											will be in the format of a JSON file. This file acts as a backup for the Authenion configuration data. The downloaded file
+											name is export.json. </p>
+										</div>
+											<br>
+
+							<!--Sync  -->	
+								<div>
+									<a style="padding: 35px" name="Sync"></a>
+									   <p class="col-sub-headings"><b>12. Sync</b></p>
+										<p class="col-para">The Sync is a manual operation lets you push all the configuration data from Authenion UI back to the Authenion server.
+											When you install Authenion for the first time, there will be no configuration data in the UI or in the Authenion server. The
+											Sync operation should be triggered for both new configurations & modifications that we perform in the Authenion UI. Any
+											changes which are not pushed from the UI to Authenion server will not be reflected until Sync operation is triggered
+											manually.  </p>
+											<!-- IMAGE SHOULD BE HERE -->
+											<p class="col-para">
+												The Sync status will throw error status when it couldn’t reach the Authenion instance in Authenion server. 	
+											</p>	
+										<!-- IMAGE SHOULD BE HERE -->
+											</div>
+                                           <br>
+				
 				<!-- ### CONFIGURE IDENTITY PROVIDER ### -->
 				<div>
 					<h4><b>Configure your Identity Provider</b></h4>
