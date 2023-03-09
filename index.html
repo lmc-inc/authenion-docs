@@ -588,10 +588,9 @@
 					<a style="padding:32px" name="Introduction"></a>
 					<p class="col-sub-headings"><b>1. Introduction</b></p>
 					<p class="col-para">Authenion enables single sign-on (SSO) solution for Oracle applications. Authenion integrates with standard OpenID Connect providers in the market such as PingFederate, PingOne, Azure, etc., for authentication related events and on the other end, it connects with the Oracle apps to securely transfer the SSO related details to the applications. Authenion will be the access management layer having PingFederate as the Identity Provider.</p>
-					<img src="assets/img/authenion-intro.png" alt="" class="col-images-intro" /> <br /> <br />
+					<img src="assets/img/authenion-intro.png" alt="" class="col-images-intro" /> <br>
 
-
-					<a style="padding:32px" name="Enterprise Deployement Model"></a>
+                     <a style="padding:32px" name="Enterprise Deployement Model"></a>
 					<p class="col-sub-headings"><b>2. Enterprise Deployment Model</b></p>
 					<p class="col-para">Authenion supports a Gateway architecture for its protected Oracle applications. In this model, the traffic is initially directed to Authenion. Authenion grants or denies access by redirecting the traffic to Authentication providers.</p>
 					<!-- <ul class="col-para-bulletpoints"> -->
@@ -599,7 +598,7 @@
 						<li><p class="col-para-bulletpoints">This deployment model can be set up quickly without disrupting the applications. The Authenion will not be installed on separate servers from the application web servers.</p></li>
 						<li><p class="col-para-bulletpoints">With the fewer component architecture, it is easy to identify issues and troubleshoot. All transactions are logged, and it is easier to view any specific events.</p></li>
 					</ul>
-					<img src="assets/img/deploymentmodel.png" alt="" class="col-images-intro"><br><br>
+					<img src="assets/img/deploymentmodel.png" alt="" class="col-images-intro"><br>
 
 					<a style="padding:32px" name="What can I do with Authenion"></a>
 					<br><p class="col-sub-headings"><b>3. What can I do with Authenion?</b></p>
@@ -611,7 +610,7 @@
 						<li><p class="col-para-bulletpoints">Connect Authenion with external OpenID Connect providers for authentication</p></li>
 						<li><p class="col-para-bulletpoints">You can manage sessions for the protected applications and use OAuth scopes to send user data to applications</p></li>
 					</ul>
-					<br>
+					
 
 					<a style="padding:32px" name="How does Authenion work"></a>
 					<p class="col-sub-headings"><b>4. How does Authenion work?</b></p>
@@ -634,7 +633,7 @@
 						<li><p class="col-para-bulletpoints">&nbsp;IdP authenticates the user using the adapters and against a data store configured to it</p></li>
 						<li><p class="col-para-bulletpoints">&nbsp;Oracle Applications will retrieve & validate the HTTP-Headers from Authenion and grant access to users based on their roles and responsibilities</p></li>
 					</ol>
-					<br>
+					
 
 					<a style="padding:32px" name="What can I Configure with Authenion"></a>
 					<p class="col-sub-headings"><b>5. What can I Configure with Authenion?</b></p>
@@ -781,15 +780,14 @@
 					</tr>
 				  </tbody> 
 				  </table>
-					<br><br><br>
+					<br><br>
 				</div>
 
 				<!-- ### INSTALLATION ### -->
 				<div>
 					<!-- <a name="install-authenion section"></a> -->
 					<h4><b>Installation</b></h4>
-
-					 <p class="col-para">This section provides instructions for installing, configuring & starting/stopping Authenion. Authenion can be installed on the Linux servers. For the System requirements, please visit System Requirements section.</p>
+                    <p class="col-para">This section provides instructions for installing, configuring & starting/stopping Authenion. Authenion can be installed on the Linux servers. For the System requirements, please visit System Requirements section.</p>
                      <a style="padding:32px" name="pre-reqs section"></a>
                      <p class="col-sub-headings"><b>1. Pre-requisites</b></p>
 					<!-- <ul class="col-para-bulletpoints"> -->
@@ -797,7 +795,7 @@
 						<li><p class="col-para-bulletpoints">Ensure the System Requirements are met</p></li>
 						<li><p class="col-para-bulletpoints">Install a supported Java runtime</p></li>
 						<li><p class="col-para-bulletpoints">The system environment variable JAVA_HOME must be set representing the location of your Java installation</p></li>
-						<br>
+					
 					</ul>
 
 
@@ -893,7 +891,7 @@
 					 
 				  </tbody> 
 				  </table>
-					<br><br>
+					<br>
 
 
 					<!-- SETUP SECTION -->
@@ -924,7 +922,7 @@
 						<br>
 						<li><p class="col-para-bulletpoints">Read and accept the Software Terms & Conditions. This will complete the setup process</li>
 						<p class="col-para-notes"><i> Note: In case if the process fails to complete the setup, you can re-run the setup script to complete it</i></p>
-					</ol><br><br>
+					</ol>
 
 
 					<!-- START/STOP SECTION -->
@@ -949,7 +947,7 @@
 						</div>
 						<br>
 						<li><p class="col-para-bulletpoints">Check the status of the Authenion application by executing the ‘status.sh’ command. </li>
-					</ol><br>
+					</ol>
 
 
 					<a style="padding:32px" name="health-check section"></a>
@@ -963,7 +961,7 @@
 							<div class="div-table3-col">https://&lt;authenion-hostname&gt;:&lt;port&gt;/ssolibrary/oidc/heartbeat</div>
 						</div>
 					</div>
-					<br><br>
+					<br>
 
 
 					<a style="padding:32px" name="idp-cert section"></a>
@@ -979,7 +977,7 @@
 							<div class="div-table3-col">./keytool -import -alias &lt;alias_name&gt; -keystore &lt;/path-to-java-cacerts&gt; -file &lt;/path-to-IdentityProvider-cert&gt;</div>
 						</div>
 					</div>
-					<br><br>
+					<br>
 
 					<a style="padding:32px" - name="ssl-cert section"></a>
 					<p class="col-sub-headings"><b>7. Install SSL Certificates for Authenion (optional)</b></p>
@@ -1001,7 +999,7 @@
 						<li><p class="col-para-bulletpoints">Copy the .crt & .key extracted in the previous step and place it in “&lt;authenion_install_dir&gt;/server/conf/certs” directory.<p></li>
 						<li><p class="col-para-bulletpoints">The above steps can be repeated during the Authenion certificate renewal process.<p></li>
 					</ol>
-					<br><br>
+					<br>
 				</div> <!-- ### INSTALLATION ### -->
 				<!-- ### UI & NAVIGATION ### -->
 				<div>
@@ -1016,7 +1014,7 @@
 
 					<image>
 
-						<br><br>
+						<!-- <br><br> -->
 
 
 						<a style="padding: 35px" name="Getting config-data into the UI"></a>
@@ -1030,7 +1028,7 @@
 								<li><p class="col-para-bulletpoints"><u>Import Function:</u>&emsp;The Import function is used to get the data from your Authenion Server. It automatically retrieves all the Authenion config data and makes it available in the Authenion UI. It uses the Authenion Instance plugin running in the Authenion server.<p></li>
 								<li><p class="col-para-bulletpoints"><u>Upload:</u>&emsp;The Upload operation is used to load the data from your local file system into the UI manually through any previously extracted configs.<p></li>
 							</ol>
-							<br><br>
+							<!-- <br><br> -->
 
 							<p class="col-sub-headings-sub"><b>Retrieving Config data from existing Authenion Instance</b></p>
 							<ol class="col-para-bulletpoints">
