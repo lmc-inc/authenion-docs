@@ -594,7 +594,8 @@
 					<a style="padding:32px" name="Enterprise Deployement Model"></a>
 					<p class="col-sub-headings"><b>2. Enterprise Deployment Model</b></p>
 					<p class="col-para">Authenion supports a Gateway architecture for its protected Oracle applications. In this model, the traffic is initially directed to Authenion. Authenion grants or denies access by redirecting the traffic to Authentication providers.</p>
-					<ul class="col-para-bulletpoints">
+					<!-- <ul class="col-para-bulletpoints"> -->
+						<ul style="margin-left:30px;" class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">This deployment model can be set up quickly without disrupting the applications. The Authenion will not be installed on separate servers from the application web servers.</p></li>
 						<li><p class="col-para-bulletpoints">With the fewer component architecture, it is easy to identify issues and troubleshoot. All transactions are logged, and it is easier to view any specific events.</p></li>
 					</ul>
@@ -604,7 +605,8 @@
 					<br><p class="col-sub-headings"><b>3. What can I do with Authenion?</b></p>
 					<p class="col-para">Authenion is a light-weight product that allows you to enable a secure Single Sign-On solution for your Oracle Enterprise applications.</p>
 					<p class="col-para">The main functionalities are:</p>
-					<ul class="col-para-bulletpoints">
+					<!-- <ul class="col-para-bulletpoints"> -->
+						<ul style="margin-left:30px;" class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">Use Authenion to protect Oracle applications</p></li>
 						<li><p class="col-para-bulletpoints">Connect Authenion with external OpenID Connect providers for authentication</p></li>
 						<li><p class="col-para-bulletpoints">You can manage sessions for the protected applications and use OAuth scopes to send user data to applications</p></li>
@@ -616,7 +618,8 @@
 					<p class="col-para">Authenion acts as the gateway to your Oracle Enterprise Applications and capture user requests & delegate it to your Identity Provider (IdP) for authentication.</p>
 
 					<p class="col-sub-headings-sub"><b>Session Initiation</b></p>
-					<ul class="col-para-bulletpoints">
+					<!-- <ul class="col-para-bulletpoints"> -->
+						<ul style="margin-left:30px;" class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">Using advanced & secured integration standards, Authenion securely connects with your Identity Provider using OAuth/OIDC protocols. This allows Authenion protected Oracle Applications requests to be delegated to your centralized Identity Provider in your organization.</p></li>
 						<li><p class="col-para-bulletpoints">The Identity Provider will be responsible for challenging the user requests with strong authentication schemes. The Identity Provider will also be responsible for collecting the user attributes and send it to Authenion through OAuth/OIDC tokens for further processing such as session establishment & granting user-access. </p></li>
 					</ul>
@@ -786,13 +789,11 @@
 					<!-- <a name="install-authenion section"></a> -->
 					<h4><b>Installation</b></h4>
 
-					<p class="col-para">This section provides instructions for installing, configuring & starting/stopping Authenion. Authenion can be installed on the Linux servers. For the System requirements, please visit System Requirements section.</p>
-
-					<a style="padding:32px" name="pre-reqs section"></a>
-
-					<p class="col-sub-headings"><b>1. Pre-requisites</b></p>
-					<ul class="col-para-bulletpoints">
-
+					 <p class="col-para">This section provides instructions for installing, configuring & starting/stopping Authenion. Authenion can be installed on the Linux servers. For the System requirements, please visit System Requirements section.</p>
+                     <a style="padding:32px" name="pre-reqs section"></a>
+                     <p class="col-sub-headings"><b>1. Pre-requisites</b></p>
+					<!-- <ul class="col-para-bulletpoints"> -->
+						<ul style="margin-left:30px;" class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">Ensure the System Requirements are met</p></li>
 						<li><p class="col-para-bulletpoints">Install a supported Java runtime</p></li>
 						<li><p class="col-para-bulletpoints">The system environment variable JAVA_HOME must be set representing the location of your Java installation</p></li>
@@ -878,12 +879,12 @@
 							  
 								  <ul>
 									  <li class="li">authenion-2.0</li>
-									  <li class="li" style="margin-left:10px;list-style-type: none"> - authenion</b></li>
-									  <li class="li" style="margin-left:30px;list-style-type: none"> - bin</li>
-									  <li class="li" style="margin-left:30px;list-style-type: none"> - config</li>
-									  <li class="li" style="margin-left:30px;list-style-type: none"> - deploy</li>
-									  <li class="li" style="margin-left:30px;list-style-type: none"> - logs</li>
-                                      <li class="li" style="margin-left:30px;list-style-type: none"> - server</li>
+									  <li class="li" style="margin-left:10px;list-style-type: none"> <b>-</b> authenion</b></li>
+									  <li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> bin</li>
+									  <li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> config</li>
+									  <li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> deploy</li>
+									  <li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> logs</li>
+                                      <li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> server</li>
 								  </ul>
 							  
 						  </td>
@@ -1121,7 +1122,7 @@
 										<!--Authorization URL-->  
 					                  	  <tr>
 							                <td>
-								               <p>Authorization URL</p>
+												<li style="list-style-type: none;position:indent;">Authorization URL</li>
 							                </td>
 							                 <td>
 									           <ul>
@@ -1132,7 +1133,7 @@
 					                      <!--Token URL-->  
 						                <tr>
 							               <td>
-								             <p>Token URL</p>
+											<li style="list-style-type: none;position:indent;">Token URL</li>
 							              </td>
 							               <td>
 									        <ul>
@@ -1143,7 +1144,7 @@
 										 <!--JWKS URL-->  
 										 <tr>
 											<td>
-											  <p>JWKS URL</p>
+											  <li style="list-style-type: none">JWKS URL</li>
 										   </td>
 											<td>
 											 <ul>
@@ -1154,7 +1155,7 @@
                                            <!--Logout URL-->  
 						                 <tr>
 							               <td>
-								             <p>Logout URL</p>
+								            <li style="list-style-type: none;position:indent;">Logout URL</li>
 							                </td>
 							                 <td>
 									            <ul>
@@ -1165,7 +1166,7 @@
 					                    <!--Issuer-->  
 					                	<tr>
 				                         <td>
-							               	<p>Issuer</p>
+											<li style="list-style-type: none;position:indent;">Issuer</li>
 							            </td>
 							              <td>
 									       <ul>
@@ -1176,7 +1177,7 @@
 						              <!--Userinfo URL-->  
 						               <tr>
 							              <td>
-								           <p>Userinfo URL</p>
+											<li style="list-style-type: none;position:indent;">Userinfo URL</li>
 							              </td>
 							               <td>
 									            <ul>
@@ -1187,8 +1188,8 @@
 							          <!--Audience-->  
 						                   <tr>
 							                 <td>
-								               <p>Audience</p>
-							                  </td>
+												<li style="list-style-type: none;position:indent;">Audience</li>
+					                           </td>
 							                    <td>
 								                   	<ul>
 								                  		<li class="li" style="list-style-type: none">authenion</li>
@@ -1198,7 +1199,7 @@
 					                  <!--Client ID-->  
 						                     <tr>
 							                     <td>
-								                    <p>Client ID</p>
+													<li style="list-style-type: none;position:indent;">Client ID</li>
 							                    </td>
 							                       <td>
 									                 <ul>
@@ -1209,7 +1210,7 @@
 					                    <!--Client Secret-->  
 					                                <tr>
 					                                	<td>
-					                            		<p>Client Secret</p>
+															<li style="list-style-type: none;position:indent;">Client Secret</li>
 					                                 	</td>
 						                                 <td>
 								                          <ul>
@@ -1220,7 +1221,8 @@
 					                 	<!--Scope-->  
 						                   <tr>
 							                   <td>
-								                 <p>Scope</p>
+												<li style="list-style-type: none;position:indent;">Scope</li>
+
 							                   </td>
 							                   <td>
 									             <ul>
@@ -1231,7 +1233,7 @@
 							            <!--Claims-->  
 						                   <tr>
 							                    <td>
-								                    <p>Claims</p>
+								                    <li style="list-style-type: none;position:indent;">Claims</li>
 							                     </td>
 							                      <td>
 									                <ul>
@@ -1242,15 +1244,20 @@
 								         <!--Authenion Instances-->  
 						                      <tr>
 							                    <td>
-								                   <p>Authenion Instances</p>
+								                   
+												   <li style="margin-top:-37px;list-style-type: none;position:indent;">Authenion Instances</li>
 							                     </td>
 							                         <td>
 									                    <ul>
-										                  <li class="li" style="list-style-type: none">https://authenion.example.com:8090</li>
-										                  <li class="li" style="list-style-type: none;font-size:12px"><i><b>Note:</b> If the Authenion is configured in cluster, enter the Authenion Instances value from all the Authenion servers. The default port is 8090 and enabled with HTTPS. Supports multiple entries.</i>
-                                                              </li>
-								                        </ul>
+										                  <li class="li" style="list-style-type: none;margin-top:10px;">https://authenion.example.com:8090</li>
+										               
+															<li class="li" style="list-style-type: none;font-size:12px;max-width:500px;background-color:#e0e2e4;"><i><b>Note:</b> If the Authenion is configured in cluster, enter the Authenion Instances value from all the Authenion servers. The default port is 8090 and enabled with HTTPS. Supports multiple entries.</i>
+															</ul>
 								                       </td>
+													   
+													  
+													   </li>
+													
 						                        </tr>
 				                       </tbody> 
 				                     </table>
@@ -1278,7 +1285,7 @@
 												<!--Cookie Domain-->  
 												<tr>
 													<td>
-														<p>Cookie Domain</p>
+														<li style="list-style-type: none;position:indent;">Cookie Domain</li>
 													 </td>
 													  <td>
 														<ul>
@@ -1289,7 +1296,7 @@
 											 <!--Session Duration-->  
 												  <tr>
 													<td>
-													   <p>Session Duration</p>
+														<li style="list-style-type: none;position:indent;">Session Duration</li>
 													 </td>
 														 <td>
 															<ul>
@@ -1306,7 +1313,7 @@
 								<a style="padding: 35px" name="Sidebar"></a>
 							       <p class="col-sub-headings"><b>4. Sidebar</b></p>
 							        <p class="col-para">The Sidebar Menu has the following Configurations</p>
-							         <ul  class="col-para-bulletpoints">
+							         <ul style="margin-left:30px;" class="col-para-bulletpoints">
 								      <li><p class="col-para-bulletpoints">Applications</p></li>
 								      <li><p class="col-para-bulletpoints">Virtal Servers</p></li>
 								      <li><p class="col-para-bulletpoints">Application Hosts</p></li>
@@ -1336,7 +1343,8 @@
 											Adding a protected application in Authenion has the following pre-requisites. Complete the setup for the below
 											configurations before you create a new application. 
 										</p>
-							         <ul class="col-para-bulletpoints">
+							         <!-- <ul class="col-para-bulletpoints"> -->
+										<ul style="margin-left:30px;" class="col-para-bulletpoints">
 								      <li><p class="col-para-bulletpoints">Virtual Servers
 										                                  <a href="#Virtual Servers"> (Section 6)</a>
 										   </p></li>
@@ -1832,7 +1840,8 @@
 					<a style="padding: 38px" name="PingFederate as the Token Provider"></a>
 					<p class="col-sub-headings"><b>1. PingFederate as the Token Provider</b></p>
 					<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>Pre-requisites</u></b></p>
-					<ul class="col-para-bulletpoints">
+					<!-- <ul class="col-para-bulletpoints"> -->
+						<ul style="margin-left:30px;" class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">PingFederate application with IdP and OAuth/OIDC roles enabled</p></li>
 						<li><p class="col-para-bulletpoints">Authorization server setup in PingFederate OAuth server setting</p></li>
 						<li><p class="col-para-bulletpoints">A configured ping IdP adapter and/or authentication policy contract policy if required for authentication and grant mapping</p></li>
@@ -1980,7 +1989,8 @@
 						<p class="col-para-bulletpoints"><b>For example:</b></p>
 						<p class="col-para-bulletpoints">In OpenID Connect Policy Management tab, create/modify the policy and add the attributes that need to be sent through id_token and userinfo endpoint.</p>
 						<p class="col-para-bulletpoints">Add the following attributesthat need to be returned in the id_token and/or as claims through userinfo endpoint.</p>
-						<ul class="col-para-bulletpoints">
+						<!-- <ul class="col-para-bulletpoints"> -->
+							<ul style="margin-left:30px;" class="col-para-bulletpoints">
 							<li>username</li>
 							<li>email</li>
 						</ul>
@@ -1999,7 +2009,8 @@
 					<a style="padding: 38px" name="Microsoft Azure Active Directory as the Token Provider"></a>
 					<p class="col-sub-headings"><b>2. Microsoft Azure Active Directory as the Token Provider</b></p>
 					<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>Pre-requisites</u></b></p>
-					<ul class="col-para-bulletpoints">
+					<!-- <ul class="col-para-bulletpoints"> -->
+						<ul style="margin-left:30px;" class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">Azure account with valid subscription</p></li>
 						<li><p class="col-para-bulletpoints">App registration</p></li>
 						<li><p class="col-para-bulletpoints">Client Secrets and Claim mappings</p></li>
