@@ -389,7 +389,6 @@ h6 {
   font-weight: 400;
   color: #35383a;
   text-align: justify;
-  max-width: 500px;
 }
 .systemrequiremetable td{
   border: 1px solid #c0c5c9;
@@ -399,6 +398,7 @@ h6 {
     line-height: 1.7;
     text-align: justify;
     list-style-type: circle;
+    max-width: 500px;
 }
 .symcomponent {
   border: 1px solid #c0c5c9;
