@@ -173,50 +173,13 @@
         </a>
       </li><!-- End Dashboard Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>System Requirements</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-         <li>
-          <a href="#Supported Operating Systems">
-              <i class="bi bi-circle"></i><span>	Supported Operating Systems </span>
-            </a>
-          </li>
-          <li>
-            <a href="#Linux User requirements">
-              <i class="bi bi-circle"></i><span>	Linux User requirements in the Authenion Server</span>
-            </a>
-          </li>
-          <li>
-            <a href="#Supported Java environment">
-              <i class="bi bi-circle"></i><span>Supported Java environment </span>
-            </a>
-          </li>
-          <li>
-            <a href="#Minimum Hardware requirements">
-              <i class="bi bi-circle"></i><span>Minimum Hardware requirements </span>
-            </a>
-          </li>
-          <li>
-            <a href="#Recommended Hardware requirements">
-              <i class="bi bi-circle"></i><span>Recommended Hardware requirements</span>
-            </a>
-          </li>
-          <li>
-            <a href="#Port Requirements">
-              <i class="bi bi-circle"></i><span>Port Requirements </span>
-            </a>
-          </li>
-          
-        </ul>
-      </li><!-- End Components Nav -->
-
+     
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Getting Started</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+		
           <li>
             <a href="#Introduction">
               <i class="bi bi-circle"></i><span>Introduction</span>
@@ -249,6 +212,47 @@
           </li>-->
         </ul>
       </li><!-- End Forms Nav -->
+	  
+	   <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#SystemRequirements">
+          <i class="bi bi-menu-button-wide"></i><span>System Requirements</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+         <li>
+          <a href="#SupportedOS">
+              <i class="bi bi-circle"></i><span>	Supported Operating Systems </span>
+            </a>
+          </li>
+          <li>
+            <a href="#LinuxUserrequirements">
+              <i class="bi bi-circle"></i><span>	Linux User requirements in the Authenion Server</span>
+            </a>
+          </li>
+          <li>
+            <a href="#SupportedJavaenvironment">
+              <i class="bi bi-circle"></i><span>Supported Java environment </span>
+            </a>
+          </li>
+          <li>
+            <a href="#MinimumHR">
+              <i class="bi bi-circle"></i><span>Minimum Hardware requirements </span>
+            </a>
+          </li>
+          <li>
+            <a href="#RecommendedHR">
+              <i class="bi bi-circle"></i><span>Recommended Hardware requirements</span>
+            </a>
+          </li>
+          <li>
+            <a href="#PortRequirements">
+              <i class="bi bi-circle"></i><span>Port Requirements </span>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
+	  <!-- End Components Nav -->
+
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
@@ -427,113 +431,6 @@
 					<p class="col-para">The release notes summarize the changes in the current and previous product features. The Authenion enables a secure Single Sign-On (SSO) solution for Oracle proprietary applications. The product uses PingFederate (or) any other standard OpenID Connect provider as Identity Provider for authentication related events</p><br>
 				</div>
 
-				<!-- ### SYSTEM REQUIREMENTS ### -->
-				<div>
-					<h4><b>System Requirements</b></h4>
-					<p class="col-para">The following requirements should be met for Authenion deployment and configuration. Authenion qualifies & certifies the following configurations that they are compatible with the product. Authenion supports IPv4 addressing. </p>
-					<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5" border="1px solid #c0c5c9">
-					
-					  <tr>
-							    <th class="symcomponent">System component</th>
-                                <th class="symcomponent">Requirements</th>
-                    </tr>
-					 
-				 <tbody class="tbody">
-					 <!--Supported Operating Systems--> 
-						<tr>
-							<td>
-                                <p>Supported Operating Systems</p>
-                            </td>
-							
-								<td>
-									<ul>
-										<li class="li">Red Hat Enterprise Linux 8 & above</li>
-										<li class="li">CentOS 8 & above</li>
-										<li class="li">Oracle Enterprise Linux 8 & above</li>
-									</ul>
-								</td>
-							
-						</tr>
-                  <!--Linux User requirements in the Authenion Server-->
-						<tr>
-							<td>
-                                <p>Linux User requirements in the Authenion Server</p>
-                            </td>
-							<td>
-								
-									<ul>
-										<li class="li">Create a Linux user in the name of ‘appuser’ to execute Authenion scripts.</li>
-										<li class="li">The 'appuser' should have Read/Write privileges to the Authenion deployment package.</li>
-										<li class="li">Authenion should be installed in the ‘/home/appuser’ directory.</li>
-									</ul>
-								
-							</td>
-						</tr>
-
-					<!--Supported Java environment-->
-					<tr>
-						<td>
-							<p>Supported Java environment</p>
-						</td>
-						<td>
-							
-								<ul>
-									<li class="li">OpenJDK 11</li>
-									<li class="li">Oracle Java SE Development Kit 11 LTS / Oracle Java SE Runtime Environment (Server JRE) 8</li>
-								</ul>
-							
-						</td>
-					</tr>
-
-					<!--Minimum Hardware requirements-->
-					<tr>
-						<td>
-							<p>Minimum Hardware requirements</p>
-						</td>
-						<td>
-							
-								<ul>
-									<li class="li">2 CPU/Cores recommended</li>
-									<li class="li">2 GB of RAM</li>
-									<li class="li">15 GB available space</li>
-								</ul>
-							
-						</td>
-					</tr>
-
-					<!--Recommended Hardware requirements-->
-					<tr>
-						<td>
-							<p>Recommended Hardware requirements</p>
-						</td>
-						<td>
-							
-								<ul>
-									<li class="li">4 CPU/Cores recommended</li>
-									<li class="li">4 GB of RAM</li>
-									<li class="li">30 GB available space</li>
-								</ul>
-							
-						</td>
-					</tr>
-					<!--Port requirements-->
-					<tr>
-						<td>
-							<p>Default Port requirements</p>
-						</td>
-						<td>
-							
-								<ul>
-									<li class="li">Authenion Sync&emsp;&emsp;-&emsp;HTTPS, TCP - 8090</li>
-									<li class="li">Authenion Healthcheck&emsp;&nbsp;-&emsp;HTTPS, TCP - 3000</li>
-								</ul>
-							
-						</td>
-					</tr>
-				</tbody> 
-				</table>
-				<br>
-				<br>
 				
 			
 					<!-- <ul class="col-para-bulletpoints">
@@ -669,6 +566,8 @@
 							<div class="div-table-col2">Authenion plug-in responsible for transferring the configuration data from UI to authenion server and vice versa. The default port is ‘8090’ & uses ‘https’.</div>
 						</div>
 					</div> -->
+					
+					
 					<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5" border="1px solid #c0c5c9">
 					
 						<tr>
@@ -780,9 +679,123 @@
 					</tr>
 				  </tbody> 
 				  </table>
-					<br><br>
+					<br>
 				</div>
 
+        <!-- ### SYSTEM REQUIREMENTS ### -->
+				<div>
+					<h4><b>System Requirements</b></h4>
+					<p class="col-para">The following requirements should be met for Authenion deployment and configuration. Authenion qualifies & certifies the following configurations that they are compatible with the product. Authenion supports IPv4 addressing. </p>
+					<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5" border="1px solid #c0c5c9">
+					
+					  <tr>
+							    <th class="symcomponent">System component</th>
+                                <th class="symcomponent">Requirements</th>
+                    </tr>
+					 
+				 <tbody class="tbody">
+					 <!--Supported Operating Systems--> 
+					 <a style="padding:32px" name="SupportedOS"></a>
+						<tr>
+							<td>
+                                <p>Supported Operating Systems</p>
+                            </td>
+							
+								<td>
+									<ul>
+										<li class="li">Red Hat Enterprise Linux 8 & above</li>
+										<li class="li">CentOS 8 & above</li>
+										<li class="li">Oracle Enterprise Linux 8 & above</li>
+									</ul>
+								</td>
+							
+						</tr>
+                  <!--Linux User requirements in the Authenion Server-->
+				  <a style="padding:32px" name="LinuxUserrequirements"></a>
+						<tr>
+							<td>
+                                <p>Linux User requirements in the Authenion Server</p>
+                            </td>
+							<td>
+								
+									<ul>
+										<li class="li">Create a Linux user in the name of ‘appuser’ to execute Authenion scripts.</li>
+										<li class="li">The 'appuser' should have Read/Write privileges to the Authenion deployment package.</li>
+										<li class="li">Authenion should be installed in the ‘/home/appuser’ directory.</li>
+									</ul>
+								
+							</td>
+						</tr>
+
+					<!--Supported Java environment-->
+					<a style="padding:32px" name="SupportedJavaenvironment"></a>
+					<tr>
+						<td>
+							<p>Supported Java environment</p>
+						</td>
+						<td>
+							
+								<ul>
+									<li class="li">OpenJDK 11</li>
+									<li class="li">Oracle Java SE Development Kit 11 LTS / Oracle Java SE Runtime Environment (Server JRE) 8</li>
+								</ul>
+							
+						</td>
+					</tr>
+
+					<!--Minimum Hardware requirements-->
+					<a style="padding:32px" name="MinimumHR"></a>
+					<tr>
+						<td>
+							<p>Minimum Hardware requirements</p>
+						</td>
+						<td>
+							
+								<ul>
+									<li class="li">2 CPU/Cores recommended</li>
+									<li class="li">2 GB of RAM</li>
+									<li class="li">15 GB available space</li>
+								</ul>
+							
+						</td>
+					</tr>
+
+					<!--Recommended Hardware requirements-->
+						<a style="padding:32px" name="RecommendedHR"></a>
+					<tr>
+						<td>
+							<p>Recommended Hardware requirements</p>
+						</td>
+						<td>
+							
+								<ul>
+									<li class="li">4 CPU/Cores recommended</li>
+									<li class="li">4 GB of RAM</li>
+									<li class="li">30 GB available space</li>
+								</ul>
+							
+						</td>
+					</tr>
+					<!--Port requirements-->
+					<a style="padding:32px" name="PortRequirements"></a>
+					<tr>
+						<td>
+							<p>Default Port requirements</p>
+						</td>
+						<td>
+							
+								<ul>
+									<li class="li">Authenion Sync&emsp;&emsp;-&emsp;HTTPS, TCP - 8090</li>
+									<li class="li">Authenion Healthcheck&emsp;&nbsp;-&emsp;HTTPS, TCP - 3000</li>
+								</ul>
+							
+						</td>
+					</tr>
+				</tbody> 
+				</table>
+				<br>
+				<br>
+				
 				<!-- ### INSTALLATION ### -->
 				<div>
 					<!-- <a name="install-authenion section"></a> -->
@@ -792,7 +805,8 @@
                      <p class="col-sub-headings"><b>1. Pre-requisites</b></p>
 					<!-- <ul class="col-para-bulletpoints"> -->
 						<ul style="margin-left:30px;" class="col-para-bulletpoints">
-						<li><p class="col-para-bulletpoints">Ensure the System Requirements are met</p></li>
+						<li><p class="col-para-bulletpoints">Ensure the 
+						are met</p></li>
 						<li><p class="col-para-bulletpoints">Install a supported Java runtime</p></li>
 						<li><p class="col-para-bulletpoints">The system environment variable JAVA_HOME must be set representing the location of your Java installation</p></li>
 					
@@ -805,7 +819,7 @@
 					<ol class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">Execute the below steps to install Authenion in your server</p></li>
 						<li><p class="col-para-bulletpoints">Request or download the authenion-2.0.zip distribution package and a valid license from the Authenion support portal or by contacting your account manager in LikeMinds</p></li>
-						<li><p class="col-para-bulletpoints">Install authenion by unzipping the authenion-2.0.zio into the “/home/appuser” directory in your linux</p></li>
+						<li><p class="col-para-bulletpoints">Install authenion by unzipping the authenion-2.0.zip into the “/home/appuser” directory in your linux</p></li>
 						<li><p class="col-para-bulletpoints">Authenion file system after extracting</p></li>
 						<li><p class="col-para-bulletpoints">Copy the obtained license file “authenion.lic” to the Authenion server and place it in the “authenion_install_dir/config” directory</p></li>
 					</ol>
@@ -1283,7 +1297,7 @@
 												<!--Cookie Domain-->  
 												<tr>
 													<td>
-														<li style="list-style-type: none;position:indent;">Cookie Domain</li>
+														<li style="list-style-type: none;position:indent;padding-right:30px">Cookie Domain</li>
 													 </td>
 													  <td>
 														<ul>
@@ -1640,7 +1654,7 @@
 									   <p class="col-sub-headings"><b>8. Header Mappings </b></p>
 										<p class="col-para">Header Mappings sends the User attributes to the target application post authentication. The target application will use
 											them for validation purposes. The Header Mappings will receive the user attributes from the Claims which are sent by the
-											Token Provider. Once the claims re received, it is then made available as HTTP-Headers to the target applications. </p>
+											Token Provider. Once the claims received, it is then made available as HTTP-Headers to the target applications. </p>
 											<!-- IMAGE SHOULD BE HERE -->
 											<h6 style="font-size: 15px;">
 												Adding Header Mapping 
@@ -1794,8 +1808,8 @@
 								<div>
 									<a style="padding: 35px" name="Authenion Status"></a>
 									   <p class="col-sub-headings"><b>10. Authenion Status </b></p>
-										<p class="col-para">Resources are the components/URI of the applications. The resources can be mapped as either protected or excluded
-											resources in an application. Each application should have at least one protected & excluded resources configured to it. </p>
+										<p class="col-para">The Authenion Status page shows the health of the Authenion Instance that is running in the Authenion server. This
+status page also displays your authenion license information. </p>
 											<ol class="col-para-bulletpoints">
 												<li><p class="col-para-bulletpoints">Click Authenion Status in the sidebar menu to view the status of your Authenion application.  </p></li>	
 										<!-- IMAGE SHOULD BE HERE -->
