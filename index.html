@@ -526,8 +526,8 @@
 						<li><p class="col-para-bulletpoints">&nbsp;User request access for Oracle Applications</p></li>
 						<li><p class="col-para-bulletpoints">&nbsp;Authenion checks for the user session, and it redirects the user’s request to IdP for authentication</p></li>
 						<li><p class="col-para-bulletpoints">&nbsp;IdP authenticates the user using the adapters and against a data store configured to it</p></li>
+						<li><p class="col-para-bulletpoints">&nbsp;IdP retrieves the necessary attributes from its configured data store and sends it to Authenion for further processing</p></li>
 						<li><p class="col-para-bulletpoints">&nbsp;Authenion will receive the authenticated user’s attributes and parse the attributes into HTTP-Headers and send it to the target application</p></li>
-						<li><p class="col-para-bulletpoints">&nbsp;IdP authenticates the user using the adapters and against a data store configured to it</p></li>
 						<li><p class="col-para-bulletpoints">&nbsp;Oracle Applications will retrieve & validate the HTTP-Headers from Authenion and grant access to users based on their roles and responsibilities</p></li>
 					</ol>
 					
@@ -805,8 +805,7 @@
                      <p class="col-sub-headings"><b>1. Pre-requisites</b></p>
 					<!-- <ul class="col-para-bulletpoints"> -->
 						<ul style="margin-left:30px;" class="col-para-bulletpoints">
-						<li><p class="col-para-bulletpoints">Ensure the 
-						are met</p></li>
+						<li><p class="col-para-bulletpoints">Ensure the System Requirements are met</p></li>
 						<li><p class="col-para-bulletpoints">Install a supported Java runtime</p></li>
 						<li><p class="col-para-bulletpoints">The system environment variable JAVA_HOME must be set representing the location of your Java installation</p></li>
 					
@@ -819,7 +818,7 @@
 					<ol class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">Execute the below steps to install Authenion in your server</p></li>
 						<li><p class="col-para-bulletpoints">Request or download the authenion-2.0.zip distribution package and a valid license from the Authenion support portal or by contacting your account manager in LikeMinds</p></li>
-						<li><p class="col-para-bulletpoints">Install authenion by unzipping the authenion-2.0.zip into the “/home/appuser” directory in your linux</p></li>
+						<li><p class="col-para-bulletpoints">Install authenion by unzipping the authenion-2.0.zip into the “/home/appuser” directory in your linux server</p></li>
 						<li><p class="col-para-bulletpoints">Authenion file system after extracting</p></li>
 						<li><p class="col-para-bulletpoints">Copy the obtained license file “authenion.lic” to the Authenion server and place it in the “authenion_install_dir/config” directory</p></li>
 					</ol>
@@ -943,7 +942,7 @@
 					<a style="padding:32px" name="start-stop section"></a>
 					<p class="col-sub-headings"><b>4. Start & Stop Services</b></p>
 					<ol class="col-para-bulletpoints">
-						<li><p class="col-para-bulletpoints">To Start the Authenion instance, navigate to the “<authenion_install_dir>/bin” directory and run the ‘startinstance.sh’ command. </li>
+						<li><p class="col-para-bulletpoints">To Start the Authenion instance, navigate to the “&lt;authenion_install_dir&gt;/bin” directory and run the ‘start-instance.sh’ command. </li>
 						<!-- TABLE3 -->
 						<div class="div-table3">
 							<div class="div-table3-row">
