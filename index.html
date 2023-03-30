@@ -1026,7 +1026,7 @@
 					<p class="col-sub-headings"><b>1. Applications / Dashboard page</b></p>
 					<p class="col-para">The Application / Dashboard page lets you view, create, or modify the applications we protect. The total protected applications will be displayed in the Dashboard Application’s tab. It also lets you access the OIDC Configuration page next to the Applications tab and access the sidebar menu for other required configurations.</p>
 
-					<image>
+					<img  src="assets/img/Dashboard.png" alt="" class="col-images-intro" /> <br>
 
 						<!-- <br><br> -->
 
@@ -1035,11 +1035,11 @@
 						<p class="col-sub-headings"><b>2. Import - Getting config-data into the UI</b></p>
 						<p class="col-para">The Import button in the Dashboard page lets you get the data into the UI.</p>
 
-						<image>
+						<img  src="assets/img/Import.png" alt="" class="col-images-intro" /> <br>
 
 							<p class="col-para">The Import page has two operations:</p>
 							<ol class="col-para-bulletpoints">
-								<li><p class="col-para-bulletpoints"><u>Import Function:</u>&emsp;The Import function is used to get the data from your Authenion Server. It automatically retrieves all the Authenion config data and makes it available in the Authenion UI. It uses the Authenion Instance plugin running in the Authenion server.<p></li>
+								<li><p class="col-para-bulletpoints"><u>Fetch Function:</u>&emsp;The Fetch function is used to get the data from your Authenion Server. It automatically retrieves all the Authenion config data and makes it available in the Authenion UI. It uses the Authenion Instance plugin running in the Authenion server.<p></li>
 								<li><p class="col-para-bulletpoints"><u>Upload:</u>&emsp;The Upload operation is used to load the data from your local file system into the UI manually through any previously extracted configs.<p></li>
 							</ol>
 							<!-- <br><br> -->
@@ -1059,7 +1059,7 @@
 							<p class="col-sub-headings"><b>3. OIDC Configuration</b></p>
 							<p class="col-para">The OIDC configuration page allows you to connect with your Identity Provider / OIDC Token Provider. This configuration includes details such as Token Providers OAuth/OIDC endpoints, Authenion Client registration details, Claims to get from the Token Provider. It includes additional configuration for Authenion such as Authenion Instance, Domain & Session duration configurations.</p>
 
-							<image>
+							<img src="assets/img/OIDC Configuration.png" alt="" class="col-images-intro" /> <br>
 
 								<p class="col-sub-headings-sub"><b>Adding OIDC Configuration</b></p>
 								<ol class="col-para-bulletpoints">
@@ -1320,6 +1320,8 @@
 										 </table>
 							
 				                </div> <!-- ### UI & NAVIGATION ### -->
+								<br>
+								<img src="assets/img/OIDCConfiguration1.png" alt="" class="col-images-intro" /> <br>
 				             <!-- Sidebar-->
 							 <div>
 								<a style="padding: 35px" name="Sidebar"></a>
@@ -1335,8 +1337,10 @@
 								      <li><p class="col-para-bulletpoints">Sync</p></li>
 								      <li><p class="col-para-bulletpoints">Export</p></li>
 							       </ul>
+								   <img style="margin-left:85px" src="assets/img/sidebar.png" alt="" class="col-images-intro" /> <br>
 						     </div>
-								<br><br>
+							
+								
 
 							<!-- Applications -->
 							<div>
@@ -1347,7 +1351,7 @@
 										Mappings & corresponds to a single Application Host (target application/backend server). Applications in Authenion can
 										be configured with both protected and unprotected (excluded) resources. Authentication requirements will be set for the
 										protected resources in an application</p>
-										<!-- IMAGE SHOULD BE HERE -->
+										<img src="assets/img/Dashboard.png" alt="" class="col-images-intro" /> <br>
 										<h6 style="font-size: 15px;color: #4e4f50;">
 											Adding an Application
 										</h6>
@@ -1477,11 +1481,11 @@
 								 </table>
 									<br />
 									<li><p class="col-para-bulletpoints">Click <b>Save</b> to complete the configuration for a new application. </p></li>
-						    <!-- IMAGE SHOULD BE HERE -->
+									<img src="assets/img/NewApplication.png" alt="" class="col-images-intro" /> <br>
 							<p>Authenion Dashboard shows the number of Applications configured. </p>
-							<!-- IMAGE SHOULD BE HERE -->
+							<img src="assets/img/NewApplication1.png" alt="" class="col-images-intro" /> <br>
 								</div>
-								<br><br>
+								
 
 							<!-- Virtual Servers  -->	
                             <div>
@@ -1489,7 +1493,7 @@
 							       <p class="col-sub-headings"><b>6. Virtual Servers</b></p>
 							        <p class="col-para">Virtual Servers enables you to protect multiple applications and their hosts. The Virtual Server is a combination of
 										hostname and port number and is defined by example.com:443.</p>
-										<!-- IMAGE SHOULD BE HERE -->
+										<img src="assets/img/Virtualserver.png" alt="" class="col-images-intro" /> <br>
 										<h6 style="font-size: 15px;">
 											Adding a Virtual Server
 
@@ -1566,10 +1570,11 @@
 									</tbody> 
 								 </table>
 									<br />
+									
 									<li><p class="col-para-bulletpoints">Click <b>Save</b> to complete the Virtual Server configuration. </p></li>
-						    <!-- IMAGE SHOULD BE HERE -->
+									<br><img src="assets/img/Virtualserver1.png" alt="" class="col-images-intro" /> <br>
 								</div>
-								<br>
+								
 
 								<!-- Application Hosts -->	
 								<div>
@@ -1577,7 +1582,7 @@
 									   <p class="col-sub-headings"><b>7. Application Hosts </b></p>
 										<p class="col-para">Applications Hosts are the target applications or the backend application servers that Authenion is protecting through a
 											gateway architecture. These target application’s access requests are validated by Authenion before they are forwarded. </p>
-											<!-- IMAGE SHOULD BE HERE -->
+											<img src="assets/img/BackendServer.png" alt="" class="col-images-intro" /> <br>
 											<h6 style="font-size: 15px;">
 												Adding Application Hosts
                                              </h6>
@@ -1644,10 +1649,10 @@
 										<br />
 										<li><p class="col-para-bulletpoints">Click <b>Save</b> to complete the Application Host configuration.
 										</p></li>
-								<!-- IMAGE SHOULD BE HERE -->
+										<img src="assets/img/Backendserver1.png" alt="" class="col-images-intro" /> <br>
 									</div>
-									<br>
 									
+								
 									<!-- Header Mappings  -->	
 								<div>
 									<a style="padding: 35px" name="Header Mapping"></a>
@@ -1655,7 +1660,7 @@
 										<p class="col-para">Header Mappings sends the User attributes to the target application post authentication. The target application will use
 											them for validation purposes. The Header Mappings will receive the user attributes from the Claims which are sent by the
 											Token Provider. Once the claims received, it is then made available as HTTP-Headers to the target applications. </p>
-											<!-- IMAGE SHOULD BE HERE -->
+											<img src="assets/img/HeaderMappings.png" alt="" class="col-images-intro" /> <br>
 											<h6 style="font-size: 15px;">
 												Adding Header Mapping 
                                              </h6>
@@ -1733,9 +1738,9 @@
 										<br />
 										<li><p class="col-para-bulletpoints">Click <b>Save</b> to complete the Header Mappings  configuration. 
 										</p></li>
-								       <!-- IMAGE SHOULD BE HERE -->
+										<img src="assets/img/Headermappings1.png" alt="" class="col-images-intro" /> <br>
 									</div>
-									<br>
+									
 									
 								<!-- Resources  -->	
 								<div>
@@ -1743,7 +1748,7 @@
 									   <p class="col-sub-headings"><b>9. Resources </b></p>
 										<p class="col-para">Resources are the components/URI of the applications. The resources can be mapped as either protected or excluded
 											resources in an application. Each application should have at least one protected & excluded resources configured to it. </p>
-											<!-- IMAGE SHOULD BE HERE -->
+											<img src="assets/img/Resources.png" alt="" class="col-images-intro" /> <br>
 											<h6 style="font-size: 15px;">
 												Adding Resources
                                              </h6>
@@ -1799,10 +1804,9 @@
 										<br />
 										<li><p class="col-para-bulletpoints">Click <b>Save</b> to complete the Resources configuration. 
 										</p></li>
-								       <!-- IMAGE SHOULD BE HERE -->
+										<img src="assets/img/Resources1.png" alt="" class="col-images-intro" /> <br>
 									</div>
-									<br>
-									<br>
+									
 
 							<!--Authenion Status -->	
 								<div>
@@ -1812,9 +1816,9 @@
 status page also displays your authenion license information. </p>
 											<ol class="col-para-bulletpoints">
 												<li><p class="col-para-bulletpoints">Click Authenion Status in the sidebar menu to view the status of your Authenion application.  </p></li>	
-										<!-- IMAGE SHOULD BE HERE -->
+												<img src="assets/img/authenionstatus.png" alt="" class="col-images-intro" /> <br>
 											</div>
-											<br>
+											
 
 							<!--Export -->	
 								<div>
@@ -1824,7 +1828,7 @@ status page also displays your authenion license information. </p>
 											will be in the format of a JSON file. This file acts as a backup for the Authenion configuration data. The downloaded file
 											name is export.json. </p>
 										</div>
-											<br>
+											
 
 							<!--Sync  -->	
 								<div>
@@ -1835,11 +1839,11 @@ status page also displays your authenion license information. </p>
 											Sync operation should be triggered for both new configurations & modifications that we perform in the Authenion UI. Any
 											changes which are not pushed from the UI to Authenion server will not be reflected until Sync operation is triggered
 											manually.  </p>
-											<!-- IMAGE SHOULD BE HERE -->
+											<img style="margin-left:55px;" src="assets/img/sync.png" alt="" class="col-images-intro" /> <br>
 											<p class="col-para">
 												The Sync status will throw error status when it couldn’t reach the Authenion instance in Authenion server. 	
 											</p>	
-										<!-- IMAGE SHOULD BE HERE -->
+									    	<img style="margin-left:55px;" src="assets/img/sync1.png" alt="" class="col-images-intro" /> <br>
 											</div>
                                            <br>
 				
