@@ -1011,6 +1011,7 @@
 						<br>
 						<li><p class="col-para-bulletpoints">Copy the .crt & .key extracted in the previous step and place it in “&lt;authenion_install_dir&gt;/server/conf/certs” directory.<p></li>
 						<li><p class="col-para-bulletpoints">The above steps can be repeated during the Authenion certificate renewal process.<p></li>
+							<p class="col-para-notes"><i> Note: This setup is optional. The Certificates can also be installed on a load-balancer servers</i></p>	
 					</ol>
 					<br>
 				</div> <!-- ### INSTALLATION ### -->
@@ -2036,7 +2037,7 @@ status page also displays your authenion license information. </p>
 						<li><p class="col-para-bulletpoints">In the Azure Portal, switch to the tenant in which you want to register the Authenion application.</p></li>
 						<li><p class="col-para-bulletpoints">In the App registrations section, select New registration and register Authenion as web application with display name and any other required details.</p></li>
 						<li><p class="col-para-bulletpoints">Add the following Authenion URI in the Redirect URI field. This is the location where Microsoft Azure redirects the user’s request post authentication.</p></li>
-						<p class="col-para-bulletpoints"><b>Redirect URI:</b>&emsp;https://&lt;authenion.example.com&gt;/ssolibrary/oidc/logout</p>
+						<p class="col-para-bulletpoints"><b>Redirect URI:</b>&emsp;https://&lt;authenion.example.com&gt;/ssolibrary/oidc/callback</p>
 						<img src="assets/img/azure-1.png" alt="" class="col-images-pf">
 						<br />
 
