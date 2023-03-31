@@ -479,217 +479,217 @@
 				</div>
 
 				<!-- ### GETTING STARTED ### -->
-				<div>
-					<h4><b>Getting Started</b></h4>
-					<p class="col-para">This guide provides information about getting started with Authenion to deploy a secure and scalable platform to enable single sign-on (SSO) to Oracle applications based on the security and industry standards.</p>
-					<a style="padding:32px" name="Introduction"></a>
-					<p class="col-sub-headings"><b>1. Introduction</b></p>
-					<p class="col-para">Authenion enables single sign-on (SSO) solution for Oracle applications. Authenion integrates with standard OpenID Connect providers in the market such as PingFederate, PingOne, Azure, etc., for authentication related events and on the other end, it connects with the Oracle apps to securely transfer the SSO related details to the applications. Authenion will be the access management layer having PingFederate as the Identity Provider.</p>
-					<img src="assets/img/authenion-intro.png" alt="" class="col-images-intro" /> <br>
+			<div>
+				<h4><b>Getting Started</b></h4>
+				<p class="col-para">This guide provides information about getting started with Authenion to deploy a secure and scalable platform to enable single sign-on (SSO) to Oracle applications based on the security and industry standards.</p>
+				<a style="padding:32px" name="Introduction"></a>
+				<p class="col-sub-headings"><b>1. Introduction</b></p>
+				<p class="col-para">Authenion enables single sign-on (SSO) solution for Oracle applications. Authenion integrates with standard OpenID Connect providers in the market such as PingFederate, PingOne, Azure, etc., for authentication related events and on the other end, it connects with the Oracle apps to securely transfer the SSO related details to the applications. Authenion will be the access management layer having PingFederate as the Identity Provider.</p>
+				<img src="assets/img/authenion-intro.png" alt="" class="col-images-intro" /> <br>
 
-                     <a style="padding:32px" name="Enterprise Deployement Model"></a>
-					<p class="col-sub-headings"><b>2. Enterprise Deployment Model</b></p>
-					<p class="col-para">Authenion supports a Gateway architecture for its protected Oracle applications. In this model, the traffic is initially directed to Authenion. Authenion grants or denies access by redirecting the traffic to Authentication providers.</p>
-					<!-- <ul class="col-para-bulletpoints"> -->
-						<ul style="margin-left:30px;" class="col-para-bulletpoints">
-						<li><p class="col-para-bulletpoints">This deployment model can be set up quickly without disrupting the applications. The Authenion will not be installed on separate servers from the application web servers.</p></li>
-						<li><p class="col-para-bulletpoints">With the fewer component architecture, it is easy to identify issues and troubleshoot. All transactions are logged, and it is easier to view any specific events.</p></li>
-					</ul>
-					<img src="assets/img/deploymentmodel.png" alt="" class="col-images-intro"><br>
+				<a style="padding:32px" name="Enterprise Deployement Model"></a>
+				<p class="col-sub-headings"><b>2. Enterprise Deployment Model</b></p>
+				<p class="col-para">Authenion supports a Gateway architecture for its protected Oracle applications. In this model, the traffic is initially directed to Authenion. Authenion grants or denies access by redirecting the traffic to Authentication providers.</p>
+				<!-- <ul class="col-para-bulletpoints"> -->
+				<ul style="margin-left:30px;" class="col-para-bulletpoints">
+					<li><p class="col-para-bulletpoints">This deployment model can be set up quickly without disrupting the applications. The Authenion will not be installed on separate servers from the application web servers.</p></li>
+					<li><p class="col-para-bulletpoints">With the fewer component architecture, it is easy to identify issues and troubleshoot. All transactions are logged, and it is easier to view any specific events.</p></li>
+				</ul>
+				<img src="assets/img/deploymentmodel.png" alt="" class="col-images-intro"><br>
 
-					<a style="padding:32px" name="What can I do with Authenion"></a>
-					<br><p class="col-sub-headings"><b>3. What can I do with Authenion?</b></p>
-					<p class="col-para">Authenion is a light-weight product that allows you to enable a secure Single Sign-On solution for your Oracle Enterprise applications.</p>
-					<p class="col-para">The main functionalities are:</p>
-					<!-- <ul class="col-para-bulletpoints"> -->
-						<ul style="margin-left:30px;" class="col-para-bulletpoints">
-						<li><p class="col-para-bulletpoints">Use Authenion to protect Oracle applications</p></li>
-						<li><p class="col-para-bulletpoints">Connect Authenion with external OpenID Connect providers for authentication</p></li>
-						<li><p class="col-para-bulletpoints">You can manage sessions for the protected applications and use OAuth scopes to send user data to applications</p></li>
-					</ul>
-					
+				<a style="padding:32px" name="What can I do with Authenion"></a>
+				<br><p class="col-sub-headings"><b>3. What can I do with Authenion?</b></p>
+				<p class="col-para">Authenion is a light-weight product that allows you to enable a secure Single Sign-On solution for your Oracle Enterprise applications.</p>
+				<p class="col-para">The main functionalities are:</p>
+				<!-- <ul class="col-para-bulletpoints"> -->
+				<ul style="margin-left:30px;" class="col-para-bulletpoints">
+					<li><p class="col-para-bulletpoints">Use Authenion to protect Oracle applications</p></li>
+					<li><p class="col-para-bulletpoints">Connect Authenion with external OpenID Connect providers for authentication</p></li>
+					<li><p class="col-para-bulletpoints">You can manage sessions for the protected applications and use OAuth scopes to send user data to applications</p></li>
+				</ul>
 
-					<a style="padding:32px" name="How does Authenion work"></a>
-					<p class="col-sub-headings"><b>4. How does Authenion work?</b></p>
-					<p class="col-para">Authenion acts as the gateway to your Oracle Enterprise Applications and capture user requests & delegate it to your Identity Provider (IdP) for authentication.</p>
 
-					<p class="col-sub-headings-sub"><b>Session Initiation</b></p>
-					<!-- <ul class="col-para-bulletpoints"> -->
-						<ul style="margin-left:30px;" class="col-para-bulletpoints">
-						<li><p class="col-para-bulletpoints">Using advanced & secured integration standards, Authenion securely connects with your Identity Provider using OAuth/OIDC protocols. This allows Authenion protected Oracle Applications requests to be delegated to your centralized Identity Provider in your organization.</p></li>
-						<li><p class="col-para-bulletpoints">The Identity Provider will be responsible for challenging the user requests with strong authentication schemes. The Identity Provider will also be responsible for collecting the user attributes and send it to Authenion through OAuth/OIDC tokens for further processing such as session establishment & granting user-access. </p></li>
-					</ul>
-					<img src="assets/img/sessioninitiation.png" alt="" class="col-images-sessionmgmt"><br><br>
+				<a style="padding:32px" name="How does Authenion work"></a>
+				<p class="col-sub-headings"><b>4. How does Authenion work?</b></p>
+				<p class="col-para">Authenion acts as the gateway to your Oracle Enterprise Applications and capture user requests & delegate it to your Identity Provider (IdP) for authentication.</p>
 
-					<p class="col-sub-headings-sub"><b>Processing Steps</b></p>
-					<ol class="col-para-bulletpoints">
-						<li><p class="col-para-bulletpoints">&nbsp;User request access for Oracle Applications</p></li>
-						<li><p class="col-para-bulletpoints">&nbsp;Authenion checks for the user session, and it redirects the user’s request to IdP for authentication</p></li>
-						<li><p class="col-para-bulletpoints">&nbsp;IdP authenticates the user using the adapters and against a data store configured to it</p></li>
-						<li><p class="col-para-bulletpoints">&nbsp;IdP retrieves the necessary attributes from its configured data store and sends it to Authenion for further processing</p></li>
-						<li><p class="col-para-bulletpoints">&nbsp;Authenion will receive the authenticated user’s attributes and parse the attributes into HTTP-Headers and send it to the target application</p></li>
-						<li><p class="col-para-bulletpoints">&nbsp;Oracle Applications will retrieve & validate the HTTP-Headers from Authenion and grant access to users based on their roles and responsibilities</p></li>
-					</ol>
-					
+				<p class="col-sub-headings-sub"><b>Session Initiation</b></p>
+				<!-- <ul class="col-para-bulletpoints"> -->
+				<ul style="margin-left:30px;" class="col-para-bulletpoints">
+					<li><p class="col-para-bulletpoints">Using advanced & secured integration standards, Authenion securely connects with your Identity Provider using OAuth/OIDC protocols. This allows Authenion protected Oracle Applications requests to be delegated to your centralized Identity Provider in your organization.</p></li>
+					<li><p class="col-para-bulletpoints">The Identity Provider will be responsible for challenging the user requests with strong authentication schemes. The Identity Provider will also be responsible for collecting the user attributes and send it to Authenion through OAuth/OIDC tokens for further processing such as session establishment & granting user-access. </p></li>
+				</ul>
+				<img src="assets/img/sessioninitiation.png" alt="" class="col-images-sessionmgmt"><br><br>
 
-					<a style="padding:32px" name="What can I Configure with Authenion"></a>
-					<p class="col-sub-headings"><b>5. What can I Configure with Authenion?</b></p>
-					<p class="col-para">Authenion includes a wide range of configuration features from its user interface (administrative console). The following are the configuration we can perform in Authenion through its UI.</p>
+				<p class="col-sub-headings-sub"><b>Processing Steps</b></p>
+				<ol class="col-para-bulletpoints">
+					<li><p class="col-para-bulletpoints">&nbsp;User request access for Oracle Applications</p></li>
+					<li><p class="col-para-bulletpoints">&nbsp;Authenion checks for the user session, and it redirects the user’s request to IdP for authentication</p></li>
+					<li><p class="col-para-bulletpoints">&nbsp;IdP authenticates the user using the adapters and against a data store configured to it</p></li>
+					<li><p class="col-para-bulletpoints">&nbsp;IdP retrieves the necessary attributes from its configured data store and sends it to Authenion for further processing</p></li>
+					<li><p class="col-para-bulletpoints">&nbsp;Authenion will receive the authenticated user’s attributes and parse the attributes into HTTP-Headers and send it to the target application</p></li>
+					<li><p class="col-para-bulletpoints">&nbsp;Oracle Applications will retrieve & validate the HTTP-Headers from Authenion and grant access to users based on their roles and responsibilities</p></li>
+				</ol>
 
-					<!-- <div class="div-table">
-						<div class="div-table-row">
-							<div class="div-table-col1">Applications</div>
-							<div class="div-table-col2">Application you are protecting with Authenion</div>
-						</div>
-						<div class="div-table-row">
-							<div class="div-table-col1">OIDC Configurations</div>
-							<div class="div-table-col2">Openid Connect provider / Identity Provider setup</div>
-						</div>
-						<div class="div-table-row">
-							<div class="div-table-col1">Virtual Servers</div>
-							<div class="div-table-col2">Application domain or hostname for a gateway architecture</div>
-						</div>
-						<div class="div-table-row">
-							<div class="div-table-col1">Application Hosts</div>
-							<div class="div-table-col2">Target Applications or backend application server details</div>
-						</div>
-						<div class="div-table-row">
-							<div class="div-table-col1">Resources</div>
-							<div class="div-table-col2">URI components of the protected applications</div>
-						</div>
-						<div class="div-table-row">
-							<div class="div-table-col1">Header Mapping</div>
-							<div class="div-table-col2">HTTP-Headers (user data) that needs to be forwarded to the protected applications</div>
-						</div>
-						<div class="div-table-row">
-							<div class="div-table-col1">Authenion Instance</div>
-							<div class="div-table-col2">Authenion plug-in responsible for transferring the configuration data from UI to authenion server and vice versa. The default port is ‘8090’ & uses ‘https’.</div>
-						</div>
-					</div> -->
-					
-					
-					<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5" border="1px solid #c0c5c9">
-					
+
+				<a style="padding:32px" name="What can I Configure with Authenion"></a>
+				<p class="col-sub-headings"><b>5. What can I Configure with Authenion?</b></p>
+				<p class="col-para">Authenion includes a wide range of configuration features from its user interface (administrative console). The following are the configuration we can perform in Authenion admin console.</p>
+
+				<!-- <div class="div-table">
+		<div class="div-table-row">
+			<div class="div-table-col1">Applications</div>
+			<div class="div-table-col2">Application you are protecting with Authenion</div>
+		</div>
+		<div class="div-table-row">
+			<div class="div-table-col1">OIDC Configurations</div>
+			<div class="div-table-col2">Openid Connect provider / Identity Provider setup</div>
+		</div>
+		<div class="div-table-row">
+			<div class="div-table-col1">Virtual Servers</div>
+			<div class="div-table-col2">Application domain or hostname for a gateway architecture</div>
+		</div>
+		<div class="div-table-row">
+			<div class="div-table-col1">Application Hosts</div>
+			<div class="div-table-col2">Target Applications or backend application server details</div>
+		</div>
+		<div class="div-table-row">
+			<div class="div-table-col1">Resources</div>
+			<div class="div-table-col2">URI components of the protected applications</div>
+		</div>
+		<div class="div-table-row">
+			<div class="div-table-col1">Header Mapping</div>
+			<div class="div-table-col2">HTTP-Headers (user data) that needs to be forwarded to the protected applications</div>
+		</div>
+		<div class="div-table-row">
+			<div class="div-table-col1">Authenion Instance</div>
+			<div class="div-table-col2">Authenion plug-in responsible for transferring the configuration data from UI to authenion server and vice versa. The default port is ‘8090’ & uses ‘https’.</div>
+		</div>
+	</div> -->
+
+
+				<table class="systemrequiremetable" cellpadding="5" cellspacing="5" border="1px solid #c0c5c9">
+
+					<tr>
+						<th class="symcomponent">Fields</th>
+						<th class="symcomponent">Values</th>
+					</tr>
+
+					<!--Applications-->
+					<tbody class="tbody">
 						<tr>
-								  <th class="symcomponent" >Fields</th>
-								  <th class="symcomponent">Values</th>
-					  </tr>
-				
-				   <!--Applications-->  
-				   <tbody class="tbody">
-						  <tr>
-							  <td>
-								  <p>Applications</p>
-							  </td>
-							  
-								  <td>
-									  <ul>
-										  <li class="li">Represents the protected Oracle applications in Authenion</li>
-										  
-									  </ul>
-								  </td>
-							  
-						  </tr>
-					<!--OIDC Configurations-->
-						  <tr>
-							  <td>
-								  <p>OIDC Configurations</p>
-							  </td>
-							  <td>
-								  
-									  <ul>
-										  <li class="li">OpenID Connect provider / Identity Provider setup.</li>
-									
-									  </ul>
-								  
-							  </td>
-						  </tr>
-  
-					  <!--Virtual Servers-->
-					  <tr>
-						  <td>
-							  <p>Virtual Servers</p>
-						  </td>
-						  <td>
-							  
-								  <ul>
-									  <li class="li">Application domain or hostname for a gateway architecture</li>
-								  </ul>
-							  
-						  </td>
-					  </tr>
-  
-					  <!--Application Hosts-->
-					  <tr>
-						  <td>
-							  <p>Application Hosts</p>
-						  </td>
-						  <td>
-							  
-								  <ul>
-									  <li class="li">Protected application's server details</li>
-					
-								  </ul>
-							  
-						  </td>
-					  </tr>
-  
-					  <!--Resources-->
-					  <tr>
-						  <td>
-							  <p>Resources</p>
-						  </td>
-						  <td>
-							  
-								  <ul>
-									  <li class="li">URI components of the protected applications</li>
-									  
-								  </ul>
-							  
-						  </td>
-					  </tr>
-					  <!--Header Mapping-->
-					  <tr>
-						  <td>
-							  <p>Header Mapping</p>
-						  </td>
-						  <td>
-							  
-								  <ul>
-									  <li class="li">HTTP-Headers containing user data that needs to be forwarded to the protected applications</li>
-									  
-								  </ul>
-							  
-						  </td>
-					  </tr>
+							<td>
+								<p>Applications</p>
+							</td>
 
-					  <!--Authenion Instance-->
-					  <tr>
-						<td>
-							<p>Authenion Instance</p>
-						</td>
-						<td>
-							
+							<td>
+								<ul>
+									<li class="li">Entry for the protected Oracle applications in Authenion</li>
+
+								</ul>
+							</td>
+
+						</tr>
+						<!--OIDC Configurations-->
+						<tr>
+							<td>
+								<p>OIDC Configurations</p>
+							</td>
+							<td>
+
+								<ul>
+									<li class="li">Your Organization's Identity Provider setup with Authenion for Authentication</li>
+
+								</ul>
+
+							</td>
+						</tr>
+
+						<!--Virtual Servers-->
+						<tr>
+							<td>
+								<p>Virtual Servers</p>
+							</td>
+							<td>
+
+								<ul>
+									<li class="li">Application domain or hostname for a gateway architecture</li>
+								</ul>
+
+							</td>
+						</tr>
+
+						<!--Application Hosts-->
+						<tr>
+							<td>
+								<p>Application Hosts</p>
+							</td>
+							<td>
+
+								<ul>
+									<li class="li">Protected application's server details (Application backend)</li>
+
+								</ul>
+
+							</td>
+						</tr>
+
+						<!--Resources-->
+						<tr>
+							<td>
+								<p>Resources</p>
+							</td>
+							<td>
+
+								<ul>
+									<li class="li">URI components of the protected applications</li>
+
+								</ul>
+
+							</td>
+						</tr>
+						<!--Header Mapping-->
+						<tr>
+							<td>
+								<p>Header Mapping</p>
+							</td>
+							<td>
+
+								<ul>
+									<li class="li">HTTP-Headers containing user data that needs to be forwarded to the protected applications</li>
+
+								</ul>
+
+							</td>
+						</tr>
+
+						<!--Authenion Instance-->
+						<tr>
+							<td>
+								<p>Authenion Instance</p>
+							</td>
+							<td>
+
 								<ul>
 									<li class="li">Authenion plug-in responsible for transferring the configuration data from UI to authenion server and vice versa. The default port is ‘8090’ & uses ‘https’.</li>
-									
+
 								</ul>
-							
-						</td>
-					</tr>
-				  </tbody> 
-				  </table>
-					<br>
-				</div>
+
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<br><br>
+			</div>
 
         <!-- ### SYSTEM REQUIREMENTS ### -->
 				<div>
 					<h4><b>System Requirements</b></h4>
-					<p class="col-para">The following requirements should be met for Authenion deployment and configuration. Authenion qualifies & certifies the following configurations that they are compatible with the product. Authenion supports IPv4 addressing. </p>
+					<p class="col-para">The following requirements should be met for Authenion installation. Authenion qualifies & certifies the following configurations that they are compatible with the product. Authenion supports IPv4 addressing. </p>
 					<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5" border="1px solid #c0c5c9">
 					
 					  <tr>
-							    <th class="symcomponent">System component</th>
+							    <th class="symcomponent">System components</th>
                                 <th class="symcomponent">Requirements</th>
                     </tr>
 					 
@@ -747,14 +747,14 @@
 					<a style="padding:32px" name="MinimumHR"></a>
 					<tr>
 						<td>
-							<p>Minimum Hardware requirements</p>
+							<p>Minimum H/W requirements</p>
 						</td>
 						<td>
 							
 								<ul>
 									<li class="li">2 CPU/Cores recommended</li>
-									<li class="li">2 GB of RAM</li>
-									<li class="li">15 GB available space</li>
+									<li class="li">4 GB of RAM</li>
+									<li class="li">5 GB available space</li>
 								</ul>
 							
 						</td>
@@ -764,14 +764,14 @@
 						<a style="padding:32px" name="RecommendedHR"></a>
 					<tr>
 						<td>
-							<p>Recommended Hardware requirements</p>
+							<p>Recommended H/W requirements</p>
 						</td>
 						<td>
 							
 								<ul>
 									<li class="li">4 CPU/Cores recommended</li>
-									<li class="li">4 GB of RAM</li>
-									<li class="li">30 GB available space</li>
+									<li class="li">8 GB of RAM</li>
+									<li class="li">25 GB available space</li>
 								</ul>
 							
 						</td>
@@ -784,10 +784,10 @@
 						</td>
 						<td>
 							
-								<ul>
-									<li class="li">Authenion Sync&emsp;&emsp;-&emsp;HTTPS, TCP - 8090</li>
-									<li class="li">Authenion Healthcheck&emsp;&nbsp;-&emsp;HTTPS, TCP - 3000</li>
-								</ul>
+							<ul>
+								<li class="li">Authenion Sync&emsp;-&emsp;HTTPS,&emsp;TCP - 8090</li>
+								<li class="li">Authenion Virtual Server&emsp;-&emsp;HTTP (or) HTTPS,&emsp;&emsp;TCP - 0 to 65535</li>
+							</ul>
 							
 						</td>
 					</tr>
@@ -800,14 +800,14 @@
 				<div>
 					<!-- <a name="install-authenion section"></a> -->
 					<h4><b>Installation</b></h4>
-                    <p class="col-para">This section provides instructions for installing, configuring & starting/stopping Authenion. Authenion can be installed on the Linux servers. For the System requirements, please visit System Requirements section.</p>
+                    <p class="col-para">This section provides instructions for installing, configuring & starting/stopping Authenion product. Authenion can be installed on the Linux servers. For the System requirements, please visit System Requirements section.</p>
                      <a style="padding:32px" name="pre-reqs section"></a>
                      <p class="col-sub-headings"><b>1. Pre-requisites</b></p>
 					<!-- <ul class="col-para-bulletpoints"> -->
 						<ul style="margin-left:30px;" class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">Ensure the System Requirements are met</p></li>
-						<li><p class="col-para-bulletpoints">Install a supported Java runtime</p></li>
-						<li><p class="col-para-bulletpoints">The system environment variable JAVA_HOME must be set representing the location of your Java installation</p></li>
+						<li><p class="col-para-bulletpoints">Install a supported Java software with the JAVA_HOME environment variable set</p></li>
+						<li><p class="col-para-bulletpoints">The JAVA_HOME variable must be set representing the location of your Java installation</p></li>
 					
 					</ul>
 
@@ -816,95 +816,95 @@
 					<a style="padding:32px" name="install-authenion section"></a>
 					<p class="col-sub-headings"><b>2. Install Authenion</b></p>
 					<ol class="col-para-bulletpoints">
-						<li><p class="col-para-bulletpoints">Execute the below steps to install Authenion in your server</p></li>
-						<li><p class="col-para-bulletpoints">Request or download the authenion-2.0.zip distribution package and a valid license from the Authenion support portal or by contacting your account manager in LikeMinds</p></li>
-						<li><p class="col-para-bulletpoints">Install authenion by unzipping the authenion-2.0.zip into the “/home/appuser” directory in your linux server</p></li>
-						<li><p class="col-para-bulletpoints">Authenion file system after extracting</p></li>
-						<li><p class="col-para-bulletpoints">Copy the obtained license file “authenion.lic” to the Authenion server and place it in the “authenion_install_dir/config” directory</p></li>
+						<li><p class="col-para-bulletpoints">Request or download the authenion-2.0 product distribution zip file and a valid license from the Authenion support portal or by contacting your account manager in LikeMinds.</p></li>
+						<li><p class="col-para-bulletpoints">Install authenion by unzipping the authenion-2.0.zip into the <i>“/home/appuser”</i> directory in the Authenion server.</p></li>
+						<li><p class="col-para-bulletpoints">Authenion file system after extracting.</p></li>
+
+
+						<!-- TABLE2 -->
+						<!-- <div class="div-table2">
+		<div class="div-table2-row">
+			<div class="div-table2-col1">Distribution ZIP file</div>
+			<div class="div-table2-col2">Download & extract the distribution zip into the installation directory <b>‘/home/appuser’</b> in your Linux server</div>
+		</div>
+		<div class="div-table2-row">
+			<div class="div-table2-col1">File system after extraction</div>
+			<div class="div-table2-col2">&lt;authenion_install_dir&gt;:&nbsp;&nbsp;<i>/home/appuser/authenion-2.0/authenion/</i></div>
+		</div>
+		<div class="div-table2-col1">Directory Structure</div>
+		<div class="div-table2-col2">authenion-2.0</div>
+		<div class="div-table2-col2">&emsp;&emsp;- authenion</b></div>
+		<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- bin</div>
+		<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- config</div>
+		<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- deploy</div>
+		<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- logs</div>
+		<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- server</div>
+	</div> -->
+						<!-- install Authenion -->
+						<table class="systemrequiremetable" cellpadding="5" cellspacing="5">
+
+							<tr>
+								<th class="symcomponent"></th>
+								<th class="symcomponent"></th>
+							</tr>
+
+							<!--Applications-->
+							<tbody class="tbody">
+								<tr>
+									<td>
+										<p>Distribution ZIP file</p>
+									</td>
+
+									<td>
+										<ul>
+											<li class="li">Download & extract the distribution zip into the installation directory <b>‘/home/appuser’</li>
+
+										</ul>
+									</td>
+
+								</tr>
+								<!--File system after extraction-->
+								<tr>
+									<td>
+										<p>File system after extraction</p>
+									</td>
+									<td>
+
+										<ul>
+											<li class="li">&lt;authenion_install_dir&gt;:&nbsp;&nbsp;<i>/home/appuser/authenion-2.0/authenion/</i></li>
+
+										</ul>
+
+									</td>
+								</tr>
+
+								<!--Directory Structure-->
+								<tr>
+									<td>
+										<p>Directory Structure</p>
+									</td>
+									<td>
+
+										<ul>
+											<li class="li">authenion-2.0</li>
+											<li class="li" style="margin-left:10px;list-style-type: none"> <b>-</b> authenion</b></li>
+											<li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> bin</li>
+											<li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> config</li>
+											<li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> deploy</li>
+											<li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> logs</li>
+											<li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> server</li>
+										</ul>
+
+									</td>
+								</tr>
+
+
+							</tbody>
+						</table>
+						<br>
+
+						<li><p class="col-para-bulletpoints">Copy the obtained license file <i>“authenion.lic”</i> to the Authenion server and place it in the <i>&lt;authenion_install_dir&gt;/config</i> directory.</p></li>
 					</ol>
-
-					<!-- TABLE2 -->
-					<!-- <div class="div-table2">
-						<div class="div-table2-row">
-							<div class="div-table2-col1">Distribution ZIP file</div>
-							<div class="div-table2-col2">Download & extract the distribution zip into the installation directory <b>‘/home/appuser’</b> in your Linux server</div>
-						</div>
-						<div class="div-table2-row">
-							<div class="div-table2-col1">File system after extraction</div>
-							<div class="div-table2-col2">&lt;authenion_install_dir&gt;:&nbsp;&nbsp;<i>/home/appuser/authenion-2.0/authenion/</i></div>
-						</div>
-						<div class="div-table2-col1">Directory Structure</div>
-						<div class="div-table2-col2">authenion-2.0</div>
-						<div class="div-table2-col2">&emsp;&emsp;- authenion</b></div>
-						<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- bin</div>
-						<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- config</div>
-						<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- deploy</div>
-						<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- logs</div>
-						<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- server</div>
-					</div> -->
-
-					<!-- install Authenion -->
-					<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5">
-					
-						<tr>
-								  <th class="symcomponent" ></th>
-								  <th class="symcomponent"></th>
-					  </tr>
-				
-				   <!--Applications-->  
-				   <tbody class="tbody">
-						  <tr>
-							  <td>
-								  <p>Distribution ZIP file</p>
-							  </td>
-							  
-								  <td>
-									  <ul>
-										  <li class="li">Download & extract the distribution zip into the installation directory <b>‘/home/appuser’</li>
-										  
-									  </ul>
-								  </td>
-							  
-						  </tr>
-					<!--File system after extraction-->
-						  <tr>
-							  <td>
-								  <p>File system after extraction</p>
-							  </td>
-							  <td>
-								  
-									  <ul>
-										  <li class="li">&lt;authenion_install_dir&gt;:&nbsp;&nbsp;<i>/home/appuser/authenion-2.0/authenion/</i></li>
-									
-									  </ul>
-								  
-							  </td>
-						  </tr>
-  
-					  <!--Directory Structure-->
-					  <tr>
-						  <td>
-							  <p>Directory Structure</p>
-						  </td>
-						  <td>
-							  
-								  <ul>
-									  <li class="li">authenion-2.0</li>
-									  <li class="li" style="margin-left:10px;list-style-type: none"> <b>-</b> authenion</b></li>
-									  <li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> bin</li>
-									  <li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> config</li>
-									  <li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> deploy</li>
-									  <li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> logs</li>
-                                      <li class="li" style="margin-left:30px;list-style-type: none"> <b>-</b> server</li>
-								  </ul>
-							  
-						  </td>
-					  </tr>
-  
-					 
-				  </tbody> 
-				  </table>
-					<br>
 
 
 					<!-- SETUP SECTION -->
@@ -919,21 +919,21 @@
 							</div>
 						</div>
 						<br>
-						<li><p class="col-para-bulletpoints">Execute the following command to grant permission</li>
+						<li><p class="col-para-bulletpoints">Execute the following command to grant permission.</li>
 						<div class="div-table3">
 							<div class="div-table3-row">
 								<div class="div-table3-col">#]&emsp;chmod +x *</div>
 							</div>
 						</div>
 						<br>
-						<li><p class="col-para-bulletpoints">Run the setup command </li>
+						<li><p class="col-para-bulletpoints">Run the setup command.</li>
 						<div class="div-table3">
 							<div class="div-table3-row">
 								<div class="div-table3-col">#]&emsp;./setup.sh</div>
 							</div>
 						</div>
 						<br>
-						<li><p class="col-para-bulletpoints">Read and accept the Software Terms & Conditions. This will complete the setup process</li>
+						<li><p class="col-para-bulletpoints">Read and accept the Software Terms & Conditions. This will complete the setup process.</li>
 						<p class="col-para-notes"><i> Note: In case if the process fails to complete the setup, you can re-run the setup script to complete it</i></p>
 					</ol>
 
@@ -942,7 +942,7 @@
 					<a style="padding:32px" name="start-stop section"></a>
 					<p class="col-sub-headings"><b>4. Start & Stop Services</b></p>
 					<ol class="col-para-bulletpoints">
-						<li><p class="col-para-bulletpoints">To Start the Authenion instance, navigate to the “&lt;authenion_install_dir&gt;/bin” directory and run the ‘start-instance.sh’ command. </li>
+						<li><p class="col-para-bulletpoints">To Start the Authenion instance, navigate to the <i>“&lt;authenion_install_dir&gt;/bin”</i> directory and run the <i>‘start-instance.sh’</i> command. </li>
 						<!-- TABLE3 -->
 						<div class="div-table3">
 							<div class="div-table3-row">
@@ -951,7 +951,7 @@
 							</div>
 						</div>
 						<br>
-						<li><p class="col-para-bulletpoints">To Stop the Authenion instance, run the ‘stop-instance.sh’ command. </li>
+						<li><p class="col-para-bulletpoints">To Stop the Authenion instance, run the <i>‘stop-instance.sh’</i> command. </li>
 						<div class="div-table3">
 							<div class="div-table3-row">
 								<div class="div-table3-col">#]&emsp;cd &lt;authenion_install_dir&gt;/bin</div>
@@ -959,7 +959,7 @@
 							</div>
 						</div>
 						<br>
-						<li><p class="col-para-bulletpoints">Check the status of the Authenion application by executing the ‘status.sh’ command. </li>
+						<li><p class="col-para-bulletpoints">Check the status of the Authenion application by executing the <i>‘status.sh’</i> command. </li>
 					</ol>
 
 
@@ -971,7 +971,7 @@
 					<!-- TABLE3 -->
 					<div class="div-table3">
 						<div class="div-table3-row">
-							<div class="div-table3-col">https://&lt;authenion-hostname&gt;:&lt;port&gt;/ssolibrary/oidc/heartbeat</div>
+							<div class="div-table3-col">https://&lt;authenion-virtualserver:port&gt;/ssolibrary/oidc/heartbeat</div>
 						</div>
 					</div>
 					<br>
