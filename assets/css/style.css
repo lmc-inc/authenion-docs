@@ -405,7 +405,7 @@ h6 {
   text-align: justify;
 }
 .systemrequiremetable td{
-  border: 1px solid #012970;
+  border: 1px solid #87CEEB;
   font-size: 13.5px;
     font-family: "Nunito", sans-serif;
     /* color: #636161; */
@@ -417,7 +417,7 @@ h6 {
     max-width: 600px;
 }
 .symcomponent {
-  border: 1px solid #012970;
+  border: 1px solid #87CEEB;
   background-color: #87CEEB;
 }
  
