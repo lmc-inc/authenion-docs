@@ -989,7 +989,7 @@
 					<!-- TABLE3 -->
 					<div class="div-table3">
 						<div class="div-table3-row">
-							<div class="div-table3-col">./keytool -import -alias &lt;alias_name&gt; -keystore &lt;/path-to-java-cacerts&gt; -file &lt;/path-to-IdentityProvider-cert&gt;</div>
+							<div style="width: 460px" class="div-table3-col">./keytool -import -alias &lt;alias_name&gt; -keystore &lt;/path-to-java-cacerts&gt; -file &lt;/path-to-IdentityProvider-cert&gt;</div>
 						</div>
 					</div>
 					<br>
@@ -1000,12 +1000,12 @@
 					<ol class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">If you have the certificate & private key in pkcs format, move the certificate to the Authenion server & run the following commands.<p></li>
 						<!-- TABLE3 -->
-						<div class="div-table3">
-							<div class="div-table3-row">
+						<div class="div-tables3">
+							<div class="div-table3-row1">
 								<div class="div-table3-col"><u>To extract .crt :</u></div>
 								<div class="div-table3-col">openssl pkcs12 -in ./myorgcert.p12 -clcerts -nokeys -out server.crt</div><br><br>
 							</div>
-							<div class="div-table3-row">
+							<div class="div-table3-row1">
 								<div class="div-table3-col"><u>To extract .key :</u></div>
 								<div class="div-table3-col">openssl pkcs12 -in ./myorgcert.p12 -nocerts -nodes -out server.key</div>
 							</div>
