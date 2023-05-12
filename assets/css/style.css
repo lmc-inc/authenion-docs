@@ -1030,7 +1030,7 @@ h6 {
 .sidebar-nav .nav-link {
   display: flex;
   align-items: center;
-  font-size: 15px;
+  font-size: 13px;
   /* font-weight: 600; */
   color: #4154f1;
   transition: 0.3;
@@ -1040,7 +1040,7 @@ h6 {
 }
 
 .sidebar-nav .nav-link i {
-  font-size: 16px;
+  font-size: 13px;
   margin-right: 10px;
   color: #4154f1;
 }

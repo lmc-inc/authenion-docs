@@ -168,7 +168,7 @@
      
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link" href="index.html">
           <i class="bi bi-grid"></i>
           <span>Release Notes</span>
         </a>
@@ -221,12 +221,12 @@
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
          <li>
           <a href="#SupportedOS">
-              <i class="bi bi-circle"></i><span>	Supported Operating Systems </span>
+              <i class="bi bi-circle"></i><span>Supported Operating Systems </span>
             </a>
           </li>
           <li>
             <a href="#LinuxUserrequirements">
-              <i class="bi bi-circle"></i><span>	Linux User requirements in the Authenion Server</span>
+              <i class="bi bi-circle"></i><span>Linux User requirements in the Authenion Server</span>
             </a>
           </li>
           <li>
@@ -424,13 +424,40 @@
         <div class="col-lg-8">
 			<div class="row">
 				<div>
-					<h4><p style="font-size: 0.9rem; color: #031128">Last modified :
-					<script>document.write(new Date().toLocaleDateString());</script> </p> </h4>
+					<h4>
+						<p style="font-size: 0.9rem; color: #031128">
+							Last modified :
+							<script>document.write(new Date().toLocaleDateString());</script>
+						</p>
+					</h4>
 					<p class="col-para"> Authenion enables single sign-on (SSO) solution for Oracle applications. Authenion integrates with standard OpenID Connect providers in the market such as PingFederate, PingOne, Azure, etc., for authentication related events and on the other end, it connects with the Oracle apps to securely transfer the SSO related details to the applications.</p> <br>
 
 					<!-- ### RELEASE NOTES ### -->
-					<h4><b>Release Notes</b></h4>
-					<p class="col-para">The release notes summarize the changes in the current and previous product features. The Authenion enables a secure Single Sign-On (SSO) solution for Oracle proprietary applications. The product uses PingFederate (or) any other standard OpenID Connect provider as Identity Provider for authentication related events.</p><br>
+					<h4><b>Authenion Release Notes</b></h4>
+					<p class="col-sub-headings"><b>Release: 2023</b></p>
+					<p class="col-para">Deployment: April 2023</p>
+					<p class="col-para">Software Download: <a href="https://support.likemindsconsulting.com" target="_blank">LikeMinds Helpdesk portal</a></p>
+					<p class="col-sub-headings"><b>Release Summary</b></p>
+					<p class="col-para">Authenion-2.0 version is now generally available. Authenion-2.0 release has new features, bug fixes, security enhancements and updated documentation.</p>
+					<p class="col-sub-headings"><b>Features & Enhancements</b></p>
+					<ul style="margin-left:30px;" class="col-para-bulletpoints">
+						<li><p class="col-para-bulletpoints">Admins can now configure the Authenion through a Administrative console. Admins can onboard/manage target Applications, OIDC Providers, Product License and lot more through the administrative console. The Authenion administrative console is hosted by LikeMinds and is available at <a href="https://launch.authenion.com/" target="_blank">Admin UI.</a></p></li>
+						<li><p class="col-para-bulletpoints">The logging has been changed to Apache Log4j2 from Logback. Audit logging is now available for recording the event occurance, type, time and responsible user or service.</p></li>
+						<li><p class="col-para-bulletpoints">Authenion is enabled with health check path and has an inbuilt load balancer for its backend connections. Authenion still rquires a network load balancer for gateway mode.</p></li>
+						<li><p class="col-para-bulletpoints"></p></li>
+					</ul>
+					<p class="col-sub-headings"><b>Fixes</b></p>
+					<ul style="margin-left:30px;" class="col-para-bulletpoints">
+						<li><p class="col-para-bulletpoints">AQ4-2022-1001: Multiple occurances of SSO transaction in authenion-engine logs.</a></p></li>
+						<li><p class="col-para-bulletpoints">AQ1-2023-1001: Authenion engine log recycling and log file size limit to 10MB.</p></li>
+						<li><p class="col-para-bulletpoints">AQ1-2023-1002: REST API calls authorization during any Sync related events with the Authenion agent.</p></li>
+						<li><p class="col-para-bulletpoints">AQ1-2023-1003: Cookie is configured with SameSite attribute</p></li>
+
+					</ul>
+
+					<br />
+
+
 				</div>
 
 				
