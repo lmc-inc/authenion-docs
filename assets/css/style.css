@@ -1612,6 +1612,7 @@ div.tiles > a, div.tiles > div {
   margin: 12px;
   width: calc(100% / 3 - 30px);
   color: #00297A;
+  height: 100px;
 }
 .tile-title {
   font-size: 22px;
