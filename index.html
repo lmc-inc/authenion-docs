@@ -407,7 +407,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h2><b><p style="font-size: 2.5rem;color: #031128">Authenion</p></b></h2>
+      <!--<h2><b><p style="font-size: 2.5rem;color: #031128">d</p></b></h2>-->
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html"></a></li>
@@ -418,20 +418,10 @@
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
-      <div class="row">
-
         <!-- Left side columns -->
         <div class="col-lg-8">
 			<div class="row">
 				<div>
-					<h4>
-						<p style="font-size: 0.9rem; color: #031128">
-							Last modified :
-							<script>document.write(new Date().toLocaleDateString());</script>
-						</p>
-					</h4>
-					<p class="col-para"> Authenion enables single sign-on (SSO) solution for Oracle applications. Authenion integrates with standard OpenID Connect providers in the market such as PingFederate, PingOne, Azure, etc., for authentication related events and on the other end, it connects with the Oracle apps to securely transfer the SSO related details to the applications.</p> <br>
-
 					<!-- ### RELEASE NOTES ### -->
 					<h4><b>Authenion Release Notes</b></h4>
 					<p class="col-sub-headings"><b>Release: 2023</b></p>
@@ -441,23 +431,23 @@
 					<p class="col-para">Authenion-2.0 version is now generally available. Authenion-2.0 release has new features, bug fixes, security enhancements and updated documentation.</p>
 					<p class="col-sub-headings"><b>Features & Enhancements</b></p>
 					<ul style="margin-left:30px;" class="col-para-bulletpoints">
-						<li><p class="col-para-bulletpoints">Admins can now configure the Authenion through a Administrative console. Admins can onboard/manage target Applications, OIDC Providers, Product License and lot more through the administrative console. The Authenion administrative console is hosted by LikeMinds and is available at <a href="https://launch.authenion.com/" target="_blank">Admin UI.</a></p></li>
+						<li><p class="col-para-bulletpoints">Admins can now configure Authenion through the Administrative console. Admins can onboard/manage target Applications, OIDC Providers, Product License and lot more through the administrative console.</p></li>
+						<li><p class="col-para-bulletpoints">Authenion administrative console is hosted by LikeMinds and is available at <a href="https://launch.authenion.com/" target="_blank">Admin UI.</a></p></li>
 						<li><p class="col-para-bulletpoints">The logging has been changed to Apache Log4j2 from Logback. Audit logging is now available for recording the event occurance, type, time and responsible user or service.</p></li>
-						<li><p class="col-para-bulletpoints">Authenion is enabled with health check path and has an inbuilt load balancer for its backend connections. Authenion still rquires a network load balancer for gateway mode.</p></li>
-						<li><p class="col-para-bulletpoints"></p></li>
+						<li><p class="col-para-bulletpoints">Authenion Cluster is available and it provides high-availability & scalability. Authenion has inbuilt load balancer for its backend connections. However, Authenion still rquires a network load balancer for aotomatically balance traffic in the cluster.</p></li>
+						<li><p class="col-para-bulletpoints">Authenion instance status can be monitored through the console. A health-check endpoint is also available to monitor its status through any monitoring tools.</p></li>
 					</ul>
 					<p class="col-sub-headings"><b>Fixes</b></p>
 					<ul style="margin-left:30px;" class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">AQ4-2022-1001: Multiple occurances of SSO transaction in authenion-engine logs.</a></p></li>
 						<li><p class="col-para-bulletpoints">AQ1-2023-1001: Authenion engine log recycling and log file size limit to 10MB.</p></li>
-						<li><p class="col-para-bulletpoints">AQ1-2023-1002: REST API calls authorization during any Sync related events with the Authenion agent.</p></li>
+						<li><p class="col-para-bulletpoints">AQ1-2023-1002: REST API calls authorization for Authenion agent.</p></li>
 						<li><p class="col-para-bulletpoints">AQ1-2023-1003: Cookie is configured with SameSite attribute</p></li>
-
+						<li><p class="col-para-bulletpoints">AQ2-2023-1006: Multiple sync requests to the same Agent APIs.</p></li>
+						<li><p class="col-para-bulletpoints">AQ2-2023-1008: Header Mapping page shows blank screen when there is no data present in OIDC claims.</p></li>
 					</ul>
 
 					<br />
-
-
 				</div>
 
 				
