@@ -1590,3 +1590,63 @@ h6 {
   font-size: 13px;
   color: #012970;
 }
+/*--------------------------------------------------------------
+# 
+--------------------------------------------------------------*/
+div.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+}
+div.tiles > a:hover a, div.tiles > a:hover p, div.tiles > a:hover h3, div.tiles > div:hover a, div.tiles > div:hover p, div.tiles > div:hover h3 {
+  color: white;
+}
+div.tiles > a, div.tiles > div {
+  display: block;
+  padding: 25px;
+  transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+  overflow: hidden;
+  background: #F5F5F6;
+  border-radius: 0px 32px;
+  min-height: 166px;
+  margin: 12px;
+  width: calc(100% / 3 - 30px);
+  color: #00297A;
+}
+.tile-title {
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #00297A;
+}
+div.tiles .tile-title a {
+  color: #00297A;
+  font-family: "ABCWhyte Bold", sans-serif;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.tile-subtitle {
+  min-height: 44px;
+  color: #212126;
+  margin-bottom: 48px;
+  /* font-weight: unset; */
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+div.okta-topics {
+  padding-right: 15%;
+  flex: 1 0 auto;
+}
+div.tiles > a:hover, div.tiles > div:hover {
+  color: white;
+  background: #00297A;
+  box-shadow: 0px 8px 24px rgba(65, 65, 75, 0.3);
+  cursor: pointer;
+}
