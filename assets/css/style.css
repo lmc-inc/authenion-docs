@@ -49,10 +49,15 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Page Title
+# title Title
 --------------------------------------------------------------*/
 .pagetitle {
   margin-bottom: 10px;
+  font-size: 36px;
+  font-family: "ABCWhyte Bold", sans-serif;
+  font-weight: 600;
+  color: #012970;
+
 }
 
 .pagetitle h1 {
@@ -1616,6 +1621,7 @@ div.tiles > a, div.tiles > div {
 }
 .tile-title {
   font-size: 22px;
+  font-family: "ABCWhyte Bold", sans-serif;
   line-height: 1.35;
   font-weight: 500;
   margin-top: 0;
@@ -1623,16 +1629,20 @@ div.tiles > a, div.tiles > div {
   color: #00297A;
 }
 div.tiles .tile-title a {
-  color: #00297A;
-  font-family: "ABCWhyte Bold", sans-serif;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    color: #00297A;
+    font-family: "ABCWhyte Bold", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 .tile-subtitle {
-  min-height: 44px;
-  color: #212126;
-  margin-bottom: 48px;
-  /* font-weight: unset; */
+    min-height: 44px;
+    font-family: "ABCWhyte Bold", sans-serif;
+    font-size: 16px;
+    color: #4f4f53;
+    margin-bottom: 48px;
+    /* font-weight: unset; */
 }
 p {
   display: block;
