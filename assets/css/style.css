@@ -950,19 +950,20 @@ h6 {
 # Sidebar
 --------------------------------------------------------------*/
 .sidebar {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  bottom: 0;
-  width: 300px;
-  z-index: 996;
-  transition: all 0.3s;
-  padding: 20px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #aab7cf transparent;
-  box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-  background-color: #fff;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 996;
+    transition: all 0.3s;
+    padding: 20px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #aab7cf transparent;
+    /*box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);*/
+    background-color: #f5f5f6;
+    font-family: "ABCWhyte Bold", sans-serif;
 }
 
 @media (max-width: 1199px) {
@@ -1037,9 +1038,9 @@ h6 {
   align-items: center;
   font-size: 13px;
   /* font-weight: 600; */
-  color: #4154f1;
+  color: #6a6a6a;
   transition: 0.3;
-  background: #f6f9ff;
+  background: #d3d6db;
   padding: 10px 15px;
   border-radius: 4px;
 }
@@ -1047,12 +1048,12 @@ h6 {
 .sidebar-nav .nav-link i {
   font-size: 13px;
   margin-right: 10px;
-  color: #4154f1;
+  color: #6a6a6a;
 }
 
 .sidebar-nav .nav-link.collapsed {
-  color: #012970;
-  background: #fff;
+  color: #6a6a6a;
+  background: #f5f5f6;
 }
 
 .sidebar-nav .nav-link.collapsed i {
@@ -1060,12 +1061,12 @@ h6 {
 }
 
 .sidebar-nav .nav-link:hover {
-  color: #4154f1;
+  color: #6a6a6a;
   background: #f6f9ff;
 }
 
 .sidebar-nav .nav-link:hover i {
-  color: #4154f1;
+  color: #6a6a6a;
 }
 
 .sidebar-nav .nav-link .bi-chevron-down {
@@ -1103,11 +1104,11 @@ h6 {
 
 .sidebar-nav .nav-content a:hover,
 .sidebar-nav .nav-content a.active {
-  color: #4154f1;
+  color: #6a6a6a;
 }
 
 .sidebar-nav .nav-content a.active i {
-  background-color: #4154f1;
+  background-color: #6a6a6a;
 }
 
 /*--------------------------------------------------------------
@@ -1612,8 +1613,8 @@ div.tiles > a, div.tiles > div {
   transition: all 0.4s cubic-bezier(.25,.8,.25,1);
   overflow: hidden;
   background: #F5F5F6;
-  border-radius: 0px 32px;
-  min-height: 166px;
+  border-radius: 0px 1px;
+  min-height: 190px;
   margin: 12px;
   width: calc(100% / 3 - 30px);
   color: #00297A;
@@ -1639,7 +1640,7 @@ div.tiles .tile-title a {
 .tile-subtitle {
     min-height: 44px;
     font-family: "ABCWhyte Bold", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     color: #4f4f53;
     margin-bottom: 48px;
     /* font-weight: unset; */
