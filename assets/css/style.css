@@ -56,7 +56,7 @@ h6 {
   font-size: 36px;
   font-family: "ABCWhyte Bold", sans-serif;
   font-weight: 600;
-  color: #012970;
+  color: black;
 
 }
 
@@ -1063,8 +1063,8 @@ h6 {
 }
 
 .sidebar-nav .nav-link:hover {
-  color: #6a6a6a;
-  background: #858585;
+  color: #FFF;
+  background: #4a4848;
 }
 
 .sidebar-nav .nav-link:hover i {
