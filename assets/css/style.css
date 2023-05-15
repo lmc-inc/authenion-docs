@@ -429,7 +429,7 @@ h6 {
 .symcomponent {
   border: 1px solid #6a6a6a;
   background-color: #6a6a6a;
-  color:#444444 ;
+  color:white ;
 }
  
 
@@ -1064,7 +1064,7 @@ h6 {
 
 .sidebar-nav .nav-link:hover {
   color: #6a6a6a;
-  background: #f6f9ff;
+  background: #858585;
 }
 
 .sidebar-nav .nav-link:hover i {
