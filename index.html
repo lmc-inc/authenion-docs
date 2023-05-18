@@ -498,8 +498,8 @@
 					<ul style="margin-left:30px;" class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">Admins can now configure Authenion through the Administrative console. Admins can onboard/manage target Applications, OIDC Providers, Product License and lot more through the administrative console.</p></li>
 						<li><p class="col-para-bulletpoints">Authenion administrative console is hosted by LikeMinds and is available at <a href="https://launch.authenion.com/" target="_blank">Admin UI.</a></p></li>
-						<li><p class="col-para-bulletpoints">The logging has been changed to Apache Log4j2 from Logback. Audit logging is now available for recording the event occurance, type, time and responsible user or service.</p></li>
-						<li><p class="col-para-bulletpoints">Authenion Cluster is available and it provides high-availability & scalability. Authenion has inbuilt load balancer for its backend connections. However, Authenion still rquires a network load balancer for aotomatically balance traffic in the cluster.</p></li>
+						<li><p class="col-para-bulletpoints">The logging framework has been changed to Apache Log4j2 from Logback. Audit logging is now available for recording the event occurance, type, time and responsible user or service.</p></li>
+						<li><p class="col-para-bulletpoints">Authenion Cluster is available and it provides high-availability & scalability. Authenion has inbuilt load balancer for its backend connections. However, Authenion still rquires a network load balancer to automatically balance traffic in the cluster.</p></li>
 						<li><p class="col-para-bulletpoints">Authenion instance status can be monitored through the console. A health-check endpoint is also available to monitor its status through any monitoring tools.</p></li>
 					</ul>
 					<p class="col-sub-headings"><b>Fixes</b></p>
@@ -1352,7 +1352,7 @@
 									                    <ul>
 										                  <li class="li" style="list-style-type: none;margin-top:10px;">https://authenion.example.com:8090</li>
 										               
-															<li class="li" style="list-style-type: none;font-size:12px;max-width:500px;background-color:#CCE0F0;"><i><b>Note:</b> If the Authenion is configured in cluster, enter the <b>Authenion Instances</b> value from all the Authenion servers. The default port is 8090 and enabled with HTTPS. Supports multiple entries.</i>
+															<li class="li" style="list-style-type: none;font-size:12px;max-width:500px;background-color:#f5f5f6;"><i><b>Note:</b> If the Authenion is configured in cluster, enter the <b>Authenion Instances</b> value from all the Authenion servers. The default port is 8090 and enabled with HTTPS. Supports multiple entries.</i>
 															</ul>
 								                       </td>
 													   
@@ -1668,7 +1668,7 @@
 								<!-- Application Hosts -->	
 								<div>
 									<a style="padding: 35px" name="Application Hosts"></a>
-									   <p class="col-sub-headings"><b>7. Application Hosts </b></p>
+									   <p class="col-sub-headings"><b>7. Application Hosts </b><p>
 										<p class="col-para">Applications Hosts are the target applications or the backend application servers that Authenion is protecting through a
 											gateway architecture. These target application’s access requests are validated by Authenion before they are forwarded. </p>
 											<img src="assets/img/BackendServer.png" alt="" class="col-images-intro" /> <br>
@@ -1762,8 +1762,8 @@
 										<!-- table ### -->
 										<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5">
 											<tr>
-											   <th class="symcomponent" >System component</th>
-											  <th class="symcomponent">Requirements</th>
+												<th class="symcomponent">System components&nbsp;&nbsp;&emsp;&emsp;</th>
+												<th class="symcomponent">Requirements&nbsp;&emsp;&emsp;&emsp;&emsp;</th>
 											</tr>
 					 
 											<tbody class="tbody">
@@ -1792,11 +1792,11 @@
 											 <!--App Header -->  
 														 <tr>
 															 <td>
-															 <p>App Header  </p>
+															 <p><b>App Header </b></p>
 															  </td>
 															  <td>
 															   <ul>
-																 <li class="li">OIDC Claim</li>
+																 <p><b>OIDC Claims </b></p>
 															   </ul>
 															 </td>
 														 </tr>
