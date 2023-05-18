@@ -1039,9 +1039,9 @@ h6 {
   align-items: center;
   font-size: 17px;
   /* font-weight: 600; */
-  color: #6a6a6a;
+  color: #F5F5F6;
   transition: 0.3;
-  /* background: #d3d6db; */
+  background: #4a4848;
   padding: 10px 15px;
   border-radius: 4px;
 }
@@ -1096,7 +1096,10 @@ h6 {
   padding: 10px 0 10px 40px;
   transition: 0.3s;
 }
-
+.sidebar-nav .nav-content a :hover{
+  color: #FFF;
+  background: #4a4848;
+}
 .sidebar-nav .nav-content a i {
   font-size: 6px;
   margin-right: 8px;
@@ -1112,6 +1115,7 @@ h6 {
 .sidebar-nav .nav-content a.active i {
   background-color: #6a6a6a;
 }
+
 
 /*--------------------------------------------------------------
 # Dashboard

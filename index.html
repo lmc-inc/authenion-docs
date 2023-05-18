@@ -168,7 +168,7 @@
      
 
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link collapsed" href="index.html">
           <i class="bi bi-grid"></i>
           <span>Release Notes</span>
         </a>
@@ -427,7 +427,7 @@
 					<p class="tile-subtitle">Release summary with Features & Enhancements and bug fixes.</p>
 			 </div>
 			<div>
-				<a href="#Introduction">
+				<a href="#GettingStarted">
 				<p class="tile-title" data-test="tile">
 							 Getting Started
 			   </p>
@@ -437,7 +437,8 @@
 			</a>
 			  </div>
 			 <div>
-				<a href="#Installation">
+				
+               <a href="#Installation">
 				<p class="tile-title" data-test="tile">
 				   Installation
 				</p>
@@ -449,7 +450,8 @@
 		
 		<div class="tiles">
 			<div>
-				<a href="#Applications / Dashboard page">
+				
+               <a href="#Console Navigation & Configurations">
 				<p class="tile-title" data-test="tile">
 				  	  Console Navigation & Configurations
 				</p>
@@ -458,7 +460,7 @@
 			</div>
 			
 			<div>
-				<a href="#PingFederate as the Token Provider">
+				<a href="#Configure your Identity Provider">
 				<p class="tile-title" data-test="tile">
 				  Configure your Identity Provider 
 				</p>
@@ -496,8 +498,8 @@
 					<ul style="margin-left:30px;" class="col-para-bulletpoints">
 						<li><p class="col-para-bulletpoints">Admins can now configure Authenion through the Administrative console. Admins can onboard/manage target Applications, OIDC Providers, Product License and lot more through the administrative console.</p></li>
 						<li><p class="col-para-bulletpoints">Authenion administrative console is hosted by LikeMinds and is available at <a href="https://launch.authenion.com/" target="_blank">Admin UI.</a></p></li>
-						<li><p class="col-para-bulletpoints">The logging has been changed to Apache Log4j2 from Logback. Audit logging is now available for recording the event occurance, type, time and responsible user or service.</p></li>
-						<li><p class="col-para-bulletpoints">Authenion Cluster is available and it provides high-availability & scalability. Authenion has inbuilt load balancer for its backend connections. However, Authenion still rquires a network load balancer for aotomatically balance traffic in the cluster.</p></li>
+						<li><p class="col-para-bulletpoints">The logging framework has been changed to Apache Log4j2 from Logback. Audit logging is now available for recording the event occurance, type, time and responsible user or service.</p></li>
+						<li><p class="col-para-bulletpoints">Authenion Cluster is available and it provides high-availability & scalability. Authenion has inbuilt load balancer for its backend connections. However, Authenion still rquires a network load balancer to automatically balance traffic in the cluster.</p></li>
 						<li><p class="col-para-bulletpoints">Authenion instance status can be monitored through the console. A health-check endpoint is also available to monitor its status through any monitoring tools.</p></li>
 					</ul>
 					<p class="col-sub-headings"><b>Fixes</b></p>
@@ -563,6 +565,7 @@
 				<!-- ### GETTING STARTED ### -->
 			<!--<div style="width:800px; background-color:lightgrey;">-->
 			<div>
+				<a style="padding:32px" name="GettingStarted"></a>
 				<h4 style="font-family: ABCWhyte Bold, sans-serif; font-size:26px; font-weight: 600;">Getting Started</h4>
 				<p class="col-para">This guide provides information about getting started with Authenion to deploy a secure and scalable platform to enable single sign-on (SSO) to Oracle applications based on the security and industry standards.</p>
 				<a style="padding:32px" name="Introduction"></a>
@@ -883,7 +886,7 @@
 				<!-- ### INSTALLATION ### -->
 				<div>
 					<!-- <a name="install-authenion section"></a> -->
-					
+					<a style="padding:32px" name="Installation"></a>
 					<h4 style="font-family: ABCWhyte Bold, sans-serif; font-size:26px; font-weight: 600;">Installation</h4>
                     <p class="col-para">This section provides instructions for installing, configuring & starting/stopping Authenion product. Authenion can be installed on the Linux servers. For the System requirements, please visit System Requirements section.</p>
                      <a style="padding:32px" name="pre-reqs section"></a>
@@ -1103,7 +1106,7 @@
 				<!-- ### UI & NAVIGATION ### -->
 				<div>
 					<!-- <a name="install-authenion section"></a> -->
-					
+					<a style="padding: 35px" name="Console Navigation & Configurations"></a>
 					<h4 style="font-family: ABCWhyte Bold, sans-serif; font-size:26px; font-weight: 600;">Console Navigation & Configurations</h4>
 					<p class="col-para">This section describes the UI of Authenion (Admin Console) and its navigation and provides steps for accessing and configuring it. Access the Authenion UI by clicking <a href="https://launch.authenion.com">Administrative Consle</a></p>
 
@@ -1349,7 +1352,7 @@
 									                    <ul>
 										                  <li class="li" style="list-style-type: none;margin-top:10px;">https://authenion.example.com:8090</li>
 										               
-															<li class="li" style="list-style-type: none;font-size:12px;max-width:500px;background-color:#CCE0F0;"><i><b>Note:</b> If the Authenion is configured in cluster, enter the <b>Authenion Instances</b> value from all the Authenion servers. The default port is 8090 and enabled with HTTPS. Supports multiple entries.</i>
+															<li class="li" style="list-style-type: none;font-size:12px;max-width:500px;background-color:#f5f5f6;"><i><b>Note:</b> If the Authenion is configured in cluster, enter the <b>Authenion Instances</b> value from all the Authenion servers. The default port is 8090 and enabled with HTTPS. Supports multiple entries.</i>
 															</ul>
 								                       </td>
 													   
@@ -1665,7 +1668,7 @@
 								<!-- Application Hosts -->	
 								<div>
 									<a style="padding: 35px" name="Application Hosts"></a>
-									   <p class="col-sub-headings"><b>7. Application Hosts </b></p>
+									   <p class="col-sub-headings"><b>7. Application Hosts </b><p>
 										<p class="col-para">Applications Hosts are the target applications or the backend application servers that Authenion is protecting through a
 											gateway architecture. These target application’s access requests are validated by Authenion before they are forwarded. </p>
 											<img src="assets/img/BackendServer.png" alt="" class="col-images-intro" /> <br>
@@ -1759,8 +1762,8 @@
 										<!-- table ### -->
 										<table class="systemrequiremetable" cellpadding = "5" cellspacing = "5">
 											<tr>
-											   <th class="symcomponent" >System component</th>
-											  <th class="symcomponent">Requirements</th>
+												<th class="symcomponent">System components&nbsp;&nbsp;&emsp;&emsp;</th>
+												<th class="symcomponent">Requirements&nbsp;&emsp;&emsp;&emsp;&emsp;</th>
 											</tr>
 					 
 											<tbody class="tbody">
@@ -1789,11 +1792,11 @@
 											 <!--App Header -->  
 														 <tr>
 															 <td>
-															 <p>App Header  </p>
+															 <p><b>App Header </b></p>
 															  </td>
 															  <td>
 															   <ul>
-																 <li class="li">OIDC Claim</li>
+																 <p><b>OIDC Claims </b></p>
 															   </ul>
 															 </td>
 														 </tr>
@@ -1936,6 +1939,7 @@ status page also displays your authenion license information. </p>
 				
 				<!-- ### CONFIGURE IDENTITY PROVIDER ### -->
 				<div>
+					<a  style="padding: 38px" name="Configure your Identity Provider"></a>
 					<h4 style="font-family: ABCWhyte Bold, sans-serif; font-size:26px; font-weight: 600;">Configure your Identity Provider</h4>
 					
 					<p class="col-para">This section provides the steps required to configure Authenion with the Identity/Token Providers like PingFederate, PingOne, Microsoft Azure, etc. The integration will be established through OAuth and OpenID Connect protocols.</p>
