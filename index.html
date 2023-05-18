@@ -499,7 +499,7 @@
 						<li><p class="col-para-bulletpoints">Admins can now configure Authenion through the Administrative console. Admins can onboard/manage target Applications, OIDC Providers, Product License and lot more through the administrative console.</p></li>
 						<li><p class="col-para-bulletpoints">Authenion administrative console is hosted by LikeMinds and is available at <a href="https://launch.authenion.com/" target="_blank">Admin UI.</a></p></li>
 						<li><p class="col-para-bulletpoints">The logging framework has been changed to Apache Log4j2 from Logback. Audit logging is now available for recording the event occurance, type, time and responsible user or service.</p></li>
-						<li><p class="col-para-bulletpoints">Authenion Cluster is available and it provides high-availability & scalability. Authenion has inbuilt load balancer for its backend connections. However, Authenion still rquires a network load balancer to automatically balance traffic in the cluster.</p></li>
+						<li><p class="col-para-bulletpoints">Authenion Cluster is available and it provides high-availability & scalability. Authenion has inbuilt load balancer for its backend connections. However, Authenion still requires a network load balancer to automatically balance traffic in the cluster.</p></li>
 						<li><p class="col-para-bulletpoints">Authenion instance status can be monitored through the console. A health-check endpoint is also available to monitor its status through any monitoring tools.</p></li>
 					</ul>
 					<p class="col-sub-headings"><b>Fixes</b></p>
@@ -512,7 +512,7 @@
 						<li><p class="col-para-bulletpoints">AQ2-2023-1008: Header Mapping page shows blank screen when there is no data present in OIDC claims.</p></li>
 					</ul>
 
-					<br />
+					<br>
 				</div>
 
 				
@@ -561,7 +561,7 @@
 						<br>
 					</ul> -->
 				</div>
-		<br />
+	
 				<!-- ### GETTING STARTED ### -->
 			<!--<div style="width:800px; background-color:lightgrey;">-->
 			<div>
@@ -571,7 +571,7 @@
 				<a style="padding:32px" name="Introduction"></a>
 				<p class="col-sub-headings"><b>1. Introduction</b></p>
 				<p class="col-para">Authenion enables single sign-on (SSO) solution for Oracle applications. Authenion integrates with standard OpenID Connect providers in the market such as PingFederate, PingOne, Azure, etc., for authentication related events and on the other end, it connects with the Oracle apps to securely transfer the SSO related details to the applications.</p>
-				<img src="assets/img/authenion-intro.png" alt="" class="col-images-intro" /> <br>
+				<img src="assets/img/authenion-intro.png" alt="" class="col-images-intro" /> 
 
 				<a style="padding:32px" name="Enterprise Deployement Model"></a>
 				<p class="col-sub-headings"><b>2. Enterprise Deployment Model</b></p>
@@ -581,10 +581,10 @@
 					<li><p class="col-para-bulletpoints">This deployment model can be set up quickly without disrupting the applications. The Authenion will not be installed on separate servers from the application web servers.</p></li>
 					<li><p class="col-para-bulletpoints">With the fewer component architecture, it is easy to identify issues and troubleshoot. All transactions are logged, and it is easier to view any specific events.</p></li>
 				</ul>
-				<img src="assets/img/deploymentmodel.png" alt="" class="col-images-intro"><br>
+				<img src="assets/img/deploymentmodel.png" alt="" class="col-images-intro">
 
 				<a style="padding:32px" name="What can I do with Authenion"></a>
-				<br><p class="col-sub-headings"><b>3. What can I do with Authenion?</b></p>
+				<p class="col-sub-headings"><b>3. What can I do with Authenion?</b></p>
 				<p class="col-para">Authenion is a light-weight product that allows you to enable a secure Single Sign-On solution for your Oracle Enterprise applications.</p>
 				<p class="col-para">The main functionalities are:</p>
 				<!-- <ul class="col-para-bulletpoints"> -->
@@ -605,7 +605,7 @@
 					<li><p class="col-para-bulletpoints">Using advanced & secured integration standards, Authenion securely connects with your Identity Provider using OAuth/OIDC protocols. This allows Authenion protected Oracle Applications requests to be delegated to your centralized Identity Provider in your organization.</p></li>
 					<li><p class="col-para-bulletpoints">The Identity Provider will be responsible for challenging the user requests with strong authentication schemes. The Identity Provider will also be responsible for collecting the user attributes and send it to Authenion through OAuth/OIDC tokens for further processing such as session establishment & granting user-access. </p></li>
 				</ul>
-				<img src="assets/img/sessioninitiation.png" alt="" class="col-images-sessionmgmt"><br><br>
+				<img src="assets/img/sessioninitiation.png" alt="" class="col-images-sessionmgmt"><br>
 
 				<p class="col-sub-headings-sub"><b>Processing Steps</b></p>
 				<ol class="col-para-bulletpoints">
@@ -881,7 +881,7 @@
 				</tbody> 
 				</table>
 				<br>
-				<br>
+			
 				
 				<!-- ### INSTALLATION ### -->
 				<div>
@@ -1115,9 +1115,9 @@
 					<p class="col-sub-headings"><b>1. Dashboard / Applications page</b></p>
 					<p class="col-para">The  Dashboard / Applications page lets you view, create, or modify the applications we protect. The total protected applications will be displayed in the Dashboard Application’s tab. It also lets you access the OIDC Configuration page next to the Applications tab and access the sidebar menu for other required configurations.</p>
 
-					<img  src="assets/img/Dashboard.png" alt="" class="col-images-intro" /> <br>
+					<img  src="assets/img/Dashboard.png" alt="" class="col-images-intro" /> 
 
-						<!-- <br><br> -->
+						
 
 
 						<a style="padding: 35px" name="Getting config-data into the UI"></a>
@@ -1131,7 +1131,7 @@
 								<li><p class="col-para-bulletpoints"><u>Fetch Function:</u>&emsp;The Fetch function is used to get the data from your Authenion Server. It automatically retrieves all the Authenion config data and makes it available in the Authenion UI. It uses the Authenion Instance plugin running in the Authenion server.<p></li>
 								<li><p class="col-para-bulletpoints"><u>Upload:</u>&emsp;The Upload operation is used to load the data from your local file system into the UI manually through any previously extracted configs.<p></li>
 							</ol>
-							<!-- <br><br> -->
+							
 
 							<p class="col-sub-headings-sub"><b>Retrieving Config data from existing Authenion Instance</b></p>
 							<ol class="col-para-bulletpoints">
@@ -1139,7 +1139,7 @@
 								<li><p class="col-para-bulletpoints">If you have Authenion server up & running  already, you can bring the configuration data into the UI through the <b>Import function</b>.</p></li>
 								<li><p class="col-para-bulletpoints">Click Import in the Authenion Dashboard.</p></li>
 								<li><p class="col-para-bulletpoints">In the Import page, enter the detail for <b>Authenion Instance</b>. For example, <i>authenion.example.com</i></p></li>
-								<li><p class="col-para-bulletpoints">Click Import.</p></li>
+								<li><p class="col-para-bulletpoints">Click Fetch.</p></li>
 								<li><p class="col-para-bulletpoints">This will bring your Authenion configuration data from authenion server to the UI.</p></li>
 							</ol>
 
@@ -1363,7 +1363,7 @@
 				                       </tbody> 
 				                     </table>
 										<br>
-										<br>
+										
 
 										<li><p class="col-sub-headings-sub"><b><u>Cookie Settings</u></b></p></li>
 										<!-- <div class="div-table4">
@@ -1572,7 +1572,7 @@
 									<li><p class="col-para-bulletpoints">Click <b>Save</b> to complete the configuration for a new application. </p></li>
 									<img src="assets/img/NewApplication.png" alt="" class="col-images-intro" /> <br>
 							<p>Authenion Dashboard shows the number of Applications configured. </p>
-							<img src="assets/img/NewApplication1.png" alt="" class="col-images-intro" /> <br>
+							<img src="assets/img/NewApplication1.png" alt="" class="col-images-intro" /> 
 								</div>
 								
 
@@ -1668,7 +1668,7 @@
 								<!-- Application Hosts -->	
 								<div>
 									<a style="padding: 35px" name="Application Hosts"></a>
-									   <p class="col-sub-headings"><b>7. Application Hosts </b><p>
+									   <p class="col-sub-headings"><b>7. Application Hosts </b></p>
 										<p class="col-para">Applications Hosts are the target applications or the backend application servers that Authenion is protecting through a
 											gateway architecture. These target application’s access requests are validated by Authenion before they are forwarded. </p>
 											<img src="assets/img/BackendServer.png" alt="" class="col-images-intro" /> <br>
@@ -2102,16 +2102,16 @@ status page also displays your authenion license information. </p>
 							<li>username</li>
 							<li>email</li>
 						</ul>
-						<br />
+						
 						<p class="col-para-bulletpoints">The above attributes can be mapped with their respective Scopes in the next page. For example, <b>openid scope</b></p>
-						<br />
+						
 
 						<li><p class="col-para-bulletpoints">Replicate the configurations if PingFederate is configured in a cluster.</p></li>
 					</ol>
 
 					<img src="assets/img/pf-client1.png" alt="" class="col-images-pf"><br />
 					<img src="assets/img/pf-client2.png" alt="" class="col-images-pf"><br />
-					<br />
+					
 
 					<!--Azure as idP-->
 					<a style="padding: 38px" name="Microsoft Azure Active Directory as the Token Provider"></a>
