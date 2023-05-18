@@ -327,14 +327,14 @@ h6 {
 .div-table3 {
   display: table;         
          
-  background-color: #b3cee8;
+  background-color: #4a4848;
   border-spacing: 20px; /* cellspacing:poor IE support for  this */
   text-align: justify;
   border-radius: 10px 5px 10px 5px;
   margin-left: auto;
   margin-right: auto;
-  border-bottom: solid 2px #6082B6;
-  border-left: solid 2px #6082B6;
+  border-bottom: solid 2px #6a6a6a;
+  border-left: solid 2px #6a6a6a;
 
 }
 
@@ -353,21 +353,21 @@ h6 {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   /* color: #35383a; */
-  color:#181E26;
+  color:#F5F5F6;
   text-align: center-left;
   
 }
 .div-tables3 {
   display: table;                
-  background-color: #b3cee8;
+  background-color: #4a4848;
   border-spacing: 10px; 
   /* cellspacing:poor IE support for  this */
   text-align: justify;
   border-radius: 10px 5px 10px 5px;
   margin-left: auto;
   margin-right: auto;
-  border-bottom: solid 2px #6082B6;
-  border-left: solid 2px #6082B6;
+  border-bottom: solid 2px #6a6a6a;
+  border-left: solid 2px #6a6a6a;
 
 }
 .div-table3-row1 {
@@ -378,7 +378,7 @@ h6 {
 .div-table4 {
   display: table;         
   width: 650px;         
-  background-color: #b3cee8;
+  background-color: #4a4848;
   border-spacing: 20px; /* cellspacing:poor IE support for  this */
   text-align: justify;
   border-radius: 20px 10px 20px 10px;
