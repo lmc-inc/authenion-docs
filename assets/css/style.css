@@ -1068,12 +1068,14 @@ h6 {
 }
 
 .sidebar-nav .nav-link:hover i {
-  color: #6a6a6a;
+  /* color: #6a6a6a; */
+  color: #FFF;
 }
 
 .sidebar-nav .nav-link .bi-chevron-down {
   margin-right: 0;
   transition: transform 0.2s ease-in-out;
+  color: #FFF;
 }
 
 .sidebar-nav .nav-link:not(.collapsed) .bi-chevron-down {
