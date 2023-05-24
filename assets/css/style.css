@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family:sans-serif;
   background: #FFF;
   /* color: #444444; */
   color:#031128;
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nunito", sans-serif;
+  font-family:sans-serif;
   font-size: 28px;
   font-weight: 990;
 }
@@ -54,7 +54,7 @@ h6 {
 .pagetitle {
   margin-bottom: 10px;
   font-size: 36px;
-  font-family: "ABCWhyte Bold", sans-serif;
+  font-family:sans-serif;
   font-weight: 600;
   color: black;
 
@@ -108,7 +108,7 @@ h6 {
 --------------------------------------------------------------*/
 /* headers, paragraphs, bullet points */
 .col-para {
-    font-family: "ABCWhyte Bold", sans-serif;
+    font-family:sans-serif;
     font-size: 15px;
     color: #4e4f53;
     line-height: 1.7;
@@ -116,7 +116,7 @@ h6 {
 }
 
 .col-para-notes {
-    font-family: "ABCWhyte Bold", sans-serif;
+    font-family:sans-serif;
     font-size: 16px;
     color: #4e4f53;
     line-height: 1.7;
@@ -125,7 +125,7 @@ h6 {
 
 .col-sub-headings {
     font-size: 18px;
-    font-family: "Nunito", sans-serif;
+    font-family:sans-serif;
     font-weight: 700;
     color: #202124;
     line-height: 1.7;
@@ -133,7 +133,7 @@ h6 {
 }
 
 .col-sub-headings-sub {
-    font-family: "ABCWhyte Bold", sans-serif;
+  font-family:sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #2d2e32;
@@ -143,7 +143,7 @@ h6 {
 }
 
 .col-para-bulletpoints {
-    font-family: "ABCWhyte Bold", sans-serif;
+    font-family:sans-serif;
     font-size: 15px;
     color: #4e4f53;
     line-height: 1.7;
@@ -251,7 +251,7 @@ h6 {
   width: 150px;         
   align:left;
   font-size: 13px;
-  font-family: "Nunito", sans-serif;
+  font-family:sans-serif;
   font-weight: 990;
   color: #fff;
   text-align: left;
@@ -262,7 +262,7 @@ h6 {
   width: 400px; 
   align:right;
   font-size: 12px;
-  font-family: "Nunito", sans-serif;
+  font-family:sans-serif;
   font-weight: 400;
   color: #fff;
   text-align: justify;
@@ -293,7 +293,7 @@ h6 {
   width: 150px;         
   align:left;
   font-size: 13px;
-  font-family: "Nunito", sans-serif;
+  font-family:sans-serif;
   font-weight: 990;
   color: #fff;
   text-align: left;
@@ -305,7 +305,7 @@ h6 {
   width: 150px;         
   align:left;
   font-size: 13px;
-  font-family: "Nunito", sans-serif;
+  font-family:sans-serif;
   font-weight: 500;
   color: #fff;
   text-align: left;
@@ -317,7 +317,7 @@ h6 {
   width: 400px; 
   align:right;
   font-size: 12px;
-  font-family: "Nunito", sans-serif;
+  font-family:sans-serif;
   font-weight: 400;
   color: #fff;
   text-align: justify;
@@ -350,7 +350,7 @@ h6 {
   width: 510px;
   align:left;
   font-size: 12px;
-  font-family: "Nunito", sans-serif;
+  font-family:sans-serif;
   font-weight: 700;
   /* color: #35383a; */
   color:#F5F5F6;
@@ -400,7 +400,7 @@ h6 {
   width: 150px;         
   align:left;
   font-size: 13px;
-  font-family: "Nunito", sans-serif;
+  font-family:sans-serif;
   font-weight: 990;
   color: #35383a;
   text-align: left;
@@ -411,7 +411,7 @@ h6 {
   width: 400px; 
   align:right;
   font-size: 12px;
-  font-family: "Nunito", sans-serif;
+  font-family:sans-serif;
   font-weight: 400;
   color: #35383a;
   text-align: justify;
@@ -419,7 +419,7 @@ h6 {
 .systemrequiremetable td{
   border: 1px solid #ebebef;
   font-size: 13.5px;
-    font-family: "Nunito", sans-serif;
+    font-family:sans-serif;
     color:#444444;
     line-height: 1.2;
     text-align: justify;
@@ -443,8 +443,38 @@ h6 {
   display: inline-flex;
   align-items: center;
   color: #4e4f53;
-  font-family: "ABCWhyte Bold", sans-serif;
+  font-family:sans-serif;
 }
+/* .video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; 16:9 aspect ratio */
+/* }
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container video::-webkit-media-controls-start-playback-button {
+  display: none;
+}
+
+.video-container video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+.video-container video::-webkit-media-controls-overlay-play-button {
+  display: none !important;
+} */
+
+
+
+/* Add additional styles as needed */
 
 
 /*--------------------------------------------------------------
@@ -601,7 +631,7 @@ h6 {
   font-size: 18px;
   font-weight: 500;
   color: #012970;
-  font-family: "Poppins", sans-serif;
+  font-family:sans-serif;
 }
 
 .card-title span {
@@ -621,7 +651,7 @@ h6 {
 /* Alerts */
 .alert-heading {
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
+  font-family:sans-serif;
   font-size: 20px;
 }
 
@@ -670,7 +700,7 @@ h6 {
 /* Breadcrumbs */
 .breadcrumb {
   font-size: 14px;
-  font-family: "Nunito", sans-serif;
+  font-family:sans-serif;
   color: #899bbd;
   font-weight: 600;
 }
@@ -738,7 +768,7 @@ h6 {
   font-size: 26px;
   font-weight: 700;
   color: #012970;
-  font-family: "Nunito", sans-serif;
+  font-family:sans-serif;
 }
 .header {
   transition: all 0.5s;
@@ -975,7 +1005,8 @@ h6 {
     scrollbar-color: #aab7cf transparent;
     /*box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);*/
     background-color: #f5f5f6;
-    font-family: "ABCWhyte Bold", sans-serif;
+    font-family:sans-serif;
+    ;
 }
 
 @media (max-width: 1199px) {
@@ -1410,7 +1441,8 @@ h6 {
 }
 
 .iconslist .label {
-  font-family: var(--bs-font-monospace);
+  font-family:sans-serif;
+  /* font-family: var(--bs-font-monospace); */
   display: inline-block;
   width: 100%;
   overflow: hidden;
@@ -1695,7 +1727,7 @@ div.tiles > a, div.tiles > div {
 }
 .tile-title {
   font-size: 22px;
-  font-family: "ABCWhyte Bold", sans-serif;
+  font-family:sans-serif;
   line-height: 1.35;
   font-weight: 500;
   margin-top: 0;
@@ -1704,7 +1736,7 @@ div.tiles > a, div.tiles > div {
 }
 div.tiles .tile-title a {
     color: #00297A;
-    font-family: "ABCWhyte Bold", sans-serif;
+    font-family:sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
@@ -1712,7 +1744,7 @@ div.tiles .tile-title a {
 }
 .tile-subtitle {
     min-height: 44px;
-    font-family: "ABCWhyte Bold", sans-serif;
+    font-family:sans-serif;
     font-size: 15px;
     color: #4f4f53;
     margin-bottom: 48px;
