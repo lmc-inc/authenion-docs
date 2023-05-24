@@ -418,19 +418,38 @@ h6 {
   color:white ;
 }
  
+/*--------------------------------------------------------------
+# navbar Knowledge Base Community Support
+--------------------------------------------------------------*/
+
+/* .navbar .dropdown a{
+  font-size: 15px;
+  align-items: center;
+  padding: 24px 12px;
+  margin: 0;
+  height: 70px;
+  display: inline-flex;
+  color: #4e4f53;
+  font-family:sans-serif;
+  border: none;
+  outline: none;
+  
+} */
+
+									
 .dropdown .dropbtn, .dropdown a {
   font-size: 15px;
-  /* font-weight: 300; */
+  font-family:sans-serif;
   border: none;
   outline: none;
   padding: 24px 12px;
-  margin: 10px;
+  margin: 0;
   height: 70px;
   display: inline-flex;
   align-items: center;
   color: #4e4f53;
-  font-family:sans-serif;
 }
+
 
 /*--------------------------------------------------------------
 # Override some default Bootstrap stylings
