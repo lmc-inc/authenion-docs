@@ -596,7 +596,7 @@
 				<p class="col-para">This guide provides information about getting started with Authenion to deploy a secure and scalable platform to enable single sign-on (SSO) to your Enterprise applications based on the security and industry standards.</p>
 				<a style="padding:32px" name="Introduction"></a>
 				<p class="col-sub-headings">1. Introduction</p>
-				<p class="col-para">Authenion enables single sign-on (SSO) solution for your Enterprise applications like Oracle and other custom applications (Java, PHP, .Net, etc.,) supporting the HTTP Headers authentication mechanism. Authenion integrates with standard OpenID Connect providers in the market such as PingFederate, PingOne, Azure, etc., for authentication related events and on the other end, it connects with the applications to securely transfer the SSO related details to the applications.</p>
+				<p class="col-para">Authenion enables single sign-on (SSO) solution for your Enterprise applications like Oracle proprietary applications and other custom applications (Java, PHP, .Net, etc.,) supporting the HTTP Headers authentication mechanism. Authenion integrates with standard OpenID Connect providers in the market such as PingFederate, PingOne, Azure, etc., for authentication related events and on the other end, it connects with the applications to securely transfer the SSO related details to the applications.</p>
 				<img src="assets/img/authenion-intro.png" alt="" class="col-images-intro"/> 
 
 				<a style="padding:32px" name="Enterprise Deployement Model"></a>
@@ -1545,7 +1545,7 @@
 														  </td>
 														  <td>
 														   <ul>
-															 <li class="li"><p class="col-para-table">ApexVirtualServer&emsp;&emsp;(Virtual Server configured in <a href="#Virtual Servers"> Section 6 </a>)</li>
+															 <li class="li"><p class="col-para-table">AppVirtualServer&emsp;(Virtual Server configured in <a href="#Virtual Servers"> Section 6 </a>)</li>
 														   </ul>
 														 </td>
 													 </tr>
@@ -1556,7 +1556,7 @@
 											 </td>
 											 <td>
 											  <ul>
-												<li class="li"><p class="col-para-table">ApexHeaders &emsp;&emsp;&emsp;&emsp;(Header Mapping configured <a href="#Header Mapping">Section 8</a>)</li>
+												<li class="li"><p class="col-para-table">MyAppHeaders &emsp;(Header Mapping configured <a href="#Header Mapping">Section 8</a>)</li>
 											  </ul>
 											</td>
 										</tr>
@@ -1567,7 +1567,7 @@
 											 </td>
 											 <td>
 											  <ul>
-												<li class="li"><p class="col-para-table">ApexResources     &emsp;&emsp;&emsp;(Protected Resource configured <a href="#Resources">Section 9</a>)</li>
+												<li class="li"><p class="col-para-table">MyAppResources&emsp;(Protected Resource configured <a href="#Resources">Section 9</a>)</li>
 											  </ul>
 											</td>
 										</tr>
@@ -1589,7 +1589,7 @@
 											 </td>
 											 <td>
 											  <ul>
-												<li class="li"><p class="col-para-table">ApexBackend&emsp;&emsp;&emsp;&emsp;(Application Host configured <a href="#Application Hosts">Section 7</a>)</li>
+												<li class="li"><p class="col-para-table">MyAppBackend&emsp;(Application Host configured <a href="#Application Hosts">Section 7</a>)</li>
 											  </ul>
 											</td>
 										</tr>
@@ -1600,7 +1600,7 @@
 											 </td>
 											 <td>
 											  <ul>
-												<li class="li"><p class="col-para-table">https://authenion.example.com:8090&emsp;&emsp;&emsp;(auto populated)
+												<li class="li"><p class="col-para-table">https://authenion.example.com:8090&emsp;&emsp;(auto populated)
 </li>
 											  </ul>
 											</td>
@@ -1658,7 +1658,7 @@
 												 </td>
 													<td>
 													  <ul>
-														<li class="li"><p class="col-para-table">ApexVirtualServer</li>
+														<li class="li"><p class="col-para-table">MyAppVirtualServer</li>
 													   </ul>
 													 </td>
 												   </tr>
@@ -1746,7 +1746,7 @@
 													 </td>
 														<td>
 														  <ul>
-															<li class="li"><p class="col-para-table">ApexBackend </li>
+															<li class="li"><p class="col-para-table">MyAppBackend </li>
 														   </ul>
 														 </td>
 													   </tr>
@@ -1757,7 +1757,7 @@
 															  </td>
 															  <td>
 															   <ul>
-																 <li class="li"><p class="col-para-table">apex.example.com:8443 &emsp;&emsp;(protected application/webserver details)</li>
+																 <li class="li"><p class="col-para-table">MyApp.example.com:8443 &emsp;&emsp;(protected application/webserver details)</li>
 															   </ul>
 															 </td>
 														 </tr>
@@ -1824,7 +1824,7 @@
 													 </td>
 														<td>
 														  <ul>
-															<li class="li"><p class="col-para-table">ApexHeaders</li>
+															<li class="li"><p class="col-para-table">MyAppHeaders</li>
 														   </ul>
 														 </td>
 													   </tr>
@@ -1912,7 +1912,7 @@
 													 </td>
 														<td>
 														  <ul>
-															<li class="li"><p class="col-para-table">ApexResources</li>
+															<li class="li"><p class="col-para-table">MyAppResources</li>
 														   </ul>
 														 </td>
 													   </tr>
@@ -1923,7 +1923,7 @@
 															  </td>
 															  <td>
 															   <ul>
-																 <li class="li"><p class="col-para-table">/apex&emsp;(Resource Path starts with a ‘/’. Multiple resource paths can be added)</Resource> </li>
+																 <li class="li"><p class="col-para-table">/MyApp&emsp;(Resource Path starts with a ‘/’. Multiple resource paths can be added)</Resource> </li>
 															   </ul>
 															 </td>
 														 </tr>
@@ -2174,7 +2174,7 @@ status page also displays your authenion license information. </p>
 
 						<li><p class="col-para">When the registration finishes, the Azure portal displays the Authenion application registration’s overview pane. You can find the Application ID which will also be used as the client_id when we connect Authenion & Azure through OAuth/OIDC.</p></li>
 						<li><p class="col-para">You need to Credential in ‘Certificates & Secrets’ page. This acts as the client credential for the Authenion application, and it allows Authenion to authenticate as itself to Microsoft Azure.</p></li>
-						<img src="assets/img/azure-2.png" alt="" class="col-images-pf"><br />
+						<img src="assets/img/azure-2.png" alt="" class="col-images-pf"><br/>
 						<br />
 
 						<li><p class="col-para">The Authenion client application need to access resources in a web API. You can use the Microsoft Azure platform for authorizing scopes, permissions-based access to fetch the appropriate user data.</p></li>
