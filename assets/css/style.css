@@ -56,7 +56,7 @@ h6 {
   font-size: 36px;
   font-family:'Helvetica', 'sans-serif','system-ui';
   font-weight: 600;
-  color: #00297A;
+  color: black;
 
 }
 
@@ -1052,6 +1052,7 @@ h6 {
 
 .sidebar-nav .nav-heading {
   font-size: 11px;
+  font-family: 'Helvetica', 'sans-serif','system-ui';
   text-transform: uppercase;
   color: #899bbd;
   font-weight: 600;
@@ -1061,6 +1062,7 @@ h6 {
 .sidebar-nav .nav-link {
   display: flex;
   align-items: center;
+  font-family: 'Helvetica', 'sans-serif','system-ui';
   font-size: 15px;
   /* font-weight: 600; */
   color: #F5F5F6;
@@ -1072,6 +1074,7 @@ h6 {
 
 .sidebar-nav .nav-link i {
   font-size: 15px;
+  font-family: 'Helvetica', 'sans-serif','system-ui';
   margin-right: 10px;
   color: #6a6a6a;
 }
@@ -1113,6 +1116,7 @@ h6 {
     display: flex;
     align-items: center;
     font-size: 17px;
+    font-family: 'Helvetica', 'sans-serif','system-ui';
     /* font-weight: 600; */
     color: #F5F5F6;
     transition: 0.3;
@@ -1122,6 +1126,7 @@ h6 {
 
 .sidebar-nav .nav-link-sub i {
   font-size: 15px;
+  font-family: 'Helvetica', 'sans-serif','system-ui';
   margin-right: 10px;
   color: #6a6a6a;
 }
@@ -1708,7 +1713,7 @@ div.tiles > a, div.tiles > div {
   height: 100px;
 }
 .tile-title {
-  font-size: 22px;
+  font-size: 21px;
   font-family:'Helvetica', 'sans-serif','system-ui';
   line-height: 1.35;
   font-weight: 500;
