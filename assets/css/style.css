@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   background: #FFF;
   /* color: #444444; */
   color:#031128;
@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   font-size: 28px;
   font-weight: 990;
 }
@@ -54,9 +54,9 @@ h6 {
 .pagetitle {
   margin-bottom: 10px;
   font-size: 36px;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   font-weight: 600;
-  color: black;
+  color: #00297A;
 
 }
 
@@ -108,17 +108,25 @@ h6 {
 --------------------------------------------------------------*/
 /* headers, paragraphs, bullet points */
 .col-para {
-    font-family:sans-serif;
-    font-size: 15px;
+    font-family: 'Helvetica', 'sans-serif','system-ui';
+    font-size: 14px;
     color: #4e4f53;
     line-height: 1.7;
+    text-align: justify;
+}
+
+.col-para-table {
+    font-family: 'Helvetica', 'sans-serif','system-ui';
+    font-size: 14px;
+    color: #4e4f53;
+    line-height: 1.4;
     text-align: justify;
 }
 
 
 .col-sub-headings {
     font-size: 18px;
-    font-family:sans-serif;
+    font-family:'Helvetica', 'sans-serif','system-ui';
     font-weight: 700;
     color: #202124;
     line-height: 1.7;
@@ -126,7 +134,7 @@ h6 {
 }
 
 .col-sub-headings-sub {
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
     font-size: 16px;
     font-weight: 400;
     color: #2d2e32;
@@ -237,7 +245,7 @@ h6 {
   width: 150px;         
   align:left;
   font-size: 13px;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   font-weight: 990;
   color: #fff;
   text-align: left;
@@ -248,7 +256,7 @@ h6 {
   width: 400px; 
   align:right;
   font-size: 12px;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   font-weight: 400;
   color: #fff;
   text-align: justify;
@@ -279,7 +287,7 @@ h6 {
   width: 150px;         
   align:left;
   font-size: 13px;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   font-weight: 990;
   color: #fff;
   text-align: left;
@@ -291,7 +299,7 @@ h6 {
   width: 150px;         
   align:left;
   font-size: 13px;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   font-weight: 500;
   color: #fff;
   text-align: left;
@@ -303,7 +311,7 @@ h6 {
   width: 400px; 
   align:right;
   font-size: 12px;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   font-weight: 400;
   color: #fff;
   text-align: justify;
@@ -336,7 +344,7 @@ h6 {
   width: 510px;
   align:left;
   font-size: 12px;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   font-weight: 700;
   /* color: #35383a; */
   color:#F5F5F6;
@@ -386,7 +394,7 @@ h6 {
   width: 150px;         
   align:left;
   font-size: 13px;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   font-weight: 990;
   color: #35383a;
   text-align: left;
@@ -397,7 +405,7 @@ h6 {
   width: 400px; 
   align:right;
   font-size: 12px;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   font-weight: 400;
   color: #35383a;
   text-align: justify;
@@ -405,7 +413,7 @@ h6 {
 .systemrequiremetable td{
   border: 1px solid #ebebef;
   font-size: 13.5px;
-    font-family:sans-serif;
+    font-family:'Helvetica', 'sans-serif','system-ui';
     color:#444444;
     line-height: 1.2;
     text-align: justify;
@@ -430,7 +438,7 @@ h6 {
   height: 70px;
   display: inline-flex;
   color: #4e4f53;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   border: none;
   outline: none;
   
@@ -439,7 +447,7 @@ h6 {
 									
 .dropdown .dropbtn, .dropdown a {
   font-size: 15px;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   border: none;
   outline: none;
   padding: 24px 12px;
@@ -605,7 +613,7 @@ h6 {
   font-size: 18px;
   font-weight: 500;
   color: #012970;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
 }
 
 .card-title span {
@@ -625,7 +633,7 @@ h6 {
 /* Alerts */
 .alert-heading {
   font-weight: 500;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   font-size: 20px;
 }
 
@@ -674,7 +682,7 @@ h6 {
 /* Breadcrumbs */
 .breadcrumb {
   font-size: 14px;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   color: #899bbd;
   font-weight: 600;
 }
@@ -742,7 +750,7 @@ h6 {
   font-size: 26px;
   font-weight: 700;
   color: #012970;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
 }
 .header {
   transition: all 0.5s;
@@ -979,7 +987,7 @@ h6 {
     scrollbar-color: #aab7cf transparent;
     /*box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);*/
     background-color: #f5f5f6;
-    font-family:sans-serif;
+    font-family:'Helvetica', 'sans-serif','system-ui';
     ;
 }
 
@@ -1053,7 +1061,7 @@ h6 {
 .sidebar-nav .nav-link {
   display: flex;
   align-items: center;
-  font-size: 17px;
+  font-size: 15px;
   /* font-weight: 600; */
   color: #F5F5F6;
   transition: 0.3;
@@ -1159,7 +1167,7 @@ h6 {
 .sidebar-nav .nav-content a {
   display: flex;
   align-items: center;
-  font-size: 15px;
+  font-size: 14px;
   /* font-weight: 600; */
   color: #6a6a6a;
   transition: 0.3;
@@ -1415,7 +1423,7 @@ h6 {
 }
 
 .iconslist .label {
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   /* font-family: var(--bs-font-monospace); */
   display: inline-block;
   width: 100%;
@@ -1701,7 +1709,7 @@ div.tiles > a, div.tiles > div {
 }
 .tile-title {
   font-size: 22px;
-  font-family:sans-serif;
+  font-family:'Helvetica', 'sans-serif','system-ui';
   line-height: 1.35;
   font-weight: 500;
   margin-top: 0;
@@ -1710,7 +1718,7 @@ div.tiles > a, div.tiles > div {
 }
 div.tiles .tile-title a {
     color: #00297A;
-    font-family:sans-serif;
+    font-family:'Helvetica', 'sans-serif','system-ui';
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
@@ -1718,8 +1726,8 @@ div.tiles .tile-title a {
 }
 .tile-subtitle {
     min-height: 44px;
-    font-family:sans-serif;
-    font-size: 15px;
+    font-family:'Helvetica', 'sans-serif','system-ui';
+    font-size: 14px;
     color: #4f4f53;
     margin-bottom: 48px;
     /* font-weight: unset; */
