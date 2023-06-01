@@ -484,7 +484,7 @@
 			</div>
 			
 			<div>
-				<a href="#Configure your Identity Provider">
+				<a href="#Connect with your Identity Provider">
 				<p class="tile-title" data-test="tile">
 					<b>Configure your Identity Provider</b> 
 				</p>
@@ -533,7 +533,7 @@
 						<li><p class="col-para">AQ4-2022-1001: Multiple occurances of SSO transaction in authenion-engine logs.</a></p></li>
 						<li><p class="col-para">AQ1-2023-1001: Authenion engine log recycling and log file size limit to 10MB.</p></li>
 						<li><p class="col-para">AQ1-2023-1002: REST API calls authorization for Authenion agent.</p></li>
-						<li><p class="col-para">AQ1-2023-1003: Cookie is configured with SameSite attribute</p></li>
+						<li><p class="col-para">AQ1-2023-1003: Cookie is configured with SameSite attribute.</p></li>
 						<li><p class="col-para">AQ2-2023-1006: Multiple sync requests to the same Agent APIs.</p></li>
 						<li><p class="col-para">AQ2-2023-1008: Header Mapping page shows blank screen when there is no data present in OIDC claims.</p></li>
 					</ul>
@@ -615,9 +615,9 @@
 				<p class="col-para">The main functionalities are:</p>
 				<!-- <ul class="col-para"> -->
 				<ul style="margin-left:30px;" class="col-para">
-					<li><p class="col-para" style="background-color:#f5f5f6">Use Authenion to protect your Enterprise applications</p></li>
-					<li><p class="col-para" style="background-color:#f5f5f6">Connect Authenion with external OpenID Connect providers for authentication</p></li>
-					<li><p class="col-para" style="background-color:#f5f5f6">You can manage sessions for the protected applications and use OAuth scopes to send user data to applications</p></li>
+					<li><p class="col-para" style="background-color:#f5f5f6">Use Authenion to protect your Enterprise applications.</p></li>
+					<li><p class="col-para" style="background-color:#f5f5f6">Connect Authenion with external OpenID Connect providers for authentication.</p></li>
+					<li><p class="col-para" style="background-color:#f5f5f6">You can manage sessions for the protected applications and use OAuth scopes to send user data to applications.</p></li>
 				</ul>
 
 
@@ -635,12 +635,12 @@
 
 				<p class="col-sub-headings-sub"><b>Processing Steps</b></p>
 				<ol class="col-para">
-					<li><p class="col-para">&nbsp;User request access for the Application</p></li>
-					<li><p class="col-para">&nbsp;Authenion checks for the user session, and it redirects the user’s request to IdP for authentication</p></li>
-					<li><p class="col-para">&nbsp;IdP authenticates the user using the adapters and against a data store configured to it</p></li>
-					<li><p class="col-para">&nbsp;IdP retrieves the necessary attributes from its configured data store and sends it to Authenion for further processing</p></li>
-					<li><p class="col-para">&nbsp;Authenion will receive the authenticated user’s attributes and parse the attributes into HTTP-Headers and send it to the target application</p></li>
-					<li><p class="col-para">&nbsp;Applications will retrieve & validate the HTTP-Headers from Authenion and grant access to users based on their roles and responsibilities</p></li>
+					<li><p class="col-para">&nbsp;User request access for the Application.</p></li>
+					<li><p class="col-para">&nbsp;Authenion checks for the user session, and it redirects the user’s request to IdP for authentication.</p></li>
+					<li><p class="col-para">&nbsp;IdP authenticates the user using the adapters and against a data store configured to it.</p></li>
+					<li><p class="col-para">&nbsp;IdP retrieves the necessary attributes from its configured data store and sends it to Authenion for further processing.</p></li>
+					<li><p class="col-para">&nbsp;Authenion will receive the authenticated user’s attributes and parse the attributes into HTTP-Headers and send it to the target application.</p></li>
+					<li><p class="col-para">&nbsp;Applications will retrieve & validate the HTTP-Headers from Authenion and grant access to users based on their roles and responsibilities.</p></li>
 				</ol>
 
 
@@ -931,9 +931,9 @@
                      <p class="col-sub-headings">1. Pre-requisites</p>
 					<!-- <ul class="col-para"> -->
 						<ul style="margin-left:30px;" class="col-para">
-						<li><p class="col-para" style="background-color:#f5f5f6">Ensure the System Requirements are met</p></li>
-						<li><p class="col-para" style="background-color:#f5f5f6">Install a supported Java software with the JAVA_HOME environment variable set</p></li>
-						<li><p class="col-para" style="background-color:#f5f5f6">The JAVA_HOME variable must be set representing the location of your Java installation</p></li>
+						<li><p class="col-para" style="background-color:#f5f5f6">Ensure the System Requirements are met.</p></li>
+						<li><p class="col-para" style="background-color:#f5f5f6">Install a supported Java software with the JAVA_HOME environment variable set.</p></li>
+						<li><p class="col-para" style="background-color:#f5f5f6">The JAVA_HOME variable must be set representing the location of your Java installation.</p></li>
 					
 					</ul>
 
@@ -1108,7 +1108,7 @@
 					<p class="col-para">The following steps will guide you to import the Identity provider’s certificate (PingFederate) into the Authenion trust store.</p>
 					<ol class="col-para">
 						<li><p class="col-para">Export the SSL Certificate from the Identity Provider (PingFederate, PingOne, AzureAD, etc.,) and place the certificate anywhere inside “&lt;authenion_install_dir&gt;” in the Authenion server.<p></li>
-						<li><p class="col-para">Run the following command in the Authenion server to install the Identity Provider’s certificate<p></li>
+						<li><p class="col-para">Run the following command in the Authenion server to install the Identity Provider’s certificate.<p></li>
 					</ol>
 					<!-- TABLE3 -->
 					<div class="div-table3">
@@ -1137,7 +1137,7 @@
 						<br>
 						<li><p class="col-para">Copy the .crt & .key extracted in the previous step and place it in “&lt;authenion_install_dir&gt;/server/conf/certs” directory.<p></li>
 						<li><p class="col-para">The above steps can be repeated during the Authenion certificate renewal process.<p></li>
-							<p class="col-para"><i> Note: This setup is optional. The Certificates can also be installed on a load-balancer servers</i></p>	
+							<p class="col-para"><i> Note: This setup is optional. The Certificates can also be installed on a load-balancer servers.</i></p>	
 					</ol>
 					<br>
 				</div> <!-- ### INSTALLATION ### -->
@@ -1146,7 +1146,7 @@
 					<!-- <a name="install-authenion section"></a> -->
 					<a style="padding: 35px" name="Console Navigation & Configurations"></a>
 					<h4 style="font-family:sans-serif; font-size:26px; font-weight: 600; color: #00297A">Console Navigation & Configurations</h4>
-					<p class="col-para">This section describes the UI of Authenion (Admin Console) and its navigation and provides steps for accessing and configuring it. Access the Authenion UI by clicking <a href="https://launch.authenion.com">Administrative Consle</a></p>
+					<p class="col-para">This section describes the UI of Authenion (Admin Console) and its navigation and provides steps for accessing and configuring it. Access the Authenion UI by clicking <a href="https://launch.authenion.com">Administrative Console</a>.</p>
 
 
 					<a style="padding: 35px" name="Applications / Dashboard page"></a>
@@ -1167,7 +1167,7 @@
 							<p class="col-para">The Import page has two operations:</p>
 							<ol class="col-para">
 								<li><p class="col-para" style="background-color:#f5f5f6"><u>Fetch Function:</u>&emsp;The Fetch function is used to get the data from your Authenion Server. It automatically retrieves all the Authenion config data and makes it available in the Authenion UI. It uses the Authenion Instance plugin running in the Authenion server.<p></li>
-								<li><p class="col-para" style="background-color:#f5f5f6"><u>Upload:</u>&emsp;The Upload operation is used to load the data from your local file system into the UI manually through any previously extracted configs.<p></li>
+								<li><p class="col-para" style="background-color:#f5f5f6"><u>Upload Operation:</u>&emsp;The Upload operation is used to load the data from your local file system into the UI manually through any previously extracted configs.<p></li>
 							</ol>
 							
 
@@ -1456,7 +1456,7 @@
 							        <p class="col-para">The Sidebar Menu has the following Configurations</p>
 							         <ul style="margin-left:30px;" class="col-para">
 								      <li><p class="col-para">Applications</p></li>
-								      <li><p class="col-para">Virtal Servers</p></li>
+								      <li><p class="col-para">Virtual Servers</p></li>
 								      <li><p class="col-para">Application Hosts</p></li>
 								      <li><p class="col-para">Header Mappings</p></li>
 								      <li><p class="col-para">Resources</p></li>
@@ -1495,7 +1495,7 @@
 								      <li><p class="col-para">Application Hosts 
 										                                  <a href="#Application Hosts">(Section 7)</a>
 								            </p></li>
-								      <li><p class="col-para">Header Mapping 
+								      <li><p class="col-para">Header Mappings 
 										                                   <a href="#Header Mapping">(Section 8)</a>
 											</p></li>
 								      <li><p class="col-para">Resources
@@ -1530,7 +1530,7 @@
 									   <!--Application name -->  
 											  <tr>
 												  <td>
-													  <p class="col-para-table">Application name </p>
+													  <p class="col-para-table">Application Name </p>
 												 </td>
 													<td>
 													  <ul>
@@ -1552,7 +1552,7 @@
 										  <!--Header Mapping  -->  
 										  <tr>
 											<td>
-												<p class="col-para-table">Header Mapping  </p>
+												<p class="col-para-table">Header Mappings  </p>
 											 </td>
 											 <td>
 											  <ul>
@@ -1585,7 +1585,7 @@
 										<!--Application Host -->  
 										<tr>
 											<td>
-												<p class="col-para-table">Application Host </p>
+												<p class="col-para-table">Application Hosts </p>
 											 </td>
 											 <td>
 											  <ul>
@@ -1717,7 +1717,7 @@
 										<ol class="col-para">
 											<li><p class="col-para">Click Application Hosts in the sidebar menu. </p></li>
 											<li><p class="col-para">Click the <b>“+New Application Host”</b> button in the Application Hosts page. </p></li>
-											<li><p class="col-para">Enter the following details to create an Application Host for your target application server  </p></li>
+											<li><p class="col-para">Enter the following details to create an Application Host for your target application server.  </p></li>
 											<p class="col-para"><b>For example:</b></p>
 										</p>
 										<!-- table ### -->
@@ -1989,12 +1989,12 @@ status page also displays your authenion license information. </p>
 					<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>Pre-requisites</u></b></p>
 					<!-- <ul class="col-para"> -->
 						<ul style="margin-left:30px;" class="col-para">
-						<li><p class="col-para" style="background-color:#f5f5f6">PingFederate application with IdP and OAuth/OIDC roles enabled</p></li>
-						<li><p class="col-para" style="background-color:#f5f5f6">Authorization server setup in PingFederate OAuth server setting</p></li>
-						<li><p class="col-para" style="background-color:#f5f5f6">A configured ping IdP adapter and/or authentication policy contract policy if required for authentication and grant mapping</p></li>
+						<li><p class="col-para" style="background-color:#f5f5f6">PingFederate application with IdP and OAuth/OIDC roles enabled.</p></li>
+						<li><p class="col-para" style="background-color:#f5f5f6">Authorization server setup in PingFederate OAuth server setting.</p></li>
+						<li><p class="col-para" style="background-color:#f5f5f6">A configured ping IdP adapter and/or authentication policy contract policy if required for authentication and grant mapping.</p></li>
 					</ul>
 					<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>OAuth / OIDC Configurations</u></b></p>
-					<p class="col-para">&emsp;This setup will manage the configurations related to the OAuth client</p>
+					<p class="col-para">&emsp;This setup will manage the configurations related to the OAuth client.</p>
 					<ol class="col-para">
 						<li><p class="col-para">Create a new Client in PingFederate for Authenion.</p></li>
 
@@ -2142,7 +2142,7 @@ status page also displays your authenion license information. </p>
 							<li>email</li>
 						</ul>
 						
-						<p class="col-para">The above attributes can be mapped with their respective Scopes in the next page. For example, <b>openid scope</b></p>
+						<p class="col-para">The above attributes can be mapped with their respective Scopes in the next page. For example, <b>openid scope</b>.</p>
 						
 
 						<li><p class="col-para">Replicate the configurations if PingFederate is configured in a cluster.</p></li>
@@ -2158,9 +2158,9 @@ status page also displays your authenion license information. </p>
 					<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>Pre-requisites</u></b></p>
 					<!-- <ul class="col-para"> -->
 						<ul style="margin-left:30px;" class="col-para">
-						<li><p class="col-para" style="background-color:#f5f5f6">Azure account with valid subscription</p></li>
-						<li><p class="col-para" style="background-color:#f5f5f6">App registration</p></li>
-						<li><p class="col-para" style="background-color:#f5f5f6">Client Secrets and Claim mappings</p></li>
+						<li><p class="col-para" style="background-color:#f5f5f6">Azure account with valid subscription.</p></li>
+						<li><p class="col-para" style="background-color:#f5f5f6">App registration.</p></li>
+						<li><p class="col-para" style="background-color:#f5f5f6">Client Secrets and Claim mappings.</p></li>
 					</ul>
 					<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>Azure Configurations</u></b></p>
 					<p class="col-para">The following will register Authenion as an OAuth/OIDC client application in Microsoft Azure & establishes a unidirectional trust relationship between Authenion and Microsoft identity platform.</p>
