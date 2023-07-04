@@ -516,40 +516,42 @@
 				<p class="col-para">This guide provides information about getting started with Authenion to deploy a secure and scalable platform to enable single sign-on (SSO) to your Enterprise applications based on the security and industry standards.</p>
 				<a style="padding:32px" name="Introduction"></a>
 				<p class="col-sub-headings">1. Introduction</p>
-				<p class="col-para">Authenion enables single sign-on (SSO) solution for your Enterprise applications and other custom applications like Java, PHP, .Net, etc., supporting HTTP Headers as their authentication mechanism. Authenion integrates with standard OpenID Connect providers in the market such as PingFederate, PingOne, Azure, etc., for authentication related events and on the other end, it connects with the applications to securely transfer the SSO related details to the applications.</p>
-				<img src="assets/img/authenion-intro.png" alt="" class="col-images-intro"/> 
+				<p class="col-para">‘Authenion’ is one of LikeMinds’ major products delivering a secure Single Sign-On (SSO) solution for Enterprise applications like Oracle and other custom applications (java, php, .net, etc.,) that supports HTTP headers as their authentication mechanism. Authenion integrates with standard OpenID Connect providers in the market for authentication related events.</p>
+				<p class="col-para">Authenion links with market-standard OpenID Connect providers such as PingFederate, PingOne, Azure, Okta, Oracle IDCS and it connects with applications to securely send SSO-related information to the applications. Authenion enables secure access to your Enterprise applications and custom applications either on-premises or cloud. Authenion complements any other common industry standard token provider via OAuth2.0 & OpenID Connect-2.0 protocols.</p>
+				<img src="assets/img/authenion-intro.png" alt="" class="col-images-intro" />
 
 				<a style="padding:32px" name="Enterprise Deployement Model"></a>
 				<p class="col-sub-headings">2. Enterprise Deployment Model</p>
-				<p class="col-para">Authenion supports a Gateway architecture for its protected applications. In this model, the traffic is initially directed to Authenion. Authenion grants or denies access by redirecting the traffic to Authentication providers.</p>
+				<p class="col-para">Authenion & your Identity Provider enable your Enterprise/Custom applications and its users experience a secure SSO solution by enforcing authentication standards to it. Together, they help achieve a seamless SSO login feature to its protected applications.</p>
+				<p class="col-para">Authenion supports a Gateway architecture for its protected applications. In this model, the traffic is initially directed to Authenion. Authenion grants or denies access based on the application resources protection type.</p>
 				<!-- <ul class="col-para"> -->
 				<ul style="margin-left:30px;" class="col-para">
-					<li><p class="col-para">This deployment model can be set up quickly without disrupting the applications. The Authenion will not be installed on separate servers from the application web servers.</p></li>
-					<li><p class="col-para">With the fewer component architecture, it is easy to identify issues and troubleshoot. All transactions are logged, and it is easier to view any specific events.</p></li>
+					<li><p class="col-para">This deployment model can be set up quickly without disrupting the applications. Authenion will be installed on separate servers from the application web servers.</p></li>
+					<li><p class="col-para">With the fewer components architecture, it is easy to manage. All transactions are logged, and makes it easier to view any specific events.</p></li>
 				</ul>
 				<img src="assets/img/deploymentmodel.png" alt="" class="col-images-intro">
 
 				<a style="padding:32px" name="What can I do with Authenion"></a>
 				<p class="col-sub-headings">3. What can I do with Authenion?</p>
-				<p class="col-para">Authenion is a light-weight product that allows you to enable a secure Single Sign-On solution for your Enterprise applications.</p>
+				<!--<p class="col-para">Authenion is a light-weight product that allows you to enable a secure Single Sign-On solution for your Enterprise applications.</p>-->
 				<p class="col-para">The main functionalities are:</p>
 				<!-- <ul class="col-para"> -->
 				<ul style="margin-left:30px;" class="col-para">
 					<li><p class="col-para" style="background-color:#f5f5f6">Use Authenion to protect your Enterprise applications.</p></li>
-					<li><p class="col-para" style="background-color:#f5f5f6">Connect Authenion with external OpenID Connect providers for authentication.</p></li>
-					<li><p class="col-para" style="background-color:#f5f5f6">You can manage sessions for the protected applications and use OAuth scopes to send user data to applications.</p></li>
+					<li><p class="col-para" style="background-color:#f5f5f6">Connect Authenion with external OpenID Connect providers such as Microsoft Azure AD, PingFederate, PingOne, Oracle IDCS, Okta, etc., for authentication.</p></li>
+					<li><p class="col-para" style="background-color:#f5f5f6">You can manage user sessions for the protected applications and use OAuth scopes to retrieve user attributes from your Identity Provider & send it to protected applications.</p></li>
 				</ul>
 
 
 				<a style="padding:32px" name="How does Authenion work"></a>
 				<p class="col-sub-headings">4. How does Authenion work?</p>
-				<p class="col-para">Authenion acts as the gateway to your Applications and capture user requests & delegate it to your Identity Provider (IdP) for authentication.</p>
+				<p class="col-para">Authenion acts as the gateway to your Enterprise & custom applications and capture user requests & delegate it to your Identity Provider (IdP) for authentication.</p>
 
 				<p class="col-sub-headings-sub"><b>Session Initiation</b></p>
 				<!-- <ul class="col-para"> -->
 				<ul style="margin-left:30px;" class="col-para">
 					<li><p class="col-para" style="background-color:#f5f5f6">Using advanced & secured integration standards, Authenion securely connects with your Identity Provider using OAuth/OIDC protocols. This allows Authenion protected application requests to be delegated to your centralized Identity Provider in your organization.</p></li>
-					<li><p class="col-para" style="background-color:#f5f5f6">The Identity Provider will be responsible for challenging the user requests with strong authentication schemes. The Identity Provider will also be responsible for collecting the user attributes and send it to Authenion through OAuth/OIDC tokens for further processing such as session establishment & granting user-access. </p></li>
+					<li><p class="col-para" style="background-color:#f5f5f6">The Identity Provider will be responsible for challenging the user requests with strong authentication schemes. The Identity Provider will also be responsible for collecting the user attributes and send it to Authenion through tokens for further processing such as session establishment & granting user-access. </p></li>
 				</ul>
 				<!--<img src="assets/img/sessioninitiation.png" alt="" class="col-images-sessionmgmt"><br>-->
 
@@ -600,7 +602,7 @@
 	</div> -->
 
 
-				<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6" >
+				<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 
 					<tr>
 						<th class="symcomponent">Authenion Configurations&nbsp;</th>
@@ -1073,7 +1075,7 @@
 					<p class="col-sub-headings">1. Dashboard / Applications </p>
 					<p class="col-para">The  Dashboard / Applications page lets you view, create, or modify the applications we protect. The total protected applications will be displayed in the Dashboard Application’s tab. It also lets you access the OIDC Configuration page next to the Applications tab and access the sidebar menu for other required configurations.</p>
 
-					<img  src="assets/img/Dashboard.png" alt="" class="col-images-intro" /> 
+					<img  src="assets/img/Dashboard.png" alt="" style="width:100%;cursor:pointer" onclick="onClick(this)"class="col-images-intro" /> 
 
 						
 
