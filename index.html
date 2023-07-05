@@ -518,8 +518,16 @@
 				<p class="col-sub-headings">1. Introduction</p>
 				<p class="col-para">‘Authenion’ is one of LikeMinds’ major products delivering a secure Single Sign-On (SSO) solution for Enterprise applications like Oracle and other custom applications (java, php, .net, etc.,) that supports HTTP headers as their authentication mechanism. Authenion integrates with standard OpenID Connect providers in the market for authentication related events.</p>
 				<p class="col-para">Authenion links with market-standard OpenID Connect providers such as PingFederate, PingOne, Azure, Okta, Oracle IDCS and it connects with applications to securely send SSO-related information to the applications. Authenion enables secure access to your Enterprise applications and custom applications either on-premises or cloud. Authenion complements any other common industry standard token provider via OAuth2.0 & OpenID Connect-2.0 protocols.</p>
-				<img src="assets/img/authenion-intro.png" alt="" class="col-images-intro" />
+				<!-- <img src="assets/img/authenion-intro.png" alt="" class="col-images-intro" /> -->
 
+				<!-- Image with onclick event -->
+<img src="assets/img/authenion-intro.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer25', 'modalImage25')" class="col-images-intro" />
+
+<!-- Modal container -->
+<div id="modalContainer25" class="modal-container" onclick="closeModal('modalContainer25')">
+    <img id="modalImage25" class="modal-image" src="assets/img/authenion-intro.png" alt="">
+</div>
+<br>
 				<a style="padding:32px" name="Enterprise Deployement Model"></a>
 				<p class="col-sub-headings">2. Enterprise Deployment Model</p>
 				<p class="col-para">Authenion & your Identity Provider enable your Enterprise/Custom applications and its users experience a secure SSO solution by enforcing authentication standards to it. Together, they help achieve a seamless SSO login feature to its protected applications.</p>
@@ -529,8 +537,15 @@
 					<li><p class="col-para">This deployment model can be set up quickly without disrupting the applications. Authenion will be installed on separate servers from the application web servers.</p></li>
 					<li><p class="col-para">With the fewer components architecture, it is easy to manage. All transactions are logged, and makes it easier to view any specific events.</p></li>
 				</ul>
-				<img src="assets/img/deploymentmodel.png" alt="" class="col-images-intro">
+				<!-- <img src="assets/img/deploymentmodel.png" alt="" class="col-images-intro"> -->
+<!-- Image with onclick event -->
+<img src="assets/img/deploymentmodel.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer26', 'modalImage26')" class="col-images-intro" />
 
+<!-- Modal container -->
+<div id="modalContainer26" class="modal-container" onclick="closeModal('modalContainer26')">
+    <img id="modalImage26" class="modal-image" src="assets/img/deploymentmodel.png" alt="">
+</div>
+<br>
 				<a style="padding:32px" name="What can I do with Authenion"></a>
 				<p class="col-sub-headings">3. What can I do with Authenion?</p>
 				<!--<p class="col-para">Authenion is a light-weight product that allows you to enable a secure Single Sign-On solution for your Enterprise applications.</p>-->
@@ -1075,16 +1090,43 @@
 					<p class="col-sub-headings">1. Dashboard / Applications </p>
 					<p class="col-para">The  Dashboard / Applications page lets you view, create, or modify the applications we protect. The total protected applications will be displayed in the Dashboard Application’s tab. It also lets you access the OIDC Configuration page next to the Applications tab and access the sidebar menu for other required configurations.</p>
 
-					<img  src="assets/img/Dashboard.png" alt="" style="width:100%;cursor:pointer" onclick="onClick(this)"class="col-images-intro" /> 
+					<!-- Image 1 with onclick event -->
+                   <img src="assets/img/Dashboard.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer1', 'modalImage1')" class="col-images-intro" />
 
-						
+                     <!-- Modal container for Image 1 -->
+                         <div id="modalContainer1" class="modal-container" onclick="closeModal('modalContainer1')">
+                            <img id="modalImage1" class="modal-image" src="assets/img/Dashboard.png" alt="">
+                          </div>
+						  <br>
+                     <!-- Add any other content you want to display on the page here -->
 
-
+                     <script>
+						function openModal(containerId, imageId) {
+							var modalContainer = document.getElementById(containerId);
+							modalContainer.style.display = "block";
+						}
+					
+						function closeModal(containerId) {
+							var modalContainer = document.getElementById(containerId);
+							modalContainer.style.display = "none";
+						}
+					</script>
+					  
+					  
 						<a style="padding: 35px" name="Getting config-data into the UI"></a>
 						<p class="col-sub-headings">2. Import - Getting config-data into the UI</p>
 						<p class="col-para">The Import button in the Dashboard page lets you get the data into the UI.</p>
 
-						  <img  src="assets/img/import1.png" alt="" class="col-images-intro" /> <br>
+						  <!-- <img  src="assets/img/import1.png" alt="" class="col-images-intro" /> <br> -->
+
+						 <!-- Image 2 with onclick event -->
+                 <img src="assets/img/import1.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer2', 'modalImage2')" class="col-images-intro" />
+
+                         <!-- Modal container for Image 2 -->
+                     <div id="modalContainer2" class="modal-container" onclick="closeModal('modalContainer2')">
+                        <img id="modalImage2" class="modal-image" src="assets/img/import1.png" alt="">
+                    </div>
+					<br>
 
 							<p class="col-para">The Import page has two operations:</p>
 							<ol class="col-para">
@@ -1108,7 +1150,16 @@
 							<p class="col-sub-headings">3. OIDC Configuration</p>
 							<p class="col-para">The OIDC configuration page allows you to connect with your Identity Provider / OIDC Token Provider. This configuration includes details such as Token Providers OAuth/OIDC endpoints, Authenion Client registration details, Claims to get from the Token Provider. It includes additional configuration for Authenion such as Authenion Instance, Domain & Session duration configurations.</p>
 
-							<img src="assets/img/OIDC Configuration.png" alt="" class="col-images-intro" /> <br>
+							<!-- <img src="assets/img/OIDC Configuration.png" alt="" class="col-images-intro" /> <br> -->
+
+							<!-- Image with onclick event -->
+                       <img src="assets/img/OIDC Configuration.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer3', 'modalImage3')" class="col-images-intro" />
+
+                 <!-- Modal container -->
+                   <div id="modalContainer3" class="modal-container" onclick="closeModal('modalContainer3')">
+                        <img id="modalImage3" class="modal-image" src="assets/img/OIDC Configuration.png" alt="">
+                         </div>
+                          <br>
 
 								<p class="col-sub-headings-sub"><b>Adding OIDC Configuration</b></p>
 								<ol class="col-para">
@@ -1370,7 +1421,15 @@
 							
 				                </div> <!-- ### UI & NAVIGATION ### -->
 								<br>
-								<img src="assets/img/OIDCConfiguration1.png" alt="" class="col-images-intro" /> <br>
+								<!-- <img src="assets/img/OIDCConfiguration1.png" alt="" class="col-images-intro" /> <br> -->
+								<!-- Image with onclick event -->
+                          <img src="assets/img/OIDCConfiguration1.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer4', 'modalImage4')" class="col-images-intro" />
+
+                              <!-- Modal container -->
+                        <div id="modalContainer4" class="modal-container" onclick="closeModal('modalContainer4')">
+                          <img id="modalImage4" class="modal-image" src="assets/img/OIDCConfiguration1.png" alt="">
+                         </div>
+                           <br>
 				             <!-- Sidebar-->
 							 <div>
 								<a style="padding: 35px" name="Sidebar"></a>
@@ -1387,8 +1446,16 @@
 								      <li><p class="col-para">Export</p></li>
 							       </ul>
 							</div>
-							 <img style="margin-left:5px" src="assets/img/sidebar.png" alt="" class="col-images-intro" /> <br>
+							 <!-- <img style="margin-left:5px" src="assets/img/sidebar.png" alt="" class="col-images-intro" /> <br> -->
 								
+               <!-- Image with onclick event -->
+           <img src="assets/img/sidebar.png" alt="" style="width:40%;height:40%;cursor:pointer"  onclick="openModal('modalContainer5', 'modalImage5')" class="col-images-intro" />
+
+                   <!-- Modal container -->
+                   <div id="modalContainer5" class="modal-container" onclick="closeModal('modalContainer5')">
+                   <img id="modalImage5" class="modal-image" src="assets/img/sidebar.png" alt="">
+                    </div>
+                     <br>
 
 							<!-- Applications -->
 							<div>
@@ -1399,7 +1466,15 @@
 										Mappings & corresponds to a single Application Host (target application/backend server). Applications in Authenion can
 										be configured with both protected and unprotected (excluded) resources. Authentication requirements will be set for the
 										protected resources in an application.</p>
-										<img src="assets/img/Dashboard.png" alt="" class="col-images-intro" /> <br>
+										<!-- <img src="assets/img/Dashboard.png" alt="" class="col-images-intro" /> <br> -->
+										<!-- Image with onclick event -->
+                      <img src="assets/img/Dashboard.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer7', 'modalImage7')" class="col-images-intro" />
+
+                      <!-- Modal container -->
+                      <div id="modalContainer7" class="modal-container" onclick="closeModal('modalContainer7')">
+                         <img id="modalImage7" class="modal-image" src="assets/img/Dashboard.png" alt="">
+                         </div>
+                          <br>
 										<!-- <h6 style="font-size: 15px;color: #4e4f50;"> -->
 											<h6 class="col-sub-headings">
 											Adding an Application
@@ -1534,9 +1609,25 @@
 							                <p>Authenion Dashboard shows the number of Applications configured. </p>
 							            <img src="assets/img/NewApplication1.png" alt="" class="col-images-intro" />  -->
 								</div>
-								<img src="assets/img/NewApplication.png" alt="" class="col-images-intro" /> <br>
+								<!-- <img src="assets/img/NewApplication.png" alt="" class="col-images-intro" /> <br> -->
+								<!-- Image with onclick event -->
+                        <img src="assets/img/NewApplication.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer8', 'modalImage8')" class="col-images-intro" />
+
+                           <!-- Modal container -->
+                     <div id="modalContainer8" class="modal-container" onclick="closeModal('modalContainer8')">
+                     <img id="modalImage8" class="modal-image" src="assets/img/NewApplication.png" alt="">
+                        </div>
+						<br>
 							                <p style="font-family:sans-serif; font-size: 14px;color: #4e4f53;">Authenion Dashboard shows the number of Applications configured. </p>
-							            <img src="assets/img/NewApplication1.png" alt="" class="col-images-intro" /> 
+							            <!-- <img src="assets/img/NewApplication1.png" alt="" class="col-images-intro" />  -->
+                   <!-- Image with onclick event -->
+                   <img src="assets/img/NewApplication1.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer9', 'modalImage9')" class="col-images-intro" />
+
+                   <!-- Modal container -->
+                     <div id="modalContainer9" class="modal-container" onclick="closeModal('modalContainer9')">
+                      <img id="modalImage9" class="modal-image" src="assets/img/NewApplication1.png" alt="">
+                    </div>
+                      <br>
 
 							<!-- Virtual Servers  -->	
                             <div>
@@ -1544,8 +1635,16 @@
 							       <p class="col-sub-headings">6. Virtual Servers</p>
 							        <p class="col-para">Virtual Servers enables you to protect multiple applications and their hosts. The Virtual Server is a combination of
 										hostname and port number and is defined by example.com:443.</p>
-										<img src="assets/img/Virtualserver.png" alt="" class="col-images-intro" /> <br>
-										 <h6 class="col-sub-headings">
+										<!-- <img src="assets/img/Virtualserver.png" alt="" class="col-images-intro" /> <br> -->
+										<!-- Image with onclick event -->
+                         <img src="assets/img/Virtualserver.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer10', 'modalImage10')" class="col-images-intro" />
+
+                           <!-- Modal container -->
+                        <div id="modalContainer10" class="modal-container" onclick="closeModal('modalContainer10')">
+                        <img id="modalImage10" class="modal-image" src="assets/img/Virtualserver.png" alt="">
+                          </div>
+                             <br>
+										<h6 class="col-sub-headings">
 											Adding a Virtual Server
 
 										</h6>
@@ -1625,7 +1724,15 @@
 									<li><p class="col-para">Click <b>Save</b> to complete the Virtual Server configuration. </p></li>
 									
 								</div>
-								<img src="assets/img/Virtualserver1.png" alt="" class="col-images-intro" /> <br>
+								<!-- <img src="assets/img/Virtualserver1.png" alt="" class="col-images-intro" /> -->
+								<!-- Image with onclick event -->
+                         <img src="assets/img/Virtualserver1.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer11', 'modalImage11')" class="col-images-intro" />
+
+                   <!-- Modal container -->
+                        <div id="modalContainer11" class="modal-container" onclick="closeModal('modalContainer11')">
+                       <img id="modalImage11" class="modal-image" src="assets/img/Virtualserver1.png" alt="">
+                      </div>
+								 <br>
 
 								<!-- Application Hosts -->	
 								<div>
@@ -1633,7 +1740,15 @@
 									   <p class="col-sub-headings">7. Application Hosts </p>
 										<p class="col-para">Applications Hosts are the target applications or the backend application servers that Authenion is protecting through a
 											gateway architecture. These target application’s access requests are validated by Authenion before they are forwarded. </p>
-											<img src="assets/img/BackendServer.png" alt="" class="col-images-intro" /> <br>
+											<!-- <img src="assets/img/BackendServer.png" alt="" class="col-images-intro" /> <br> -->
+											<!-- Image with onclick event -->
+                              <img src="assets/img/BackendServer.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer12', 'modalImage12')" class="col-images-intro" />
+
+                          <!-- Modal container -->
+                       <div id="modalContainer12" class="modal-container" onclick="closeModal('modalContainer12')">
+                          <img id="modalImage12" class="modal-image" src="assets/img/BackendServer.png" alt="">
+                           </div>
+											<br>
 											<h6 class="col-sub-headings">
 												Adding Application Hosts
                                              </h6>
@@ -1702,8 +1817,15 @@
 										</p></li>
 										
 									</div>
-									<img src="assets/img/Backendserver1.png" alt="" class="col-images-intro" /> <br>
-								
+									<!-- <img src="assets/img/Backendserver1.png" alt="" class="col-images-intro" /> <br> -->
+									<!-- Image with onclick event -->
+                         <img src="assets/img/Backendserver1.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer13', 'modalImage13')" class="col-images-intro" />
+
+                               <!-- Modal container -->
+                     <div id="modalContainer13" class="modal-container" onclick="closeModal('modalContainer13')">
+                        <img id="modalImage13" class="modal-image" src="assets/img/Backendserver1.png" alt="">
+                </div>
+                       <br>							
 									<!-- Header Mappings  -->	
 								<div>
 									<a style="padding: 35px" name="Header Mapping"></a>
@@ -1711,7 +1833,15 @@
 										<p class="col-para">Header Mappings sends the User attributes to the target application post authentication. The target application will use
 											them for validation purposes. The Header Mappings will receive the user attributes from the Claims which are sent by the
 											Token Provider. Once the claims received, it is then made available as HTTP-Headers to the target applications. </p>
-											<img src="assets/img/HeaderMappings.png" alt="" class="col-images-intro" /> <br>
+											<!-- <img src="assets/img/HeaderMappings.png" alt="" class="col-images-intro" /> <br> -->
+											<!-- Image with onclick event -->
+                        <img src="assets/img/HeaderMappings.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer14', 'modalImage14')" class="col-images-intro" />
+
+                      <!-- Modal container -->
+                  <div id="modalContainer14" class="modal-container" onclick="closeModal('modalContainer14')">
+                    <img id="modalImage14" class="modal-image" src="assets/img/HeaderMappings.png" alt="">
+                 </div>
+                     <br>
 											<h6 class="col-sub-headings">
 												Adding Header Mapping 
                                              </h6>
@@ -1791,15 +1921,31 @@
 										</p></li>
 										
 									</div>
-									<img src="assets/img/Headermappings1.png" alt="" class="col-images-intro" /> <br>
-									
+									<!-- <img src="assets/img/Headermappings1.png" alt="" class="col-images-intro" /> <br> -->
+									<!-- Image with onclick event -->
+<img src="assets/img/Headermappings1.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer15', 'modalImage15')" class="col-images-intro" />
+
+<!-- Modal container -->
+<div id="modalContainer15" class="modal-container" onclick="closeModal('modalContainer15')">
+    <img id="modalImage15" class="modal-image" src="assets/img/Headermappings1.png" alt="">
+</div>
+<br>
+
 								<!-- Resources  -->	
 								<div>
 									<a style="padding: 35px" name="Resources"></a>
 									   <p class="col-sub-headings">9. Resources </p>
 										<p class="col-para">Resources are the components/URI of the applications. The resources can be mapped as either protected or excluded
 											resources in an application. Each application should have at least one protected & excluded resources configured to it. </p>
-											<img src="assets/img/Resources.png" alt="" class="col-images-intro" /> <br>
+											<!-- <img src="assets/img/Resources.png" alt="" class="col-images-intro" /> <br> -->
+<!-- Image with onclick event -->
+<img src="assets/img/Resources.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer16', 'modalImage16')" class="col-images-intro" />
+
+<!-- Modal container -->
+<div id="modalContainer16" class="modal-container" onclick="closeModal('modalContainer16')">
+    <img id="modalImage16" class="modal-image" src="assets/img/Resources.png" alt="">
+</div>
+<br>
 											<h6 class="col-sub-headings">
 												Adding Resources
                                              </h6>
@@ -1857,8 +2003,15 @@
 										</p></li>
 										
 									</div>
-									<img src="assets/img/Resources1.png" alt="" class="col-images-intro" /> <br>
+									<!-- <img src="assets/img/Resources1.png" alt="" class="col-images-intro" /> <br> -->
+<!-- Image with onclick event -->
+<img src="assets/img/Resources1.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer17', 'modalImage17')" class="col-images-intro" />
 
+<!-- Modal container -->
+<div id="modalContainer17" class="modal-container" onclick="closeModal('modalContainer17')">
+    <img id="modalImage17" class="modal-image" src="assets/img/Resources1.png" alt="">
+</div>
+<br>
 							<!--Authenion Status -->	
 								<div>
 									<a style="padding: 35px" name="Authenion Status"></a>
@@ -1869,8 +2022,16 @@ status page also displays your authenion license information. </p>
 												<li><p class="col-para">Click Authenion Status in the sidebar menu to view the status of your Authenion application.  </p></li>	
 												
 											</div>
-											<img src="assets/img/authenionstatus.png" alt="" class="col-images-intro" /> <br>
+											<!-- <img src="assets/img/authenionstatus.png" alt="" class="col-images-intro" /> <br> -->
+											<!-- Image with onclick event -->
+<img src="assets/img/authenionstatus.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer18', 'modalImage18')" class="col-images-intro" />
 
+<!-- Modal container -->
+<div id="modalContainer18" class="modal-container" onclick="closeModal('modalContainer18')">
+    <img id="modalImage18" class="modal-image" src="assets/img/authenionstatus.png" alt="">
+</div>
+
+<br>
 							<!--Export -->	
 								<div>
 									<a style="padding: 35px" name="Export"></a>
@@ -1893,11 +2054,26 @@ status page also displays your authenion license information. </p>
 											
 											<p class="col-para"> Note: Add the JWKS endpoint to the 'agent-authorization.properties' file in the '/config/' directory. </p> </br> 
 
-											<img  src="assets/img/sync.png" alt="" class="col-images-intro" /> <br>
-											<p class="col-para">
+											<!-- <img  src="assets/img/sync.png" alt="" class="col-images-intro" /> <br> -->
+											<!-- Image with onclick event -->
+<img src="assets/img/sync.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer19', 'modalImage19')" class="col-images-intro" />
+
+<!-- Modal container -->
+<div id="modalContainer19" class="modal-container" onclick="closeModal('modalContainer19')">
+    <img id="modalImage19" class="modal-image" src="assets/img/sync.png" alt="">
+</div>
+<br>
+									<p class="col-para">
 												The Sync status will throw error status when it couldn’t reach the Authenion instance in Authenion server. 	
 											</p>	
-									    	<img  src="assets/img/sync1.png" alt="" class="col-images-intro" /> <br>
+									    	<!-- <img  src="assets/img/sync1.png" alt="" class="col-images-intro" /> <br> -->
+											<!-- Image with onclick event -->
+<img src="assets/img/sync1.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer20', 'modalImage20')" class="col-images-intro" />
+
+<!-- Modal container -->
+<div id="modalContainer20" class="modal-container" onclick="closeModal('modalContainer20')">
+    <img id="modalImage20" class="modal-image" src="assets/img/sync1.png" alt="">
+</div>
 											</div>
                                          
 			<br />
@@ -2074,8 +2250,24 @@ status page also displays your authenion license information. </p>
 						<li><p class="col-para">Replicate the configurations if PingFederate is configured in a cluster.</p></li>
 					</ol>
 
-					<img src="assets/img/pf-client1.png" alt="" class="col-images-pf"><br />
-					<img src="assets/img/pf-client2.png" alt="" class="col-images-pf"><br />
+					<!-- <img src="assets/img/pf-client1.png" alt="" class="col-images-pf"><br /> -->
+					<!-- Image with onclick event -->
+               <img src="assets/img/pf-client1.png" alt=""  onclick="openModal('modalContainer22', 'modalImage22')" class="col-images-pf" />
+
+             <!-- Modal container -->
+                    <div id="modalContainer22" class="modal-container" onclick="closeModal('modalContainer22')">
+                     <img id="modalImage22" class="modal-image" src="assets/img/pf-client1.png" alt="">
+                </div>
+				<br/>
+				<!-- Image with onclick event -->
+<img src="assets/img/pf-client2.png" alt=""  onclick="openModal('modalContainer23', 'modalImage23')" class="col-images-pf" />
+
+<!-- Modal container -->
+<div id="modalContainer23" class="modal-container" onclick="closeModal('modalContainer23')">
+    <img id="modalImage23" class="modal-image" src="assets/img/pf-client2.png" alt="">
+</div>
+					<!-- <img src="assets/img/pf-client2.png" alt="" class="col-images-pf"> -->
+					<br />
 					
 
 					<!--Azure as idP-->
@@ -2095,12 +2287,27 @@ status page also displays your authenion license information. </p>
 						<li><p class="col-para">In the App registrations section, select New registration and register Authenion as web application with display name and any other required details.</p></li>
 						<li><p class="col-para">Add the following Authenion URI in the Redirect URI field. This is the location where Microsoft Azure redirects the user’s request post authentication.</p></li>
 						<p class="col-para"><b>Redirect URI:</b>&emsp;https://&lt;authenion.example.com&gt;/ssolibrary/oidc/callback</p>
-						<img src="assets/img/azure-1.png" alt="" class="col-images-pf">
+						<!-- <img src="assets/img/azure-1.png" alt="" class="col-images-pf"> -->
+						<!-- Image with onclick event -->
+<img src="assets/img/azure-1.png" alt=""  onclick="openModal('modalContainer21', 'modalImage21')" class="col-images-pf" />
+
+<!-- Modal container -->
+<div id="modalContainer21" class="modal-container" onclick="closeModal('modalContainer21')">
+    <img id="modalImage21" class="modal-image" src="assets/img/azure-1.png" alt="">
+</div>
 						<br />
 
 						<li><p class="col-para">When the registration finishes, the Azure portal displays the Authenion application registration’s overview pane. You can find the Application ID which will also be used as the client_id when we connect Authenion & Azure through OAuth/OIDC.</p></li>
 						<li><p class="col-para">You need to Credential in ‘Certificates & Secrets’ page. This acts as the client credential for the Authenion application, and it allows Authenion to authenticate as itself to Microsoft Azure.</p></li>
-						<img src="assets/img/azure-2.png" alt="" class="col-images-pf"><br/>
+						<!-- <img src="assets/img/azure-2.png" alt="" class="col-images-pf"><br/> -->
+						<!-- Image with onclick event -->
+<img src="assets/img/azure-2.png" alt=""  onclick="openModal('modalContainer24', 'modalImage24')" class="col-images-pf" />
+
+<!-- Modal container -->
+<div id="modalContainer24" class="modal-container" onclick="closeModal('modalContainer24')">
+    <img id="modalImage24" class="modal-image" src="assets/img/azure-2.png" alt="">
+</div>
+
 						<br />
 
 						<li><p class="col-para">The Authenion client application need to access resources in a web API. You can use the Microsoft Azure platform for authorizing scopes, permissions-based access to fetch the appropriate user data.</p></li>
