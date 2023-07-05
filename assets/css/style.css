@@ -149,7 +149,7 @@ h6 {
 }
 
 .col-images-intro {
-    border-radius: 1px 25px 1px 25px;
+    /* border-radius: 1px 25px 1px 25px; */
     width: auto;
     height: 450px;
     display: block;
