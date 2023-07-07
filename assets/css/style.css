@@ -425,6 +425,10 @@ h6 {
   font-family:'Helvetica', 'sans-serif','system-ui';
 }
  
+.systemrequiremetable .tbody td:first-child {
+  width: 27%;
+}
+
 /*--------------------------------------------------------------
 # navbar Knowledge Base Community Support
 --------------------------------------------------------------*/
