@@ -143,6 +143,15 @@ h6 {
     display: inline-flex;
 }
 
+.col-sub-headings-app {
+    font-size: 20px;
+    font-family: 'Helvetica', 'sans-serif','system-ui';
+    font-weight: 700;
+    color: #00297A;
+    line-height: 1.7;
+    text-align: justify;
+}
+
 
 .col-logo-top {
    
