@@ -335,21 +335,25 @@
 	  </li><!-- End Icons Nav -->
 
 	  <li class="nav-item">
-		  <!--Application Integration with Authenion-->
-		  <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+		  <a class="nav-link collapsed" data-bs-target="#apps-nav" data-bs-toggle="collapse" href="#">
 			  <!--<i class="bi bi-gem"></i>--><span>Application Integration with Authenion&nbsp;</span><i class="bi bi-chevron-down ms-auto"></i>
 		  </a>
-		  <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+		  <ul id="apps-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 			  <li>
 				  <a href="#Oracle E-Business Suite" class="nav-link-sub collapsed">
 					  <!--<i class="bi bi-circle">--></i><span>Oracle E-Business Suite</span>
 				  </a>
 			  </li>
-	  </li><!-- Application Integration with Authenion -->
+			  <li>
+				  <a href="#Generic Applications with Header Variables" class="nav-link-sub collapsed">
+					  <!--<i class="bi bi-circle"></i>--><span>Generic Applications with Header Variables</span>
+				  </a>
+			  </li>
+
+		  </ul>
+	  </li><!-- End Icons Nav -->
 
 	  <li class="nav-heading"></li>
-
-
 
 
 	  </li><!-- End Blank Page Nav -->
@@ -2382,35 +2386,35 @@
 							</p>
 						</li>
 						<!--<li>
-							<p class="col-para">
-								<a href="#Oracle Apex"><u>Oracle Apex</u></a>
-							</p>
-						</li>
-						<li>
-							<p class="col-para">
-								<a href="#Oracle Hyperion"><u>Oracle Hyperion</u></a>
-							</p>
-						</li>
-						<li>
-							<p class="col-para">
-								<a href="#Oracle Agile"><u>Oracle Agile</u></a>
-							</p>
-						</li>
-						<li>
-							<p class="col-para">
-								<a href="#Oracle Business Intelligence"><u>Oracle Business Intelligence</u></a>
-							</p>
-						</li>
-						<li>
-							<p class="col-para">
-								<a href="#Oracle Primavera Unifier"><u>Oracle Primavera Unifier</u></a>
-							</p>
-						</li>
-						<li>
-							<p class="col-para">
-								<a href="#Oracle Transportation Management"><u>Oracle Transportation Management</u></a>
-							</p>
-						</li>-->
+			<p class="col-para">
+				<a href="#Oracle Apex"><u>Oracle Apex</u></a>
+			</p>
+		</li>
+		<li>
+			<p class="col-para">
+				<a href="#Oracle Hyperion"><u>Oracle Hyperion</u></a>
+			</p>
+		</li>
+		<li>
+			<p class="col-para">
+				<a href="#Oracle Agile"><u>Oracle Agile</u></a>
+			</p>
+		</li>
+		<li>
+			<p class="col-para">
+				<a href="#Oracle Business Intelligence"><u>Oracle Business Intelligence</u></a>
+			</p>
+		</li>
+		<li>
+			<p class="col-para">
+				<a href="#Oracle Primavera Unifier"><u>Oracle Primavera Unifier</u></a>
+			</p>
+		</li>
+		<li>
+			<p class="col-para">
+				<a href="#Oracle Transportation Management"><u>Oracle Transportation Management</u></a>
+			</p>
+		</li>-->
 						<li>
 							<p class="col-para">
 								<a href="#Generic Applications with Header Variables"><u>Generic Applications with Header Variables</u></a>
@@ -2435,11 +2439,19 @@
 					<p class="col-para">Authenion is a light-weight product that enables Single Sign-On to Oracle E-Business Suite application. It provides a simplified yet secured solution. Authenion uses a plugin called EBS Integration Kit (EIK) to enable SSO for Oracle E-Business suite application. Authenion’s EIK is a J2EE plugin, and it can be deployed on any standard application servers such as Apache Tomcat, Weblogic, etc. Authenion-EIK is responsible for handling all user requests that are delegated from Oracle E-Business suite application & securely redirect it to the Organization’s Identity Provider for authentication. Authenion-EIK is OpenID compliant, and it can be directly connected with industry standard Identity Providers in the market. Authenion-EIK also supports the use of header variables to exchange user information.</p>
 					<br />
 
-					<p class="col-sub-headings-sub"><b>Architecture</b></p>
-					<p class="col-para">Oracle EBS SSO Architecture diagram</p><br />
+					<p class="col-sub-headings-sub"><b>Architecture</b></p><br />
+					<!-- Image with onclick event -->
+					<!--<img src="assets/img/EIK-Architecture.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerEIK1', 'modalImageEIK1')" class="col-images-intro" />-->
+					<img src="assets/img/EIK-Architecture.png" alt="" style="width:45%;height:30%;cursor:pointer" onclick="openModal('modalContainerEIK1', 'modalImageEIK1')" class="col-images-pf" />
+					<!-- Model Container-->
+					<div id="modalContainerEIK1" class="modal-container" onclick="closeModal('modalContainerEIK1')">
+						<img id="modalImageEIK1" class="modal-image" src="assets/img/EIK-Architecture.png" alt="">
+					</div>
+					<br />
+					<br />
 					<br />
 
-					<p class="col-sub-headings">Configuration Steps</p>
+					<p class="col-sub-headings-eik">Configuration Steps</p>
 					<p class="col-para">The following sections describes the configuration steps required for Authenion-EIK setup and Oracle EBS setup for Single Sign-On.</p>
 					<br />
 					<p class="col-sub-headings-sub"><b>1. Pre-requisites</b></p>
@@ -2512,16 +2524,55 @@
 						</tbody>
 					</table>
 					<br />
+					<br />
 
 					<p class="col-sub-headings-sub"><b><u>Generate EIKAuth.config File</u></b></p>
 					<p class="col-para">The EIKAuth.config config file can be generated from the Authenion Admin console. You can access the Authenion Admin console through <a href="https://launch.authenion.com"> <u>https://launch.authenion.com</u> </a>(or) <a href="#Console Interactions & Configurations"> <u>on-prem</u></a>.</p>
 					<ol class="col-para">
 						<li><p class="col-para">Login to the Authenion Admin console.</p></li>
-						<li><p class="col-para">In the Sidebar Menu, locate & click <i>'EIK Configurator'</i>.</p></li>
-						<li><p class="col-para">Select the Authentication type as <i>'OpenID Connect Login'</i>.</p></li>
-						<li><p class="col-para">In the <i>'Issuer Url'</i> field, enter your Identity Provider's Issuer value and click <i>'Load metadata'</i>. This will automatically load the required Authorization server endpoints.</p></li>
-						<li><p class="col-para">You can also enter the Authorization server details manually by clicking <i>'Show Advanced Configuration'</i> next to the 'Load metadata' button.</p></li>
-						<li><p class="col-para">Enter details for the rest of the fields as mentioned below in the table.</p></li>
+						<li><p class="col-para">In the Dashboard page, click <i><b>'EIK Configurator'</b></i> in the Sidebar menu.</p></li>
+						<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/eik-sidebar.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerEIK2', 'modalImageEIK2')" class="col-images-pf" />
+						<!-- Model Container-->
+						<div id="modalContainerEIK2" class="modal-container" onclick="closeModal('modalContainerEIK2')">
+							<img id="modalImageEIK2" class="modal-image" src="assets/img/eik-sidebar.png" alt="">
+						</div>
+						<br />
+						<br />
+						<li><p class="col-para">Select the Authentication type as <i><b>'OpenID Connect Login'</b></i>.</p></li>
+						<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/eik-configurator-1.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerEIK3', 'modalImageEIK3')" class="col-images-pf" />
+						<!-- Model Container-->
+						<div id="modalContainerEIK3" class="modal-container" onclick="closeModal('modalContainerEIK3')">
+							<img id="modalImageEIK3" class="modal-image" src="assets/img/eik-configurator-1.png" alt="">
+						</div>
+						<br />
+						<br />
+						<li><p class="col-para">In the <i><b>'Issuer Url'</b></i> field, enter your Identity Provider's Issuer value and click <i>'Load metadata'</i>. This will automatically load the required Authorization server endpoints.</p></li>
+						<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/eik-configurator-2.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerEIK4', 'modalImageEIK4')" class="col-images-pf" />
+						<!-- Model Container-->
+						<div id="modalContainerEIK4" class="modal-container" onclick="closeModal('modalContainerEIK4')">
+							<img id="modalImageEIK4" class="modal-image" src="assets/img/eik-configurator-2.png" alt="">
+						</div>
+						<br />
+						<br />
+						<!--<li><p class="col-para">You can also enter the Authorization server details manually by clicking <i>'Show Advanced Configuration'</i> next to the 'Load metadata' button.</p></li>-->
+						<li><p class="col-para">Click <i><b>'Show Advanced Configuration'</b></i> next to the 'Load metadata' button.</p></li>
+						<li><p class="col-para">Enter the value for <i><b>'Scopes'</b></i> field. For example, <i>'openid'</i>. This field supports multiple values entered with a space as mentioned in the screenshot below.</p></li>
+						<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/eik-configurator-3.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerEIK5', 'modalImageEIK5')" class="col-images-pf" />
+						<!-- Model Container-->
+						<div id="modalContainerEIK5" class="modal-container" onclick="closeModal('modalContainerEIK5')">
+							<img id="modalImageEIK5" class="modal-image" src="assets/img/eik-configurator-3.png" alt="">
+						</div>
+						<br />
+						<br />
+						<li><p class="col-para">Enter the details the rest of the fields as mentioned below in the table.</p></li>
 						<br />
 						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 							<tr>
@@ -2586,7 +2637,7 @@
 									<td>
 										<ul>
 											<p class="col-para-table">Authenion-EIK plugin's deployment filename. The default plugin filename is <i>'EBSAuth.war'</i>. Therefore, the Context path should be,</p>
-											<p class="col-para-table"><i><b>EBSAuth</b></i></p>
+											<p class="col-para-table"><i><b>/EBSAuth</b></i></p>
 										</ul>
 									</td>
 								</tr>
@@ -2629,9 +2680,18 @@
 							</tbody>
 						</table>
 						<br />
+						<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/eik-configurator-4.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerEIK6', 'modalImageEIK6')" class="col-images-pf" />
+						<!-- Model Container-->
+						<div id="modalContainerEIK6" class="modal-container" onclick="closeModal('modalContainerEIK6')">
+							<img id="modalImageEIK6" class="modal-image" src="assets/img/eik-configurator-4.png" alt="">
+						</div>
+						<br />
+						<br />
 
-						<li><p class="col-para">After entering the above values, click the <i>'Save'</i> button. This will download a file named <i><b>'EIKAuth.config'</b></i>.</p></li>
-						<li><p class="col-para">Copy or Move the downloaded <i>EIKAuth.config</i> file to a temporary location in the tomcat server. This file will be used in the EIK deployment section later.</p></li>
+						<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button. This will download a file named <i><b>'EIKAuth.config'</b></i>.</p></li>
+						<li><p class="col-para">Copy the downloaded <i>'EIKAuth.config'</i> file to a temporary location in the tomcat server. This file will be used in the EIK deployment section later.</p></li>
 					</ol>
 					<br />
 
@@ -2651,6 +2711,15 @@
 						<ul style="margin-left:30px;" class="col-para">
 							<p class="col-para"><i><b>java -cp EBSdatasource.jar com.likeminds.ebsauth.v1.EIKDatasource Y </b></i></p>
 						</ul>
+						<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/eik-configurator-5.png" alt="" style="width:60%;height:50%;cursor:pointer" onclick="openModal('modalContainerEIK7', 'modalImageEIK7')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerEIK7" class="modal-container" onclick="closeModal('modalContainerEIK7')">
+							<img id="modalImageEIK7" class="modal-image" src="assets/img/eik-configurator-5.png" alt="">
+						</div>
+						<br />
+						<br />
 						<li><p class="col-para">The configuration section will open as mentioned in the screenshot below:</p></li>
 						<li><p class="col-para">Enter the details as mentioned below in the table.</p></li>
 						<br />
@@ -2830,12 +2899,21 @@
 							</tbody>
 						</table>
 						<br />
+						<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/eik-configurator-6.png" alt="" style="width:80%;height:50%;cursor:pointer" onclick="openModal('modalContainerEIK8', 'modalImageEIK8')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerEIK8" class="modal-container" onclick="closeModal('modalContainerEIK8')">
+							<img id="modalImageEIK8" class="modal-image" src="assets/img/eik-configurator-6.png" alt="">
+						</div>
+						<br />
+						<br />
 
-						<li><p class="col-para">After entering the above values, the EIKUSER will be registered with the following message.</p></li>
-						<li><p class="col-para">A new file named <i><b>'EIK.dbcx'</b></i> will be generated in the same directory. Move this file to a temporary location in the tomcat server. This file will be used in the EIK deployment section.</p></li>
+						<li><p class="col-para">After entering the above values, the EIKUSER will be registered. A new file named <i><b>'EIK.dbcx'</b></i> will be generated in the same directory.</p></li>
+						<li><p class="col-para">Copy this file to a temporary location in the tomcat server. This file will be used in the EIK deployment section.</p></li>
 					</ol>
 					<br />
-					
+
 
 					<p class="col-sub-headings-sub"><b><u>Deploy Authenion-EIK</u></b></p>
 					<p class="col-para">This section guides you through the deployment steps for Authenion - EBS Integration Kit. This guide will show the deployment steps in an <i>'Apache Tomcat'</i> application server.</p>
@@ -2843,14 +2921,14 @@
 						<li><p class="col-para">Login to the <a href="https://support.likemindsconsulting.com"> <u>Like Minds Support Portal</u></a> and download the required binaries to complete the EIK deployment.</p></li>
 						<li><p class="col-para">The following are the list of files that will be downloaded as part of the installation package.</p></li>
 						<ul style="margin-left:30px;" class="col-para">
-							<p class="col-para"><i>EBSAuth.war</i></p>
-							<p class="col-para"><i>security.properties</i></p>
-							<p class="col-para"><i>log4j2.xml</i></p>
-							<p class="col-para"><i>EBSdatasource.jar</i></p>
+							<li><p class="col-para"><i>EBSAuth.war</i></p></li>
+							<li><p class="col-para"><i>security.properties</i></p></li>
+							<li><p class="col-para"><i>log4j2.xml</i></p></li>
+							<li><p class="col-para"><i>EBSdatasource.jar</i></p></li>
 						</ul>
 
-						<li><p class="col-para">Login to the server where <i>Apache Tomcat</i> has been installed and move all the above files to a temporary lcoation.</p></li>
-						<li><p class="col-para">Navigate to tomcat installation directory ($CATALINA_HOME).</p></li>
+						<li><p class="col-para">Login to the server where <i>Apache Tomcat</i> has been installed and copy all the above files in to a temporary lcoation.</p></li>
+						<li><p class="col-para">Navigate to the tomcat installation directory ($CATALINA_HOME) in a terminal (linux) or command prompt(windows).</p></li>
 						<li><p class="col-para">Set an environment variable <i><b>'EIK_HOME'</b></i> resolving the path to the tomcat installation directory.</p></li>
 						<ul style="margin-left:30px;" class="col-para">
 							<p class="col-para">For example,</p>
@@ -2884,88 +2962,88 @@
 						<br />
 					</ol>
 
-						<p class="col-sub-headings-sub"><b><u>Configure Oracle EBS System Profile options</u></b></p>
-						<p class="col-para">This section will guide you to configure the system profile options that enable Single Sign-On to the Oracle E-Business Suite application. These system profile optiones are Oracle recommended for enabling SSO with any providers.</p>
-						<ol class="col-para">
-							<li><p class="col-para">Login to the Oracle E-Business suite application as a <i>'System Administrator'</i></p></li>
-							<li><p class="col-para">Navigate to <i>'System Profile'</i> in System Administration. Edit the following system profile options as mentioned in the table:</p></li>
-							<br />
-							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+					<p class="col-sub-headings-sub"><b><u>Configure Oracle EBS System Profile options</u></b></p>
+					<p class="col-para">This section will guide you to configure the system profile options that enable Single Sign-On to the Oracle E-Business Suite application. These system profile optiones are Oracle recommended for enabling SSO with any providers.</p>
+					<ol class="col-para">
+						<li><p class="col-para">Login to the Oracle E-Business suite application as a <i>'System Administrator'</i></p></li>
+						<li><p class="col-para">Navigate to <i>'System Profile'</i> in System Administration. Edit the following system profile options as mentioned in the table:</p></li>
+						<br />
+						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+							<tr>
+								<th class="symcomponent">Configurations</th>
+								<th class="symcomponent">&emsp;Values</th>
+							</tr>
+
+							<tbody class="tbody">
+
+								<!--Application SSO Type -->
 								<tr>
-									<th class="symcomponent">Configurations</th>
-									<th class="symcomponent">&emsp;Values</th>
+									<td>
+										<p class="col-para-table">Application SSO Type<i></i></p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>SSWA w/SSO</b></i></p>
+										</ul>
+									</td>
 								</tr>
+								<!--Application Authenticate Agent -->
+								<tr>
+									<td>
+										<p class="col-para-table">Application Authenticate Agent</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">For example,</p>
+											<p class="col-para-table"><i><b>https://eik.example.com:8443/EBSAuth&emsp;</b></i></p>
+										</ul>
+									</td>
+								</tr>
+								<!--Application SSO Login Types-->
+								<tr>
+									<td>
+										<p class="col-para-table">Application SSO Login Types</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>Both</b></i></p>
+										</ul>
+									</td>
+								</tr>
+								<!--Application SSO Auto Link User-->
+								<tr>
+									<td>
+										<p class="col-para-table">Application SSO Auto Link User</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>Enabled</b></i></p>
+										</ul>
+									</td>
+								</tr>
+								<!--Application SSO LDAP Synchronization-->
+								<tr>
+									<td>
+										<p class="col-para-table">Application SSO LDAP Synchronization</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>Disabled</b></i></p>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
 
-								<tbody class="tbody">
+						<li><p class="col-para">After modifying the above system profile options, restart the Oracle E-Business suite application & database services. After successful restart of the services, You can test the Single Sign-On login.</p></li>
+						<li><p class="col-para"><b>Testing:</b> Enter your Oracle EBS applicatipon url in a browser. The browser will redirect your request to the Identity Provider for authentication. Post successful authentication, you will be redirected back to the Oracle EBS application homepage with your assigned roles & responsibilities.</p></li>
+						<li><p class="col-para">This completes the setup for Authenion-EIK & Oracle E-Business suite integration for Single Sign-On.</p></li>
 
-									<!--Application SSO Type -->
-									<tr>
-										<td>
-											<p class="col-para-table">Application SSO Type<i></i></p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table"><i><b>SSWA w/SSO</b></i></p>
-											</ul>
-										</td>
-									</tr>
-									<!--Application Authenticate Agent -->
-									<tr>
-										<td>
-											<p class="col-para-table">Application Authenticate Agent</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table">For example,</p>
-												<p class="col-para-table"><i><b>https://eik.example.com:8443/EBSAuth&emsp;</b></i></p>
-											</ul>
-										</td>
-									</tr>
-									<!--Application SSO Login Types-->
-									<tr>
-										<td>
-											<p class="col-para-table">Application SSO Login Types</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table"><i><b>Both</b></i></p>
-											</ul>
-										</td>
-									</tr>
-									<!--Application SSO Auto Link User-->
-									<tr>
-										<td>
-											<p class="col-para-table">Application SSO Auto Link User</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table"><i><b>Enabled</b></i></p>
-											</ul>
-										</td>
-									</tr>
-									<!--Application SSO LDAP Synchronization-->
-									<tr>
-										<td>
-											<p class="col-para-table">Application SSO LDAP Synchronization</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table"><i><b>Disabled</b></i></p>
-											</ul>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<br />
-
-							<li><p class="col-para">After modifying the above system profile options, restart the Oracle E-Business suite application & database services.After successful restart of the services, You can test the Single Sign-On login.</p></li>
-							<li><p class="col-para"><b>Testing:</b> Enter your Oracle EBS applicatipon url in a browser. This will redirect you to the Identity Provider for authentication. Post authentication, you will be redirected back to the Oracle EBS application homepage with your assigned roles & responsibilities.</p></li>
-							<li><p class="col-para">This completes the setup for Authenion-EIK & Oracle E-Business suite integration for Single Sign-On.</p></li>
-
-						</ol>
+					</ol>
 
 
-</div> <!--END OF APPLICATION INTEGRATION with Authenion-->
+				</div> <!--END OF APPLICATION INTEGRATION with Authenion-->
 
 
 

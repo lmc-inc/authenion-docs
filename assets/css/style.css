@@ -133,6 +133,15 @@ h6 {
     text-align: justify;
 }
 
+.col-sub-headings-eik {
+    font-size: 19px;
+    font-family: 'Helvetica', 'sans-serif','system-ui';
+    font-weight: 700;
+    color: #00297A;
+    line-height: 1.7;
+    text-align: justify;
+}
+
 .col-sub-headings-sub {
   font-family:'Helvetica', 'sans-serif','system-ui';
     font-size: 16px;
