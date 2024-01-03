@@ -639,7 +639,7 @@
 				<!--<a style="padding:32px" name="Introduction"></a>-->
 				<a style="padding:32px" name="Introduction"></a>
 				<p class="col-sub-headings">1. Introduction</p>
-				<p class="col-para">Authenion product from Like Minds is aimed towards delivering a secure Single Sign-On (SSO) experience for Enterprise applications from Oracle, IBM, SAP and other custom applications (java, php, .net, etc.,) that supports HTTP headers as their authentication mechanism. Authenion is a stand-alone product and can be installed on any physical/virtual Linux servers either on-premise/cloud or both. Authenion integrates with standard OpenID Connect providers in the market for authentication related events.</p>
+				<p class="col-para">Authenion product from Like Minds is aimed towards delivering a secure Single Sign-On (SSO) experience for Enterprise applications from Oracle, IBM, SAP and other custom applications (java, php, .net, etc.,) that supports HTTP headers as their last mile integration and Single Sign-On. Authenion is a stand-alone product and can be installed on any physical/virtual Linux servers either on-premise/cloud or both. Authenion integrates with standard OpenID Connect providers in the market for authentication related events.</p>
 				<!--<p class="col-para">Authenion links with market-standard OpenID Connect providers such as PingFederate, PingOne, Azure, Okta, Oracle IDCS and it connects with applications to securely send SSO-related information to the applications. Authenion enables secure access to your Enterprise applications and custom applications either on-premises or cloud. Authenion complements any other common industry standard token provider via OAuth2.0 & OpenID Connect-2.0 protocols.</p>-->
 				<!--<ul style="margin-left:30px;" class="col-para">
 						<li><p class="col-para" style="background-color:#f5f5f6">Use Authenion to protect your Enterprise applications and enable Single Sign-On.</p></li>
@@ -661,10 +661,10 @@
 				<p class="col-sub-headings">2. How does Authenion work?</p>
 				<p class="col-sub-headings-sub"><b>Integration mechanism</b></p>
 				<!--<p class="col-para">Authenion acts as the gateway to your Enterprise & custom applications and capture user requests & delegate it to your Identity Provider (IdP) for authentication.</p>-->
-				<p class="col-para">Authenion as a standalone product, must be integrated with your Enterprise/Custom applications & with your Identity Management (IdM) systems to complete the <i><b>'initial & final-phase'</b></i> integration plan for Single Sign-On (SSO). Authenion supports integration with OpenID Connect (OIDC) enabled Identity Systems and with a wide range of enterprise & custom applications.</p>
+				<p class="col-para">Authenion as a standalone product, must be integrated with your Enterprise/Custom applications & with your Identity Provider (IdP) to complete the <i><b>'first mile and last mile integrations'</b></i> for authentication and Single Sign-On (SSO). Authenion supports integration with OpenID Connect (OIDC) enabled Identity Provider and with a wide range of enterprise & custom applications.</p>
 				<ol class="col-para">
-					<li><p class="col-para">The <a href="#Connect with your Identity Provider"><i><b><u>'initial-phase'</u></b></i></a> integration involves connecting with your identity providers, which Authenion uses to receive claims after user's authentication sessions. The claims are sent to Authenion from Identity management (IdM) systems through OpenID Connect (OIDC) tokens.</p></li>
-					<li><p class="col-para">The <a href="#Application Integration with Authenion"><i><b><u>'final-phase'</u></b></i></a> implementation involves Authenion integration with end-user's applications where Single Sign-On (SSO) will be enabled.</p></li>
+					<li><p class="col-para">The <a href="#Connect with your Identity Provider"><i><b><u>'first mile'</u></b></i></a> integration involves connecting with your identity providers, which Authenion uses to receive claims after user's authentication sessions. The claims are sent to Authenion from the Identity Provider (IdP) through OpenID Connect (OIDC) tokens.</p></li>
+					<li><p class="col-para">The <a href="#Application Integration with Authenion"><i><b><u>'last mile'</u></b></i></a> integration involves Authenion integration with end-user's applications where Single Sign-On (SSO) will be enabled.</p></li>
 				</ol>
 				<br />
 				<!-- <img src="assets/img/authenion-intro.png" alt="" class="col-images-intro" /> -->
@@ -680,7 +680,7 @@
 				<a style="padding:32px" name="Enterprise Deployement Model"></a>
 				<p class="col-sub-headings">3. Enterprise Deployment Model</p>
 				<!--<p class="col-para">Authenion along with an Identity Provider enable your Enterprise/Custom applications and its users experience a secure Single Sign-On by enforcing authentication standards to the applications. Together, they help achieve a seamless Single Sign-On feature to the protected applications.</p>-->
-				<p class="col-para">Authenion provides a Gateway architecture for end-user's applications that supports Header variables for login. In the gateway model, the user's request is initially directed to Authenion and then Authenion grants or denies access to the request based on the application resource protection type.</p>
+				<p class="col-para">Authenion provides a Gateway architecture for end-user's applications that supports Header variables for last mile integration nad Single Sign-On. In the gateway model, the user's request is initially directed to Authenion and then Authenion grants or denies access to the request based on the application resource protection type.</p>
 				<!-- <ul class="col-para"> -->
 				<ul style="margin-left:30px;" class="col-para">
 					<li><p class="col-para">This deployment model can be set up quickly without disrupting the applications. Authenion will be installed on separate servers from the application web servers.</p></li>
@@ -794,7 +794,7 @@
 							<td>
 
 								<ul>
-									<p class="col-para-table">Connecting with your Identity Management (IdM) systems for Authentication</p>
+									<p class="col-para-table">Connecting with your Identity Provider (IdP) for Authentication</p>
 
 								</ul>
 
@@ -852,7 +852,7 @@
 							<td>
 
 								<ul>
-									<p class="col-para-table">Header variables containing user info for the end-user's applications login</p>
+									<p class="col-para-table">Header variables containing user info for the end-user's applications last mile integration and Single Sign-On</p>
 
 								</ul>
 
@@ -1029,7 +1029,7 @@
 						<a style="padding:32px" name="install-authenion section"></a>
 						<p class="col-sub-headings">2. Install Authenion</p>
 						<ol class="col-para">
-							<li><p class="col-para">Request or download the authenion-2.0 product distribution zip file and a valid license from the Authenion support portal or by contacting your account manager in LikeMinds.</p></li>
+							<li><p class="col-para">Request or download the authenion-2.0 product distribution file and a valid license from the Authenion support portal or by contacting your account manager at LikeMinds.</p></li>
 							<li><p class="col-para">Install authenion by unzipping the authenion-2.0.zip into the <i>“/home/appuser”</i> directory in the Authenion server.</p></li>
 							<li><p class="col-para">Authenion file system after extracting.</p></li>
 
@@ -1192,7 +1192,7 @@
 
 						<a style="padding:32px" name="idp-cert section"></a>
 						<p class="col-sub-headings">6. Install Identity Provider’s Certificate into Authenion Trust Store</p>
-						<p class="col-para">The following steps will guide you to import the Identity provider’s certificate (PingFederate) into the Authenion trust store.</p>
+						<p class="col-para">The following steps will guide you to import the Identity provider’s certificate into the Authenion trust store.</p>
 						<ol class="col-para">
 							<li><p class="col-para">Export the SSL Certificate from the Identity Provider (PingFederate, PingOne, AzureAD, etc.,) and place the certificate anywhere inside “&lt;authenion_install_dir&gt;” in the Authenion server.<p></li>
 							<li><p class="col-para">Run the following command in the Authenion server to install the Identity Provider’s certificate.<p></li>
@@ -1618,9 +1618,7 @@
 						<p class="col-para">
 							Applications represent the protected Applications to which the user requests are sent. Each application will have a
 							dedicated entry in the Dashboard/Applications tab. Applications are configured with Virtual Servers, Resources, Header
-							Mappings & corresponds to a single Application Host (target application/backend server). Applications in Authenion can
-							be configured with both protected and unprotected (excluded) resources. Authentication requirements will be set for the
-							protected resources in an application.
+							Mappings & corresponds to a single Application Host (target application/backend server).
 						</p>
 						<!-- <img src="assets/img/Dashboard.png" alt="" class="col-images-intro" /> <br> -->
 						<!-- Image with onclick event -->
@@ -1908,7 +1906,7 @@
 						<a style="padding: 35px" name="Application Hosts"></a>
 						<p class="col-sub-headings">7. Application Hosts </p>
 						<p class="col-para">
-							Applications Hosts are the target applications or the backend application servers that Authenion is protecting through a
+							Applications Hosts are the target applications or the backend application servers that Authenion is protecting through the
 							gateway architecture. These target application’s access requests are validated by Authenion before they are forwarded.
 						</p>
 						<!-- <img src="assets/img/BackendServer.png" alt="" class="col-images-intro" /> <br> -->
@@ -2283,7 +2281,7 @@
 						<h4 style="font-family: sans-serif; font-size: 26px; font-weight: 600; color: #00297A">Connect with your Identity Provider</h4>
 
 						<!--<p class="col-para">This configuration section is the <i>'initial-phase'</i> of the Authenion integration mechanism. can be integrated with your Identity provider to take care of the authentication related events. Any standard OpenID Connect certified providers such as PingFederate, PingOne, Microsoft Azure, Okta, etc., can be configured as Identity Provider for Authenion.</p>-->
-						<p class="col-para">This configuration section is the <i><b>'initial-phase'</b></i> of the Authenion integration mechanism. This section guides you to configure Identity/Token Providers in the Authenion administration console. The integration will be established through OAuth and OpenID Connect protocols.</p>
+						<p class="col-para">This configuration section is the <i><b>'first mile integration'</b></i> of the Authenion integration mechanism. This section guides you to configure Identity/Token Providers in the Authenion administration console. The integration will be established through OAuth and OpenID Connect protocols.</p>
 
 						<!--PingFederate as IdP-->
 						<a style="padding: 38px" name="PingFederate as the Token Provider"></a>
@@ -2293,7 +2291,7 @@
 						<ul style="margin-left:30px;" class="col-para">
 							<li><p class="col-para" style="background-color:#f5f5f6">PingFederate application with IdP and OAuth/OIDC roles enabled.</p></li>
 							<li><p class="col-para" style="background-color:#f5f5f6">Authorization server setup in PingFederate OAuth server setting.</p></li>
-							<li><p class="col-para" style="background-color:#f5f5f6">A configured ping IdP adapter and/or authentication policy contract policy if required for authentication and grant mapping.</p></li>
+							<li><p class="col-para" style="background-color:#f5f5f6">A configured Ping Federate IdP adapter and/or authentication policy contract policy if required for authentication and grant mapping.</p></li>
 						</ul>
 						<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>OAuth / OIDC Configurations</u></b></p>
 						<p class="col-para">&emsp;This setup will manage the configurations related to the OAuth client.</p>
@@ -2521,7 +2519,7 @@
 					<div>
 						<a style="padding: 38px" name="Application Integration with Authenion"></a>
 						<h4 style="font-family: sans-serif; font-size: 26px; font-weight: 600; color: #00297A">Application Integration with Authenion</h4>
-						<p class="col-para">Once you have connected Authenion with your Identity Provider, you can integrate end-user's applications into Authenion for Single Sign-On (SSO). This configuration is the <i><b>'final-phase'</b></i> of the integration mechanism.</p>
+						<p class="col-para">Once you have connected Authenion with your Identity Provider, you can integrate end-user's applications into Authenion for Single Sign-On (SSO). This configuration is the <i><b>'last mile integration'</b></i>mechanism.</p>
 						<p class="col-para">Authenion supports a large number of proprietary or third-party applications for Single Sign-On. Following are the list of applications certified to work with Authenion:</p>
 							<br />
 							<!--<p class="col-para">This section describes the purpose of setting up your enterprise applications with Authenion for Single Sign-On. The following are the list of enterprise applications certified for Single Sign-On with Authenion.</p>-->
@@ -2668,8 +2666,8 @@
 						<br />
 						<p class="col-sub-headings-sub"><b>1. Pre-requisites</b></p>
 						<ol class="col-para">
-							<li><p class="col-para">Install an Apache Tomcat application in a dedicated physical / virtual server</p></li>
-							<li><p class="col-para">Configure Apache Tomcat for SSL with a listen port (for example, 8443)</p></li>
+							<li><p class="col-para">Install an Apache Tomcat application or any application server of your choice in a dedicated physical / virtual server</p></li>
+							<li><p class="col-para">Configure the application server for SSL with a listen port (for example, 8443)</p></li>
 							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
 						</ol>
 						<br />
@@ -2709,7 +2707,7 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">EIK plugin should be deployed in the Apache Tomcat application server with necessary config files with it</p>
+										<p class="col-para-table">EIK plugin should be deployed in the Apache Tomcat / Weblogic server or any other application server with necessary config files with it</p>
 
 									</td>
 								</tr>
@@ -2739,7 +2737,7 @@
 						<br />
 
 						<p class="col-sub-headings-sub"><b><u>Generate EIKAuth.config File</u></b></p>
-						<p class="col-para">The EIKAuth.config config file can be generated from the Authenion Admin console. You can access the Authenion Admin console through <a href="https://launch.authenion.com"> <u>https://launch.authenion.com</u> </a>(or) <a href="#Console Interactions & Configurations"> <u>on-prem</u></a>.</p>
+						<p class="col-para">The EIKAuth.config config file can be generated from the Authenion Admin console. You can access the Authenion Admin console through <a href="https://launch.authenion.com"> <u>https://launch.authenion.com</u> </a>(or) <a href="#Console Interactions & Configurations"> <u>on-premise</u></a>.</p>
 						<ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
 							<li><p class="col-para">In the Dashboard page, click <i><b>'EIK Configurator'</b></i> in the Sidebar menu.</p></li>
@@ -3139,13 +3137,14 @@
 								<li><p class="col-para"><i>EBSdatasource.jar</i></p></li>
 							</ul>
 
-							<li><p class="col-para">Login to the server where <i>Apache Tomcat</i> has been installed and copy all the above files in to a temporary lcoation.</p></li>
-							<li><p class="col-para">Navigate to the tomcat installation directory ($CATALINA_HOME) in a terminal (linux) or command prompt(windows).</p></li>
-							<li><p class="col-para">Set an environment variable <i><b>'EIK_HOME'</b></i> resolving the path to the tomcat installation directory.</p></li>
+							<li><p class="col-para">Login to the server where <i>Apache Tomcat</i> or your preferred application server has been installed and copy all the above files in to a temporary lcoation.</p></li>
+							<!-- <li><p class="col-para">Navigate to the tomcat installation directory ($CATALINA_HOME) in a terminal (linux) or command prompt(windows).</p></li> -->
+							<li><p class="col-para">Set an environment variable <i><b>'EIK_HOME'</b></i> resolving the path to the application server installation directory.</p></li>
 							<ul style="margin-left:30px;" class="col-para">
-								<p class="col-para">For example,</p>
+								<p class="col-para">Following is the example for a Linux system:</p>
 								<p class="col-para"><u>Linux:</u><i><b> export EIK_HOME=&lt;path to tomcat installation directory&gt;</b></i></p>
 								<p>Add the above command to the .bash_profile file and source it.</p>
+								<p class="col-para">Following is the example for a Windows system:</p>
 								<p class="col-para"><u>Windows:</u> Open the <i>'Environment variables'</i> option in System Properties. Add the system variable as <i><b>EIK_HOME</b></i> and set its value to the <i>tomcat installation directory.</i></p>
 							</ul>
 							<li><p class="col-para">Navigate to $EIK_HOME directory. Create a new directory named <i><b>'EBSAuth'</b></i>. Assign <i>read & write</i> privileges to the <i>EBSAuth</i> directory.</p></li>
@@ -3249,7 +3248,7 @@
 							<br />
 
 							<li><p class="col-para">After modifying the above system profile options, restart the Oracle E-Business suite application & database services. After successful restart of the services, You can test the Single Sign-On login.</p></li>
-							<li><p class="col-para"><b>Testing:</b> Enter your Oracle EBS applicatipon url in a browser. The browser will redirect your request to the Identity Provider for authentication. Post successful authentication, you will be redirected back to the Oracle EBS application homepage with your assigned roles & responsibilities.</p></li>
+							<li><p class="col-para"><b>Testing:</b> Enter your Oracle EBS application url in a browser. The browser will redirect your request to the Identity Provider for authentication. Upon successful authentication, you will be redirected back to the Oracle EBS application homepage with your assigned roles & responsibilities.</p></li>
 							<li><p class="col-para">This completes the setup for Authenion-EIK & Oracle E-Business suite integration for Single Sign-On.</p></li>
 
 						</ol>
@@ -3260,7 +3259,7 @@
 						<p class="col-sub-headings-app"><u>Oracle Apex</u></p>
 
 						<p class="col-sub-headings-sub"><b>Oracle Apex SSO with Authenion</b></p>
-						<p class="col-para">Oracle Apex application can easily be integrated with Authenion because it is a header-based application.</p>
+						<p class="col-para">Apex Application is a part of Salesforce platform which is designed for building applications, add business logic to the system (for example, creating custom workflows) and integrating with external systems. For Apex, achieving Single Sign-On involves integrating Salesforce with an Identity Provider (IdP) using any of the authentication protocols (such as SAML, OAuth, OpenID Connect). Authenion enables Single Sign-On for Apex by it's virtual server.</p>
 						<br />
 
 						<p class="col-sub-headings-sub"><b>Architecture</b></p><br />
@@ -3323,17 +3322,22 @@
 						<p class="col-sub-headings-sub"><b><u>Authenion Configurations</u></b></p>
 						<p class="col-para">Following are the Authenion configurations to onboard the Apex application for SSO.</p>
 
-						<p class="col-sub-headings-sub"><u>Configure Virtual Server</u></p>
-						<p class="col-para">Here, a virtual server name or DNS entry is assigned for Authenion to handle all requests to the Apex application. This virtual server value will be the front-end facing URL for users to access the Apex application.</p>
-
+						<p class="col-sub-headings-sub"><u><a href="#Virtual Servers">Configure Virtual Server</a></u></p>
+						<p class="col-para">Below is an example configuration for Apex application virtual server.</p>
+						<!--   <p class="col-para">In this section, a virtual server name or DNS entry is assigned for Authenion to handle all requests to the Apex application. This virtual server value will be the front-end facing URL for users to access the Apex application.</p>   -->
+						
+						<!-- <!--
 						<ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
 							<li><p class="col-para">In the Dashboard page, click <i><b>'Virtual Servers'</b></i> in the Sidebar menu.</p></li>
 							<br />
+						-->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/VirtualServersGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex2', 'modalImageApex2')" class="col-images-pf" />
+						<!--	<img src="assets/img/VirtualServersGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex2', 'modalImageApex2')" class="col-images-pf" /> -->
 							<!-- Model Container-->
+
+							<!--
 							<div id="modalContainerApex2" class="modal-container" onclick="closeModal('modalContainerApex2')">
 								<img id="modalImageApex2" class="modal-image" src="assets/img/VirtualServersGeneral.png" alt="">
 							</div>
@@ -3342,17 +3346,18 @@
 
 							<li><p class="col-para">Click on <i>New Virtual Server</i>.</p></li>
 							<br />
+						-->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/NewVirtualServerButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex3', 'modalImageApex3')" class="col-images-pf" />
+							<!-- <img src="assets/img/NewVirtualServerButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex3', 'modalImageApex3')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex3" class="modal-container" onclick="closeModal('modalContainerApex3')">
+							<!-- <div id="modalContainerApex3" class="modal-container" onclick="closeModal('modalContainerApex3')">
 								<img id="modalImageApex3" class="modal-image" src="assets/img/NewVirtualServerButton.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li>
+							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li> -->
 
 							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 								<tr>
@@ -3419,48 +3424,49 @@
 							<br >
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/ApexVirtualServers.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex4', 'modalImageApex4')" class="col-images-pf" />
+							<!-- <img src="assets/img/ApexVirtualServers.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex4', 'modalImageApex4')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex4" class="modal-container" onclick="closeModal('modalContainerApex4')">
+							<!-- <div id="modalContainerApex4" class="modal-container" onclick="closeModal('modalContainerApex4')">
 								<img id="modalImageApex4" class="modal-image" src="assets/img/ApexVirtualServers.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
+							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li> -->
 
 						</ol>
 						
-						<p class="col-sub-headings-sub"><u>Configure Application Hosts</u></p>
-						<p class="col-para">Here, Apex application's backend servers are configured in Authenion. This makes sure the requests to Authenion are forwarded(proxied) to Apex's backend servers during SSO transactions.</p>
+						<p class="col-sub-headings-sub"><u><a href="#Application Hosts">Configure Application Hosts</a></u></p>
+						<p class="col-para">Below is an example configuration for Apex application hosts.</p>
+						<!-- <p class="col-para">In this section, Apex application's backend servers are configured in Authenion. This makes sure the requests to Authenion are forwarded(proxied) to Apex's backend servers during SSO transactions.</p>
 
 						<ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
 							<li><p class="col-para">In the Dashboard page, click <i><b>'Application Hosts'</b></i> in the Sidebar menu.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/ApplicationHostsGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex5', 'modalImageApex5')" class="col-images-pf" />
+							<!-- <img src="assets/img/ApplicationHostsGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex5', 'modalImageApex5')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex5" class="modal-container" onclick="closeModal('modalContainerApex5')">
+							<!-- <div id="modalContainerApex5" class="modal-container" onclick="closeModal('modalContainerApex5')">
 								<img id="modalImageApex5" class="modal-image" src="assets/img/ApplicationHostsGeneral.png" alt="">
 							</div>
 							<br />
 							<br />
 
 							<li><p class="col-para">Click on <i>New Application Host</i>.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/NewApplicationHostButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex6', 'modalImageApex6')" class="col-images-pf" />
+							<!-- <img src="assets/img/NewApplicationHostButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex6', 'modalImageApex6')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex6" class="modal-container" onclick="closeModal('modalContainerApex6')">
+							<!-- <div id="modalContainerApex6" class="modal-container" onclick="closeModal('modalContainerApex6')">
 								<img id="modalImageApex6" class="modal-image" src="assets/img/NewApplicationHostButton.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li>
+							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li> -->
 
 							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 								<tr>
@@ -3527,47 +3533,48 @@
 							<br >
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/ApexApplicationHosts.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex7', 'modalImageApex7')" class="col-images-pf" />
+							<!-- <img src="assets/img/ApexApplicationHosts.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex7', 'modalImageApex7')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex7" class="modal-container" onclick="closeModal('modalContainerApex7')">
+							<!-- <div id="modalContainerApex7" class="modal-container" onclick="closeModal('modalContainerApex7')">
 								<img id="modalImageApex7" class="modal-image" src="assets/img/ApexApplicationHosts.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
+							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li> -->
 						</ol>
 
-						<p class="col-sub-headings-sub"><u>Configure Header Mappings</u></p>
-						<p class="col-para">Here, the attributes that are received from the identity provider are mapped and sent to the Apex application. These attributes are used to pass information about a user to the backend protected Apex application.</p>
+						<p class="col-sub-headings-sub"><u><a href="#Header Mapping">Configure Header Mappings</a></u></p>
+						<p class="col-para">Below is an example configuration for Apex application header mappings.</p>
+						<!-- <p class="col-para">In this section, the attributes that are received from the identity provider are mapped and sent to the Apex application. These attributes are used to pass information about a user to the backend protected Apex application.</p>
 
 						<ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
 							<li><p class="col-para">In the Dashboard page, click <i><b>'Header Mappings'</b></i> in the Sidebar menu.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/HeaderMappingsGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex8', 'modalImageApex8')" class="col-images-pf" />
+							<!-- <img src="assets/img/HeaderMappingsGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex8', 'modalImageApex8')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex8" class="modal-container" onclick="closeModal('modalContainerApex8')">
+							<!-- <div id="modalContainerApex8" class="modal-container" onclick="closeModal('modalContainerApex8')">
 								<img id="modalImageApex8" class="modal-image" src="assets/img/HeaderMappingsGeneral.png" alt="">
 							</div>
 							<br />
 							<br />
 
 							<li><p class="col-para">Click on <i>New Header Mapping</i>.</p></li>
-							<br />
+							<br /> -->
 							
 							<!-- Image with onclick event -->
-							<img src="assets/img/NewHeaderMappingButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex9', 'modalImageApex9')" class="col-images-pf" />
+							<!-- <img src="assets/img/NewHeaderMappingButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex9', 'modalImageApex9')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex9" class="modal-container" onclick="closeModal('modalContainerApex9')">
+							<!-- <div id="modalContainerApex9" class="modal-container" onclick="closeModal('modalContainerApex9')">
 								<img id="modalImageApex9" class="modal-image" src="assets/img/NewHeaderMappingButton.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li>
+							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li> -->
 
 							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 								<tr>
@@ -3621,47 +3628,48 @@
 							<br >
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/ApexHeaderMappings.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex10', 'modalImageApex10')" class="col-images-pf" />
+							<!-- <img src="assets/img/ApexHeaderMappings.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex10', 'modalImageApex10')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex10" class="modal-container" onclick="closeModal('modalContainerApex10')">
+							<!-- <div id="modalContainerApex10" class="modal-container" onclick="closeModal('modalContainerApex10')">
 								<img id="modalImageApex10" class="modal-image" src="assets/img/ApexHeaderMappings.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
+							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li> -->
 						</ol>
 
-						<p class="col-sub-headings-sub"><u>Configure Resources</u></p>
-						<p class="col-para">Here, the resource paths are protected either through an authentication scheme or are unprotected. Whether resources are protected or not can be checked on the <i>"+ New Application Page"</i>.</p>
+						<p class="col-sub-headings-sub"><u><a href="#Resources">Configure Resources</a></u></p>
+						<p class="col-para">Below is an example configuration for Apex application resources.</p>
+						<!-- <p class="col-para">In this section, the resource paths are protected either through an authentication scheme or are unprotected. Whether resources are protected or not can be checked on the <i>"+ New Application Page"</i>.</p>
 
 						<ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
 							<li><p class="col-para">In the Dashboard page, click <i><b>'Resources'</b></i> in the Sidebar menu.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/ResourcesGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex11', 'modalImageApex11')" class="col-images-pf" />
+							<!-- <img src="assets/img/ResourcesGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex11', 'modalImageApex11')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex11" class="modal-container" onclick="closeModal('modalContainerApex11')">
+							<!-- <div id="modalContainerApex11" class="modal-container" onclick="closeModal('modalContainerApex11')">
 								<img id="modalImageApex11" class="modal-image" src="assets/img/ResourcesGeneral.png" alt="">
 							</div>
 							<br />
 							<br />
 							
 							<li><p class="col-para">Click on <i>New Resource</i>.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/NewResourceButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex12', 'modalImageApex12')" class="col-images-pf" />
+							<!-- <img src="assets/img/NewResourceButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex12', 'modalImageApex12')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex12" class="modal-container" onclick="closeModal('modalContainerApex12')">
+							<!-- <div id="modalContainerApex12" class="modal-container" onclick="closeModal('modalContainerApex12')">
 								<img id="modalImageApex12" class="modal-image" src="assets/img/NewResourceButton.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li>
+							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li> -->
 
 							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 								<tr>
@@ -3679,7 +3687,7 @@
 										<td>
 											<ul>
 												<p class="col-para-table">Unique name for the resource. For example,</p>
-												<p class="col-para-table"><i><b>Apex Protected URI</b></i></p>
+												<p class="col-para-table"><i><b>Apex Resource URI</b></i></p>
 											</ul>
 										</td>
 									</tr>
@@ -3702,60 +3710,181 @@
 							<br >
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/ApexResources.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex13', 'modalImageApex13')" class="col-images-pf" />
+							<!-- <img src="assets/img/ApexResources.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex13', 'modalImageApex13')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex13" class="modal-container" onclick="closeModal('modalContainerApex13')">
+							<!-- <div id="modalContainerApex13" class="modal-container" onclick="closeModal('modalContainerApex13')">
 								<img id="modalImageApex13" class="modal-image" src="assets/img/ApexResources.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
+							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li> -->
 						</ol>
 
-						<p class="col-sub-headings-sub"><u>Create Application</u></p>
-						<p class="col-para">Here, a new entry for the Apex application is created in the Authenion admin console.</p>
+						<p class="col-sub-headings-sub"><u><a href="#Applications">Create Application</a></u></p>
+						<p class="col-para">Below is an example configuration for creating a new entry for Apex application.</p>
+
+						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+							<tr>
+								<th class="symcomponent">Configurations</th>
+								<th class="symcomponent">&emsp;Values</th>
+							</tr>
+
+							<tbody class="tbody">
+
+								<!--Name-->
+								<tr>
+									<td>
+										<p class="col-para-table">Name</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Unique name for the application. For example,</p>
+											<p class="col-para-table"><i><b>Apex Application</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Virtual Server-->
+								<tr>
+									<td>
+										<p class="col-para-table">Virtual Server</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Select the appropriate configured virtual server. For example,</p>
+											<p class="col-para-table"><i><b>ApexVirtualServer</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Header Mapping-->
+								<tr>
+									<td>
+										<p class="col-para-table">Header Mapping</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Select the appropriate configured header mappings. For example,</p>
+											<p class="col-para-table"><i><b>ApexAttributes</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Protected Resource-->
+								<tr>
+									<td>
+										<p class="col-para-table">Protected Resource</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Select the appropriate configured protected resource. For example,</p>
+											<p class="col-para-table"><i><b>Apex Protected URI</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Excluded Resource-->
+								<tr>
+									<td>
+										<p class="col-para-table">Excluded Resource</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Select the appropriate configured excluded resource. For example,</p>
+											<p class="col-para-table"><i><b>Apex Unprotected URI</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Application Host-->
+								<tr>
+									<td>
+										<p class="col-para-table">Application Host</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Select the appropriate configured application host. For example,</p>
+											<p class="col-para-table"><i><b>ApexBackend</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Authenion Instances-->
+								<tr>
+									<td>
+										<p class="col-para-table">Authenion Instances</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Auto populated</p>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br >
+						<br >
+
+						<!-- Image with onclick event -->
+						<!-- <img src="assets/img/ApexResources.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex13', 'modalImageApex13')" class="col-images-pf" /> -->
+						<!-- Model Container-->
+						<!-- <div id="modalContainerApex13" class="modal-container" onclick="closeModal('modalContainerApex13')">
+							<img id="modalImageApex13" class="modal-image" src="assets/img/ApexResources.png" alt="">
+						</div>
+						<br />
+						<br />
+
+						<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li> -->
+					</ol>
+
+
+
+
+
+
+						<!-- <p class="col-para">In this section, a new entry for the Apex application is created in the Authenion admin console.</p>
 
 						<ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
 							<li><p class="col-para">In the Dashboard page, click <i><b>'Applications'</b></i> in the Sidebar menu.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/ApplicationsGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex14', 'modalImageApex14')" class="col-images-pf" />
+							<!-- <img src="assets/img/ApplicationsGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex14', 'modalImageApex14')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex14" class="modal-container" onclick="closeModal('modalContainerApex14')">
+							<!-- <div id="modalContainerApex14" class="modal-container" onclick="closeModal('modalContainerApex14')">
 								<img id="modalImageApex14" class="modal-image" src="assets/img/ApplicationsGeneral.png" alt="">
 							</div>
 							<br />
 							<br />
 
 							<li><p class="col-para">Click on <i>New Application</i>.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/NewApplicationButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex15', 'modalImageApex15')" class="col-images-pf" />
+							<!-- <img src="assets/img/NewApplicationButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex15', 'modalImageApex15')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex15" class="modal-container" onclick="closeModal('modalContainerApex15')">
+							<!-- <div id="modalContainerApex15" class="modal-container" onclick="closeModal('modalContainerApex15')">
 								<img id="modalImageApex15" class="modal-image" src="assets/img/NewApplicationButton.png" alt="">
 							</div>
 							<br />
 							<br />
 
 							<li><p class="col-para">Enter the details for the fields according to the configurations done in the previous steps for Apex application.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/ApexApplication.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex16', 'modalImageApex16')" class="col-images-pf" />
+							<!-- <img src="assets/img/ApexApplication.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex16', 'modalImageApex16')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerApex16" class="modal-container" onclick="closeModal('modalContainerApex16')">
+							<!-- <div id="modalContainerApex16" class="modal-container" onclick="closeModal('modalContainerApex16')">
 								<img id="modalImageApex16" class="modal-image" src="assets/img/ApexApplication.png" alt="">
 							</div>
 							<br />
 							<br />
 
 							<li><p class="col-para">After entering all the values, click the <i><b>'Save'</b></i> button.</p></li>
-							<li><p class="col-para">Finally, click on <i><b>'Sync'</b></i> button which can be located on the top of the sidebar menu.</p></li>
+							<li><p class="col-para">Finally, click on <i><b>'Sync'</b></i> button which can be located on the top of the sidebar menu.</p></li> -->
 						</ol>
 
 						<p class="col-sub-headings-sub"><b><u>SSO Setup in Oracle Apex Application</u></b></p>
@@ -3785,7 +3914,7 @@
 						<p class="col-sub-headings-app"><u>Oracle Hyperion</u></p>
 						
 						<p class="col-sub-headings-sub"><b> Oracle Hyperion SSO with Authenion</b></p>
-						<p class="col-para">Oracle Hyperion application can easily be integrated with Authenion because it is a header-based application. </p>
+						<p class="col-para">Authenion passes user identity/claims as header variables(s) to Apex for Single Sign-On.</p>
 						<p class="col-sub-headings-sub"><b> Architecture</b></p>
 						<br>
 						<!-- Image with onclick event -->
@@ -3845,7 +3974,7 @@
 						<p class="col-para">Following are the Authenion configurations to onboard the Hyperion application for SSO.</p>
 
 						<p class="col-sub-headings-sub"><u>Configure Virtual Server</u></p>
-						<p class="col-para">Here, a virtual server name or DNS entry is assigned for Authenion to handle all requests to the Hyperion application. This virtual server value will be the front-end facing URL for users to access the Hyperion application.</p>
+						<p class="col-para">In this section, a virtual server name or DNS entry is assigned for Authenion to handle all requests to the Hyperion application. This virtual server value will be the front-end facing URL for users to access the Hyperion application.</p>
 
 						<ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
@@ -3950,7 +4079,7 @@
 				
 						
 				<p class="col-sub-headings-sub"><u>Configure Application Hosts</u></p>
-				<p class="col-para">Here, Hyperion application's backend servers are configured in Authenion. This makes sure the requests to Authenion are forwarded(proxied) to Hyperion's backend servers during SSO transactions.</p>
+				<p class="col-para">in this section, Hyperion application's backend servers are configured in Authenion. This makes sure the requests to Authenion are forwarded(proxied) to Hyperion's backend servers during SSO transactions.</p>
 
 				<ol class="col-para">
 					<li><p class="col-para">Login to the Authenion Admin console.</p></li>
@@ -4051,7 +4180,7 @@
 
 
 <p class="col-sub-headings-sub"><u>Configure Header Mappings</u></p>
-						<p class="col-para">Here, the attributes that are received from the identity provider are mapped and sent to the Hyperion application. These attributes are used to pass information about a user to the backend protected Hyperion application.</p>
+						<p class="col-para">In this section, the attributes that are received from the identity provider are mapped and sent to the Hyperion application. These attributes are used to pass information about a user to the backend protected Hyperion application.</p>
 
 						<ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
@@ -4137,7 +4266,7 @@
 							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
 						</ol>
 						<p class="col-sub-headings-sub"><u>Configure Resources</u></p>
-						<p class="col-para">Here, the resource paths are protected either through an authentication scheme or are unprotected. Whether resources are protected or not can be checked on the <i>"+ New Application Page"</i>.</p>
+						<p class="col-para">In this section, the resource paths are protected either through an authentication scheme or are unprotected. Whether resources are protected or not can be checked on the <i>"+ New Application Page"</i>.</p>
 
 						<ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
@@ -4208,7 +4337,7 @@
 							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
 						</ol>
 						<p class="col-sub-headings-sub"><u>Create Application</u></p>
-						<p class="col-para">Here, a new entry for the hyperion application is created in the Authenion admin console.</p>
+						<p class="col-para">In this section, a new entry for the hyperion application is created in the Authenion admin console.</p>
 
 						<ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
@@ -4271,7 +4400,7 @@
 						<p class="col-sub-headings-app"><u>Oracle Primavera Unifier</u></p>
 
 						<p class="col-sub-headings-sub"><b>Oracle Primavera Unifier SSO with Authenion</b></p>
-						<p class="col-para">Unifier application can easily be integrated with Authenion because it is a header-based application.</p>
+						<p class="col-para">Primavera Unifier is a cloud-based, lifecycle management tool which is designed to streamline and control project management processes. Single Sign-On for Unifier is achieved by integrating with an identity provider (IdP) such as Active Directory or SAML-based authentication services. Authenion enables Single Sign-On for Unifier by it's virtual server.</p>
 						<br />
 
 						<p class="col-sub-headings-sub"><b>Architecture</b></p><br />
@@ -4334,36 +4463,36 @@
 						<p class="col-sub-headings-sub"><b><u>Authenion Configurations</u></b></p>
 						<p class="col-para">Following are the Authenion configurations to onboard the Unifier application for SSO.</p>
 
-						<p class="col-sub-headings-sub"><u>Configure Virtual Server</u></p>
-						<p class="col-para">Here, a virtual server name or DNS entry is assigned for Authenion to handle all requests to the Unifier application. This virtual server value will be the front-end facing URL for users to access the Unifier application.</p>
+						<p class="col-sub-headings-sub"><u><a href="#Virtual Servers">Configure Virtual Server</a></u></p>
+						<p class="col-para">Below is an example configuration for Unifier application virtual server.</p>
 
-						<ol class="col-para">
+						<!-- <ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
 							<li><p class="col-para">In the Dashboard page, click <i><b>'Virtual Servers'</b></i> in the Sidebar menu.</p></li>
-							<br />
+							<br /> -->
 							
 							<!-- Image with onclick event -->
-							<img src="assets/img/VirtualServersGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier2', 'modalImageUnifier2')" class="col-images-pf" />
+							<!-- <img src="assets/img/VirtualServersGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier2', 'modalImageUnifier2')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier2" class="modal-container" onclick="closeModal('modalContainerUnifier2')">
+							<!-- <div id="modalContainerUnifier2" class="modal-container" onclick="closeModal('modalContainerUnifier2')">
 								<img id="modalImageUnifier2" class="modal-image" src="assets/img/VirtualServersGeneral.png" alt="">
 							</div>
 							<br />
 							<br />
 
 							<li><p class="col-para">Click on <i>New Virtual Server</i>.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/NewVirtualServerButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier3', 'modalImageUnifier3')" class="col-images-pf" />
+							<!-- <img src="assets/img/NewVirtualServerButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier3', 'modalImageUnifier3')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier3" class="modal-container" onclick="closeModal('modalContainerUnifier3')">
+							<!-- <div id="modalContainerUnifier3" class="modal-container" onclick="closeModal('modalContainerUnifier3')">
 								<img id="modalImageUnifier3" class="modal-image" src="assets/img/NewVirtualServerButton.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li>
+							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li> -->
 
 							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 								<tr>
@@ -4430,48 +4559,49 @@
 							<br >
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/UnifierVirtualServers.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier4', 'modalImageUnifier4')" class="col-images-pf" />
+							<!-- <img src="assets/img/UnifierVirtualServers.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier4', 'modalImageUnifier4')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier4" class="modal-container" onclick="closeModal('modalContainerUnifier4')">
+							<!-- <div id="modalContainerUnifier4" class="modal-container" onclick="closeModal('modalContainerUnifier4')">
 								<img id="modalImageUnifier4" class="modal-image" src="assets/img/UnifierVirtualServers.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
+							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li> -->
 
 						</ol>
 
-						<p class="col-sub-headings-sub"><u>Configure Application Hosts</u></p>
-						<p class="col-para">Here, Unifier application's backend servers are configured in Authenion. This makes sure the requests to Authenion are forwarded(proxied) to Unifier's backend servers during SSO transactions.</p>
+						<p class="col-sub-headings-sub"><u><a href="#Application Hosts">Configure Application Hosts</a></u></p>
+						<p class="col-para">Below is an example configuration for Unifier application hosts.</p>
 
-						<ol class="col-para">
+
+						<!-- <ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
 							<li><p class="col-para">In the Dashboard page, click <i><b>'Application Hosts'</b></i> in the Sidebar menu.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/ApplicationHostsGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier5', 'modalImageUnifier5')" class="col-images-pf" />
+							<!-- <img src="assets/img/ApplicationHostsGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier5', 'modalImageUnifier5')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier5" class="modal-container" onclick="closeModal('modalContainerUnifier5')">
+							<!-- <div id="modalContainerUnifier5" class="modal-container" onclick="closeModal('modalContainerUnifier5')">
 								<img id="modalImageUnifier5" class="modal-image" src="assets/img/ApplicationHostsGeneral.png" alt="">
 							</div>
 							<br />
 							<br />
 
 							<li><p class="col-para">Click on <i>New Application Host</i>.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/NewApplicationHostButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier6', 'modalImageUnifier6')" class="col-images-pf" />
+							<!-- <img src="assets/img/NewApplicationHostButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier6', 'modalImageUnifier6')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier6" class="modal-container" onclick="closeModal('modalContainerUnifier6')">
+							<!-- <div id="modalContainerUnifier6" class="modal-container" onclick="closeModal('modalContainerUnifier6')">
 								<img id="modalImageUnifier6" class="modal-image" src="assets/img/NewApplicationHostButton.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li>
+							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li> -->
 
 							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 								<tr>
@@ -4538,47 +4668,47 @@
 							<br >
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/UnifierApplicationHost.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier7', 'modalImageUnifier7')" class="col-images-pf" />
+							<!-- <img src="assets/img/UnifierApplicationHost.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier7', 'modalImageUnifier7')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier7" class="modal-container" onclick="closeModal('modalContainerUnifier7')">
+							<!-- <div id="modalContainerUnifier7" class="modal-container" onclick="closeModal('modalContainerUnifier7')">
 								<img id="modalImageUnifier7" class="modal-image" src="assets/img/UnifierApplicationHost.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
+							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li> -->
 						</ol>
 
-						<p class="col-sub-headings-sub"><u>Configure Header Mappings</u></p>
-						<p class="col-para">Here, the attributes that are received from the identity provider are mapped and sent to the Unifier application. These attributes are used to pass information about a user to the backend protected Unifier application.</p>
+						<p class="col-sub-headings-sub"><u><a href="#Header Mapping">Configure Header Mappings</a></u></p>
+						<p class="col-para">Below is an example configuration for Unifier application header mappings.</p>
 
-						<ol class="col-para">
+						<!-- <ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
 							<li><p class="col-para">In the Dashboard page, click <i><b>'Header Mappings'</b></i> in the Sidebar menu.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/HeaderMappingsGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier8', 'modalImageUnifier8')" class="col-images-pf" />
+							<!-- <img src="assets/img/HeaderMappingsGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier8', 'modalImageUnifier8')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier8" class="modal-container" onclick="closeModal('modalContainerUnifier8')">
+							<!-- <div id="modalContainerUnifier8" class="modal-container" onclick="closeModal('modalContainerUnifier8')">
 								<img id="modalImageUnifier8" class="modal-image" src="assets/img/HeaderMappingsGeneral.png" alt="">
 							</div>
 							<br />
 							<br />
 
 							<li><p class="col-para">Click on <i>New Header Mapping</i>.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/NewHeaderMappingButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier9', 'modalImageUnifier9')" class="col-images-pf" />
+							<!-- <img src="assets/img/NewHeaderMappingButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier9', 'modalImageUnifier9')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier9" class="modal-container" onclick="closeModal('modalContainerUnifier9')">
+							<!-- <div id="modalContainerUnifier9" class="modal-container" onclick="closeModal('modalContainerUnifier9')">
 								<img id="modalImageUnifier9" class="modal-image" src="assets/img/NewHeaderMappingButton.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li>
+							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li> -->
 
 							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 								<tr>
@@ -4632,47 +4762,47 @@
 							<br >
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/UnifierHeaderMappings.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier10', 'modalImageUnifier10')" class="col-images-pf" />
+							<!-- <img src="assets/img/UnifierHeaderMappings.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier10', 'modalImageUnifier10')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier10" class="modal-container" onclick="closeModal('modalContainerUnifier10')">
+							<!-- <div id="modalContainerUnifier10" class="modal-container" onclick="closeModal('modalContainerUnifier10')">
 								<img id="modalImageUnifier10" class="modal-image" src="assets/img/UnifierHeaderMappings.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
+							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li> -->
 						</ol>
 
-						<p class="col-sub-headings-sub"><u>Configure Resources</u></p>
-						<p class="col-para">Here, the resource paths are protected either through an authentication scheme or are unprotected. Whether resources are protected or not can be checked on the <i>"+ New Application Page"</i>.</p>
+						<p class="col-sub-headings-sub"><u><a href="#Resources">Configure Resources</a></u></p>
+						<p class="col-para">Below is an example configuration for Unifier application resources.</p>
 
-						<ol class="col-para">
+						<!-- <ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
 							<li><p class="col-para">In the Dashboard page, click <i><b>'Resources'</b></i> in the Sidebar menu.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/ResourcesGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier11', 'modalImageUnifier11')" class="col-images-pf" />
+							<!-- <img src="assets/img/ResourcesGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier11', 'modalImageUnifier11')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier11" class="modal-container" onclick="closeModal('modalContainerUnifier11')">
+							<!-- <div id="modalContainerUnifier11" class="modal-container" onclick="closeModal('modalContainerUnifier11')">
 								<img id="modalImageUnifier11" class="modal-image" src="assets/img/ResourcesGeneral.png" alt="">
 							</div>
 							<br />
 							<br />
 
 							<li><p class="col-para">Click on <i>New Resource</i>.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/NewResourceButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier12', 'modalImageUnifier12')" class="col-images-pf" />
+							<!-- <img src="assets/img/NewResourceButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier12', 'modalImageUnifier12')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier12" class="modal-container" onclick="closeModal('modalContainerUnifier12')">
+							<!-- <div id="modalContainerUnifier12" class="modal-container" onclick="closeModal('modalContainerUnifier12')">
 								<img id="modalImageUnifier12" class="modal-image" src="assets/img/NewResourceButton.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li>
+							<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li> -->
 
 							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 								<tr>
@@ -4690,7 +4820,7 @@
 										<td>
 											<ul>
 												<p class="col-para-table">Unique name for the resource. For example,</p>
-												<p class="col-para-table"><i><b>Unifier Protected URI</b></i></p>
+												<p class="col-para-table"><i><b>Unifier Resource URI</b></i></p>
 											</ul>
 										</td>
 									</tr>
@@ -4713,60 +4843,162 @@
 							<br >
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/UnifierResources.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier13', 'modalImageUnifier13')" class="col-images-pf" />
+							<!-- <img src="assets/img/UnifierResources.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier13', 'modalImageUnifier13')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier13" class="modal-container" onclick="closeModal('modalContainerUnifier13')">
+							<!-- <div id="modalContainerUnifier13" class="modal-container" onclick="closeModal('modalContainerUnifier13')">
 								<img id="modalImageUnifier13" class="modal-image" src="assets/img/UnifierResources.png" alt="">
 							</div>
 							<br />
 							<br />
 
-							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
+							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li> -->
 						</ol>
 
-						<p class="col-sub-headings-sub"><u>Create Application</u></p>
-						<p class="col-para">Here, a new entry for the Unifier application is created in the Authenion admin console.</p>
+						<p class="col-sub-headings-sub"><u><a href="#Applications">Create Application</a></u></p>
+						<p class="col-para">Below is an example configuration for creating a new entry for Unifier application.</p>
 
-						<ol class="col-para">
+						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+							<tr>
+								<th class="symcomponent">Configurations</th>
+								<th class="symcomponent">&emsp;Values</th>
+							</tr>
+
+							<tbody class="tbody">
+
+								<!--Name-->
+								<tr>
+									<td>
+										<p class="col-para-table">Name</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Unique name for the application. For example,</p>
+											<p class="col-para-table"><i><b>Unifier Application</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Virtual Server-->
+								<tr>
+									<td>
+										<p class="col-para-table">Virtual Server</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Select the appropriate configured virtual server. For example,</p>
+											<p class="col-para-table"><i><b>UnifierVirtualServer</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Header Mapping-->
+								<tr>
+									<td>
+										<p class="col-para-table">Header Mapping</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Select the appropriate configured header mappings. For example,</p>
+											<p class="col-para-table"><i><b>UnifierAttributes</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Protected Resource-->
+								<tr>
+									<td>
+										<p class="col-para-table">Protected Resource</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Select the appropriate configured protected resource. For example,</p>
+											<p class="col-para-table"><i><b>Unifier Protected URI</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Excluded Resource-->
+								<tr>
+									<td>
+										<p class="col-para-table">Excluded Resource</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Select the appropriate configured excluded resource. For example,</p>
+											<p class="col-para-table"><i><b>Unifier Unprotected URI</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Application Host-->
+								<tr>
+									<td>
+										<p class="col-para-table">Application Host</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Select the appropriate configured application host. For example,</p>
+											<p class="col-para-table"><i><b>UnifierBackend</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Authenion Instances-->
+								<tr>
+									<td>
+										<p class="col-para-table">Authenion Instances</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Auto populated</p>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br >
+						<br >
+
+						<!-- <ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
 							<li><p class="col-para">In the Dashboard page, click <i><b>'Applications'</b></i> in the Sidebar menu.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/ApplicationsGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier14', 'modalImageUnifier14')" class="col-images-pf" />
+							<!-- <img src="assets/img/ApplicationsGeneral.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier14', 'modalImageUnifier14')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier14" class="modal-container" onclick="closeModal('modalContainerUnifier14')">
+							<!-- <div id="modalContainerUnifier14" class="modal-container" onclick="closeModal('modalContainerUnifier14')">
 								<img id="modalImageUnifier14" class="modal-image" src="assets/img/ApplicationsGeneral.png" alt="">
 							</div>
 							<br />
 							<br />
 
 							<li><p class="col-para">Click on <i>New Application</i>.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/NewApplicationButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier15', 'modalImageUnifier15')" class="col-images-pf" />
+							<!-- <img src="assets/img/NewApplicationButton.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier15', 'modalImageUnifier15')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier15" class="modal-container" onclick="closeModal('modalContainerUnifier15')">
+							<!-- <div id="modalContainerUnifier15" class="modal-container" onclick="closeModal('modalContainerUnifier15')">
 								<img id="modalImageUnifier15" class="modal-image" src="assets/img/NewApplicationButton.png" alt="">
 							</div>
 							<br />
 							<br />
 
 							<li><p class="col-para">Enter the details for the fields according to the configurations done in the previous steps for Unifier application.</p></li>
-							<br />
+							<br /> -->
 
 							<!-- Image with onclick event -->
-							<img src="assets/img/UnifierApplication.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier16', 'modalImageUnifier16')" class="col-images-pf" />
+							<!-- <img src="assets/img/UnifierApplication.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier16', 'modalImageUnifier16')" class="col-images-pf" /> -->
 							<!-- Model Container-->
-							<div id="modalContainerUnifier16" class="modal-container" onclick="closeModal('modalContainerUnifier16')">
+							<!-- <div id="modalContainerUnifier16" class="modal-container" onclick="closeModal('modalContainerUnifier16')">
 								<img id="modalImageUnifier16" class="modal-image" src="assets/img/UnifierApplication.png" alt="">
 							</div>
 							<br />
 							<br />
 
 							<li><p class="col-para">After entering all the values, click the <i><b>'Save'</b></i> button.</p></li>
-							<li><p class="col-para">Finally, click on <i><b>'Sync'</b></i> button which can be located on the top of the sidebar menu.</p></li>
+							<li><p class="col-para">Finally, click on <i><b>'Sync'</b></i> button which can be located on the top of the sidebar menu.</p></li> -->
 						</ol>
 
 						<p class="col-sub-headings-sub"><b><u>SSO Setup in Oracle Primavera Unifier Application</u></b></p>
