@@ -364,7 +364,7 @@
 			  </li>
 			  <li>
 				  <a href="#Oracle Apex" class="nav-link-sub collapsed">
-					  <!--<i class="bi bi-circle">--></i><span>Oracle Apex</span>
+					  <!--<i class="bi bi-circle">--></i><span>Oracle APEX</span>
 				  </a>
 			  </li>
 			  <li>
@@ -680,7 +680,7 @@
 				<a style="padding:32px" name="Enterprise Deployement Model"></a>
 				<p class="col-sub-headings">3. Enterprise Deployment Model</p>
 				<!--<p class="col-para">Authenion along with an Identity Provider enable your Enterprise/Custom applications and its users experience a secure Single Sign-On by enforcing authentication standards to the applications. Together, they help achieve a seamless Single Sign-On feature to the protected applications.</p>-->
-				<p class="col-para">Authenion provides a Gateway architecture for end-user's applications that supports Header variables for last mile integration nad Single Sign-On. In the gateway model, the user's request is initially directed to Authenion and then Authenion grants or denies access to the request based on the application resource protection type.</p>
+				<p class="col-para">Authenion provides a Gateway architecture for end-user's applications that supports Header variables for last mile integration and Single Sign-On. In the gateway model, the user's request is initially directed to Authenion and then Authenion grants or denies access to the request based on the application resource protection type.</p>
 				<!-- <ul class="col-para"> -->
 				<ul style="margin-left:30px;" class="col-para">
 					<li><p class="col-para">This deployment model can be set up quickly without disrupting the applications. Authenion will be installed on separate servers from the application web servers.</p></li>
@@ -847,12 +847,12 @@
 						<!--Header Mapping-->
 						<tr>
 							<td>
-								<p class="col-para-table"><a href="#Header Mapping"><u>Header Mapping</u></a></p>
+								<p class="col-para-table"><a href="#Header Mapping"><u>Header Mappings</u></a></p>
 							</td>
 							<td>
 
 								<ul>
-									<p class="col-para-table">Header variables containing user info for the end-user's applications last mile integration and Single Sign-On</p>
+									<p class="col-para-table">Header variables containing user info for the end-user's application's last mile integration and Single Sign-On</p>
 
 								</ul>
 
@@ -1030,8 +1030,8 @@
 						<p class="col-sub-headings">2. Install Authenion</p>
 						<ol class="col-para">
 							<li><p class="col-para">Request or download the authenion-2.0 product distribution file and a valid license from the Authenion support portal or by contacting your account manager at LikeMinds.</p></li>
-							<li><p class="col-para">Install authenion by unzipping the authenion-2.0.zip into the <i>“/home/appuser”</i> directory in the Authenion server.</p></li>
-							<li><p class="col-para">Authenion file system after extracting.</p></li>
+							<li><p class="col-para">Install authenion by unzipping the authenion-2.0.zip file into the <i>“/home/appuser”</i> directory in the Authenion server.</p></li>
+							<li><p class="col-para">After extracting the zip file, the folder structure should look like as shown in the table below. </p></li>
 
 
 							<!-- TABLE2 -->
@@ -1207,7 +1207,7 @@
 
 						<a style="padding:32px" - name="ssl-cert section"></a>
 						<p class="col-sub-headings">7. Install SSL Certificates for Authenion (optional)</p>
-						<p class="col-para">Authenion allows you to install your organization’s signed certificates. The certificates should be in the .crt & .key files format. To place your organization’s cert in Authenion, follow the steps below.</p>
+						<p class="col-para">Authenion allows you to install your organization’s signed certificates. The certificates should be in the .crt & .key files format. To place your organization’s certificate in Authenion, follow the steps below.</p>
 						<ol class="col-para">
 							<li><p class="col-para">If you have the certificate & private key in pkcs format, move the certificate to the Authenion server & run the following commands.<p></li>
 							<!-- TABLE3 -->
@@ -1224,7 +1224,7 @@
 							<br>
 							<li><p class="col-para">Copy the .crt & .key extracted in the previous step and place it in “&lt;authenion_install_dir&gt;/server/conf/certs” directory.<p></li>
 							<li><p class="col-para">The above steps can be repeated during the Authenion certificate renewal process.<p></li>
-							<p class="col-para"><i> Note: This setup is optional. The Certificates can also be installed on a load-balancer servers.</i></p>
+							<p class="col-para"><i> Note: This setup is optional. The Certificates can also be installed on load-balancer servers.</i></p>
 						</ol>
 						<br>
 					</div> <!-- ### INSTALLATION ### -->
@@ -1594,6 +1594,8 @@
 							<li><p class="col-para">Header Mappings</p></li>
 							<li><p class="col-para">Resources</p></li>
 							<li><p class="col-para">Authenion Status</p></li>
+							<li><p class="col-para">EIK Configurator</p></li>
+							<li><p class="col-para">Logout</p></li>
 							<li><p class="col-para">Sync</p></li>
 							<li><p class="col-para">Export</p></li>
 						</ul>
@@ -1665,7 +1667,7 @@
 							</li>
 						</ul>
 						<ol class="col-para">
-							<li><p class="col-para">To add an application, click <b>New Application</b> in the Dashboard page.</p></li>
+							<li><p class="col-para">To add an application, click <b>New Application</b> on the Dashboard page.</p></li>
 							<li><p class="col-para">Enter the following details: </p></li>
 							</p>
 							<br>
@@ -1740,7 +1742,7 @@
 										</td>
 										<td>
 											<ul>
-												<p class="col-para-table">UnprotectdResource&emsp;(Configured <a href="#Resources">Section 9</a>)</p>
+												<p class="col-para-table">UnprotectedResource&emsp;(Configured <a href="#Resources">Section 9</a>)</p>
 											</ul>
 										</td>
 									</tr>
@@ -1816,8 +1818,8 @@
 
 						</h6>
 						<ol class="col-para">
-							<li><p class="col-para">Click Virtual Servers in the sidebar menu.</p></li>
-							<li><p class="col-para">Click the <b>“+ New Virtual Server”</b> button in the Virtual Servers page. </p></li>
+							<li><p class="col-para">Click Virtual Servers on the sidebar menu.</p></li>
+							<li><p class="col-para">Click the <b>“+ New Virtual Server”</b> button on the Virtual Servers page. </p></li>
 							<li><p class="col-para">Enter the following details to create a Virtual Server for your application.  </p></li>
 							<p class="col-para"><b>For example:</b></p>
 							</p>
@@ -1907,7 +1909,7 @@
 						<p class="col-sub-headings">7. Application Hosts </p>
 						<p class="col-para">
 							Applications Hosts are the target applications or the backend application servers that Authenion is protecting through the
-							gateway architecture. These target application’s access requests are validated by Authenion before they are forwarded.
+							gateway architecture. The target application’s access requests are validated by Authenion before they are forwarded.
 						</p>
 						<!-- <img src="assets/img/BackendServer.png" alt="" class="col-images-intro" /> <br> -->
 						<!-- Image with onclick event -->
@@ -1922,8 +1924,8 @@
 							Adding Application Hosts
 						</h6>
 						<ol class="col-para">
-							<li><p class="col-para">Click Application Hosts in the sidebar menu. </p></li>
-							<li><p class="col-para">Click the <b>“+New Application Host”</b> button in the Application Hosts page. </p></li>
+							<li><p class="col-para">Click Application Hosts on the sidebar menu. </p></li>
+							<li><p class="col-para">Click the <b>“+New Application Host”</b> button on the Application Hosts page. </p></li>
 							<li><p class="col-para">Enter the following details to create an Application Host for your target application server.  </p></li>
 							<p class="col-para"><b>For example:</b></p>
 							</p>
@@ -2005,7 +2007,7 @@
 						<p class="col-para">
 							Header Mappings sends the User attributes to the target application post authentication. The target application will use
 							them for validation purposes. The Header Mappings will receive the user attributes from the Claims which are sent by the
-							Token Provider. Once the claims received, it is then made available as HTTP-Headers to the target applications.
+							Token Provider. Once the claims are received, it is then made available as HTTP-Headers to the target applications.
 						</p>
 						<!-- <img src="assets/img/HeaderMappings.png" alt="" class="col-images-intro" /> <br> -->
 						<!-- Image with onclick event -->
@@ -2020,8 +2022,8 @@
 							Adding Header Mapping
 						</h6>
 						<ol class="col-para">
-							<li><p class="col-para">Click Header Mappings in the sidebar menu.  </p></li>
-							<li><p class="col-para">Click the <b>“+New Header Mapping”</b> button in the Header Mappings page.  </p></li>
+							<li><p class="col-para">Click Header Mappings on the sidebar menu.  </p></li>
+							<li><p class="col-para">Click the <b>“+New Header Mapping”</b> button on the Header Mappings page.  </p></li>
 							<li><p class="col-para">Enter the following details to create a header mapping for your target application.   </p></li>
 							<p class="col-para"><b>For example:</b></p>
 							</p>
@@ -2114,7 +2116,7 @@
 						<p class="col-sub-headings">9. Resources </p>
 						<p class="col-para">
 							Resources are the components/URI of the applications. The resources can be mapped as either protected or excluded
-							resources in an application. Each application should have at least one protected & excluded resources configured to it.
+							resources in an application.
 						</p>
 						<!-- <img src="assets/img/Resources.png" alt="" class="col-images-intro" /> <br> -->
 						<!-- Image with onclick event -->
@@ -2129,8 +2131,8 @@
 							Adding Resources
 						</h6>
 						<ol class="col-para">
-							<li><p class="col-para">Click Resources in the sidebar menu.   </p></li>
-							<li><p class="col-para">Click the <b>“+New Resource”</b> button in the Resources page.  </p></li>
+							<li><p class="col-para">Click Resources on the sidebar menu.   </p></li>
+							<li><p class="col-para">Click the <b>“+New Resource”</b> button on the Resources page.  </p></li>
 							<li><p class="col-para">Enter the following details to create a Resources for your target application.    </p></li>
 							<p class="col-para"><b>For example:</b></p>
 							</p>
@@ -2203,7 +2205,7 @@
 							status page also displays your authenion license information.
 						</p>
 						<ol class="col-para">
-							<li><p class="col-para">Click Authenion Status in the sidebar menu to view the status of your Authenion application.  </p></li>
+							<li><p class="col-para">Click Authenion Status on the sidebar menu to view the status of your Authenion application.  </p></li>
 
 					</div>
 					<!-- <img src="assets/img/authenionstatus.png" alt="" class="col-images-intro" /> <br> -->
@@ -2272,7 +2274,6 @@
 							name is export.json.
 						</p>
 					</div>
-					<br />
 					<br />
 
 					<!-- ### CONFIGURE IDENTITY PROVIDER ### -->
@@ -2412,7 +2413,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">Select the accesstoken to map with this client</li>
+												<li class="li"><p class="col-para-table">Select the access token to map with this client</li>
 											</ul>
 										</td>
 									</tr>
@@ -2496,7 +2497,7 @@
 							<br />
 
 							<li><p class="col-para">When the registration finishes, the Azure portal displays the Authenion application registration’s overview pane. You can find the Application ID which will also be used as the client_id when we connect Authenion & Azure through OAuth/OIDC.</p></li>
-							<li><p class="col-para">You need to Credential in ‘Certificates & Secrets’ page. This acts as the client credential for the Authenion application, and it allows Authenion to authenticate as itself to Microsoft Azure.</p></li>
+							<li><p class="col-para">You need to add "Credential" in ‘Certificates & Secrets’ page. This acts as the client credential for the Authenion application, and it allows Authenion to authenticate as itself to Microsoft Azure.</p></li>
 							<!-- <img src="assets/img/azure-2.png" alt="" class="col-images-pf"><br/> -->
 							<!-- Image with onclick event -->
 							<img src="assets/img/azure-2.png" alt="" onclick="openModal('modalContainer24', 'modalImage24')" class="col-images-pf" />
@@ -2519,7 +2520,7 @@
 					<div>
 						<a style="padding: 38px" name="Application Integration with Authenion"></a>
 						<h4 style="font-family: sans-serif; font-size: 26px; font-weight: 600; color: #00297A">Application Integration with Authenion</h4>
-						<p class="col-para">Once you have connected Authenion with your Identity Provider, you can integrate end-user's applications into Authenion for Single Sign-On (SSO). This configuration is the <i><b>'last mile integration'</b></i>mechanism.</p>
+						<p class="col-para">Once you have connected Authenion with your Identity Provider, you can integrate end-user's applications into Authenion for Single Sign-On (SSO). This configuration is the <i><b>'last mile integration'</b></i> mechanism.</p>
 						<p class="col-para">Authenion supports a large number of proprietary or third-party applications for Single Sign-On. Following are the list of applications certified to work with Authenion:</p>
 						<br />
 						<!--<p class="col-para">This section describes the purpose of setting up your enterprise applications with Authenion for Single Sign-On. The following are the list of enterprise applications certified for Single Sign-On with Authenion.</p>-->
@@ -2582,7 +2583,7 @@
 							<div>
 								<a href="#Oracle Apex">
 									<p class="tile-app-int" data-test="tile">
-										<b>Oracle Apex</b>
+										<b>Oracle APEX</b>
 									</p>
 								</a>
 							</div>
@@ -2666,7 +2667,7 @@
 						<br />
 						<p class="col-sub-headings-sub"><b>1. Pre-requisites</b></p>
 						<ol class="col-para">
-							<li><p class="col-para">Install an Apache Tomcat application or any application server of your choice in a dedicated physical / virtual server</p></li>
+							<li><p class="col-para">Install an Apache Tomcat / Weblogic application or any application server of your choice in a dedicated physical / virtual server</p></li>
 							<li><p class="col-para">Configure the application server for SSL with a listen port (for example, 8443)</p></li>
 							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
 						</ol>
@@ -2740,7 +2741,7 @@
 						<p class="col-para">The EIKAuth.config config file can be generated from the Authenion Admin console. You can access the Authenion Admin console through <a href="https://launch.authenion.com"> <u>https://launch.authenion.com</u> </a>(or) <a href="#Console Interactions & Configurations"> <u>on-premise</u></a>.</p>
 						<ol class="col-para">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
-							<li><p class="col-para">In the Dashboard page, click <i><b>'EIK Configurator'</b></i> in the Sidebar menu.</p></li>
+							<li><p class="col-para">On the Dashboard page, click <i><b>'EIK Configurator'</b></i> on the Sidebar menu.</p></li>
 							<br />
 							<!-- Image with onclick event -->
 							<img src="assets/img/eik-sidebar.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerEIK2', 'modalImageEIK2')" class="col-images-pf" />
@@ -2901,7 +2902,7 @@
 							<br />
 
 							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button. This will download a file named <i><b>'EIKAuth.config'</b></i>.</p></li>
-							<li><p class="col-para">Copy the downloaded <i>'EIKAuth.config'</i> file to a temporary location in the tomcat server. This file will be used in the EIK deployment section later.</p></li>
+							<li><p class="col-para">Copy the downloaded <i>'EIKAuth.config'</i> file to a temporary location in the Apache tomcat / Weblogic server. This file will be used in the EIK deployment section later.</p></li>
 						</ol>
 						<br />
 
@@ -3120,13 +3121,13 @@
 							<br />
 
 							<li><p class="col-para">After entering the above values, the EIKUSER will be registered. A new file named <i><b>'EIK.dbcx'</b></i> will be generated in the same directory.</p></li>
-							<li><p class="col-para">Copy this file to a temporary location in the tomcat server. This file will be used in the EIK deployment section.</p></li>
+							<li><p class="col-para">Copy this file to a temporary location in the Apache tomcat / Weblogic server. This file will be used in the EIK deployment section.</p></li>
 						</ol>
 						<br />
 
 
 						<p class="col-sub-headings-sub"><b><u>Deploy Authenion-EIK</u></b></p>
-						<p class="col-para">This section guides you through the deployment steps for Authenion - EBS Integration Kit. This guide will show the deployment steps in an <i>'Apache Tomcat'</i> application server.</p>
+						<p class="col-para">This section guides you through the deployment steps for Authenion - EBS Integration Kit. This guide will show the deployment steps in an <i>'Apache Tomcat / Weblogic'</i> application server.</p>
 						<ol class="col-para">
 							<li><p class="col-para">Login to the <a href="https://support.likemindsconsulting.com"> <u>Like Minds Support Portal</u></a> and download the required binaries to complete the EIK deployment.</p></li>
 							<li><p class="col-para">The following are the list of files that will be downloaded as part of the installation package.</p></li>
@@ -3137,23 +3138,23 @@
 								<li><p class="col-para"><i>EBSdatasource.jar</i></p></li>
 							</ul>
 
-							<li><p class="col-para">Login to the server where <i>Apache Tomcat</i> or your preferred application server has been installed and copy all the above files in to a temporary lcoation.</p></li>
+							<li><p class="col-para">Login to the server where <i>Apache Tomcat / Weblogic</i> or your preferred application server has been installed and copy all the above files in to a temporary lcoation.</p></li>
 							<!-- <li><p class="col-para">Navigate to the tomcat installation directory ($CATALINA_HOME) in a terminal (linux) or command prompt(windows).</p></li> -->
 							<li><p class="col-para">Set an environment variable <i><b>'EIK_HOME'</b></i> resolving the path to the application server installation directory.</p></li>
 							<ul style="margin-left:30px;" class="col-para">
 								<p class="col-para">Following is the example for a Linux system:</p>
-								<p class="col-para"><u>Linux:</u><i><b> export EIK_HOME=&lt;path to tomcat installation directory&gt;</b></i></p>
+								<p class="col-para"><u>Linux:</u><i><b> export EIK_HOME=&lt;path to Apache tomcat / Weblogic installation directory&gt;</b></i></p>
 								<p>Add the above command to the .bash_profile file and source it.</p>
 								<p class="col-para">Following is the example for a Windows system:</p>
-								<p class="col-para"><u>Windows:</u> Open the <i>'Environment variables'</i> option in System Properties. Add the system variable as <i><b>EIK_HOME</b></i> and set its value to the <i>tomcat installation directory.</i></p>
+								<p class="col-para"><u>Windows:</u> Open the <i>'Environment variables'</i> option in System Properties. Add the system variable as <i><b>EIK_HOME</b></i> and set its value to the <i>Apache tomcat / Weblogic installation directory.</i></p>
 							</ul>
 							<li><p class="col-para">Navigate to $EIK_HOME directory. Create a new directory named <i><b>'EBSAuth'</b></i>. Assign <i>read & write</i> privileges to the <i>EBSAuth</i> directory.</p></li>
-							<li><p class="col-para">Obtain or download the Authenion-EIK license from the Like Minds Support portal. Copy the license file <i><b>'ebsauth.lic'</b></i> and move it to a temporary location in the tomcat server.</p></li>
+							<li><p class="col-para">Obtain or download the Authenion-EIK license from the Like Minds Support portal. Copy the license file <i><b>'ebsauth.lic'</b></i> and move it to a temporary location in the Apache tomcat / Weblogic server.</p></li>
 							<li><p class="col-para">Copy the license file to the following directory:</i></p></li>
 							<ul style="margin-left:30px;" class="col-para">
 								<p class="col-para"><i>$EIK_HOME/EBSAuth/</i></p>
 							</ul>
-							<li><p class="col-para">Locate the <i>EIKAuth.config</i> & <i>EIK.dbcx</i> files from the temporary location (Generated and copied to tomcat server in the previous sections).</p> <p>Copy both the files to the following directory:</p></li>
+							<li><p class="col-para">Locate the <i>EIKAuth.config</i> & <i>EIK.dbcx</i> files from the temporary location (Generated and copied to Apache tomcat / Weblogic server in the previous sections).</p> <p>Copy both the files to the following directory:</p></li>
 							<ul style="margin-left:30px;" class="col-para">
 								<p class="col-para"><i>$EIK_HOME/EBSAuth/</i></p>
 							</ul>
@@ -3165,16 +3166,16 @@
 							<ul style="margin-left:30px;" class="col-para">
 								<p class="col-para"><i>$CATALINA_HOME/webapps/</i></p>
 							</ul>
-							<li><p class="col-para">Restart the <i>Apache Tomcat</i> services.</p></li>
-							<li><p class="col-para">This completes the deployment of Authenion-EIK in the Apache Tomcat application server.</p></li>
-							<li><p class="col-para">Repeat the steps above in all the servers, if Apache Tomcat is configured for H/A.</p></li>
+							<li><p class="col-para">Restart the <i>Apache Tomcat / Weblogic</i> services.</p></li>
+							<li><p class="col-para">This completes the deployment of Authenion-EIK in the Apache Tomcat / Weblogic application server.</p></li>
+							<li><p class="col-para">Repeat the steps above in all the servers, if Apache Tomcat / Weblogic is configured for H/A.</p></li>
 							<!--<br />-->
-							<p class="col-para"><i><b>Note:</b></i> A single Authenion-EIK deployment will connect with only one Oracle EBS Application for SSO. However, if you have requirements to connect with multiple Oracle EBS environments for SSO, you can deploy multiple instances of Authenion-EIK in the same Apache Tomcat server by changing the <i>'Context Path'</i>. For example, you can follow the above steps 1 to 14 and deploy plugins by changing the .war filename to <i>'EBSAuth_DEV.war'</i> & <i>'EBSAuth_PRD.war'</i> in the tomcat servers and point to appropriate Oralce EBS application environments.</p>
+							<p class="col-para"><i><b>Note:</b></i> A single Authenion-EIK deployment will connect with only one Oracle EBS Application for SSO. However, if you have requirements to connect with multiple Oracle EBS environments for SSO, you can deploy multiple instances of Authenion-EIK in the same Apache Tomcat / Weblogic server by changing the <i>'Context Path'</i>. For example, you can follow the above steps 1 to 14 and deploy plugins by changing the .war filename to <i>'EBSAuth_DEV.war'</i> & <i>'EBSAuth_PRD.war'</i> in the Apache tomcat / Weblogic servers and point to appropriate Oralce EBS application environments.</p>
 							<br />
 						</ol>
 
 						<p class="col-sub-headings-sub"><b><u>Configure Oracle EBS System Profile options</u></b></p>
-						<p class="col-para">This section will guide you to configure the system profile options that enable Single Sign-On to the Oracle E-Business Suite application. These system profile optiones are Oracle recommended for enabling SSO with any providers.</p>
+						<p class="col-para">This section will guide you to configure the system profile options that enable Single Sign-On to the Oracle E-Business Suite application. These system profile options are Oracle recommended for enabling SSO with any providers.</p>
 						<ol class="col-para">
 							<li><p class="col-para">Login to the Oracle E-Business suite application as a <i>'System Administrator'</i></p></li>
 							<li><p class="col-para">Navigate to <i>'System Profile'</i> in System Administration. Edit the following system profile options as mentioned in the table:</p></li>
@@ -3247,7 +3248,7 @@
 							</table>
 							<br />
 
-							<li><p class="col-para">After modifying the above system profile options, restart the Oracle E-Business suite application & database services. After successful restart of the services, You can test the Single Sign-On login.</p></li>
+							<li><p class="col-para">After modifying the above system profile options, restart the Oracle E-Business suite application & database services. After successful restart of the services, you can test the Single Sign-On login.</p></li>
 							<li><p class="col-para"><b>Testing:</b> Enter your Oracle EBS application url in a browser. The browser will redirect your request to the Identity Provider for authentication. Upon successful authentication, you will be redirected back to the Oracle EBS application homepage with your assigned roles & responsibilities.</p></li>
 							<li><p class="col-para">This completes the setup for Authenion-EIK & Oracle E-Business suite integration for Single Sign-On.</p></li>
 
@@ -3256,10 +3257,10 @@
 						<!--Oracle Apex Application-->
 
 						<a style="padding: 35px" name="Oracle Apex"></a>
-						<p class="col-sub-headings-app"><u>Oracle Apex</u></p>
+						<p class="col-sub-headings-app"><u>Oracle Application Express (APEX)</u></p>
 
-						<p class="col-sub-headings-sub"><b>Oracle Apex SSO with Authenion</b></p>
-						<p class="col-para">Oracle Apex is a web-based integrated development environment which simplifies the process of building applications and pages. Oracle Apex can be integrated with Authenion to achieve a centralized web SSO solution. Oracle Apex application supports the use of HTTP Header variables to identity a user and to create a session for the user in Oracle Apex application.</p>
+						<p class="col-sub-headings-sub"><b>Oracle APEX SSO with Authenion</b></p>
+						<p class="col-para">Oracle APEX is a web-based integrated development environment which simplifies the process of building applications and pages. It supports the use of HTTP Header variables to identify a user and to create a session for the user in Oracle APEX application.</p>
 						<br />
 
 						<p class="col-sub-headings-sub"><b>Architecture</b></p><br />
@@ -3275,7 +3276,7 @@
 						<br />
 
 						<p class="col-sub-headings-eik">Configuration Steps</p>
-						<p class="col-para">The following sections describes the configuration steps in Authenion & Oracle Apex application for Single Sign-On.</p>
+						<p class="col-para">The following sections describes the configuration steps in Authenion & Oracle APEX application for Single Sign-On.</p>
 						<br />
 
 						<!--<p class="col-sub-headings-sub"><b>1. Pre-requisites</b></p>
@@ -3299,7 +3300,7 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">Virtual Server in Authenion will be the user-facing URL of the Oracle Apex application. Virtual Server is defined by the hostname and port</p>
+										<p class="col-para-table">Virtual Server in Authenion will be the user-facing URL of the Oracle APEX application. Virtual Server is defined by the hostname and port</p>
 
 									</td>
 								</tr>
@@ -3310,7 +3311,7 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">Application Host details is about the server responsible for hosting the Oracle Apex application and its components</p>
+										<p class="col-para-table">Application Host details is about the server responsible for hosting the Oracle APEX application and its components</p>
 
 									</td>
 								</tr>
@@ -3321,7 +3322,7 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">Headers Mappings in Authenion are used to send one or more user attribute values to Oracle Apex application as HTTP Heder variables</p>
+										<p class="col-para-table">Headers Mappings in Authenion are used to send one or more user attribute values to Oracle APEX application as HTTP Header variables</p>
 
 									</td>
 								</tr>
@@ -3332,7 +3333,7 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">Resources in Authenion are the Oracle Apex application components that requires different security levels. Apex application can be configured with <i>'Protected' & 'Excluded'</i> resources as per the requirements</p>
+										<p class="col-para-table">Resources in Authenion are the Oracle APEX application components that requires different security levels. APEX application can be configured with <i>'Protected' & 'Excluded'</i> resources as per the requirements</p>
 
 									</td>
 								</tr>
@@ -3343,18 +3344,18 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">This setup in Authenion will register a unique entry for the Oracle Apex application</p>
+										<p class="col-para-table">This setup in Authenion will register a unique entry for the Oracle APEX application</p>
 
 									</td>
 								</tr>
 
 								<tr>
 									<td>
-										<p class="col-para-table"><a href="#Apex SSO setup"> <u>SSO setup in Oracle Apex</u></a></p>
+										<p class="col-para-table"><a href="#Apex SSO setup"> <u>SSO setup in Oracle APEX</u></a></p>
 									</td>
 									<td>
 
-										<p class="col-para-table">Oracle Apex configuration that needs to be done for its application modules independently inside the Apex administration workspace</p>
+										<p class="col-para-table">Oracle APEX configuration that needs to be done for its application modules independently inside the Apex administration workspace</p>
 
 									</td>
 								</tr>
@@ -3364,10 +3365,10 @@
 						<br />
 
 						<!--<p class="col-sub-headings-sub"><b><u>Authenion Configurations</u></b></p>-->
-						<p class="col-para">Following are the configurations that needs to be done in the <a href="https://launch.authenion.com" target="_blank"><u>Authenion Administrative Console</u></a> to onboard the Oracle Apex application for Single Sign-On.</p>
+						<p class="col-para">Following are the configurations that needs to be done in the <a href="https://launch.authenion.com" target="_blank"><u>Authenion Administrative Console</u></a> to onboard the Oracle APEX application for Single Sign-On.</p>
 
 						<p class="col-sub-headings-sub"><b><u>Virtual Server</u></b></p>
-						<p class="col-para">Following is an example configuration of a Virtual Server for Oracle Apex application.</p>
+						<p class="col-para">Following is an example configuration of a Virtual Server for Oracle APEX application.</p>
 						<br />
 
 						<!--<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
@@ -3439,7 +3440,7 @@
 
 
 						<p class="col-sub-headings-sub"><b><u>Application Host</u></b></p>
-						<p class="col-para">Following is an example configuration of an Application Host in Authenion for Oracle Apex application.</p>
+						<p class="col-para">Following is an example configuration of an Application Host in Authenion for Oracle APEX application.</p>
 						<br />
 
 						<!--<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
@@ -3510,7 +3511,7 @@
 						<br>
 
 						<p class="col-sub-headings-sub"><b><u>Header Mapping</u></b></p>
-						<p class="col-para">Following is an example configuration of a Header Mapping for Oracle Apex application.</p>
+						<p class="col-para">Following is an example configuration of a Header Mapping for Oracle APEX application.</p>
 						<br />
 
 						<!--<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
@@ -3568,7 +3569,7 @@
 
 
 						<p class="col-sub-headings-sub"><b><u>Resources</u></b></p>
-						<p class="col-para">Following is an example configuration of Protected & Excluded Resources in Authenion for Oracle Apex application.</p>
+						<p class="col-para">Following is an example configuration of Protected & Excluded Resources in Authenion for Oracle APEX application.</p>
 						<br />
 
 						<!--<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
@@ -3647,8 +3648,8 @@
 						<br />
 
 
-						<p class="col-sub-headings-sub"><b><u>Registering an Application for Oracle Apex in Authenion</u></b></p>
-						<p class="col-para">Following is an example configuration of creating an Application in Authenion for Oracle Apex.</p>
+						<p class="col-sub-headings-sub"><b><u>Registering an Application for Oracle APEX in Authenion</u></b></p>
+						<p class="col-para">Following is an example configuration of creating an Application in Authenion for Oracle APEX.</p>
 
 						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 							<tr>
@@ -3756,13 +3757,13 @@
 
 
 						<a style="padding: 35px" name="Apex SSO setup"></a><br />
-						<p class="col-sub-headings-sub"><b><u>SSO Setup in Oracle Apex Application</u></b></p>
-						<p class="col-para">Oracle Apex administrators can configure the available HTTP Header authentication schemes in Apex workspace to enable Single Sign-On with Authenion. The authentication schemes should be configured per Apex application and need to set its status as <i>current</i>. <a href="https://docs.oracle.com/en/database/oracle/apex/23.1/aeadm/editing-http-header-variable.html#GUID-75191381-9EC9-4FDF-B303-647C88C0E1E5" target="_blank"><u>Click here</u></a> to refer the Oracle Document.</p>
+						<p class="col-sub-headings-sub"><b><u>SSO Setup in Oracle APEX Application</u></b></p>
+						<p class="col-para">Oracle APEX administrators can configure the available HTTP Header authentication schemes in APEX workspace to enable Single Sign-On with Authenion. The authentication schemes should be configured per APEX application and need to set its status as <i>current</i>. <a href="https://docs.oracle.com/en/database/oracle/apex/23.1/aeadm/editing-http-header-variable.html#GUID-75191381-9EC9-4FDF-B303-647C88C0E1E5" target="_blank"><u>Click here</u></a> to refer the Oracle Document.</p>
 
 						<ol class="col-para">
-							<li><p class="col-para">Login to the Oracle Apex administrative console.</p></li>
+							<li><p class="col-para">Login to the Oracle APEX administrative console.</p></li>
 							<li><p class="col-para">On the workspace homepage, click the <i><b>App Builder</b></i> icon.</p></li>
-							<li><p class="col-para">Select the Apex application for which Single Sign-On needs to be enabled.</p></li>
+							<li><p class="col-para">Select the APEX application for which Single Sign-On needs to be enabled.</p></li>
 							<li><p class="col-para">On the Application home page, click <i><b>Shared Components</b></i>.</p></li>
 							<li><p class="col-para">Under <i><b>Security</b></i>, select an existing scheme or cretate a new scheme.</p></li>
 							<li><p class="col-para">Modify the follwoing fields in the authentication scheme.</p></li>
@@ -3771,16 +3772,965 @@
 								<li><p>HTTP Header Variable Name - <i><b>'REMOTE_USER'</b></i></p></li>
 								<li><p>Click <i><b>Save</b></i></p></li>
 							</ul>
-							<li><p class="col-para">Repeat steps 1 to 6 to enable SSO login for all Oracle Apex application instances.</p></li>
+							<li><p class="col-para">Repeat steps 1 to 6 to enable SSO login for Oracle APEX application.</p></li>
+							<!--
 							<li><p class="col-para"><b>Testing:</b> The Oracle Apex SSO with Authenion follows the gateway model.</p></li>
 							<ul>
 								<li><p>Enter the Authenion protected URL for Apex in a browser. The browser will redirect your request to the Identity Provider for authentication.</p></li>
 								<li><p>Upon successful authentication, user claims are sent to Authenion. The user claims are send as HTTP Header variables to Oracle Apex to identify the user and session creation.</p></li>
 								<li><p>Once the session is created, the user will be granted access to the Oracle Apex application.</p></li>
 							</ul>
+						-->
 						</ol>
 						<p class="col-para"></p>
 
+
+
+					<!--Oracle Hyperion-->
+
+					<p class="col-para"></p>
+						<a style="padding: 35px" name="Oracle Hyperion"<div id="Oracle Hyperion"></div></a></div>
+						<p class="col-sub-headings-app"><u>Oracle Hyperion</u></p>
+
+						<p class="col-sub-headings-sub"><b>Oracle Hyperion SSO with Authenion</b></p>
+						<p class="col-para">Oracle Hyperion is a centralized planning, budgeting, and forecasting tool that integrates different operational planning processes and enhances business predictability.</p>
+						<br />
+
+						<p class="col-sub-headings-sub"><b>Architecture</b></p><br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/architecture-2.png" alt="" style="width:45%;height:30%;cursor:pointer" onclick="openModal('modalContainerHyperion', 'modalImageHyperion')" class="col-images-pf" />
+						<!-- Model Container-->
+						<div id="modalContainerHyperion" class="modal-container" onclick="closeModal('modalContainerHyperion')">
+							<img id="modalImageHyperion" class="modal-image" src="assets/img/architecture-2.png" alt="">
+						</div>
+						<br />
+						<br />
+						<br />
+
+						<p class="col-sub-headings-eik">Configuration Steps</p>
+						<p class="col-para">The following sections describes the configuration steps in Authenion & Oracle Hyperion application for Single Sign-On.</p>
+						<br />
+
+						
+
+						<p class="col-sub-headings-sub"><b>SSO Integration Workflow</b></p>
+						<!-- TABLE - Task & Description -->
+						<table class="systemrequiremetable" cellp="5" cellspacing="5" style="background-color:#f5f5f6">
+							<tr>
+								<th class="symcomponent">Tasks</th>
+								<th class="symcomponent">&emsp;Description</th>
+							</tr>
+
+							<tbody class="tbody">
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Virtual Servers"> <u>Create a Virtual Server</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Virtual Server in Authenion will be the user-facing URL of the Oracle Hyperion application. Virtual Server is defined by the hostname and port</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Application Hosts"> <u>Create an Application Host</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Application Host details is about the server responsible for hosting the Oracle Hyperion application and its components</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Header Mapping"> <u>Create a Header Mapping</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Headers Mappings in Authenion are used to send one or more user attribute values to Oracle Hyperion application as HTTP Header variables</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Resources"> <u>Create Resources</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Resources in Authenion are the Oracle Hyperion application components that requires different security levels. Hyperion application can be configured with <i>'Protected' & 'Excluded'</i> resources as per the requirements</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Applications"> <u>Create an Application</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">This setup in Authenion will register a unique entry for the Oracle Hyperion application</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Hyperion SSO setup"> <u>SSO setup in Oracle Hyperion</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Oracle Hyperion configuration that needs to be done for its application modules independently inside the Hyperion administration workspace</p>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						<br />
+
+						<!--<p class="col-sub-headings-sub"><b><u>Authenion Configurations</u></b></p>-->
+						<p class="col-para">Following are the configurations that needs to be done in the <a href="https://launch.authenion.com" target="_blank"><u>Authenion Administrative Console</u></a> to onboard the Oracle Hyperion application for Single Sign-On.</p>
+
+						<p class="col-sub-headings-sub"><b><u>Virtual Server</u></b></p>
+						<p class="col-para">Following is an example configuration of a Virtual Server for Oracle Hyperion application.</p>
+						<br />
+
+						
+	<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/hyperion vs-1.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion1', 'modalImagehyperion1')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerhyperion1" class="modal-container" onclick="closeModal('modalContainerhyperion1')">
+							<img id="modalImagehyperion1" class="modal-image" src="assets/img/hyperion vs-1.png" alt="">
+						</div>
+						<br />
+						<br>
+
+
+						<p class="col-sub-headings-sub"><b><u>Application Host</u></b></p>
+						<p class="col-para">Following is an example configuration of an Application Host in Authenion for Oracle Hyperion application.</p>
+						<br />
+
+						
+						<!-- Image with onclick event -->
+						<img src="assets/img/hyperion ah-2.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion2', 'modalImagehyperion2')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerhyperion2" class="modal-container" onclick="closeModal('modalContainerhyperion2')">
+							<img id="modalImagehyperion2" class="modal-image" src="assets/img/hyperion ah-2.png" alt="">
+						</div>
+						<br />
+						<br>
+
+						<p class="col-sub-headings-sub"><b><u>Header Mapping</u></b></p>
+						<p class="col-para">Following is an example configuration of a Header Mapping for Oracle Hyperion application.</p>
+						<br />
+
+						
+						<!-- Image with onclick event -->
+						<img src="assets/img/hyperion hm-3.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion3', 'modalImagehyperion3')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerhyperion3" class="modal-container" onclick="closeModal('modalContainerhyperion3')">
+							<img id="modalImagehyperion3" class="modal-image" src="assets/img/hyperion hm-3.png" alt="">
+						</div>
+						<br />
+						<br />
+
+
+						<p class="col-sub-headings-sub"><b><u>Resources</u></b></p>
+						<p class="col-para">Following is an example configuration of Protected & Excluded Resources in Authenion for Oracle Hyperion application.</p>
+						<br />
+
+						
+						<!-- Image with onclick event -->
+						<img src="assets/img/hyperion res-4.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion4', 'modalImagehyperion4')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerhyperion4" class="modal-container" onclick="closeModal('modalContainerhyperion4')">
+							<img id="modalImagehyperion4" class="modal-image" src="assets/img/hyperion res-4.png" alt="">
+						</div>
+						<br />
+						<br />
+
+
+						<p class="col-sub-headings-sub"><b><u>Registering an Application for Oracle Hyperion in Authenion</u></b></p>
+						<p class="col-para">Following is an example configuration of creating an Application in Authenion for Oracle Hyperion.</p>
+
+						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+							<tr>
+								<th class="symcomponent">Configuration</th>
+								<th class="symcomponent">&emsp;Values</th>
+							</tr>
+
+							<tbody class="tbody">
+
+								<!--Name-->
+								<tr>
+									<td>
+										<p class="col-para-table">Name</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>Hyperion</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Virtual Server-->
+								<tr>
+									<td>
+										<p class="col-para-table">Virtual Server</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>HyperionVirtualServer</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Header Mapping-->
+								<tr>
+									<td>
+										<p class="col-para-table">Header Mapping</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>HyperionHeaders</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Protected Resource-->
+								<tr>
+									<td>
+										<p class="col-para-table">Protected Resource</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>HyperionProtected</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Excluded Resource-->
+								<tr>
+									<td>
+										<p class="col-para-table">Excluded Resource</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>HyperionExcluded</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Application Host-->
+								<tr>
+									<td>
+										<p class="col-para-table">Application Host</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>HyperionBackend</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Authenion Instances-->
+								<tr>
+									<td>
+										<p class="col-para-table">Authenion Instances</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Auto populated</p>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br>
+						<br>
+						<!-- Image with onclick event -->
+						<img src="assets/img/hyperion application-5.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion5', 'modalImagehyperion5')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerhyperion5" class="modal-container" onclick="closeModal('modalContainerhyperion5')">
+							<img id="modalImagehyperion5" class="modal-image" src="assets/img/hyperion application-5.png" alt="">
+						</div>
+						<br />
+						<br />
+
+
+
+
+						
+
+						<a style="padding: 35px" name="Hyperion SSO setup"></a><br />
+	<p class="col-sub-headings-sub"><b> SSO setup in Oracle Hyperion Application</b></p>
+	<p class="col-para">
+		Hyperion application can be integrated with Authenion for Single Sign-On. Following setup allows you to enable SSO to
+		Hyperion application.
+	</p>
+
+	<ol class="col-para">
+
+		<li>
+			<p class="col-para">
+				Access Oracle Hyperion Shared Services Console as a System Administrator. See Launching Shared Services
+				Console.
+			</p>
+		</li>
+		<li>
+			<p class="col-para">
+				Select Administration, and then Configure User Directories.
+			</p>
+		</li>
+		<li><p class="col-para"> Click Security Options.</p></li>
+		<li>
+			<p class="col-para">
+				In the Single Sign-On Configuration section:
+			</p>
+		</li>
+		<li><p class="col-para"> Select the Enable SSO check box</p></li>
+		<li>
+			<p class="col-para">
+				From SSO Provider or Security Agent drop-down list, select Other
+			</p>
+		</li>
+		<li>
+			<p class="col-para">
+				From SSO Mechanism drop-down list, select Custom HTTP Header and then specify the name of the header that
+				the security agent passes to EPM System (‘remote_user’).
+			</p>
+		</li>
+		<li>
+			<p class="col-para">
+				Click OK
+			</p>
+		</li>
+	</ol>&nbsp;&nbsp;
+
+
+
+					<!--Oracle Primavera Unifier-->
+						
+					<a style="padding: 35px" name="Oracle Primavera Unifier"></a>
+					<p class="col-sub-headings-app"><u>Oracle Primavera Unifier</u></p>
+
+					<p class="col-sub-headings-sub"><b>Oracle Unifier SSO with Authenion</b></p>
+					<p class="col-para">Oracle Primavera Unifier allows customers to digitize and automate their capital asset planning and execution processes, which helps improve profitability, operational reliability, and risk management.</p>
+					<br />
+
+					<p class="col-sub-headings-sub"><b>Architecture</b></p><br />
+
+						<!-- Image with onclick event -->
+						<img src="assets/img/Unifier-Architecture.png" alt="" style="width:45%;height:30%;cursor:pointer" onclick="openModal('modalContainerUnifier1', 'modalImageUnifier1')" class="col-images-pf" />
+						<!-- Model Container-->
+						<div id="modalContainerUnifier1" class="modal-container" onclick="closeModal('modalContainerUnifier1')">
+							<img id="modalImageUnifier1" class="modal-image" src="assets/img/Unifier-Architecture.png" alt="">
+						</div>
+						<br />
+						<br />
+						<br />
+
+					<p class="col-sub-headings-eik">Configuration Steps</p>
+					<p class="col-para">The following sections describes the configuration steps in Authenion & Oracle Unifier application for Single Sign-On.</p>
+					<br />
+
+					<p class="col-sub-headings-sub"><b>SSO Integration Workflow</b></p>
+						<!-- TABLE - Task & Description -->
+						<table class="systemrequiremetable" cellp="5" cellspacing="5" style="background-color:#f5f5f6">
+							<tr>
+								<th class="symcomponent">Tasks</th>
+								<th class="symcomponent">&emsp;Description</th>
+							</tr>
+
+							<tbody class="tbody">
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Virtual Servers"> <u>Create a Virtual Server</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Virtual Server in Authenion will be the user-facing URL of the Oracle Unifier application. Virtual Server is defined by the hostname and port</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Application Hosts"> <u>Create an Application Host</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Application Host details is about the server responsible for hosting the Oracle Unifier application and its components</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Header Mapping"> <u>Create a Header Mapping</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Header Mappings in Authenion are used to send one or more user attribute values to Oracle Unifier application as HTTP header variables</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Resources"> <u>Create Resources</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Resources in Authenion are the Oracle Unifier application components that requires different security levels. Unifier application can be configured with <i>'Protected' & 'Excluded'</i> resources as per the requirements</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Applications"> <u>Create an Application</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">This setup in Authenion will register a unique entry for the Oracle Unifier application</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Apex SSO setup"> <u>SSO setup in Oracle Unifier</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Oracle Unifier configuration needs to be done for its application modules independently inside the Unifier administration workspace</p>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						<br />
+
+						<p class="col-para">Following are the configurations that needs to be done in the <a href="https://launch.authenion.com" target="_blank"><u>Authenion Administrative Console</u></a> to onboard the Oracle Unifier application for Single Sign-On.</p>
+
+					<p class="col-sub-headings-sub"><b><u>Virtual Server</u></b></p>
+					<p class="col-para">Following is an example configuration of a Virtual Server for Oracle Unifier application.</p>
+					<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/UnifierVirtualServers.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier2', 'modalImageUnifier2')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerUnifier2" class="modal-container" onclick="closeModal('modalContainerUnifier2')">
+							<img id="modalImageUnifier2" class="modal-image" src="assets/img/UnifierVirtualServers.png" alt="">
+						</div>
+						<br />
+						<br>
+
+					<p class="col-sub-headings-sub"><b><u>Application Host</u></b></p>
+					<p class="col-para">Following is an example configuration of an Application Host in Authenion for Oracle Unifier application.</p>
+					<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/UnifierApplicationHost.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier3', 'modalImageUnifier3')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerUnifier3" class="modal-container" onclick="closeModal('modalContainerUnifier3')">
+						<img id="modalImageUnifier3" class="modal-image" src="assets/img/UnifierApplicationHost.png" alt="">
+						</div>
+						<br />
+						<br>
+
+					<p class="col-sub-headings-sub"><b><u>Header Mapping</u></b></p>
+					<p class="col-para">Following is an example configuration of a Header Mapping for Oracle Unifier application.</p>
+					<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/UnifierHeaderMappings.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier4', 'modalImageUnifier4')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerUnifier4" class="modal-container" onclick="closeModal('modalContainerUnifier4')">
+							<img id="modalImageUnifier4" class="modal-image" src="assets/img/UnifierHeaderMappings.png" alt="">
+						</div>
+						<br />
+						<br />
+
+					<p class="col-sub-headings-sub"><b><u>Resources</u></b></p>
+					<p class="col-para">Following is an example configuration of Protected & Excluded Resources in Authenion for Oracle Unifier application.</p>
+					<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/UnifierResources.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier5', 'modalImageUnifier5')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerUnifier5" class="modal-container" onclick="closeModal('modalContainerUnifier5')">
+							<img id="modalImageUnifier5" class="modal-image" src="assets/img/UnifierResources.png" alt="">
+						</div>
+						<br />
+						<br />
+
+					<p class="col-sub-headings-sub"><b><u>Registering an Application for Oracle Unifier in Authenion</u></b></p>
+					<p class="col-para">Following is an example configuration of creating an Application in Authenion for Oracle Unifier.</p>
+
+					<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+						<tr>
+							<th class="symcomponent">Configuration</th>
+							<th class="symcomponent">&emsp;Values</th>
+						</tr>
+
+						<tbody class="tbody">
+
+							<!--Name-->
+							<tr>
+								<td>
+									<p class="col-para-table">Name</p>
+								</td>
+								<td>
+									<ul>
+										<p class="col-para-table"><i><b>Unifier</b></i></p>
+									</ul>
+								</td>
+							</tr>
+
+							<!--Virtual Server-->
+							<tr>
+								<td>
+									<p class="col-para-table">Virtual Server</p>
+								</td>
+								<td>
+									<ul>
+										<p class="col-para-table"><i><b>UnifierVirtualServer</b></i></p>
+									</ul>
+								</td>
+							</tr>
+
+							<!--Header Mapping-->
+							<tr>
+								<td>
+									<p class="col-para-table">Header Mapping</p>
+								</td>
+								<td>
+									<ul>
+										<p class="col-para-table"><i><b>UnifierHeaders</b></i></p>
+									</ul>
+								</td>
+							</tr>
+
+							<!--Protected Resource-->
+							<tr>
+								<td>
+									<p class="col-para-table">Protected Resource</p>
+								</td>
+								<td>
+									<ul>
+										<p class="col-para-table"><i><b>UnifierProtected</b></i></p>
+									</ul>
+								</td>
+							</tr>
+
+							<!--Excluded Resource-->
+							<tr>
+								<td>
+									<p class="col-para-table">Excluded Resource</p>
+								</td>
+								<td>
+									<ul>
+										<p class="col-para-table"><i><b>UnifierExcluded</b></i></p>
+									</ul>
+								</td>
+							</tr>
+
+							<!--Application Host-->
+							<tr>
+								<td>
+									<p class="col-para-table">Application Host</p>
+								</td>
+								<td>
+									<ul>
+										<p class="col-para-table"><i><b>UnifierBackend</b></i></p>
+									</ul>
+								</td>
+							</tr>
+
+							<!--Authenion Instances-->
+							<tr>
+								<td>
+									<p class="col-para-table">Authenion Instances</p>
+								</td>
+								<td>
+									<ul>
+										<p class="col-para-table">Auto populated</p>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<br>
+
+					<!-- Image with onclick event -->
+					<img src="assets/img/UnifierApplication.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier6', 'modalImageUnifier6')" class="col-images-intro" />
+					<!-- Model Container-->
+					<div id="modalContainerUnifier6" class="modal-container" onclick="closeModal('modalContainerUnifier6')">
+						<img id="modalImageUnifier6" class="modal-image" src="assets/img/UnifierApplication.png" alt="">
+					</div>
+					<br />
+					<br />
+
+					<a style="padding: 35px" name="Unifier SSO setup"></a><br />
+					<p class="col-sub-headings-sub"><b><u>SSO Setup in Oracle Unifier Application</u></b></p>
+
+
+					<p class="col-para">The following setup enables SSO login to the Unifier application.</p>
+
+					<ol class="col-para">
+						<li><p class="col-para">Create a property file called custom.properties and load it along with the skire.properties file.</p></li>
+						<li><p class="col-para">The custom.properties file must define the following three SSO configuration properties:</p></li>
+						<ul>
+							<li><p>Set the name of the header that will contain a valid Unifier username:</p></li>
+							<p style="margin-left: 30px;">(HTTP_header = 'remote_user')</p>
+							<li><p>Set your logoff redirect URI after user logs out of Unifier:</p></li>
+							<p style="margin-left: 30px;">SSO Logout URL = https://unifier.example.com/ssolibrary/oidc/logout</p>
+						</ul>
+					</ol>
+
+
+				<!--Agile PLM-->
+
+				<p class="col-para"></p>
+						<a style="padding: 35px" name="Oracle Agile PLM"></a>
+						<p class="col-sub-headings-app"><u>Oracle Agile PLM</u></p>
+
+						<p class="col-sub-headings-sub"><b>Oracle Agile PLM SSO with Authenion</b></p>
+						<p class="col-para">Agile PLM is designed to help its customers to make better product portfolio decisions, supply chain partners, collaborate across design, and accelerate new product introduction. It also provides features , processes and work flows such as approval  processes for the data types and associated files.</p>
+						<br />
+
+						<p class="col-sub-headings-sub"><b>Architecture</b></p><br />
+
+						<!-- Image with onclick event -->
+
+						<!-- Image with onclick event -->
+						<img src="assets/img/architecture-1.png" alt="" style="width:45%;height:30%;cursor:pointer" onclick="openModal('modalContainerAgile', 'modalImageAgile')" class="col-images-pf" />
+						<!-- Model Container-->
+						<div id="modalContainerAgile" class="modal-container" onclick="closeModal('modalContainerAgile')">
+							<img id="modalImageAgile" class="modal-image" src="assets/img/architecture-1.png" alt="">
+						</div>
+						<br />
+						<br />
+						<br />
+
+						<p class="col-sub-headings-eik">Configuration Steps</p>
+						<p class="col-para">The following sections describes the configuration steps in Authenion & Oracle Agile PLM application for Single Sign-On.</p>
+						<br />
+
+						
+
+						<p class="col-sub-headings-sub"><b>SSO Integration Workflow</b></p>
+						<!-- TABLE - Task & Description -->
+						<table class="systemrequiremetable" cellp="5" cellspacing="5" style="background-color:#f5f5f6">
+							<tr>
+								<th class="symcomponent">Tasks</th>
+								<th class="symcomponent">&emsp;Description</th>
+							</tr>
+
+							<tbody class="tbody">
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Virtual Servers"> <u>Create a Virtual Server</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Virtual Server in Authenion will be the user-facing URL of the Oracle Agile PLM application. Virtual Server is defined by the hostname and port</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Application Hosts"> <u>Create an Application Host</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Application Host details is about the server responsible for hosting the Oracle Agile PLM application and its components</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Header Mapping"> <u>Create a Header Mapping</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Headers Mappings in Authenion are used to send one or more user attribute values to Oracle Agile PLM application as HTTP Header variables</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Resources"> <u>Create Resources</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Resources in Authenion are the Oracle Agile PLM application components that requires different security levels. Agile PLM application can be configured with <i>'Protected' & 'Excluded'</i> resources as per the requirements</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Applications"> <u>Create an Application</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">This setup in Authenion will register a unique entry for the Oracle Agile PLM application</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Agile PLM SSO setup"> <u>SSO setup in Oracle Agile PLM</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Oracle Agile PLM configuration that needs to be done for its application modules independently inside the Agile PLM administration workspace</p>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						<br />
+
+						<!--<p class="col-sub-headings-sub"><b><u>Authenion Configurations</u></b></p>-->
+						<p class="col-para">Following are the configurations that needs to be done in the <a href="https://launch.authenion.com" target="_blank"><u>Authenion Administrative Console</u></a> to onboard the Oracle Agile PLM application for Single Sign-On.</p>
+
+						<p class="col-sub-headings-sub"><b><u>Virtual Server</u></b></p>
+						<p class="col-para">Following is an example configuration of a Virtual Server for Oracle Agile PLM application.</p>
+						<br />
+
+						
+	<br />
+						<!-- Image with onclick event -->
+						<img src="assets/img/agile vs-1.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContaineragile1', 'modalImageagile1')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContaineragile1" class="modal-container" onclick="closeModal('modalContaineragile1')">
+							<img id="modalImageagile1" class="modal-image" src="assets/img/agile vs-1.png" alt="">
+						</div>
+						<br />
+						<br>
+
+
+						<p class="col-sub-headings-sub"><b><u>Application Host</u></b></p>
+						<p class="col-para">Following is an example configuration of an Application Host in Authenion for Oracle Agile PLM application.</p>
+						<br />
+
+						
+						<!-- Image with onclick event -->
+						<img src="assets/img/agile ah-2.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContaineragile2', 'modalImageagile2')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContaineragile2" class="modal-container" onclick="closeModal('modalContaineragile2')">
+							<img id="modalImageagile2" class="modal-image" src="assets/img/agile ah-2.png" alt="">
+						</div>
+						<br />
+						<br>
+
+						<p class="col-sub-headings-sub"><b><u>Header Mapping</u></b></p>
+						<p class="col-para">Following is an example configuration of a Header Mapping for Oracle Agile PLM application.</p>
+						<br />
+
+						
+						<!-- Image with onclick event -->
+						<img src="assets/img/agile hm-3.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContaineragile3', 'modalImageagile3')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContaineragile3" class="modal-container" onclick="closeModal('modalContaineragile3')">
+							<img id="modalImageagile3" class="modal-image" src="assets/img/agile hm-3.png" alt="">
+						</div>
+						<br />
+						<br />
+
+
+						<p class="col-sub-headings-sub"><b><u>Resources</u></b></p>
+						<p class="col-para">Following is an example configuration of Protected & Excluded Resources in Authenion for Oracle Agile PLM application.</p>
+						<br />
+
+						
+						<!-- Image with onclick event -->
+						<img src="assets/img/agile res-4.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContaineragile4', 'modalImageagile4')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContaineragile4" class="modal-container" onclick="closeModal('modalContaineragile4')">
+							<img id="modalImageagile4" class="modal-image" src="assets/img/agile res-4.png" alt="">
+						</div>
+						<br />
+						<br />
+
+
+						<p class="col-sub-headings-sub"><b><u>Registering an Application for Oracle Agile PLM in Authenion</u></b></p>
+						<p class="col-para">Following is an example configuration of creating an Application in Authenion for Oracle Agile PLM.</p>
+
+						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+							<tr>
+								<th class="symcomponent">Configuration</th>
+								<th class="symcomponent">&emsp;Values</th>
+							</tr>
+
+							<tbody class="tbody">
+
+								<!--Name-->
+								<tr>
+									<td>
+										<p class="col-para-table">Name</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>Agile PLM</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Virtual Server-->
+								<tr>
+									<td>
+										<p class="col-para-table">Virtual Server</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>AgileVirtualServer</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Header Mapping-->
+								<tr>
+									<td>
+										<p class="col-para-table">Header Mapping</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>AgileHeaders</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Protected Resource-->
+								<tr>
+									<td>
+										<p class="col-para-table">Protected Resource</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>AgileProtected</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Excluded Resource-->
+								<tr>
+									<td>
+										<p class="col-para-table">Excluded Resource</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>AgileExcluded</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Application Host-->
+								<tr>
+									<td>
+										<p class="col-para-table">Application Host</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table"><i><b>AgileBackend</b></i></p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Authenion Instances-->
+								<tr>
+									<td>
+										<p class="col-para-table">Authenion Instances</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Auto populated</p>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br>
+						<br>
+						<!-- Image with onclick event -->
+						<img src="assets/img/agile application-5.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContaineragile5', 'modalImageagile5')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContaineragile5" class="modal-container" onclick="closeModal('modalContaineragile5')">
+							<img id="modalImageagile5" class="modal-image" src="assets/img/agile application-5.png" alt="">
+						</div>
+						<br />
+						<br />
+
+
+
+						
+						<a style="padding: 35px" name="Agile PLM SSO setup"></a><br />
+	<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u> SSO setup in Oracle Agile PLM Application </u></b></p>
+	<ol class="col-para">
+
+		<li><p class="col-para">Navigate to the WebLogic console where the Agile PLM application is installed and create AgileIdentityAsserter. </p></li>
+		<li>
+			<p class="col-para">
+				in WLS Console
+			</p>
+		</li>
+
+		<ul style="margin-left:30px;" class="col-para">
+			<li><p class="col-para">Click Lock and Edit</p></li>
+			<li><p class="col-para"> Move to Summary of Security Realms >AgileRealm >Providers</p></li>
+			<li><p class="col-para">Click New</p></li>
+			<li><p class="col-para">Create AgileIdentityAsserter Authentication with "AgileIdentityAssertion" Provider</p></li>
+			<li><p class="col-para">Open the added AgileIdentityAsserter</p></li>
+			<li><p class="col-para">Select the Active type as ‘remote_user’ and Save.  </p></li>
+			<li><p class="col-para"> Click Activate Changes.  </p></li>
+			<li><p class="col-para"> Logout from the console </p></li>
+		</ul>
+
+		<li>
+			<p class="col-para">
+				Open ‘agile.Properties’ file, and add the below settings:
+				oam.header.name = remote_user
+				oam.sso.logout.url = https://<agile.example.com>:<443>/ssolibrary/oidc/logout
+			</p>
+		</li>
+		<li>
+			<p class="col-para">
+				Open the Web.xml (\application.ear\application.war\WEB-INF\ web.xml) and change auth-method as below:
+				<auth-method>client-cert, form</auth-method>
+			</p>
+		</li>
+		<li>
+			<p class="col-para">
+				Restart the WebLogic Application Server where the Agile Application is installed.
+			</p>
+		</li>
+		<li><p class="col-para"> Login to Agile Java Client.</p></li>
+		<li>
+			<p class="col-para">
+				Navigate to the Location node.
+			</p>
+		</li>
+		<li><p class="col-para">Enter the Web Server Proxy URL</p></li>
+		<li>
+			<p class="col-para">
+				Restart the File Manager
+			</p>
+		</li>
+
+
+	</ol>
 
 
 						<!-- REPEAT THE ABOVE ORACLE APEX FORMAT FOR ALL THE REST OF THE APPLICATIONS-->
@@ -3848,40 +4798,171 @@
 	<p class="col-sub-headings-sub"><b><u>Authenion Configurations</u></b></p>
 	<p class="col-para">Following are the Authenion configurations to onboard the Hyperion application for SSO.</p>
 
-	<p class="col-sub-headings-sub"><u>Configure Virtual Server</u></p>
-	<p class="col-para">In this section, a virtual server name or DNS entry is assigned for Authenion to handle all requests to the Hyperion application. This virtual server value will be the front-end facing URL for users to access the Hyperion application.</p>
+						<p class="col-sub-headings-sub"><u><a href="#Virtual Servers">Configure Virtual Server</a></u></p>
+						<p class="col-para">Below is an example configuration for Hyperion application virtual server.</p>
+						
 
-	<ol class="col-para">
-		<li><p class="col-para">Login to the Authenion Admin console.</p></li>
-		<li><p class="col-para">In the Dashboard page, click <i><b>'Virtual Servers'</b></i> in the Sidebar menu.</p></li>
-		<br>-->
-						<!-- Image with onclick event -->
-						<!--<img src="assets/img/hyperion-1.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion1', 'modalImagehyperion1')" class="col-images-pf" />-->
-						<!-- Model Container-->
-						<!--<div id="modalContainerhyperion1" class="modal-container" onclick="closeModal('modalContainerhyperion1')">
-		<img id="modalImagehyperion1" class="modal-image" src="assets/img/hyperion-1.png" alt="">
-	</div>
+						
+							
+							
 
+							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+								<tr>
+									<th class="symcomponent">Configurations</th>
+									<th class="symcomponent">&emsp;Values</th>
+								</tr>
 
-	<br>
-	<br>
-	<li><p class="col-para">Click on <i>New Virtual Server</i>.</p></li>
-	<br>-->
-						<!-- Image with onclick event -->
-						<!--<img src="assets/img/hyperion-2.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion2', 'modalImagehyperion2')" class="col-images-pf" />-->
-						<!-- Model Container-->
-						<!--<div id="modalContainerhyperion2" class="modal-container" onclick="closeModal('modalContainerhyperion2')">
-		<img id="modalImagehyperion2" class="modal-image" src="assets/img/hyperion-2.png" alt="">
-	</div>
-	<br>
-	<br>
-	<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li>
+								<tbody class="tbody">
 
-	<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
-		<tr>
-			<th class="symcomponent">Configurations</th>
-			<th class="symcomponent">&emsp;Values</th>
-		</tr>
+									<!-Name-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Name</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Unique name for the virtual server. For example,</p>
+												<p class="col-para-table"><i><b>HyperionVirtualServer</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+
+									<!--Host-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Host</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Hostname for the virtual server. For example,</p>
+												<p class="col-para-table"><i><b>hyperion.example.com</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+
+									<!--Port-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Port</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Port number of the virtual server. For example,</p>
+												<p class="col-para-table"><i><b>443</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+
+									<!--use SSL-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Use SSL</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">If the virtual server requires HTTPS connection, check the box. For example,</p>
+												<p class="col-para-table"><i><b>true</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br >
+							
+							
+				
+						
+							<p class="col-sub-headings-sub"><u><a href="#Application Hosts">Configure Application Hosts</a></u></p>
+							<p class="col-para">Below is an example configuration for Hyperion application hosts.</p>
+
+				
+					<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+						<tr>
+							<th class="symcomponent">Configurations</th>
+							<th class="symcomponent">&emsp;Values</th>
+						</tr>
+
+						<tbody class="tbody">
+						-->
+
+							<!--Name-->
+							<!--
+							<tr>
+								<td>
+									<p class="col-para-table">Name</p>
+								</td>
+								<td>
+									<ul>
+										<p class="col-para-table">Unique name for the application host. For example,</p>
+										<p class="col-para-table"><i><b>HyperionBackend</b></i></p>
+									</ul>
+								</td>
+							</tr>
+						-->
+
+							<!--Host-->
+							<!--
+							<tr>
+								<td>
+									<p class="col-para-table">Host</p>
+								</td>
+								<td>
+									<ul>
+										<p class="col-para-table">Hostname:port pair for the application host. For example,</p>
+										<p class="col-para-table"><i><b>hyperion-backend.example.com:8080</b></i></p>
+									</ul>
+								</td>
+							</tr>
+						-->
+
+							<!--use SSL-->
+							<!--
+							<tr>
+								<td>
+									<p class="col-para-table">Use SSL</p>
+								</td>
+								<td>
+									<ul>
+										<p class="col-para-table">If the backend application host requires HTTPS connection, check the box. For example,</p>
+										<p class="col-para-table"><i><b>true</b></i></p>
+									</ul>
+								</td>
+							</tr>
+						-->
+
+							<!--Enable Session Persistence-->
+							<!--
+							<tr>
+								<td>
+									<p class="col-para-table">Enable Session Persistence</p>
+								</td>
+								<td>
+									<ul>
+										<p class="col-para-table">If requests are directed to the same server from the same client, check the box For example,</p>
+										<p class="col-para-table"><i><b>false</b></i></p>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<br >
+					<br>
+					
+					
+					
+					
+
+					<p class="col-sub-headings-sub"><u><a href="#Header Mapping">Configure Header Mappings</a></u></p>
+					<p class="col-para">Below is an example configuration for Hyperion application header mappings.</p>
+
+						
 
 		<tbody class="tbody">-->
 						<!--Name-->
@@ -3946,8 +5027,244 @@
 
 		<br>
 		<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
+	-->
 
-	</ol>
+									<!--Name-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Name</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Unique name for the header mapping. For example,</p>
+												<p class="col-para-table"><i><b>oracleAttributes</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+
+									<!--App Header-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">App Header</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Name of the HTTP header that the target application requires. For example,</p>
+												<p class="col-para-table"><i><b>remote_user</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+
+									<!--OIDC Claim-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">OIDC Claim</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Attribute from OIDC claims to map with the HTTP header. For example,</p>
+												<p class="col-para-table"><i><b>username</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br >
+							<br>
+							
+
+							
+							<p class="col-sub-headings-sub"><u><a href="#Resources">Configure Resources</a></u></p>
+							<p class="col-para">Below is an example configuration for Hyperion application resources.</p>
+
+						
+
+							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+								<tr>
+									<th class="symcomponent">Configurations</th>
+									<th class="symcomponent">&emsp;Values</th>
+								</tr>
+
+								<tbody class="tbody">
+								-->
+
+									<!--Name-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Name</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Unique name for the resource. For example,</p>
+												<p class="col-para-table"><i><b>hyperionProtected URI</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+
+									<!--Resource Path-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Resource Path</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">List of URL path patterns from the application. Note that paths must begin with a /. For example,</p>
+												<p class="col-para-table"><i><b>/workspace/smartview</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br >
+							
+							<p class="col-sub-headings-sub"><u><a href="#Applications">Create Application</a></u></p>
+							<p class="col-para">Below is an example configuration for creating a new entry for Hyperion application.</p>
+							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+								<tr>
+									<th class="symcomponent">Configurations</th>
+									<th class="symcomponent">&emsp;Values</th>
+								</tr>
+	
+								<tbody class="tbody">
+								-->
+	
+									<!--Name-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Name</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Unique name for the application. For example,</p>
+												<p class="col-para-table"><i><b>Hyperion Application</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+	
+									<!--Virtual Server-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Virtual Server</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Select the appropriate configured virtual server. For example,</p>
+												<p class="col-para-table"><i><b>HyperionVirtualServer</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+	
+									<!--Header Mapping-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Header Mapping</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Select the appropriate configured header mappings. For example,</p>
+												<p class="col-para-table"><i><b>oracleAttributes</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+	
+									<!--Protected Resource-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Protected Resource</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Select the appropriate configured protected resource. For example,</p>
+												<p class="col-para-table"><i><b>Protected URI</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+	
+									<!--Excluded Resource-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Excluded Resource</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Select the appropriate configured excluded resource. For example,</p>
+												<p class="col-para-table"><i><b>root</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+	
+									<!--Application Host-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Application Host</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Select the appropriate configured application host. For example,</p>
+												<p class="col-para-table"><i><b>HyperionBackend</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+	
+									<!--Authenion Instances-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Authenion Instances</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">https://authenion.example.com:8090</p>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br >
+							<br >
+	
+
+						
+						<p class="col-sub-headings-sub"><b>Enable SSO setup in Oracle Hyperion Application</b></p>
+						<p class="col-para">Hyperion application can be integrated with Authenion for Single Sign-On. Following setup allows you to enable SSO to 
+							Hyperion application. </p>
+						
+							<ol class="col-para">
+			
+							<li><p class="col-para">Access Oracle Hyperion Shared Services Console as a System Administrator. See Launching Shared Services 
+								Console. </p></li>
+					<li><p class="col-para">Select Administration, and then Configure User Directories. 
+						</p></li>
+						<li><p class="col-para"> Click Security Options.</p></li>
+					<li><p class="col-para">In the Single Sign-On Configuration section: 
+						</p></li>
+						<li><p class="col-para"> Select the Enable SSO check box</p></li>
+					<li><p class="col-para"> From SSO Provider or Security Agent drop-down list, select Other
+						</p></li>
+						<li><p class="col-para">From SSO Mechanism drop-down list, select Custom HTTP Header and then specify the name of the header that 
+							the security agent passes to EPM System (‘remote_user’).</p></li>
+					<li><p class="col-para"> Click OK
+						</p></li></ol>&nbsp;&nbsp;
 
 
 	<p class="col-sub-headings-sub"><u>Configure Application Hosts</u></p>
@@ -4926,19 +6243,11 @@
 	<p class="col-sub-headings-sub"><b><u>Authenion Configurations</u></b></p>
 	<p class="col-para">Following are the Authenion configurations to onboard the Agile PLM application for SSO.</p>
 
-	<p class="col-sub-headings-sub"><u>Configure Virtual Server</u></p>
-	<p class="col-para">Here, a virtual server name or DNS entry is assigned for Authenion to handle all requests to the Agile PLM application. This virtual server value will be the front-end facing URL for users to access the Agile PLM application.</p>
+						<p class="col-sub-headings-sub"><u><a href="#Virtual Servers">Configure Virtual Server</a></u></p>
+						<p class="col-para">Below is an example configuration for Agile PLM application virtual server.</p>
 
-	<ol class="col-para">
-		<li><p class="col-para">Login to the Authenion Admin console.</p></li>
-		<li><p class="col-para">In the Dashboard page, click <i><b>'Virtual Servers'</b></i> in the Sidebar menu.</p></li>
-		<br>-->
-						<!-- Image with onclick event -->
-						<!--<img src="assets/img/hyperion-16.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion16', 'modalImagehyperion16')" class="col-images-pf" />-->
-						<!-- Model Container-->
-						<!--<div id="modalContainerhyperion16" class="modal-container" onclick="closeModal('modalContainerhyperion16')">
-		<img id="modalImagehyperion16" class="modal-image" src="assets/img/hyperion-16.png" alt="">
-	</div>
+						
+							
 
 	<br>
 	<br>
@@ -5025,40 +6334,30 @@
 		<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
 
 	</ol>
+-->
+									<!--use SSL-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Use SSL</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">If the virtual server requires HTTPS connection, check the box. For example,</p>
+												<p class="col-para-table"><i><b>true</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br >
+							<br >
+							
+						
+							<p class="col-sub-headings-sub"><u><a href="#Application Hosts">Configure Application Hosts</a></u></p>
+							<p class="col-para">Below is an example configuration for Agile PLM application hosts.</p>
 
-	<p class="col-sub-headings-sub"><u>Configure Application Hosts</u></p>
-	<p class="col-para">Here, Agile PLM application's backend servers are configured in Authenion. This makes sure the requests to Authenion are forwarded(proxied) to Agile PLM's backend servers during SSO transactions.</p>
-
-	<ol class="col-para">
-		<li><p class="col-para">Login to the Authenion Admin console.</p></li>
-		<li><p class="col-para">In the Dashboard page, click <i><b>'Application Hosts'</b></i> in the Sidebar menu.</p></li>
-		<br>-->
-						<!-- Image with onclick event -->
-						<!--<img src="assets/img/hyperion-19.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion19', 'modalImagehyperion19')" class="col-images-pf" />-->
-						<!-- Model Container-->
-						<!--<div id="modalContainerhyperion19" class="modal-container" onclick="closeModal('modalContainerhyperion19')">
-		<img id="modalImagehyperion19" class="modal-image" src="assets/img/hyperion-19.png" alt="">
-	</div>
-	<br>
-	<br>
-	<li><p class="col-para">Click on <i>New Application Host</i>.</p></li>
-	<br>-->
-						<!-- Image with onclick event -->
-						<!--<img src="assets/img/hyperion-20.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion20', 'modalImagehyperion20')" class="col-images-pf" />-->
-						<!-- Model Container-->
-						<!--<div id="modalContainerhyperion20" class="modal-container" onclick="closeModal('modalContainerhyperion20')">
-		<img id="modalImagehyperion20" class="modal-image" src="assets/img/hyperion-20.png" alt="">
-	</div>
-
-	<br>
-	<br>
-	<li><p class="col-para">Enter the details for the fields as mentioned below in the table.</p></li>
-
-	<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
-		<tr>
-			<th class="symcomponent">Configurations</th>
-			<th class="symcomponent">&emsp;Values</th>
-		</tr>
+						
 
 		<tbody class="tbody">-->
 						<!--Name-->
@@ -5157,61 +6456,31 @@
 			<th class="symcomponent">Configurations</th>
 			<th class="symcomponent">&emsp;Values</th>
 		</tr>
+	-->
+									<!--Enable Session Persistence-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Enable Session Persistence</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">If requests are directed to the same server from the same client, check the box For example,</p>
+												<p class="col-para-table"><i><b>false</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br >
+							<br>
+							
+							
 
-		<tbody class="tbody">-->
-						<!--Name-->
-						<!--<tr>
-		<td>
-			<p class="col-para-table">Name</p>
-		</td>
-		<td>
-			<ul>
-				<p class="col-para-table">Unique name for the header mapping. For example,</p>
-				<p class="col-para-table"><i><b>AgileAttributes</b></i></p>
-			</ul>
-		</td>
-	</tr>-->
-						<!--App Header-->
-						<!--<tr>
-		<td>
-			<p class="col-para-table">App Header</p>
-		</td>
-		<td>
-			<ul>
-				<p class="col-para-table">Name of the HTTP header that the target application requires. For example,</p>
-				<p class="col-para-table"><i><b>remote_user</b></i></p>
-			</ul>
-		</td>
-	</tr>-->
-						<!--OIDC Claim-->
-						<!--<tr>
-				<td>
-					<p class="col-para-table">OIDC Claim</p>
-				</td>
-				<td>
-					<ul>
-						<p class="col-para-table">Attribute from OIDC claims to map with the HTTP header. For example,</p>
-						<p class="col-para-table"><i><b>username</b></i></p>
-					</ul>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<br>
-	<br>-->
-						<!-- Image with onclick event -->
-						<!--<img src="assets/img/hyperion-28.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion28', 'modalImagehyperion28')" class="col-images-pf" />-->
-						<!-- Model Container-->
-						<!--<div id="modalContainerhyperion28" class="modal-container" onclick="closeModal('modalContainerhyperion28')">
-			<img id="modalImagehyperion28" class="modal-image" src="assets/img/hyperion-28.png" alt="">
-		</div>
+							<p class="col-sub-headings-sub"><u><a href="#Header Mapping">Configure Header Mappings</a></u></p>
+							<p class="col-para">Below is an example configuration for Agile PLM application header mappings.</p>
 
-
-
-		<br>
-		<br>
-		<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
-	</ol>
+						
 
 	<p class="col-sub-headings-sub"><u>Configure Resources</u></p>
 	<p class="col-para">Here, the resource paths are protected either through an authentication scheme or are unprotected. Whether resources are protected or not can be checked on the <i>"+ New Application Page"</i>.</p>
@@ -5281,48 +6550,31 @@
 						<!--<div id="modalContainerhyperion25" class="modal-container" onclick="closeModal('modalContainerhyperion25')">
 			<img id="modalImagehyperion25" class="modal-image" src="assets/img/hyperion-25.png" alt="">
 		</div>
+	-->
 
-		<br>
-		<br>
-		<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button.</p></li>
-	</ol>
+									<!--OIDC Claim-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">OIDC Claim</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Attribute from OIDC claims to map with the HTTP header. For example,</p>
+												<p class="col-para-table"><i><b>username</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br ><br>
+							
+						
 
-	<p class="col-sub-headings-sub"><u>Create Application</u></p>
-	<p class="col-para">Here, a new entry for the Agile PLM application is created in the Authenion admin console.</p>
+							<p class="col-sub-headings-sub"><u><a href="#Resources">Configure Resources</a></u></p>
+							<p class="col-para">Below is an example configuration for Agile PLM application resources.</p>
 
-	<ol class="col-para">
-		<li><p class="col-para">Login to the Authenion Admin console.</p></li>
-		<li><p class="col-para">In the Dashboard page, click <i><b>'Applications'</b></i> in the Sidebar menu.</p></li>
-		<br>
-		<img src="assets/img/hyperion-26.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion26', 'modalImagehyperion26')" class="col-images-pf" />-->
-						<!-- Model Container-->
-						<!--<div id="modalContainerhyperion26" class="modal-container" onclick="closeModal('modalContainerhyperion26')">
-		<img id="modalImagehyperion26" class="modal-image" src="assets/img/hyperion-26.png" alt="">
-	</div>
-	<br>
-	<br>
-	<li><p class="col-para">Click on <i>New Application</i>.</p></li>
-	<br>
-	<img src="assets/img/hyperion-27.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion27', 'modalImagehyperion27')" class="col-images-pf" />-->
-						<!-- Model Container-->
-						<!--<div id="modalContainerhyperion27" class="modal-container" onclick="closeModal('modalContainerhyperion27')">
-		<img id="modalImagehyperion27" class="modal-image" src="assets/img/hyperion-27.png" alt="">
-	</div>
-	<br>
-	<br>
-	<li><p class="col-para">Enter the details for the fields according to the configurations done in the previous steps for Agile PLM application.</p></li>
-	<br>
-	<img src="assets/img/hyperion-30.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion30', 'modalImagehyperion30')" class="col-images-pf" />-->
-						<!-- Model Container-->
-						<!--<div id="modalContainerhyperion30" class="modal-container" onclick="closeModal('modalContainerhyperion30')">
-			<img id="modalImagehyperion30" class="modal-image" src="assets/img/hyperion-30.png" alt="">
-		</div>
-
-		<br>
-		<br>
-		<li><p class="col-para">After entering all the values, click the <i><b>'Save'</b></i> button.</p></li>
-		<li><p class="col-para">Finally, click on <i><b>'Sync'</b></i> button which can be located on the top of the sidebar menu.</p></li>
-	</ol>
+						
 
 	<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>Enable SSO setup in Oracle Agile PLM Application </u></b></p>
 	<ol class="col-para">
@@ -5344,47 +6596,188 @@
 			<li><p class="col-para"> Click Activate Changes.  </p></li>
 			<li><p class="col-para"> Logout from the console </p></li>
 		</ul>
+	-->
 
-		<li>
-			<p class="col-para">
-				Open ‘agile.Properties’ file, and add the below settings:
-				oam.header.name = remote_user
-				oam.sso.logout.url = https://<agile.example.com>:<443>/ssolibrary/oidc/logout
-			</p>
-		</li>
-		<li>
-			<p class="col-para">
-				Open the Web.xml (\application.ear\application.war\WEB-INF\ web.xml) and change auth-method as below:
-				<auth-method>client-cert, form</auth-method>
-			</p>
-		</li>
-		<li>
-			<p class="col-para">
-				Restart the WebLogic Application Server where the Agile Application is installed.
-			</p>
-		</li>
-		<li><p class="col-para"> Login to Agile Java Client.</p></li>
-		<li>
-			<p class="col-para">
-				Navigate to the Location node.
-			</p>
-		</li>
-		<li><p class="col-para">Enter the Web Server Proxy URL</p></li>
-		<li>
-			<p class="col-para">
-				Restart the File Manager
-			</p>
-		</li>
+									<!--Resource Path-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Resource Path</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">List of URL path patterns from the application. Note that paths must begin with a /. For example,</p>
+												<p class="col-para-table"><i><b>/Agile/PLMservlet</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br ><br>
+							
+
+							<p class="col-sub-headings-sub"><u><a href="#Applications">Create Application</a></u></p>
+							<p class="col-para">Below is an example configuration for creating a new entry for Agile PLM application.</p>
+							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+								<tr>
+									<th class="symcomponent">Configurations</th>
+									<th class="symcomponent">&emsp;Values</th>
+								</tr>
+	
+								<tbody class="tbody">
+								-->
+	
+									<!--Name-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Name</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Unique name for the application. For example,</p>
+												<p class="col-para-table"><i><b>Agile PLM </b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+	
+									<!--Virtual Server-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Virtual Server</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Select the appropriate configured virtual server. For example,</p>
+												<p class="col-para-table"><i><b>AgileVirtualServer</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+	
+									<!--Header Mapping-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Header Mapping</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Select the appropriate configured header mappings. For example,</p>
+												<p class="col-para-table"><i><b>AgileAttributes</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+	
+									<!--Protected Resource-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Protected Resource</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Select the appropriate configured protected resource. For example,</p>
+												<p class="col-para-table"><i><b>Agile Protected URI</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+	
+									<!--Excluded Resource-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Excluded Resource</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Select the appropriate configured excluded resource. For example,</p>
+												<p class="col-para-table"><i><b>root</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+	
+									<!--Application Host-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Application Host</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Select the appropriate configured application host. For example,</p>
+												<p class="col-para-table"><i><b>AgileBackend</b></i></p>
+											</ul>
+										</td>
+									</tr>
+								-->
+	
+									<!--Authenion Instances-->
+									<!--
+									<tr>
+										<td>
+											<p class="col-para-table">Authenion Instances</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">https://authenion.example.com:8090</p>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br >
+							<br >
+
+						
+						
+					  <p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>Enable SSO setup in Oracle Agile PLM Application </u></b></p>
+					  <ol class="col-para">
+			
+						<li><p class="col-para">Navigate to the WebLogic console where the Agile PLM application is installed and create AgileIdentityAsserter. </p></li>
+					<li><p class="col-para">in WLS Console
+						</p></li>
+			
+						<ul style="margin-left:30px;" class="col-para">
+							<li><p class="col-para">Click Lock and Edit</p></li>
+							<li><p class="col-para"> Move to Summary of Security Realms >AgileRealm >Providers</p></li>
+							<li><p class="col-para">Click New</p></li>
+							<li><p class="col-para">Create AgileIdentityAsserter Authentication with "AgileIdentityAssertion" Provider</p></li>
+							<li><p class="col-para">Open the added AgileIdentityAsserter</p></li>
+							<li><p class="col-para">Select the Active type as ‘remote_user’ and Save.  </p></li>
+							<li><p class="col-para"> Click Activate Changes.  </p></li>
+							<li><p class="col-para"> Logout from the console </p></li></ul>
+							
+					<li><p class="col-para">Open ‘agile.Properties’ file, and add the below settings: 
+						oam.header.name = remote_user 
+						oam.sso.logout.url = https://<agile.example.com>:<443>/ssolibrary/oidc/logout
+						</p></li>
+						<li><p class="col-para">Open the Web.xml (\application.ear\application.war\WEB-INF\ web.xml) and change auth-method as below: 
+							<auth-method>client-cert, form</auth-method> 
+							</p></li>
+					<li><p class="col-para">Restart the WebLogic Application Server where the Agile Application is installed.
+						</p></li>
+						<li><p class="col-para"> Login to Agile Java Client.</p></li>
+					<li><p class="col-para">Navigate to the Location node.
+						</p></li>
+						<li><p class="col-para">Enter the Web Server Proxy URL</p></li>
+					<li><p class="col-para"> Restart the File Manager
+						</p></li>
+							
+							
+					  </ol>
 
 
-	</ol>-->
 
 
 
 
-
-
-
+					-->
 
 					</div> <!--END OF APPLICATION INTEGRATION with Authenion-->
 
