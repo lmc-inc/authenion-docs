@@ -344,8 +344,8 @@
 				  </a>
 			  </li>
 			  <li>
-				  <a href="#Microsoft Azure Active Directory as the Token Provider" class="nav-link-sub collapsed">
-					  <!--<i class="bi bi-circle"></i>--><span>Microsoft Azure Active Directory as the Token Provider</span>
+				  <a href="#Microsoft Entra ID as the Token Provider" class="nav-link-sub collapsed">
+					  <!--<i class="bi bi-circle"></i>--><span>Microsoft Entra ID as the Token Provider</span>
 				  </a>
 			  </li>
 
@@ -2481,8 +2481,8 @@
 
 
 						<!--Azure as idP-->
-						<a style="padding: 38px" name="Microsoft Azure Active Directory as the Token Provider"></a>
-						<p class="col-sub-headings">2. Microsoft Azure Active Directory as the Token Provider</p>
+						<a style="padding: 38px" name="Microsoft Entra ID as the Token Provider"></a>
+						<p class="col-sub-headings">2. Microsoft Entra ID as the Token Provider</p>
 						<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>Pre-requisites</u></b></p>
 						<!-- <ul class="col-para"> -->
 						<ul style="margin-left:30px;" class="col-para">
@@ -2490,39 +2490,116 @@
 							<li><p class="col-para" style="background-color:#f5f5f6">App registration.</p></li>
 							<li><p class="col-para" style="background-color:#f5f5f6">Client Secrets and Claim mappings.</p></li>
 						</ul>
-						<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>Azure Configurations</u></b></p>
-						<p class="col-para">The following will register Authenion as an OAuth/OIDC client application in Microsoft Azure & establishes a unidirectional trust relationship between Authenion and Microsoft identity platform.</p>
+						<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>Entra ID Configurations</u></b></p>
+						<p class="col-para">The following will register Authenion as an OAuth/OIDC client application in Microsoft Entra ID & establish a unidirectional trust relationship between Authenion and Microsoft identity platform. When the registration finishes, the Azure portal displays the Authenion application registration’s overview pane. You can find the Application ID which will also be used as the client_id when we connect Authenion & Entra ID through OAuth/OIDC.</p>
+						<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;App Registration</b></p>
 						<ol class="col-para">
-							<li><p class="col-para">In the Azure Portal, switch to the tenant in which you want to register the Authenion application.</p></li>
-							<li><p class="col-para">In the App registrations section, select New registration and register Authenion as web application with display name and any other required details.</p></li>
-							<li><p class="col-para">Add the following Authenion URI in the Redirect URI field. This is the location where Microsoft Azure redirects the user’s request post authentication.</p></li>
+							<li><p class="col-para">Login to the <a href="https://portal.azure.com/#home" target="_blank"><u>Azure portal</u></a>.</p></li>
+							<li><p class="col-para">In the <i>Manage Microsoft Entra ID</i> section, click on <i>view</i>.</p></li>
+							<li><p class="col-para">Click on <i>+Add</i> and then click on <i>App Registration</i>.</p></li>
+							<ol class="col-para">
+								<li><p class="col-para">Give a display name for the app.</p></li>
+								<li><p class="col-para">Select the tenant in which you want to register the Authenion application.</p></li>
+								<li><p class="col-para">Add the following Authenion URI in the Redirect URI field. This is the location where Entra ID redirects the user’s request post authentication.</p></li>
+							
 							<p class="col-para"><b>Redirect URI:</b>&emsp;https://&lt;authenion.example.com&gt;/ssolibrary/oidc/callback</p>
 							<!-- <img src="assets/img/azure-1.png" alt="" class="col-images-pf"> -->
-							<!-- Image with onclick event -->
-							<img src="assets/img/azure-1.png" alt="" onclick="openModal('modalContainer21', 'modalImage21')" class="col-images-pf" />
+							</ol>
+							<li><p class="col-para">Click on <i>Register</i>.</p></li>
+						</ol>
+						<!-- Image with onclick event -->
+						<img src="assets/img/entra3.png" alt="" onclick="openModal('modalContainer29', 'modalImage29')" class="col-images-pf" />
 
-							<!-- Modal container -->
-							<div id="modalContainer21" class="modal-container" onclick="closeModal('modalContainer21')">
-								<img id="modalImage21" class="modal-image" src="assets/img/azure-1.png" alt="">
-							</div>
-							<br />
+						<!-- Modal container -->
+						<div id="modalContainer29" class="modal-container" onclick="closeModal('modalContainer29')">
+							<img id="modalImage29" class="modal-image" src="assets/img/entra3.png" alt="">
+						</div>
+						<br />
 
-							<li><p class="col-para">When the registration finishes, the Azure portal displays the Authenion application registration’s overview pane. You can find the Application ID which will also be used as the client_id when we connect Authenion & Azure through OAuth/OIDC.</p></li>
-							<li><p class="col-para">You need to add "Credential" in ‘Certificates & Secrets’ page. This acts as the client credential for the Authenion application, and it allows Authenion to authenticate as itself to Microsoft Azure.</p></li>
+						<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;Token Configuration</b></p>
+						<ol class="col-para">
+							<li><p class="col-para">From the side menu, click on <i>Token configuration</i>.</p></li>
+							<li><p class="col-para">Click on <i>+ Add optional claim</i>.</p></li>
+							<ol class="col-para">
+								<li><p class="col-para">Select ID</p></li>
+								<li><p class="col-para">Check the attributes - <i>email</i>, <i>preferred_username</i>.</p></li>
+							</ol>
+							<li><p class="col-para">Click on <i>Add</i>.</p></li>
+						</ol>
+						<p class="col-para"><b>Note:</b> In case a dialogue appears, check the box which says <i>Microsoft graph</i>.</p>
+
+						<!--IMAGE FOR TOKEN CONFIGURATION-->
+
+						<img src="assets/img/entra1.png" alt="" onclick="openModal('modalContainer27', 'modalImage27')" class="col-images-pf" />
+
+						<!-- Modal container -->
+						<div id="modalContainer27" class="modal-container" onclick="closeModal('modalContainer27')">
+							<img id="modalImage27" class="modal-image" src="assets/img/entra1.png" alt="">
+						</div>
+						<br />
+
+						<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;API Permissions</b></p>
+						<ol class="col-para">
+							<li><p class="col-para">From the side menu, click on <i>API permissions</i>.</p></li>
+							<li><p class="col-para">Click on <i>+ Add a permission</i>.</p></li>
+							<li><p class="col-para">Click on <i>Microsoft Graph</i>.</p></li>
+							<li><p class="col-para">Click on <i>delegated permissions</i>.</p></li>
+							<ol class="col-para">
+								<li><p class="col-para">Under "Openid permissions", check email, openid and profile.</p></li>
+								<li><p class="col-para">Under "User", check "User.Read".</p></li>
+							</ol>
+							<li><p class="col-para">Click on <i>Add permissions</i>.</p></li>
+						</ol>
+
+						<!--IMAGE FOR API PERMISSIONS-->
+
+						<img src="assets/img/entra2.png" alt="" onclick="openModal('modalContainer28', 'modalImage28')" class="col-images-pf" />
+
+						<!-- Modal container -->
+						<div id="modalContainer28" class="modal-container" onclick="closeModal('modalContainer28')">
+							<img id="modalImage28" class="modal-image" src="assets/img/entra2.png" alt="">
+						</div>
+						<br />
+
+						<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;Certificates & Secrets</b></p>
+						<ol class="col-para">
+							<li><p class="col-para">From the side menu, click on <i>Certificates & secrets</i>.</p></li>
+							<li><p class="col-para">Click on <i>Client secrets</i>.</p></li>
+							<li><p class="col-para">Click on <i>+ New client secret</i>.</p></li>
+							<ol class="col-para">
+								<li><p class="col-para">Enter some description for the client.</p></li>
+								<li><p class="col-para">Set the expiry for the client.</p></li>
+							</ol>
+							<li><p class="col-para">Click on <i>Add</i>.</p></li>
+						</ol>
+
+						<!--IMAGE FOR CERTS AND SECRETS-->
+						<img src="assets/img/entra4.png" alt="" onclick="openModal('modalContainer30', 'modalImage30')" class="col-images-pf" />
+
+						<!-- Modal container -->
+						<div id="modalContainer30" class="modal-container" onclick="closeModal('modalContainer30')">
+							<img id="modalImage30" class="modal-image" src="assets/img/entra4.png" alt="">
+						</div>
+						<br />
+						<br />
+						
+
+							<!-- <li><p class="col-para">When the registration finishes, the Azure portal displays the Authenion application registration’s overview pane. You can find the Application ID which will also be used as the client_id when we connect Authenion & Azure through OAuth/OIDC.</p></li> -->
+							<!-- <li><p class="col-para">You need to add "Credential" in ‘Certificates & Secrets’ page. This acts as the client credential for the Authenion application, and it allows Authenion to authenticate as itself to Microsoft Azure.</p></li> -->
 							<!-- <img src="assets/img/azure-2.png" alt="" class="col-images-pf"><br/> -->
 							<!-- Image with onclick event -->
-							<img src="assets/img/azure-2.png" alt="" onclick="openModal('modalContainer24', 'modalImage24')" class="col-images-pf" />
+							<!-- <img src="assets/img/azure-2.png" alt="" onclick="openModal('modalContainer24', 'modalImage24')" class="col-images-pf" /> -->
 
 							<!-- Modal container -->
-							<div id="modalContainer24" class="modal-container" onclick="closeModal('modalContainer24')">
+							<!--<div id="modalContainer24" class="modal-container" onclick="closeModal('modalContainer24')">
 								<img id="modalImage24" class="modal-image" src="assets/img/azure-2.png" alt="">
 							</div>
 
-							<br />
+							<br />-->
 
-							<li><p class="col-para">The Authenion client application need to access resources in a web API. You can use the Microsoft Azure platform for authorizing scopes, permissions-based access to fetch the appropriate user data.</p></li>
+							<!-- <li><p class="col-para">The Authenion client application need to access resources in a web API. You can use the Microsoft Azure platform for authorizing scopes, permissions-based access to fetch the appropriate user data.</p></li>
 							<li><p class="col-para">The user data can be added as claims using the OIDC userinfo endpoint. Any attributes that are required by the target application can be added as claims in the userinfo endpoint.</p></li>
-						</ol><br />
+						</ol><br /> -->
 
 
 					</div>
