@@ -123,12 +123,20 @@
 	  <ul class="sidebar-nav" id="sidebar-nav">
 
 
-		  <li class="nav-item">
-			  <a class="nav-link collapsed" href="#ReleaseNotes">
-				  <!--<i class="bi bi-grid"></i>-->
-				  <span>Release Notes</span>
-			  </a>
-		  </li><!-- End Dashboard Nav -->
+		<li class="nav-item">
+			<a class="nav-link collapsed" data-bs-target="#ReleaseNotes" data-bs-toggle="collapse" href="#">
+			  <span>Release Notes</span><i class="bi bi-chevron-down ms-auto"></i>
+			</a>
+			<ul id="ReleaseNotes" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+			  <li>
+				<a href="index_3.0.html" target="_blank" class="nav-link-sub collapsed">
+				  <span>authenion-3.0</span> 
+				</a>
+			  </li>
+			</ul>
+		  </li>
+		  
+		  <!-- End Dashboard Nav -->
 
 
 		  <li class="nav-item">
