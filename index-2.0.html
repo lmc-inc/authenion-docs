@@ -53,6 +53,10 @@
 		</div><!-- End Logo -->
 
 
+		<!--<div style="font-size: 19px;color: #00297A;margin-right: 37px;" class="bi bi-circle" id="tables-nav">
+			<a href="" style="color: black">Configuration Docs</a>
+		</div>-->
+
 		<div class="search-bar">
 			<form class="search-form d-flex align-items-center" method="POST" action="#">
 				<input type="text" name="query" placeholder="Search" title="Enter search keyword">
@@ -120,17 +124,17 @@
 
 
 		  <li class="nav-item">
-			<a class="nav-link collapsed" data-bs-target="#ReleaseNote" data-bs-toggle="collapse" href="#ReleaseNote">
+			<a class="nav-link collapsed" data-bs-target="#ReleaseNote" data-bs-toggle="collapse" href="#">
 			  <span>Release Notes</span><i class="bi bi-chevron-down ms-auto"></i>
 			</a>
 			<ul id="ReleaseNote" class="nav-content collapse" data-bs-parent="#sidebar-nav">
 			  <li>
-				<a href="index-2.0.html" target="_blank" class="nav-link-sub collapsed">
-				  <span>authenion-2.0</span> 
+				<a href="index.html" target="_blank" class="nav-link-sub collapsed">
+				  <span>authenion-3.0</span> 
 				</a>
 			  </li>
 			</ul>
-		  </li><!-- End Dashboard Nav -->
+		  </li>
 
 		  <li class="nav-item">
 			  <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
@@ -153,13 +157,26 @@
 						  <!--<i class="bi bi-circle"></i>--><span>Enterprise Deployment Model</span>
 					  </a>
 				  </li>
-				  
+				  <!--<li>
+					  <a href="#What can I do with Authenion" class="nav-link-sub collapsed">-->
+						  <!--<i class="bi bi-circle"></i>--><!--<span>What can I do with Authenion?</span>
+					  </a>
+				  </li>-->
+				  <!--<li>
+					  <a href="#How does Authenion work" class="nav-link-sub collapsed">-->
+						  <!--<i class="bi bi-circle"></i>--><!--<span>How does Authenion work?</span>
+					  </a>
+				  </li>-->
 				  <li>
 					  <a href="#What can I Configure with Authenion" class="nav-link-sub collapsed">
 						  <!--<i class="bi bi-circle"></i>--><span>What can I Configure with Authenion?</span>
 					  </a>
 				  </li>
-				  
+				  <!--<li>
+				  <a href="forms-validation.html">
+					<i class="bi bi-circle"></i><span></span>
+				  </a>
+				</li>-->
 			  </ul>
 		  </li><!-- End Forms Nav -->
 
@@ -268,11 +285,6 @@
 						  <!--<i class="bi bi-circle"></i>--><span>Identity Provider Configuration</span>
 					  </a>
 				  </li>
-				  <li>
-					<a href="#LDAP Authentication Provider" class="nav-link-sub collapsed">
-						<!--<i class="bi bi-circle"></i>--><span>LDAP Authentication Provider</span>
-					</a>
-				</li>
 				  </a>
 		  </li>
 		  <li>
@@ -414,7 +426,6 @@
 						<b>Release Notes</b>
 
 					</p>
-					
 					<p class="tile-subtitle">Release summary with Features & Enhancements and bug fixes.</p></a>
 					
 			 </div>
@@ -502,7 +513,138 @@
 						                             <a href="https://support.likemindsconsulting.com/support/solutions/articles/48001251586-release-notes" target="_blank"><u>Features & Enhancements</u></a>, 
 													 <a href="https://support.likemindsconsulting.com/support/solutions/articles/48001251586-release-notes" target="_blank"><u>Fixes</u></a>.</p>
 
-                 
+                    
+
+
+					<!-- ### MOVING CONTENT TO SUPPORT PORTAL ### -->
+					<!--<p class="col-sub-headings">Release Summary</p>
+	<p class="col-para">Authenion-2.0 version is now generally available. Authenion-2.0 release has new features, bug fixes, security enhancements and updated documentation.</p>
+	<p class="col-sub-headings">Features & Enhancements</p>
+	<ul style="margin-left:30px;" class="col-para">
+		<li><p class="col-para">Admins can now configure Authenion through the Administrative console. Admins can onboard/manage target Applications, OIDC Providers, Product License and lot more through the administrative console.</p></li>
+		<li><p class="col-para">Authenion administrative console is hosted by LikeMinds and is available at <a href="https://launch.authenion.com/" target="_blank"><u>Admin UI</u></a>.</p></li>
+		<li><p class="col-para">The logging framework has been changed to Apache Log4j2 from Logback. Audit logging is now available for recording the event occurrence, type, time and responsible user or service.</p></li>
+		<li><p class="col-para">Authenion Cluster is available and it provides high-availability & scalability. Authenion has inbuilt load balancer for its backend connections. However, Authenion still requires a network load balancer to automatically balance traffic in the cluster.</p></li>
+		<li><p class="col-para">Authenion instance status can be monitored through the console. A health-check endpoint is also available to monitor its status through any monitoring tools.</p></li>
+	</ul>
+	<p class="col-sub-headings">Fixes</p>
+
+	<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">-->
+					<!--<tr>
+		<th class="symcomponent">Authenion Configurations&nbsp;</th>
+		<th class="symcomponent">&emsp;Requirements</th>
+	</tr>-->
+					<!--Applications-->
+					<!--<tbody class="tbody">
+	<tr>
+		<td>
+			<p class="col-para-table-fixes"><a href="https://support.likemindsconsulting.com" style="color: #00297A" target="_blank">AQ4-2022-1001</a></p>
+		</td>
+
+		<td>
+			<ul>
+				<p class="col-para-table">Multiple occurrences of SSO transaction in authenion-engine logs</p>
+
+			</ul>
+		</td>
+
+	</tr>-->
+					<!--OIDC Configurations-->
+					<!--<tr>
+		<td>
+			<p class="col-para-table-fixes"><a href="https://support.likemindsconsulting.com" style="color: #00297A" target="_blank">AQ1-2023-1001</a></p>
+		</td>
+		<td>
+
+			<ul>
+				<p class="col-para-table">Authenion engine log recycling and log file size limit to 10MB</p>
+
+			</ul>
+
+		</td>
+	</tr>-->
+					<!--Virtual Servers-->
+					<!--<tr>
+		<td>
+			<p class="col-para-table-fixes"><a href="https://support.likemindsconsulting.com" style="color: #00297A" target="_blank">AQ1-2023-1002</a></p>
+		</td>
+		<td>
+
+			<ul>
+				<p class="col-para-table">REST API calls authorization for Authenion agent</p>
+			</ul>
+
+		</td>
+	</tr>-->
+					<!--Application Hosts-->
+					<!--<tr>
+		<td>
+			<p class="col-para-table-fixes"><a href="https://support.likemindsconsulting.com" style="color: #00297A" target="_blank">AQ1-2023-1003</a></p>
+		</td>
+		<td>
+
+			<ul>
+				<p class="col-para-table">Cookie is configured with SameSite attribute</p>
+
+			</ul>
+
+		</td>
+	</tr>-->
+					<!--Resources-->
+					<!--<tr>
+		<td>
+			<p class="col-para-table-fixes"><a href="https://support.likemindsconsulting.com" style="color: #00297A" target="_blank">AQ2-2023-1006</a></p>
+		</td>
+		<td>
+
+			<ul>
+				<p class="col-para-table">Multiple sync requests to the same Agent APIs</p>
+
+			</ul>
+
+		</td>
+	</tr>-->
+					<!--Header Mapping-->
+					<!--<tr>
+		<td>
+			<p class="col-para-table-fixes"><a href="https://support.likemindsconsulting.com" style="color: #00297A" target="_blank">AQ2-2023-1008</a></p>
+		</td>
+		<td>
+
+			<ul>
+				<p class="col-para-table">Header Mapping page shows blank screen when there is no data present in OIDC claims</p>
+
+			</ul>
+
+		</td>
+	</tr>-->
+					<!--Authenion Instance-->
+					<!--<tr>
+				<td>
+					<p class="col-para-table-fixes"><a href="https://support.likemindsconsulting.com" style="color: #00297A" target="_blank">AQ2-2023-1009</a></p>
+				</td>
+				<td>
+
+					<ul>
+						<p class="col-para-table">Enabled Security Headers to Prevent Vulnerabilities - HTTP Response Headers to modify web browsers behavior to avoid security vulnerabilities</p>
+
+					</ul>
+
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>-->
+					<!--<ul style="margin-left:30px;" class="col-para">
+		<li><p class="col-para">AQ4-2022-1001: Multiple occurrences of SSO transaction in authenion-engine logs.</a></p></li>
+		<li><p class="col-para">AQ1-2023-1001: Authenion engine log recycling and log file size limit to 10MB.</p></li>
+		<li><p class="col-para">AQ1-2023-1002: REST API calls authorization for Authenion agent.</p></li>
+		<li><p class="col-para">AQ1-2023-1003: Cookie is configured with SameSite attribute.</p></li>
+		<li><p class="col-para">AQ2-2023-1006: Multiple sync requests to the same Agent APIs.</p></li>
+		<li><p class="col-para">AQ2-2023-1008: Header Mapping page shows blank screen when there is no data present in OIDC claims.</p></li>
+		<li><p class="col-para">AQ2-2023-1009: Enabled Security Headers to Prevent Vulnerabilities - HTTP Response Headers to modify web browsers behavior to avoid security vulnerabilities.</p></li>
+	</ul>-->
+
 					<br>
 				</div>	
 			</div>
@@ -521,9 +663,15 @@
 				<a style="padding:32px" name="Introduction"></a>
 				<p class="col-sub-headings">1. Introduction</p>
 				<p class="col-para">Authenion product from Like Minds is aimed towards delivering a secure Single Sign-On (SSO) experience for Enterprise applications from Oracle, IBM, SAP and other custom applications (java, php, .net, etc.,) that supports HTTP headers as their last mile integration and Single Sign-On. Authenion is a stand-alone product and can be installed on any physical/virtual Linux servers either on-premise/cloud or both. Authenion integrates with standard OpenID Connect providers in the market for authentication related events.</p>
-				
+				<!--<p class="col-para">Authenion links with market-standard OpenID Connect providers such as PingFederate, PingOne, Azure, Okta, Oracle IDCS and it connects with applications to securely send SSO-related information to the applications. Authenion enables secure access to your Enterprise applications and custom applications either on-premises or cloud. Authenion complements any other common industry standard token provider via OAuth2.0 & OpenID Connect-2.0 protocols.</p>-->
+				<!--<ul style="margin-left:30px;" class="col-para">
+						<li><p class="col-para" style="background-color:#f5f5f6">Use Authenion to protect your Enterprise applications and enable Single Sign-On.</p></li>
+						<li><p class="col-para" style="background-color:#f5f5f6">Connect Authenion with external OpenID Connect providers such as Microsoft Entra ID (formerly Azure Active Directory), PingFederate, PingOne, Oracle IDCS, Okta, etc., for authentication.</p></li>
+						<li><p class="col-para" style="background-color:#f5f5f6">You can manage user sessions for the protected applications and use OAuth scopes to retrieve user attributes from your Identity Provider & send it to protected applications.</p></li>
+					</ul>-->
 				<br />
-				
+				<!-- <img src="assets/img/authenion-intro.png" alt="" class="col-images-intro" /> -->
+				<!-- Image with onclick event -->
 				<img src="assets/img/authenion-intro.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer25', 'modalImage25')" class="col-images-intro" />
 
 				<!-- Modal container -->
@@ -676,21 +824,6 @@
 							</td>
 						</tr>
 
-						<!--LDAP Authentication Provider-->
-						<tr>
-							<td>
-								<p class="col-para-table"><a href="#LDAP Authentication Provider"><u>LDAP Authentication Provider</u></a></p>
-							</td>
-							<td>
-
-								<ul>
-									<p class="col-para-table">Connecting with your LDAP Authentication Provider for Authentication</p>
-
-								</ul>
-
-							</td>
-						</tr>
-
 						<!--Virtual Servers-->
 						<tr>
 							<td>
@@ -799,7 +932,26 @@
 								</td>
 
 							</tr>
-						
+							<!--Linux User requirements in the Authenion Server-->
+							<a style="padding:32px" name="LinuxUserrequirements"></a>
+							<tr>
+								<td>
+									<p class="col-para-table">Linux User requirements in the Authenion Server</p>
+								</td>
+								<td>
+
+									<ul>
+										<li>
+											<p class="col-para-table">Create a Linux user in the name of ‘appuser’ to execute Authenion scripts.</p>
+										</li>
+										<li>
+											<p class="col-para-table">The 'appuser' should have Read/Write privileges to the Authenion deployment package.</p>
+										</li>
+										<li><p class="col-para-table" ">Authenion should be installed in the ‘/home/appuser’ directory.</p></li>
+									</ul>
+
+								</td>
+							</tr>
 
 							<!--Supported Java environment-->
 							<a style="padding:32px" name="SupportedJavaenvironment"></a>
@@ -811,9 +963,9 @@
 
 									<ul>
 										<li>
-											<p class="col-para-table">OpenJDK 17</p>
+											<p class="col-para-table">OpenJDK 11</p>
 										</li>
-										<li><p class="col-para-table">Oracle Java SE Development Kit 17 LTS / Oracle Java SE Runtime Environment (Server JRE) 8</p></li>
+										<li><p class="col-para-table">Oracle Java SE Development Kit 11 LTS / Oracle Java SE Runtime Environment (Server JRE) 8</p></li>
 									</ul>
 
 								</td>
@@ -901,10 +1053,29 @@
 						<p class="col-sub-headings">2. Install Authenion</p>
 						<ol class="col-para">
 							<li><p class="col-para">Request or download the Authenion product distribution file and a valid license from the Authenion support portal or by contacting your account manager at LikeMinds.</p></li>
-							<li><p class="col-para">Install Authenion by extracting the authenion-3.0.zip file into the Authenion server.</p></li>
+							<li><p class="col-para">Install Authenion by extracting the authenion-2.0.zip file into the <i>“/home/appuser”</i> directory in the Authenion server.</p></li>
 							<li><p class="col-para">After extracting the zip file, the folder structure should appear as shown in the table below. </p></li>
 
 
+							<!-- TABLE2 -->
+							<!-- <div class="div-table2">
+				<div class="div-table2-row">
+					<div class="div-table2-col1">Distribution ZIP file</div>
+					<div class="div-table2-col2">Download & extract the distribution zip into the installation directory <b>‘/home/appuser’</b> in your Linux server</div>
+				</div>
+				<div class="div-table2-row">
+					<div class="div-table2-col1">File system after extraction</div>
+					<div class="div-table2-col2">&lt;authenion_install_dir&gt;:&nbsp;&nbsp;<i>/home/appuser/authenion-2.0/authenion/</i></div>
+				</div>
+				<div class="div-table2-col1">Directory Structure</div>
+				<div class="div-table2-col2">authenion-2.0</div>
+				<div class="div-table2-col2">&emsp;&emsp;- authenion</b></div>
+				<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- bin</div>
+				<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- config</div>
+				<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- deploy</div>
+				<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- logs</div>
+				<div class="div-table2-col2">&emsp;&emsp;&emsp;&emsp;- server</div>
+			</div> -->
 							<!-- install Authenion -->
 							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 
@@ -922,7 +1093,7 @@
 
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">Download & extract the distribution zip into the installation directory </li>
+												<li class="li"><p class="col-para-table">Download & extract the distribution zip into the installation directory <b>‘/home/appuser’</b></li>
 
 											</ul>
 										</td>
@@ -936,7 +1107,7 @@
 										<td>
 
 											<ul>
-												<li class="li"><p class="col-para-table">&lt;authenion_install_dir&gt;:&nbsp;&nbsp;<i>/home/appuser/authenion/</i></p></li>
+												<li class="li"><p class="col-para-table">&lt;authenion_install_dir&gt;:&nbsp;&nbsp;<i>/home/appuser/authenion-2.0/authenion/</i></p></li>
 
 											</ul>
 
@@ -951,13 +1122,13 @@
 										<td>
 
 											<ul>
-												<li class="li" style="list-style-type: none"><p class="col-para-table"> <b>-</b> authenion</b></li>
+												<li class="li" style="list-style-type: none"><p class="col-para-table"> <b>-</b> authenion-2.0</b></li>
+												<li class="li" style="margin-left:10px;list-style-type: none"><p class="col-para-table"> <b>-</b> authenion</b></li>
 												<li class="li" style="margin-left:30px;list-style-type: none"><p class="col-para-table"> <b>-</b> bin</li>
 												<li class="li" style="margin-left:30px;list-style-type: none"> <p class="col-para-table"><b>-</b> config</li>
 												<li class="li" style="margin-left:30px;list-style-type: none"><p class="col-para-table"> <b>-</b> deploy</li>
 												<li class="li" style="margin-left:30px;list-style-type: none"><p class="col-para-table"> <b>-</b> logs</li>
 												<li class="li" style="margin-left:30px;list-style-type: none"> <p class="col-para-table"><b>-</b> server</li>
-											    <li class="li" style="margin-left:30px;list-style-type: none"> <p class="col-para-table"><b>-</b> work</li>
 											</ul>
 
 										</td>
@@ -1025,12 +1196,6 @@
 							</div>
 							<br>
 							<li><p class="col-para">Check the status of the Authenion application by executing the <i>‘status.sh’</i> command. </li>
-								<div class="div-tables3">
-									<div class="div-table3-row1">
-										<div class="div-table3-col">#]&emsp;cd &lt;authenion_install_dir&gt;/bin</div>
-										<div class="div-table3-col">#]&emsp;./status.sh</div>
-									</div>
-								</div>
 						</ol>
 
 
@@ -1177,7 +1342,60 @@
 							<ul class="col-para">
 								<li><p class="col-sub-headings-sub"><b><u>OpenID Connect Provider - Settings</u></b></p></li>
 
-								
+								<!-- <div class="div-table4">
+									<div class="div-table4-row">
+										<div class="div-table4-col1">Authorization URL</div>
+										<div class="div-table4-col2">https://idp.example.com/authorize</div>
+									</div>
+									<div class="div-table4-row">
+										<div class="div-table4-col1">Token URL</div>
+										<div class="div-table4-col2">https://idp.example.com/token</div>
+									</div>
+									<div class="div-table4-row">
+										<div class="div-table4-col1">Logout URL</div>
+										<div class="div-table4-col2">https://idp.example.com/idp/logout</div>
+									</div>
+									<div class="div-table4-row">
+										<div class="div-table4-col1">JWKS URL</div>
+										<div class="div-table4-col2">https://idp.example.com/jwks</div>
+									</div>
+									<div class="div-table4-row">
+										<div class="div-table4-col1">Issuer</div>
+										<div class="div-table4-col2">https://idp.example.com</div>
+									</div>
+									<div class="div-table4-row">
+										<div class="div-table4-col1">Userinfo URL</div>
+										<div class="div-table4-col2">https://idp.example.com/idp/userinfo</div>
+									</div>
+									<div class="div-table4-row">
+										<div class="div-table4-col1">Audience</div>
+										<div class="div-table4-col2">authenion</div>
+									</div>
+									<div class="div-table4-row">
+										<div class="div-table4-col1">Client ID</div>
+										<div class="div-table4-col2">&lt;Registered value client_id from your IdP&gt;</div>
+									</div>
+									<div class="div-table4-row">
+										<div class="div-table4-col1">Client Secret</div>
+										<div class="div-table4-col2">&lt;Registered client_secret value from your IdP&gt;</div>
+									</div>
+									<div class="div-table4-row">
+										<div class="div-table4-col1">Scope</div>
+										<div class="div-table4-col2">openid (Multiple scopes can be added)</div>
+									</div>
+									<div class="div-table4-row">
+										<div class="div-table4-col1">Claims</div>
+										<div class="div-table4-col2">Claims from Identity Provider (sub, username, email, etc.,)</div>
+									</div>
+									<div class="div-table4-row">
+										<div class="div-table4-col1">Authenion Instances</div>
+										<div class="div-table4-col2">
+											https://&lt;authenion.example.com&gt;:8090
+											<p style="font-size:0.6rem; color:black"><i><br>Note: If the Authenion is configured in cluster, enter the Authenion Instances value from all the Authenion servers. The default port is 8090 and enabled with HTTPS. Supports multiple entries.</i></p>
+										</div>
+									</div> -->
+								<!-- </div> -->
+
 								<!-- install Authenion -->
 								<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 									<tr>
@@ -1385,11 +1603,6 @@
 						<img id="modalImage4" class="modal-image" src="assets/img/OIDCConfiguration1.png" alt="">
 					</div>
 					<br>
-
-					<!-- LDAP Authentication Provider-->
-
-
-
 					<!-- Sidebar-->
 					<div>
 						<a style="padding: 35px" name="Sidebar"></a>
