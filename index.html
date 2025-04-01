@@ -249,6 +249,32 @@
 		  </li><!-- End Tables Nav -->
 
 		  <li class="nav-item">
+			<a class="nav-link collapsed" data-bs-target="#launch-nav" data-bs-toggle="collapse" href="#">
+				<span>Launching the Authenion Admin UI Console </span><i class="bi bi-chevron-down ms-auto"></i>
+			</a>
+			<ul id="launch-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+				<li>
+					<a href="#pre-reqsLaunchingAuthenionConsole" class="nav-link-sub collapsed">
+						<!--<i class="bi bi-circle"></i>--><span>Pre-requisites</span>
+					</a>
+				</li>
+				<li>
+					<a href="#Linux&windowsEnviLaunchingAuthenionConsole" class="nav-link-sub collapsed">
+						<!--<i class="bi bi-circle"></i>--><span>Linux and Windows Environment (Execution Steps)</span>
+					</a>
+				</li>
+				<li>
+					<a href="#LocalAuthenticationtoLaunchAuthenionConsole" class="nav-link-sub collapsed">
+						<!--<i class="bi bi-circle"></i--><span>Using Local Authentication to Launch Authenion Console</span>
+					</a>
+				</li>
+				
+			</ul>
+
+		</li><!-- End Tables Nav -->
+
+		  
+		  <li class="nav-item">
 			  <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
 				  <!--<i class="bi bi-bar-chart"></i>--><span>Console Interactions & Configurations&nbsp;</span><i class="bi bi-chevron-down ms-auto"></i>
 			  </a>
@@ -1104,7 +1130,7 @@
 
                       <p class="col-para"><i> Note: In Authenion-3.0, we have the option to start and stop each service individually.</i></p>
 
-
+                    <!-- Authenion Health-check -->
 						<a style="padding:32px" name="health-check section"></a>
 						<p class="col-sub-headings">5. Authenion Health-check</p>
 						<ol class="col-para">
@@ -1158,6 +1184,76 @@
 						<br>
 					</div> <!-- ### INSTALLATION ### -->
 
+
+					<!-- ### Launching the Authenion Admin UI Console ### -->
+					<div>
+						<a style="padding:32px" name="LaunchingtheAuthenionConsole"></a>
+						<h4 style="font-family:sans-serif; font-size:26px; font-weight: 600; color: #00297A">Launching the Authenion Admin UI Console</h4>
+						<p class="col-para">To launch the Authenion Admin UI console, we have a standalone utility that can be executed on any J2EE application server. The utility, ‘authenion-admin-1.2.jar’ will be provided alongside the Authenion package. You can use either the OIDC provider or the standalone method to launch the Tomcat admin console.</p>
+						
+						<!-- ### Pre-requisites (for both Linux and Windows) ### -->
+						
+						<a style="padding:32px" name="pre-reqsLaunchingAuthenionConsole"></a>
+						<p class="col-sub-headings">1. Pre-requisites (for both Linux and Windows)</p>
+						<p class="col-sub-headings-sub"><b>Download the File:</b></p>
+						<ol class="col-para">
+						   <li><p class="col-para">Download the `authenion-admin-1.2.zip` file and place it in the application server where our Authenion-EIK is deployed.</p></li> 
+						</ol>
+						   <p class="col-sub-headings-sub"><b>Extract the File:</b></p>
+						<ol class="col-para">
+						   <li> <p class="col-para">Unzip the `authenion-admin-1.2.zip` file.</p></li> 
+						   <li> <p class="col-para">After extraction, you will see only one file: authenion-admin-1.2.zip.</p></li> 
+					    </ol>
+						<p class="col-sub-headings-sub"><b>Configure Azure:</b></p>
+						<ol class="col-para">
+						   <li>  <p class="col-para">In the Azure portal, under the registered Authenion Application, configure the redirect URL for the admin UI jar.</p></li> 
+						   <li>  <p class="col-para">Ensure the associated port is configured.</p></li> 
+						   <li>  <p class="col-para">Example URL: `https://servername:9898`</p></li> 
+						</ol>
+
+                        <!-- ### END Pre-requisites (for both Linux and Windows) ### -->
+							
+                        <!-- ### Linux & WINDOWS Environment (Execution Steps) ### -->
+						<a style="padding:32px" name="Linux&windowsEnviLaunchingAuthenionConsole"></a>
+						<p class="col-sub-headings">2. Linux and Windows Environment (Execution Steps) </p>
+                        <!-- <p class="col-sub-headings-sub"><b>Navigate to the Directory:</b></p> -->
+						<ol class="col-para">
+						   <li><p class="col-para">Open a terminal on your Linux server where the `authenion-admin-1.2.zip` file is located.</p></li> 
+						   <li> <p class="col-para">Make sure the `authenion.p12` file is in the same directory.</p></li> 
+						   <li> <p class="col-para">Use the `cd` command to go to the directory where both files are present.</p></li>
+						<!-- <p class="col-sub-headings-sub"><b>Execute the Command:</b></p> -->
+						<li> <p class="col-para">Run the following command in the terminal to execute the utility and launch the Authenion UI Admin console:</p></li> 
+						<p class="col-para">
+							<code>java -jar authenion-admin-1.2.jar com.authenion.sso.authenionadmin.AuthenionAdminApplication --authority=https://login.microsoftonline.com/<Azure Tenanat id>/v2.0 --client_id=<Azure applicaion clientid> --redirect_uri=https://<tomcathostname>:9898 --scope=api://<Azure Application id>/openid --prompt=login </code>
+							</p>
+					    <!-- <p class="col-sub-headings-sub"><b>Configure java -jar authenion-admin-1.2.jar com.authenioAzure:</b></p> -->
+						<li>  <p class="col-para">Once the execution is successful, you will be redirected to the Authenion Admin Console.</p></li> 
+						 </ol>
+
+                          <!-- ### END Linux & WINDOWS Environment (Execution Steps) ### -->
+
+						<a style="padding:32px" name="LocalAuthenticationtoLaunchAuthenionConsole"></a>
+						<p class="col-sub-headings">3. Using Local Authentication to Launch Authenion Console</p>
+						<p class="col-para">To launch the Authenion console using local authentication instead of an OIDC provider, follow these steps:</p>
+                        <p class="col-sub-headings-sub"><b>Execute the Command:</b></p>
+						<ol class="col-para">
+							<li><p class="col-para">Run the following Java command to enable local authentication:</p></li> 
+							<p class="col-para">
+								<code>java -jar tomcat-admin-1.2.jar com.tomcat.sso.tomcatadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://servername:9898 --adminPassword=anypassword</code>
+							</p>
+							<li> <p class="col-para">Replace `<anypassword>` with the password you want to set for the Authenion console to login.</p></li>
+						</ol>
+						<p class="col-sub-headings-sub"><b>Login Information:</b></p>
+						<ol class="col-para">
+							<li><p class="col-para">After executing the command, use the following login credentials:</p></li> 
+							<p class="col-para">Username:Administrator</p>
+                            <p class="col-para">Password:The password you specified in the command (anypassword)</p>
+							<li> <p class="col-para">This method allows you to bypass the OIDC provider and use local authentication for accessing the Authenion admin console.</p></li>
+						</ol>
+						
+						
+
+                   </div>
 
 					<!-- ### UI & Interactions ### -->
 					<div>
