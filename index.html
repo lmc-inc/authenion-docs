@@ -795,6 +795,7 @@
 										<li><p class="col-para-table">Red Hat Enterprise Linux 7 & above</p></li>
 										<li><p class="col-para-table">CentOS 7 & above</p></li>
 										<li><p class="col-para-table">Oracle Enterprise Linux 7 & above</p></li>
+										<li><p class="col-para-table">Windows 11</p></li>
 									</ul>
 								</td>
 
@@ -811,9 +812,9 @@
 
 									<ul>
 										<li>
-											<p class="col-para-table">OpenJDK 17</p>
+											<p class="col-para-table">OpenJDK 17 to 23</p>
 										</li>
-										<li><p class="col-para-table">Oracle Java SE Development Kit 17 LTS / Oracle Java SE Runtime Environment (Server JRE) 8</p></li>
+										
 									</ul>
 
 								</td>
@@ -866,9 +867,16 @@
 
 									<ul>
 										<li>
-											<p class="col-para-table">Authenion Sync&emsp;-&emsp;HTTPS,&emsp;TCP - 8090</p>
+											<p class="col-para-table">Authenion Sync&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;HTTPS,&emsp;TCP - 8090</p>
 										</li>
-										<li><p class="col-para-table">Authenion Virtual Server&emsp;-&emsp;HTTP (or) HTTPS,&emsp;&emsp;TCP - 0 to 65535</p></li>
+										<li><p class="col-para-table">Authenion Virtual Server&emsp; -&emsp;HTTP (or) HTTPS,&emsp;TCP - 0 to 65535</p></li>
+									    <li><p class="col-para-table">Rules Engine&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;  8334</p></li>
+										<li><p class="col-para-table">Authenion Grid &emsp;&emsp;&emsp;&emsp;&emsp;-&emsp; 8200</p></li>
+										<li><p class="col-para-table">Ignite Engine &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;10800</p></li>
+										<li><p class="col-para-table">Authenion Debug app &emsp;&emsp;-&emsp; 8888</p></li>
+										<li><p class="col-para-table">Authenion OIDC&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;8334</p></li>
+										<li><p class="col-para-table">Authenion SSO &emsp;&emsp;&emsp;&emsp;&emsp; -&emsp;8334</p></li>
+										<li><p class="col-para-table">Nginx&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;3000</p></li>
 									</ul>
 
 								</td>
@@ -901,7 +909,7 @@
 						<p class="col-sub-headings">2. Install Authenion</p>
 						<ol class="col-para">
 							<li><p class="col-para">Request or download the Authenion product distribution file and a valid license from the Authenion support portal or by contacting your account manager at LikeMinds.</p></li>
-							<li><p class="col-para">Install Authenion by extracting the authenion-3.0.zip file into the Authenion server.</p></li>
+							<li><p class="col-para">Install Authenion by extracting the authenion-3.0.zip file into any desired user directory Eg:- <i>“/home/user”</i> directory in the Authenion server.</p></li>
 							<li><p class="col-para">After extracting the zip file, the folder structure should appear as shown in the table below. </p></li>
 
 
@@ -922,7 +930,8 @@
 
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">Download & extract the distribution zip into the installation directory </li>
+
+												<li class="li"><p class="col-para-table">Download & extract the distribution zip into the installation directory <b>‘/home/user’</b></li>
 
 											</ul>
 										</td>
@@ -936,7 +945,7 @@
 										<td>
 
 											<ul>
-												<li class="li"><p class="col-para-table">&lt;authenion_install_dir&gt;:&nbsp;&nbsp;<i>/home/appuser/authenion/</i></p></li>
+												<li class="li"><p class="col-para-table">&lt;authenion_install_dir&gt;:&nbsp;&nbsp;<i>/home/user/authenion/</i></p></li>
 
 											</ul>
 
@@ -975,6 +984,9 @@
 						<!-- SETUP SECTION -->
 						<a style="padding:32px" name="setup section"></a>
 						<p class="col-sub-headings">3. Setup Authenion</p>
+						<p class="col-para">Authenion installation can be done on both Linux and Windows environment. Below are the steps for each:</p>
+						<!--LINUX ENVIRONMENT-->
+						<p class="col-sub-headings-sub"><b>Linux Environment :</b></p>
 						<ol class="col-para">
 							<li><p class="col-para">Navigate to the following directory in the Authenion server.</li>
 							<!-- TABLE3 -->
@@ -1002,10 +1014,35 @@
 							<p class="col-para"><i> Note: In case if the process fails to complete the setup, you can re-run the setup script to complete it.</i></p>
 						</ol>
 
+						<!-- WINDOWS ENVIRONMENT-->
+						<p class="col-sub-headings-sub"><b>Windows Environment :</b></p>
+						<ol class="col-para">
+							<li><p class="col-para">Navigate to the following directory in the Authenion server.</li>
+							<!-- TABLE3 -->
+							<div class="div-table3">
+								<div class="div-table3-row">
+									<div class="div-table3-col">#]&emsp;&lt;authenion_install_dir&gt;/bin</div>
+								</div>
+							</div>
+							<br>
+							
+							<li><p class="col-para">Run the setup command.</li>
+							<div class="div-table3">
+								<div class="div-table3-row">
+									<div class="div-table3-col">#]&emsp;./setup.bat</div>
+								</div>
+							</div>
+							<br>
+							<li><p class="col-para">Read and accept the Software Terms & Conditions. This will complete the setup process.</li>
+							<p class="col-para"><i> Note: In case if the process fails to complete the setup, you can re-run the setup script to complete it.</i></p>
+						</ol>
+
 
 						<!-- START/STOP SECTION -->
 						<a style="padding:32px" name="start-stop section"></a>
 						<p class="col-sub-headings">4. Start & Stop Services</p>
+                         <!--LINUX ENVIRONMENT-->
+						<p class="col-sub-headings-sub"><b>Linux Environment :</b></p>
 						<ol class="col-para">
 							<li><p class="col-para">To Start the Authenion instance, navigate to the <i>“&lt;authenion_install_dir&gt;/bin”</i> directory and run the <i>‘start-instance.sh’</i> command. </li>
 							<!-- TABLE3 -->
@@ -1024,7 +1061,7 @@
 								</div>
 							</div>
 							<br>
-							<li><p class="col-para">Check the status of the Authenion application by executing the <i>‘status.sh’</i> command. </li>
+							<li><p class="col-para">Check the status of the Authenion application, by navigate to the <i>“&lt;authenion_install_dir&gt;/bin”</i> directory and executing the <i>‘status.sh’</i> command. </li>
 								<div class="div-tables3">
 									<div class="div-table3-row1">
 										<div class="div-table3-col">#]&emsp;cd &lt;authenion_install_dir&gt;/bin</div>
@@ -1032,6 +1069,40 @@
 									</div>
 								</div>
 						</ol>
+
+						<p class="col-para"><i> Note: In Authenion-3.0, we have the option to start and stop each service individually.</i></p>
+
+						<!-- WINDOWS ENVIRONMENT-->
+						 <p class="col-sub-headings-sub"><b>Windows Environment :</b></p>
+						 <ol class="col-para">
+							 <li><p class="col-para">To Start the Authenion instance, navigate to the <i>“&lt;authenion_install_dir&gt;/bin”</i> directory and run the <i>‘start-instance.bat’</i> command. </li>
+							 <!-- TABLE3 -->
+							 <div class="div-tables3">
+								 <div class="div-table3-row1">
+									 <div class="div-table3-col">#]&emsp;cd &lt;authenion_install_dir&gt;/bin</div>
+									 <div class="div-table3-col">#]&emsp;start-instance.bat</div>
+								 </div>
+							 </div>
+							 <br>
+							 <li><p class="col-para">To Stop the Authenion instance, navigate to the <i>“&lt;authenion_install_dir&gt;/bin”</i> directory and run the <i>‘stop-instance.bat’</i> command. </li>
+							 <div class="div-tables3">
+								 <div class="div-table3-row1">
+									 <div class="div-table3-col">#]&emsp;cd &lt;authenion_install_dir&gt;/bin</div>
+									 <div class="div-table3-col">#]&emsp;stop-instance.bat</div>
+								 </div>
+							 </div>
+							 <br>
+							 <li><p class="col-para">Check the status of the Authenion application, by navigate to the <i>“&lt;authenion_install_dir&gt;/bin”</i> directory and executing the <i>‘status.bat’</i> command. </li>
+								 <div class="div-tables3">
+									 <div class="div-table3-row1">
+										 <div class="div-table3-col">#]&emsp;cd &lt;authenion_install_dir&gt;/bin</div>
+										 <div class="div-table3-col">#]&emsp;status.bat</div>
+									 </div>
+								 </div>
+						 </ol>
+                    
+
+                      <p class="col-para"><i> Note: In Authenion-3.0, we have the option to start and stop each service individually.</i></p>
 
 
 						<a style="padding:32px" name="health-check section"></a>
