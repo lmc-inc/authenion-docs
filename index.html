@@ -1095,7 +1095,6 @@
 									</div>
 								</div>
 						</ol>
-
 						<p class="col-para"><i> Note: In Authenion-3.0, we have the option to start and stop each service individually.</i></p>
 
 						<!-- WINDOWS ENVIRONMENT-->
@@ -1391,7 +1390,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"<p class="col-para-table">https://idp.example.com/token</li>
+										<li class="li" style="list-style-type: none"></li><p class="col-para-table">https://idp.example.com/token</li>
 									</ul>
 								</td>
 								</tr>
@@ -1574,13 +1573,514 @@
 					<br>
 
 					<!-- LDAP Authentication Provider-->
+					<div>
+                        <a style="padding: 35px" name="LDAP Authentication Provider"></a>
+                        <p class="col-sub-headings">4. LDAP Authentication Provider</p>
+                        <!-- Image with onclick event -->
+                        
+                        </div>
+						<br>
 
+						<p class="col-sub-headings-sub"><b>Adding LDAP Authentication Provider Configuration</b></p>
+						<ol class="col-para">
+							<li><p class="col-para">Click LDAP Authentication Provider Configuration in the Dashboard page.</p></li>
+							<li><p class="col-para">Enter the following details & click Save to configure your LDAP Provider with Authenion for authentication.</b></p></li>
 
+							<ul class="col-para">
+								<li><p class="col-sub-headings-sub"><b><u>LDAP Authentication Provider - Settings</u></b></p></li>
+
+								
+								<!-- install Authenion -->
+								<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+									<tr>
+										<th class="symcomponent">Configurations</th>
+										<th class="symcomponent">&emsp;Values</th>
+									</tr>
+
+									<tbody class="tbody">
+										<!--LDAP ServerL-->
+										<tr>
+											<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">LDAP Server</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"></li><p class="col-para-table">ldaps://ldap.example.com:636</li>
+									</ul>
+								</td>
+								</tr>
+								<!--Bind DN-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Bind DN</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"></li><p class="col-para-table">Registered value Bind DN from your LDAP</li>
+									</ul>
+								</td>
+								</tr>
+								<!--Bind Password-->
+								<tr>
+									<td>
+								<li style="list-style-type: none"><p class="col-para-table">Bind Password</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+									</ul>
+								</td>
+								</tr>
+								<!--Base DN-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Base DN</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">https://idp.example.com/idp/logout</li>
+									</ul>
+								</td>
+								</tr>
+								<!--Search Base-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Search Base</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">https://idp.example.com</li>
+									</ul>
+								</td>
+								</tr>
+								<!--Search Scope-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Search Scope</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">https://idp.example.com/idp/userinfo (Optional)</li>
+									</ul>
+								</td>
+								</tr>
+								<!--Return Attributes-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Return Attributes</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">authenion</li>
+									</ul>
+								</td>
+								</tr>
+								<!--Username Attribute-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Username Attribute</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value client_id from your IdP</li>
+									</ul>
+								</td>
+								</tr>
+								<!--Read Timeout-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Read Timeout</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Registered client_secret value from your IdP</li>
+									</ul>
+								</td>
+								</tr>
+								<!--Client Secret-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Client Secret</li>
+
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">openid (Multiple scopes can be added)</li>
+									</ul>
+								</td>
+								</tr>
+								<!--OIDC Virtual Server-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">OIDC Virtual Server</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Claims from Identity Provider (sub, username, email, etc.,)</li>
+									</ul>
+								</td>
+								</tr>
+								<!--OIDC Virtual Server Port-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">OIDC Virtual Server Port</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Claims from Identity Provider (sub, username, email, etc.,)</li>
+									</ul>
+								</td>
+								</tr> 
+                                 <!--Use SSL-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Use SSL</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Claims from Identity Provider (sub, username, email, etc.,)</li>
+									</ul>
+								</td>
+								</tr>
+                                 <!--Include Claims in ID_Token-->
+								 <tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Include Claims in ID_Token</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Claims from Identity Provider (sub, username, email, etc.,)</li>
+									</ul>
+								</td>
+								</tr>
+                                 <!--Enable MFA-->
+								 <tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Enable MFA</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Claims from Identity Provider (sub, username, email, etc.,)</li>
+									</ul>
+								</td>
+								</tr>
+								</tbody>
+								</table>
+								<br>    
+					
+					<!-- Image with onclick event -->
+					<img src="assets/img/authenion-3.0/LdapAuthenticationprovider1.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerLdapAuthenticationprovider1', 'modalImageLdapAuthenticationprovider1')" class="col-images-intro" />
+
+					<!-- Modal container -->
+					<div id="modalContainerLdapAuthenticationprovider1" class="modal-container" onclick="closeModal('modalContainerLdapAuthenticationprovider1')">
+						<img id="modalImageLdapAuthenticationprovider1" class="modal-image" src="assets/img/authenion-3.0/LdapAuthenticationprovider1.png" alt="">
+					</div>
+					<br>
+					
+						<li><p class="col-sub-headings-sub"><b><u>MFA Settings</u></b></p></li>
+                    <!-- install Authenion -->
+								<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+									<tr>
+										<th class="symcomponent">Configurations</th>
+										<th class="symcomponent">&emsp;Values</th>
+									</tr>
+
+									<tbody class="tbody">
+										<!--Email-->
+										<tr>
+											<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Email</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"></li><p class="col-para-table">ldaps://ldap.example.com:636</li>
+									</ul>
+								</td>
+								</tr>
+								<!--SMS-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">SMS</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"></li><p class="col-para-table">Registered value Bind DN from your LDAP</li>
+									</ul>
+								</td>
+								</tr>
+								<!--TOTP-->
+								<tr>
+									<td>
+								<li style="list-style-type: none"><p class="col-para-table">TOTP</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+									</ul>
+								</td>
+								</tr>
+								</tbody>
+								</table>
+								
+
+								
+									<li><p class="col-sub-headings-sub"><b><u>SMTP Configurations</u></b></p></li>
+								<!-- install Authenion -->
+											<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+												<tr>
+													<th class="symcomponent">Configurations</th>
+													<th class="symcomponent">&emsp;Values</th>
+												</tr>
+			
+												<tbody class="tbody">
+													<!--From Address-->
+													<tr>
+														<td>
+											<li style="list-style-type: none;position:indent;"><p class="col-para-table">From Address</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"></li><p class="col-para-table">ldaps://ldap.example.com:636</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Email Server-->
+											<tr>
+												<td>
+											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Email Server</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"></li><p class="col-para-table">Registered value Bind DN from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Mail Port-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">Mail Port</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Mail Protocol-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">Mail Protocol</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Username-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">Username</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											<!--password-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">Password</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Connection Timeout-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">Connection Timeout</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Ldap Attribute-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">Ldap Attribute</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											<!--SMTPS Authentication-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">SMTPS Authentication</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Enable Encryption-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">Enable Encryption</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											</tbody>
+											</table>
+								
+
+					<!-- Image with onclick event -->
+					<img src="assets/img/authenion-3.0/LdapAuthenticationprovider2.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerLdapAuthenticationprovider2', 'modalImageLdapAuthenticationprovider2')" class="col-images-intro" />
+
+					<!-- Modal container -->
+					<div id="modalContainerLdapAuthenticationprovider2" class="modal-container" onclick="closeModal('modalContainerLdapAuthenticationprovider2')">
+						<img id="modalImageLdapAuthenticationprovider2" class="modal-image" src="assets/img/authenion-3.0/LdapAuthenticationprovider2.png" alt="">
+					</div>
+					<br>
+
+					<li><p class="col-sub-headings-sub"><b><u>Twilio Settings</u></b></p></li>
+								<!-- install Authenion -->
+											<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+												<tr>
+													<th class="symcomponent">Configurations</th>
+													<th class="symcomponent">&emsp;Values</th>
+												</tr>
+			
+												<tbody class="tbody">
+													<!--Account SID-->
+													<tr>
+														<td>
+											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Account SID</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"></li><p class="col-para-table">ldaps://ldap.example.com:636</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Auth Token-->
+											<tr>
+												<td>
+											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Auth Token</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"></li><p class="col-para-table">Registered value Bind DN from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											<!--From Number-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">From Number</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											<!--SMS Service-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">SMS Service</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Ldap Attribute-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">Ldap Attribute</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											</tbody>
+											</table>
+											<br>
+											<li><p class="col-sub-headings-sub"><b><u>TOTP Settings</u></b></p></li>
+								<!-- install Authenion -->
+											<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+												<tr>
+													<th class="symcomponent">Configurations</th>
+													<th class="symcomponent">&emsp;Values</th>
+												</tr>
+			
+												<tbody class="tbody">
+													<!--Grace Time-->
+													<tr>
+														<td>
+											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Grace Time</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"></li><p class="col-para-table">ldaps://ldap.example.com:636</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Skew Windows-->
+											<tr>
+												<td>
+											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Skew Windows</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"></li><p class="col-para-table">Registered value Bind DN from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Ldap Attribute-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">Ldap Attribute</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">Registered value Bind Password from your LDAP</li>
+												</ul>
+											</td>
+											</tr>
+											</tbody>
+											</table>
+										</br>
+					<!-- Image with onclick event -->
+					<img src="assets/img/authenion-3.0/LdapAuthenticationprovider3.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerLdapAuthenticationprovider3', 'modalImageLdapAuthenticationprovider3')" class="col-images-intro" />
+
+					<!-- Modal container -->
+					<div id="modalContainerLdapAuthenticationprovider3" class="modal-container" onclick="closeModal('modalContainerLdapAuthenticationprovider3')">
+						<img id="modalImageLdapAuthenticationprovider3" class="modal-image" src="assets/img/authenion-3.0/LdapAuthenticationprovider3.png" alt="">
+					</div>
+					<br>
 
 					<!-- Sidebar-->
 					<div>
 						<a style="padding: 35px" name="Sidebar"></a>
-						<p class="col-sub-headings">4. Sidebar</p>
+						<p class="col-sub-headings">5. Sidebar</p>
 						<!-- Image with onclick event -->
 
 						<p class="col-para">The Sidebar Menu has the following Configurations</p>
@@ -1613,7 +2113,7 @@
 					<!-- Applications -->
 					<div>
 						<a style="padding: 35px" name="Applications"></a>
-						<p class="col-sub-headings">5. Applications</p>
+						<p class="col-sub-headings">6. Applications</p>
 						<p class="col-para">
 							Applications sidebar represent the protected Applications to which the user requests are sent. Each application will have a
 							dedicated entry in the Dashboard/Applications tab. Applications are configured with Virtual Servers, Resources, Header
@@ -1807,7 +2307,7 @@
 					<!-- Virtual Servers  -->
 					<div>
 						<a style="padding: 35px" name="Virtual Servers"></a>
-						<p class="col-sub-headings">6. Virtual Servers</p>
+						<p class="col-sub-headings">7. Virtual Servers</p>
 						<p class="col-para">
 							Virtual Servers enables you to protect multiple applications and their hosts. The Virtual Server is a combination of
 							hostname and port number and is defined by example.com:443.
@@ -1914,7 +2414,7 @@
 					<!-- Application Hosts -->
 					<div>
 						<a style="padding: 35px" name="Application Hosts"></a>
-						<p class="col-sub-headings">7. Application Hosts </p>
+						<p class="col-sub-headings">8. Application Hosts </p>
 						<p class="col-para">
 							Applications Hosts are the target applications or the backend application servers that Authenion is protecting through the
 							gateway architecture. The target application’s access requests are validated by Authenion before they are forwarded.
@@ -2011,7 +2511,7 @@
 					<!-- Header Mappings  -->
 					<div>
 						<a style="padding: 35px" name="Header Mapping"></a>
-						<p class="col-sub-headings">8. Header Mappings </p>
+						<p class="col-sub-headings">9. Header Mappings </p>
 						<p class="col-para">
 							Header Mappings sends the User attributes to the target application after authentication. The target application will send the attributes
 							for validation purposes. The Header Mappings will receive the user attributes from the Claims which are sent by the
@@ -2121,7 +2621,7 @@
 					<!-- Resources  -->
 					<div>
 						<a style="padding: 35px" name="Resources"></a>
-						<p class="col-sub-headings">9. Resources </p>
+						<p class="col-sub-headings">10. Resources </p>
 						<p class="col-para">
 							Resources are the components/URI of the applications. The resources can be mapped as either protected or excluded
 							resources in an application.
@@ -2216,7 +2716,7 @@
 					<!--Authenion Status -->
 					<div>
 						<a style="padding: 35px" name="Authenion Status"></a>
-						<p class="col-sub-headings">10. Authenion Status </p>
+						<p class="col-sub-headings">11. Authenion Status </p>
 						<p class="col-para">
 							The Authenion Status page shows the health of the Authenion Instance that is running in the Authenion server. This
 							status page also displays your authenion license information.
@@ -2250,7 +2750,7 @@
 					<!--Sync  -->
 					<div>
 						<a style="padding: 35px" name="Sync & Export"></a>
-						<p class="col-sub-headings">11. Sync & Export</p>
+						<p class="col-sub-headings">12. Sync & Export</p>
 						<p class="col-sub-headings-sub"><b><u>Sync</u></b></p>
 						<p class="col-para">
 							The Sync is a manual operation that lets you push all the configuration data from the Authenion UI back to the Authenion server.
