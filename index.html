@@ -2183,7 +2183,7 @@
 										</td>
 										<td>
 											<ul>
-												<p class="col-para-table">(auto generated)</p>
+												<p class="col-para-table">Unique ID (auto generated)</p>
 											</ul>
 										</td>
 									</tr>
@@ -2264,6 +2264,28 @@
 											</ul>
 										</td>
 									</tr>
+                                    <!--Enable -->
+									<tr>
+										<td>
+											<p class="col-para-table">Enable </p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Checkbox&emsp;&emsp;(Enable/Disable Application)</p>
+											</ul>
+										</td>
+									</tr>
+                                    <!--Enable Host Headers -->
+									<tr>
+										<td>
+											<p class="col-para-table">Enable Host Headers </p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Checkbox&emsp;&emsp;(Enable/Disable Host Headers)</p>
+											</ul>
+										</td>
+									</tr>
 								</tbody>
 							</table>
 							<br />
@@ -2281,6 +2303,51 @@
 						<img id="modalImage8" class="modal-image" src="assets/img/authenion-3.0/NewApplication.png" alt="">
 					</div>
 					<br>
+					<li><p class="col-sub-headings-sub"><b><u>Configure Authorization rule for your Application</u></b></p></li>
+								<!-- install Authenion -->
+											<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+												<tr>
+													<th class="symcomponent">Configurations</th>
+													<th class="symcomponent">&emsp;Values</th>
+												</tr>
+			
+												<tbody class="tbody">
+													<!--Enable Authorization Engine for this Application-->
+													<tr>
+														<td>
+											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Enable Authorization Engine for this Application</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"></li><p class="col-para-table">Toggle (Enable/Disable the Rules for the Application)</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Rule-->
+											<tr>
+												<td>
+											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Rule</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"></li><p class="col-para-table">Configure Authorization Rules for the Application</li>
+												</ul>
+											</td>
+											</tr>
+											<!--Ldap Attribute-->
+											<tr>
+												<td>
+											<li style="list-style-type: none"><p class="col-para-table">Context Path</li>
+											</td>
+											<td>
+												<ul>
+													<li class="li" style="list-style-type: none"><p class="col-para-table">/</li>
+												</ul>
+											</td>
+											</tr>
+											</tbody>
+											</table>
+										</br>
                    
 					<!-- <img src="assets/img/NewApplication1.png" alt="" class="col-images-intro" />  -->
 					<!-- Image with onclick event -->
@@ -2345,7 +2412,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">1 (Unique ID) </li>
+												<li class="li"><p class="col-para-table">Unique ID (auto generated) </li>
 											</ul>
 										</td>
 									</tr>
@@ -2367,7 +2434,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">authenion.example.com&emsp;&emsp;(protected application domain or hostname)</li>
+												<li class="li"><p class="col-para-table">authenion3.example.com&emsp;&emsp;(protected application domain or hostname)</li>
 											</ul>
 										</td>
 									</tr>
@@ -2451,7 +2518,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">1 (Unique ID) </li>
+												<li class="li"><p class="col-para-table">Unique ID (auto generated)</li>
 											</ul>
 										</td>
 									</tr>
@@ -2485,6 +2552,28 @@
 										<td>
 											<ul>
 												<li class="li"><p class="col-para-table">checkbox&emsp;&emsp;&emsp;(HTTP or HTTPS)</li>
+											</ul>
+										</td>
+									</tr>
+									<!--Enable Session Persistence-->
+									<tr>
+										<td>
+											<p class="col-para-table">Enable Session Persistence </p>
+										</td>
+										<td>
+											<ul>
+												<li class="li"><p class="col-para-table">checkbox&emsp;&emsp;&emsp;(Enable/Disable Session Persistence)</li>
+											</ul>
+										</td>
+									</tr>
+									<!--HTTP1.1-->
+									<tr>
+										<td>
+											<p class="col-para-table">HTTP1.1 </p>
+										</td>
+										<td>
+											<ul>
+												<li class="li"><p class="col-para-table">checkbox&emsp;&emsp;&emsp;(Enable/Disable HTTP Proxy with HTTP/1.1 )</li>
 											</ul>
 										</td>
 									</tr>
@@ -2549,7 +2638,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">1 (Unique ID) </li>
+												<li class="li"><p class="col-para-table">Unique ID (auto generated) </li>
 											</ul>
 										</td>
 									</tr>
@@ -2658,7 +2747,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">1 (Unique ID) </li>
+												<li class="li"><p class="col-para-table">Unique ID (auto generated) </li>
 											</ul>
 										</td>
 									</tr>
@@ -2681,6 +2770,28 @@
 										<td>
 											<ul>
 												<li class="li"><p class="col-para-table">/MyApp&emsp;(Resource Path starts with a ‘/’. Multiple resource paths can be added)</Resource> </li>
+											</ul>
+										</td>
+									</tr>
+									<!--Enable Authorization Rules -->
+									<tr>
+										<td>
+											<p class="col-para-table">Enable Authorization Rules</p>
+										</td>
+										<td>
+											<ul>
+												<li class="li"><p class="col-para-table">Toggle (Enable/Disable Authorization Rules)</Resource> </li>
+											</ul>
+										</td>
+									</tr>
+									<!--Rule -->
+									<tr>
+										<td>
+											<p class="col-para-table">Rule</p>
+										</td>
+										<td>
+											<ul>
+												<li class="li"><p class="col-para-table">Configure Authorization Rules for the Resources</Resource> </li>
 											</ul>
 										</td>
 									</tr>
@@ -4051,10 +4162,10 @@
 						<!--<br>
 	<br />-->
 						<!-- Image with onclick event -->
-						<img src="assets/img/Apex-VirtualServer.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex2', 'modalImageApex2')" class="col-images-intro" />
+						<img src="assets/img/authenion-3.0/Apex-VirtualServer.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex2', 'modalImageApex2')" class="col-images-intro" />
 						<!-- Model Container-->
 						<div id="modalContainerApex2" class="modal-container" onclick="closeModal('modalContainerApex2')">
-							<img id="modalImageApex2" class="modal-image" src="assets/img/Apex-VirtualServer.png" alt="">
+							<img id="modalImageApex2" class="modal-image" src="assets/img/authenion-3.0/Apex-VirtualServer.png" alt="">
 						</div>
 						<br />
 						<br>
@@ -4123,10 +4234,10 @@
 	<br>
 	<br />-->
 						<!-- Image with onclick event -->
-						<img src="assets/img/Apex-Backend.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex3', 'modalImageApex3')" class="col-images-intro" />
+						<img src="assets/img/authenion-3.0/Apex-Backend.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex3', 'modalImageApex3')" class="col-images-intro" />
 						<!-- Model Container-->
 						<div id="modalContainerApex3" class="modal-container" onclick="closeModal('modalContainerApex3')">
-							<img id="modalImageApex3" class="modal-image" src="assets/img/Apex-Backend.png" alt="">
+							<img id="modalImageApex3" class="modal-image" src="assets/img/authenion-3.0/Apex-Backend.png" alt="">
 						</div>
 						<br />
 						<br>
@@ -4180,10 +4291,10 @@
 	<br />
 	<br />-->
 						<!-- Image with onclick event -->
-						<img src="assets/img/Apex-Headers.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex4', 'modalImageApex4')" class="col-images-intro" />
+						<img src="assets/img/authenion-3.0/Apex-Headers.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex4', 'modalImageApex4')" class="col-images-intro" />
 						<!-- Model Container-->
 						<div id="modalContainerApex4" class="modal-container" onclick="closeModal('modalContainerApex4')">
-							<img id="modalImageApex4" class="modal-image" src="assets/img/Apex-Headers.png" alt="">
+							<img id="modalImageApex4" class="modal-image" src="assets/img/authenion-3.0/Apex-Headers.png" alt="">
 						</div>
 						<br />
 						<br />
@@ -4260,10 +4371,10 @@
 	<br />
 	<br />-->
 						<!-- Image with onclick event -->
-						<img src="assets/img/Apex-Resporces.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex5', 'modalImageApex5')" class="col-images-intro" />
+						<img src="assets/img/authenion-3.0/Apex-Resporces.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex5', 'modalImageApex5')" class="col-images-intro" />
 						<!-- Model Container-->
 						<div id="modalContainerApex5" class="modal-container" onclick="closeModal('modalContainerApex5')">
-							<img id="modalImageApex5" class="modal-image" src="assets/img/Apex-Resporces.png" alt="">
+							<img id="modalImageApex5" class="modal-image" src="assets/img/authenion-3.0/Apex-Resporces.png" alt="">
 						</div>
 						<br />
 						<br />
@@ -4368,10 +4479,10 @@
 						<br>
 						<br>
 						<!-- Image with onclick event -->
-						<img src="assets/img/Apex-Application.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex6', 'modalImageApex6')" class="col-images-intro" />
+						<img src="assets/img/authenion-3.0/Apex-Application.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerApex6', 'modalImageApex6')" class="col-images-intro" />
 						<!-- Model Container-->
 						<div id="modalContainerApex6" class="modal-container" onclick="closeModal('modalContainerApex6')">
-							<img id="modalImageApex6" class="modal-image" src="assets/img/Apex-Application.png" alt="">
+							<img id="modalImageApex6" class="modal-image" src="assets/img/authenion-3.0/Apex-Application.png" alt="">
 						</div>
 						<br />
 						<br />
