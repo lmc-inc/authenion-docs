@@ -710,7 +710,7 @@
 							<td>
 
 								<ul>
-									<p class="col-para-table">Connecting with your LDAP Authentication Provider for Authentication</p>
+									<p class="col-para-table">Connecting with your LDAP Authentication Provider for MFA, SMS and TOTP Authentication </p>
 
 								</ul>
 
@@ -1203,12 +1203,7 @@
 						   <li> <p class="col-para">Unzip the `authenion-admin-1.2.zip` file.</p></li> 
 						   <li> <p class="col-para">After extraction, you will see only one file: authenion-admin-1.2.zip.</p></li> 
 					    </ol>
-						<p class="col-sub-headings-sub"><b>Configure Azure:</b></p>
-						<ol class="col-para">
-						   <li>  <p class="col-para">In the Azure portal, under the registered Authenion Application, configure the redirect URL for the admin UI jar.</p></li> 
-						   <li>  <p class="col-para">Ensure the associated port is configured.</p></li> 
-						   <li>  <p class="col-para">Example URL: `https://servername:9898`</p></li> 
-						</ol>
+						
 
                         <!-- ### END Pre-requisites (for both Linux and Windows) ### -->
 							
@@ -1223,11 +1218,15 @@
 						<!-- <p class="col-sub-headings-sub"><b>Execute the Command:</b></p> -->
 						<li> <p class="col-para">Run the following command in the terminal to execute the utility and launch the Authenion UI Admin console:</p></li> 
 						<p class="col-para">
-							<code>java -jar authenion-admin-1.2.jar com.authenion.sso.authenionadmin.AuthenionAdminApplication --authority=https://login.microsoftonline.com/<Azure Tenanat id>/v2.0 --client_id=<Azure applicaion clientid> --redirect_uri=https://<tomcathostname>:9898 --scope=api://<Azure Application id>/openid --prompt=login </code>
-							</p>
+							<code>
+								java -jar authenion-admin-1.2.jar com.authenion.sso.authenionadmin.AuthenionAdminApplication --authority=https://login.microsoftonline.com/&lt;AzureTenantId&gt;/v2.0 --client_id=Azureapplicationclientid --redirect_uri=https://&lt;tomcathostname&gt;:9898 --scope=api://&lt;AzureApplicationid&gt;/openid --prompt=login
+							</code>
+						</p>
 					    <!-- <p class="col-sub-headings-sub"><b>Configure java -jar authenion-admin-1.2.jar com.authenioAzure:</b></p> -->
 						<li>  <p class="col-para">Once the execution is successful, you will be redirected to the Authenion Admin Console.</p></li> 
 						 </ol>
+                          
+						 <p class="col-para"><i> Note: Please ensure that the redirect_uri used in the command is added to the Azure Application's Redirect URIs list.</i></p>
 
                           <!-- ### END Linux & WINDOWS Environment (Execution Steps) ### -->
 
@@ -1238,7 +1237,9 @@
 						<ol class="col-para">
 							<li><p class="col-para">Run the following Java command to enable local authentication:</p></li> 
 							<p class="col-para">
-								<code>java -jar tomcat-admin-1.2.jar com.tomcat.sso.tomcatadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://servername:9898 --adminPassword=anypassword</code>
+								<code>
+									java -jar authenion-admin-1.2.jar com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://servername:9898 --adminPassword=anypassword
+								</code>
 							</p>
 							<li> <p class="col-para">Replace `anypassword` with the password you want to set for the Authenion console to login.</p></li>
 						</ol>
@@ -1577,7 +1578,8 @@
                         <a style="padding: 35px" name="LDAP Authentication Provider"></a>
                         <p class="col-sub-headings">4. LDAP Authentication Provider</p>
                         <!-- Image with onclick event -->
-                        
+						
+						<p class="col-para">This configuration provides a secure and scalable identity and access management solution by integrating LDAP authentication, OIDC, and multi-factor authentication (MFA). LDAP is used to authenticate user credentials against directory services with secure bind credentials and search parameters. OIDC enables single sign-on (SSO) with a registered client and configured redirect URIs. MFA is implemented using Email, SMS (via Twilio), and TOTP for added security. SMTP settings support email-based verification with TLS/SSL encryption, while Twilio ensures reliable SMS delivery. TOTP also offers time-based one-time passwords with configurable grace periods.</p>
                         </div>
 						<br>
 
@@ -2545,7 +2547,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">authenion3.example.com&emsp;&emsp;(protected application domain or hostname)</li>
+												<li class="li"><p class="col-para-table">authenion3.likemindscloud.com&emsp;&emsp;(protected application domain or hostname)</li>
 											</ul>
 										</td>
 									</tr>
@@ -2651,7 +2653,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">MyApp.example.com:8443 &emsp;&emsp;(protected application/webserver details)</li>
+												<li class="li"><p class="col-para-table">apex.likemindscloud.com:8080 &emsp;&emsp;(protected application/webserver details)</li>
 											</ul>
 										</td>
 									</tr>
@@ -2880,7 +2882,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">/MyApp&emsp;&emsp;(Resource Path starts with a ‘/’. Multiple resource paths can be added)</Resource> </li>
+												<li class="li"><p class="col-para-table">/ords/**&emsp;&emsp;(Resource Path starts with a ‘/’. Multiple resource paths can be added)</Resource> </li>
 											</ul>
 										</td>
 									</tr>
@@ -2948,11 +2950,11 @@
 					</div>
 					<!-- <img src="assets/img/authenionstatus.png" alt="" class="col-images-intro" /> <br> -->
 					<!-- Image with onclick event -->
-					<img src="assets/img/authenionstatus.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer18', 'modalImage18')" class="col-images-intro" />
+					<img src="assets/img/authenion-3.0/status.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer18', 'modalImage18')" class="col-images-intro" />
 
 					<!-- Modal container -->
 					<div id="modalContainer18" class="modal-container" onclick="closeModal('modalContainer18')">
-						<img id="modalImage18" class="modal-image" src="assets/img/authenionstatus.png" alt="">
+						<img id="modalImage18" class="modal-image" src="assets/img/authenion-3.0/status.png" alt="">
 					</div>
 
 					<br>
