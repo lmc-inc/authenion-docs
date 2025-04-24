@@ -402,10 +402,9 @@
 				  </a>
 			  </li>
 			  <li>
-				 <!-- <a href="#Generic Applications with Header Variables" class="nav-link-sub collapsed">-->
-					  <!--<i class="bi bi-circle"></i>-->
-					<!--  <span>Generic Applications</span>
-				  </a>-->
+				  <a href="#Generic Applications with Header Variables" class="nav-link-sub collapsed">
+					  <!--<i class="bi bi-circle"></i>--><span>Generic Applications</span>
+				  </a>
 			  </li>
 
 		  </ul>
@@ -897,9 +896,13 @@
 											<p class="col-para-table">Authenion Sync&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;HTTPS, TCP - 8090</p>
 										</li>
 										<li><p class="col-para-table">Authenion Virtual Server&emsp; -&emsp;HTTP (or) HTTPS, TCP - 0 to 65535</p></li>
-							            <li><p class="col-para-table">Authenion Debug app &emsp;&emsp;-&emsp;8888</p></li>
+									    <li><p class="col-para-table">Rules Engine&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;8334</p></li>
+										<li><p class="col-para-table">Authenion Grid &emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;8200</p></li>
+										<li><p class="col-para-table">Ignite Engine&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;10800</p></li>
+										<li><p class="col-para-table">Authenion Debug app &emsp;&emsp;-&emsp;8888</p></li>
 										<li><p class="col-para-table">Authenion OIDC &emsp;&emsp;&emsp;&emsp; -&emsp;8990</p></li>
 										<li><p class="col-para-table">Authenion SSO&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;8333</p></li>
+										<li><p class="col-para-table">Nginx&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &emsp;&emsp;&emsp;-&emsp;3000</p></li>
 									</ul>
 
 								</td>
@@ -1029,7 +1032,7 @@
 							<li><p class="col-para">Run the setup command.</li>
 							<div class="div-table3">
 								<div class="div-table3-row">
-									<div class="div-table3-col">#]&emsp;sudo ./setup.sh</div>
+									<div class="div-table3-col">#]&emsp;./setup.sh</div>
 								</div>
 							</div>
 							<br>
@@ -1142,7 +1145,7 @@
 
 
 						<a style="padding:32px" name="idp-cert section"></a>
-						<p class="col-sub-headings">6. Import Identity Provider’s Certificate into Authenion Trust Store</p>
+						<p class="col-sub-headings">6. Install Identity Provider’s Certificate into Authenion Trust Store</p>
 						<p class="col-para">The following steps will guide you to import the Identity provider’s certificate into the Authenion trust store.</p>
 						<ol class="col-para">
 							<li><p class="col-para">Export the SSL Certificate from the Identity Provider (PingFederate, PingOne, AzureAD, etc.,) and place the certificate anywhere inside “&lt;authenion_install_dir&gt;” in the Authenion server.<p></li>
@@ -1157,7 +1160,7 @@
 						<br>
 
 						<a style="padding:32px" - name="ssl-cert section"></a>
-						<p class="col-sub-headings">7. Import SSL Certificates for Authenion (optional)</p>
+						<p class="col-sub-headings">7. Install SSL Certificates for Authenion (optional)</p>
 						<p class="col-para">Authenion allows you to install your organization’s signed certificates. The certificates should be in the .crt & .key files format. To place your organization’s certificate in Authenion, follow the steps below.</p>
 						<ol class="col-para">
 							<li><p class="col-para">If you have the certificate & private key in pkcs format, move the certificate to the Authenion server & run the following commands.<p></li>
@@ -1185,7 +1188,7 @@
 					<div>
 						<a style="padding:32px" name="LaunchingtheAuthenionConsole"></a>
 						<h4 style="font-family:sans-serif; font-size:26px; font-weight: 600; color: #00297A">Launching the Authenion Admin UI Console</h4>
-						<p class="col-para">To launch the Authenion Admin UI console, we have a standalone utility that can be executed on any J2EE application server. The utility, ‘authenion-admin-1.2.jar’ will be provided alongside the Authenion package. You can use either the OIDC provider or the standalone method to launch the Authenion admin console.</p>
+						<p class="col-para">To launch the Authenion Admin UI console, we have a standalone utility that can be executed on any J2EE application server. The utility, ‘authenion-admin-1.2.jar’ will be provided alongside the Authenion package. You can use either the OIDC provider or the standalone method to launch the Tomcat admin console.</p>
 						
 						<!-- ### Pre-requisites (for both Linux and Windows) ### -->
 						
@@ -1193,12 +1196,12 @@
 						<p class="col-sub-headings">1. Pre-requisites (for both Linux and Windows)</p>
 						<p class="col-sub-headings-sub"><b>Download the File:</b></p>
 						<ol class="col-para">
-						   <li><p class="col-para">Download the `authenion-admin-xx-version.zip` file and place it in the application server where our Authenion-EIK is deployed.</p></li> 
+						   <li><p class="col-para">Download the `authenion-admin-1.2.zip` file and place it in the application server where our Authenion-EIK is deployed.</p></li> 
 						</ol>
 						   <p class="col-sub-headings-sub"><b>Extract the File:</b></p>
 						<ol class="col-para">
-						   <li> <p class="col-para">Unzip the `authenion-admin-xx-version.zip` file.</p></li> 
-						   <li> <p class="col-para">After extraction, you will see only one file: authenion-admin-xx-version.zip.</p></li> 
+						   <li> <p class="col-para">Unzip the `authenion-admin-1.2.zip` file.</p></li> 
+						   <li> <p class="col-para">After extraction, you will see only one file: authenion-admin-1.2.zip.</p></li> 
 					    </ol>
 						
 
@@ -1209,17 +1212,17 @@
 						<p class="col-sub-headings">2. Using Azure as an OIDC Provider for Authentication to Launch Authenion Console </p>
                         <!-- <p class="col-sub-headings-sub"><b>Navigate to the Directory:</b></p> -->
 						<ol class="col-para">
-						   <li><p class="col-para">Open a terminal on your Linux or windows server where the `authenion-admin-xx-version.zip` file is located.</p></li> 
+						   <li><p class="col-para">Open a terminal on your Linux or windows server where the `authenion-admin-1.2.zip` file is located.</p></li> 
 						   <li> <p class="col-para">Make sure the `authenion.p12` file is in the same directory.</p></li> 
 						   <li> <p class="col-para">Use the `cd` command to go to the directory where both files are present.</p></li>
 						<!-- <p class="col-sub-headings-sub"><b>Execute the Command:</b></p> -->
 						<li> <p class="col-para">Run the following command in the terminal to execute the utility and launch the Authenion UI Admin console:</p></li> 
 						<p class="col-para">
 							<code>
-								java -jar authenion-admin-xx-version.jar com.authenion.sso.authenionadmin.AuthenionAdminApplication --authority=https://login.microsoftonline.com/&lt;AzureTenantId&gt;/v2.0 --client_id=Azureapplicationclientid --redirect_uri=https://&lt;authenionhostname&gt;:9898 --scope=api://&lt;AzureApplicationid&gt;/openid --prompt=login
+								java -jar authenion-admin-1.2.jar com.authenion.sso.authenionadmin.AuthenionAdminApplication --authority=https://login.microsoftonline.com/&lt;AzureTenantId&gt;/v2.0 --client_id=Azureapplicationclientid --redirect_uri=https://&lt;tomcathostname&gt;:9898 --scope=api://&lt;AzureApplicationid&gt;/openid --prompt=login
 							</code>
 						</p>
-					    <!-- <p class="col-sub-headings-sub"><b>Configure java -jar authenion-admin-xx-version.jar com.authenioAzure:</b></p> -->
+					    <!-- <p class="col-sub-headings-sub"><b>Configure java -jar authenion-admin-1.2.jar com.authenioAzure:</b></p> -->
 						<li>  <p class="col-para">Once the execution is successful, you will be redirected to the Authenion Admin Console.</p></li> 
 						 </ol>
                           
@@ -1235,7 +1238,7 @@
 							<li><p class="col-para">Run the following Java command to enable local authentication:</p></li> 
 							<p class="col-para">
 								<code>
-									java -jar authenion-admin-xx-version.jar com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://servername:9898 --adminPassword=anypassword
+									java -jar authenion-admin-1.2.jar com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://servername:9898 --adminPassword=anypassword
 								</code>
 							</p>
 							<li> <p class="col-para">Replace `anypassword` with the password you want to set for the Authenion console to login.</p></li>
@@ -4782,10 +4785,10 @@
 
 						
 						<!-- Image with onclick event -->
-						<img src="assets/img/hyperion ah-2.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion2', 'modalImagehyperion2')" class="col-images-intro" />
+						<img src="assets/img/authenion-3.0/HyperionApphost.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion2', 'modalImagehyperion2')" class="col-images-intro" />
 						<!-- Model Container-->
 						<div id="modalContainerhyperion2" class="modal-container" onclick="closeModal('modalContainerhyperion2')">
-							<img id="modalImagehyperion2" class="modal-image" src="assets/img/hyperion ah-2.png" alt="">
+							<img id="modalImagehyperion2" class="modal-image" src="assets/img/authenion-3.0/HyperionApphost.png" alt="">
 						</div>
 						<br />
 						<br>
@@ -4919,10 +4922,10 @@
 						<br>
 						<br>
 						<!-- Image with onclick event -->
-						<img src="assets/img/hyperion application-5.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion5', 'modalImagehyperion5')" class="col-images-intro" />
+						<img src="assets/img/authenion-3.0/HyperionApplication.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerhyperion5', 'modalImagehyperion5')" class="col-images-intro" />
 						<!-- Model Container-->
 						<div id="modalContainerhyperion5" class="modal-container" onclick="closeModal('modalContainerhyperion5')">
-							<img id="modalImagehyperion5" class="modal-image" src="assets/img/hyperion application-5.png" alt="">
+							<img id="modalImagehyperion5" class="modal-image" src="assets/img/authenion-3.0/HyperionApplication.png" alt="">
 						</div>
 						<br />
 						<br />
@@ -5108,10 +5111,10 @@
 					<p class="col-para">Following is an example configuration of an Application Host in Authenion for Oracle Unifier application.</p>
 					<br />
 						<!-- Image with onclick event -->
-						<img src="assets/img/UnifierApplicationHost.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier3', 'modalImageUnifier3')" class="col-images-intro" />
+						<img src="assets/img/authenion-3.0/UnifierAppHost.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier3', 'modalImageUnifier3')" class="col-images-intro" />
 						<!-- Model Container-->
 						<div id="modalContainerUnifier3" class="modal-container" onclick="closeModal('modalContainerUnifier3')">
-						<img id="modalImageUnifier3" class="modal-image" src="assets/img/UnifierApplicationHost.png" alt="">
+						<img id="modalImageUnifier3" class="modal-image" src="assets/img/authenion-3.0/UnifierAppHost.png" alt="">
 						</div>
 						<br />
 						<br>
@@ -5120,10 +5123,10 @@
 					<p class="col-para">Following is an example configuration of a Header Mapping for Oracle Unifier application.</p>
 					<br />
 						<!-- Image with onclick event -->
-						<img src="assets/img/UnifierHeaderMappings.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier4', 'modalImageUnifier4')" class="col-images-intro" />
+						<img src="assets/img/authenion-3.0/UnifierHeader.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier4', 'modalImageUnifier4')" class="col-images-intro" />
 						<!-- Model Container-->
 						<div id="modalContainerUnifier4" class="modal-container" onclick="closeModal('modalContainerUnifier4')">
-							<img id="modalImageUnifier4" class="modal-image" src="assets/img/UnifierHeaderMappings.png" alt="">
+							<img id="modalImageUnifier4" class="modal-image" src="assets/img/authenion-3.0/UnifierHeader.png" alt="">
 						</div>
 						<br />
 						<br />
@@ -5240,10 +5243,10 @@
 					<br>
 
 					<!-- Image with onclick event -->
-					<img src="assets/img/UnifierApplication.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier6', 'modalImageUnifier6')" class="col-images-intro" />
+					<img src="assets/img/authenion-3.0/UnifierApplication.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContainerUnifier6', 'modalImageUnifier6')" class="col-images-intro" />
 					<!-- Model Container-->
 					<div id="modalContainerUnifier6" class="modal-container" onclick="closeModal('modalContainerUnifier6')">
-						<img id="modalImageUnifier6" class="modal-image" src="assets/img/UnifierApplication.png" alt="">
+						<img id="modalImageUnifier6" class="modal-image" src="assets/img/authenion-3.0/UnifierApplication.png" alt="">
 					</div>
 					<br />
 					<br />
@@ -5409,10 +5412,10 @@
 
 						
 						<!-- Image with onclick event -->
-						<img src="assets/img/agile ah-2.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContaineragile2', 'modalImageagile2')" class="col-images-intro" />
+						<img src="assets/img/authenion-3.0/AgileAppHost.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContaineragile2', 'modalImageagile2')" class="col-images-intro" />
 						<!-- Model Container-->
 						<div id="modalContaineragile2" class="modal-container" onclick="closeModal('modalContaineragile2')">
-							<img id="modalImageagile2" class="modal-image" src="assets/img/agile ah-2.png" alt="">
+							<img id="modalImageagile2" class="modal-image" src="assets/img/authenion-3.0/AgileAppHost.png" alt="">
 						</div>
 						<br />
 						<br>
@@ -5546,10 +5549,10 @@
 						<br>
 						<br>
 						<!-- Image with onclick event -->
-						<img src="assets/img/agile application-5.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContaineragile5', 'modalImageagile5')" class="col-images-intro" />
+						<img src="assets/img/authenion-3.0/AgileApplication.png" alt="" style="width:80%;height:40%;cursor:pointer" onclick="openModal('modalContaineragile5', 'modalImageagile5')" class="col-images-intro" />
 						<!-- Model Container-->
 						<div id="modalContaineragile5" class="modal-container" onclick="closeModal('modalContaineragile5')">
-							<img id="modalImageagile5" class="modal-image" src="assets/img/agile application-5.png" alt="">
+							<img id="modalImageagile5" class="modal-image" src="assets/img/authenion-3.0/AgileApplication.png" alt="">
 						</div>
 						<br />
 						<br />
