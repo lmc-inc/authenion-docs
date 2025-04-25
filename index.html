@@ -1612,7 +1612,8 @@
                         <p class="col-sub-headings">4. LDAP Authentication Provider</p>
                         <!-- Image with onclick event -->
 						
-						<p class="col-para">This configuration provides a secure and scalable identity and access management solution by integrating LDAP authentication, OIDC, and multi-factor authentication (MFA). LDAP is used to authenticate user credentials against directory services with secure bind credentials and search parameters. OIDC enables single sign-on (SSO) with a registered client and configured redirect URIs. MFA is implemented using Email, SMS (via Twilio), and TOTP for added security. SMTP settings support email-based verification with TLS/SSL encryption, while Twilio ensures reliable SMS delivery. TOTP also offers time-based one-time passwords with configurable grace periods.</p>
+						<p class="col-para">LDAP authentication is a process where user credentials are validated against a directory services, to grant access to resources. It's a core part of how LDAP (Lightweight Directory Access Protocol) manages user identities and permissions within an organization.</p>
+						<p class="col-para"><b>Multi-Factor Authentication</b>: MFA is a security method that requires users to provide two or more verification factors to access a resource. MFA enhances security by reducing the risk of unauthorized access beyond just using a username and password.</p>
                         </div>
 						<br>
 
@@ -1812,6 +1813,9 @@
 					<br>
 					
 						<li><p class="col-sub-headings-sub"><b><u>MFA Settings</u></b></p></li>
+						<p class="col-para"><b>Email</b>: Sends a one-time verification code to the user's registered email address for identity verification.</p>
+						<p class="col-para"><b>SMS</b>: Sends a one-time passcode via text message to the user's mobile number during login.</p>
+						<p class="col-para"><b>TOTP</b>: Stands for Time-based One-Time Passwords and generates a time-sensitive passcode using an authenticator app on the user's device for secure login.</p>
                     <!-- install Authenion -->
 								<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 									<tr>
@@ -1859,6 +1863,11 @@
 
 								
 									<li><p class="col-sub-headings-sub"><b><u>SMTP Configurations</u></b></p></li>
+
+									<p class="col-para"><b>From Address</b>: specify the email address used for sending support and notification emails.</p>
+									<p class="col-para"><b>Email Server</b>: SMTP server for sending emails.</p>
+									<p class="col-para"><b>Mail Port</b>: SMTP server port.</p>
+									<p class="col-para"><b>Ldap Attribute</b>: LDAP attribute represent various kinds of characteristics of the entry itself.</p>
 								<!-- install Authenion -->
 											<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 												<tr>
@@ -1991,6 +2000,11 @@
 					<br>
 
 					<li><p class="col-sub-headings-sub"><b><u>Twilio Settings</u></b></p></li>
+
+					<p class="col-para"><b>Account SID</b>: A Twilio Account SID is a 34-character alphanumeric identifier unique key that is used to identify a specific Twilio Parent Account or Subaccount.</p>
+                    <p class="col-para"><b>Auth token</b>: Auth Token is a secret password, used to authenticate requests to the Twilio REST API.</p>
+                    <p class="col-para"><b>SMS Service</b>: SMS provide or service being used.</p>
+                    <p class="col-para"><b>Ldap Attribute</b>: LDAP attribute represent various kinds of characteristics of the entry itself.</p>
 								<!-- install Authenion -->
 											<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 												<tr>
@@ -2058,6 +2072,10 @@
 											</table>
 											<br>
 											<li><p class="col-sub-headings-sub"><b><u>TOTP Settings</u></b></p></li>
+
+											<p class="col-para"><b>Grace Time</b>: Refers to the period after a TOTP code has technically expired during which it can still be used for authentication, allowing for minor delays in code entry. The default grace time is 30 seconds.</p>
+                                            <p class="col-para"><b>Skew Windows</b>: Refers to the allowance of a certain number of time intervals (e.g., 30-second periods) that are considered valid for authentication, even if there is a slight discrepancy between the client’s and server’s time.</p>
+                                            <p class="col-para"><b>Ldap Attribute</b>: LDAP attribute represent various kinds of characteristics of the entry itself.</p>
 								<!-- install Authenion -->
 											<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
 												<tr>
