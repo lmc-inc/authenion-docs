@@ -1145,7 +1145,7 @@
 							Ensure the Authenion application is not running before proceeding.</p></li>
 					
 						<li><p class="col-para">Navigate to the wrapper directory:<br>
-							<code>C:\Authenion_Windows\authenion\bin\wrapper</code></p></li>
+							<code>authenion\bin\wrapper</code></p></li>
 					
 						<li><p class="col-para">Update Java home path:<br>
 							Open <code>AuthenionWindowsService.exe</code> using a text editor .<br>
@@ -1221,7 +1221,7 @@
 					<div>
 						<a style="padding:32px" name="LaunchingtheAuthenionConsole"></a>
 						<h4 style="font-family:sans-serif; font-size:26px; font-weight: 600; color: #00297A">Launching the Authenion Admin UI Console</h4>
-						<p class="col-para">To launch the Authenion Admin UI console, we have a standalone utility that can be executed on any J2EE application server. The utility, ‘authenion-admin-xx-version.zip' will be provided alongside the Authenion package. You can use either the OIDC provider or the standalone method to launch the Authenion admin console.</p>
+						<p class="col-para">To launch the Authenion Admin UI console, we provide a standalone utility (authenion-admin-xx-version.zip) that can run independently of containers operating on its own server. You can launch the Authenion admin console using either the OIDC provider or the standalone mode.</p>
 						
 						<!-- ### Pre-requisites (for both Linux and Windows) ### -->
 						
@@ -1259,7 +1259,7 @@
 						<li>  <p class="col-para">Once the execution is successful, you will be redirected to the Authenion Admin Console.</p></li> 
 						 </ol>
                           
-						 <p class="col-para"><i> Note: Please ensure that the redirect_uri used in the command is added to the Azure Application's Redirect URIs list.</i></p>
+						 <p class="col-para"><i> Note: Please ensure that the redirect_uri used in the command is configured in the OIDC provider.</i></p>
 
                           <!-- ### END Linux & WINDOWS Environment (Execution Steps) ### -->
 
@@ -1274,14 +1274,16 @@
 									java -jar authenion-admin-xx-version.zip com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://servername:9898 --adminPassword=anypassword
 								</code>
 							</p>
-							<li> <p class="col-para">Replace `anypassword` with the password you want to set for the Authenion console to login.</p></li>
+							
 						</ol>
+						<p class="col-para"><i> Note: You can set the password using an environment variable .The password must be strong and should include special characters like % or $ to enhance security.</i></p>
+							 
 						<p class="col-sub-headings-sub"><b>Login Information:</b></p>
 						<ol class="col-para">
 							<li><p class="col-para">After executing the command, use the following login credentials:</p></li> 
 							<p class="col-para"><b>Username</b>:Administrator</p>
                             <p class="col-para"><b>Password</b>:The password you specified in the command (anypassword)</p>
-							<li> <p class="col-para">This method allows you to bypass the OIDC provider and use local authentication for accessing the Authenion admin console.</p></li>
+							
 						</ol>
 						
 						<!-- Image 1 with onclick event -->
