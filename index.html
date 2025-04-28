@@ -266,7 +266,7 @@
 				</li>
 				<li>
 					<a href="#AzureAuthenticationtoLaunchAuthenionConsole" class="nav-link-sub collapsed">
-						<!--<i class="bi bi-circle"></i>--><span>Using Azure as an OIDC Provider for Authentication to Launch Authenion Console</span>
+						<!--<i class="bi bi-circle"></i>--><span>OIDC Provider for Authentication to Launch Authenion Console</span>
 					</a>
 				</li>
 				<li>
@@ -717,7 +717,7 @@
 							<td>
 
 								<ul>
-									<p class="col-para-table">Connecting with your LDAP Authentication Provider for MFA, SMS and TOTP Authentication </p>
+									<p class="col-para-table">Connecting with your LDAP Authentication Provider for Email, SMS and TOTP Authentication </p>
 
 								</ul>
 
@@ -825,10 +825,10 @@
 
 								<td>
 									<ul>
-										<li><p class="col-para-table">Red Hat Enterprise Linux 7 & above</p></li>
-										<li><p class="col-para-table">CentOS 7 & above</p></li>
-										<li><p class="col-para-table">Oracle Enterprise Linux 7 & above</p></li>
-										<li><p class="col-para-table">Windows Server</p></li>
+										<li><p class="col-para-table">Red Hat Enterprise Linux 9</p></li>
+										<!--<li><p class="col-para-table">CentOS 7 & above</p></li>-->
+										<li><p class="col-para-table">Oracle Enterprise Linux 9</p></li>
+										<li><p class="col-para-table">Windows 11 pro </p></li>
 									</ul>
 								</td>
 
@@ -1234,7 +1234,7 @@
 						   <p class="col-sub-headings-sub"><b>Extract the File:</b></p>
 						<ol class="col-para">
 						   <li> <p class="col-para">Unzip the `authenion-admin-xx-version.zip` file.</p></li> 
-						   <li> <p class="col-para">After extraction, you will see only one file: authenion-admin-xx-version.zip.</p></li> 
+						   <li> <p class="col-para">After extraction, you will see only one file: authenion-admin-xx-version .</p></li> 
 					    </ol>
 						
 
@@ -1242,7 +1242,7 @@
 							
                         <!-- ### Linux & WINDOWS Environment (Execution Steps) ### -->
 						<a style="padding:32px" name="AzureAuthenticationtoLaunchAuthenionConsole"></a>
-						<p class="col-sub-headings">2. Using Azure as an OIDC Provider for Authentication to Launch Authenion Console </p>
+						<p class="col-sub-headings">2. OIDC Provider for Authentication to Launch Authenion Console </p>
                         <!-- <p class="col-sub-headings-sub"><b>Navigate to the Directory:</b></p> -->
 						<ol class="col-para">
 						   <li><p class="col-para">Open a terminal on your Linux or windows server where the `authenion-admin-xx-version.zip` file is located.</p></li> 
@@ -1651,7 +1651,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"></li><p class="col-para-table">Configured BindDN from LDAP&emsp;&emsp;(cn=dmanager)</li>
+										<li class="li" style="list-style-type: none"></li><p class="col-para-table">Configured BindDN from LDAP</li>
 									</ul>
 								</td>
 								</tr>
@@ -1673,7 +1673,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"><p class="col-para-table">Configured Base DN from LDAP&emsp;&emsp;(dc=example,dc=com)</li>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Configured Base DN from LDAP&emsp;&emsp;</li>
 									</ul>
 								</td>
 								</tr>
@@ -1684,7 +1684,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"><p class="col-para-table">Configured Search Base from LDAP&emsp;&emsp;(ou=People)</li>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Configured Search Base from LDAP&emsp;&emsp;</li>
 									</ul>
 								</td>
 								</tr>
@@ -1695,7 +1695,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"><p class="col-para-table">checkbox&emsp;&emsp;(Enable Scope/Disable Scope)</li>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">checkbox&emsp;&emsp;</li>
 									</ul>
 								</td>
 								</tr>
@@ -1706,7 +1706,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"><p class="col-para-table">Configured the Return Attributes from LDAP&emsp;&emsp;(uid,mail,isMemberOf,mobile,totpSecret..etc)</li>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Configured the Return Attributes from LDAP&emsp;&emsp;</li>
 									</ul>
 								</td>
 								</tr>
@@ -1717,7 +1717,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"><p class="col-para-table">Configure Username Attribute&emsp;&emsp;(uid)</li>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Configure Username Attribute&emsp;&emsp;</li>
 									</ul>
 								</td>
 								</tr>
@@ -1773,7 +1773,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"><p class="col-para-table">checkbox&emsp;&emsp;(HTTP or HTTPS)</li>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">checkbox&emsp;&emsp;</li>
 									</ul>
 								</td>
 								</tr>
@@ -1784,7 +1784,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"><p class="col-para-table">checkbox&emsp;&emsp;(Enable/Disable Claims in ID_Token)</li>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">checkbox&emsp;&emsp;</li>
 									</ul>
 								</td>
 								</tr>
@@ -1795,7 +1795,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"><p class="col-para-table">checkbox&emsp;&emsp;(Enable/Disable MFA)</li>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">checkbox&emsp;&emsp;</li>
 									</ul>
 								</td>
 								</tr>
@@ -1831,7 +1831,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"></li><p class="col-para-table">checkbox&emsp;&emsp;(Enable/Disable Email)</li>
+										<li class="li" style="list-style-type: none"></li><p class="col-para-table">checkbox&emsp;&emsp;</li>
 									</ul>
 								</td>
 								</tr>
@@ -1842,7 +1842,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"></li><p class="col-para-table">checkbox&emsp;&emsp;(Enable/Disable SMS)</li>
+										<li class="li" style="list-style-type: none"></li><p class="col-para-table">checkbox&emsp;&emsp;</li>
 									</ul>
 								</td>
 								</tr>
@@ -1853,7 +1853,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"><p class="col-para-table">checkbox&emsp;&emsp;(Enable/Disable TOTP)</li>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">checkbox&emsp;&emsp;</li>
 									</ul>
 								</td>
 								</tr>
@@ -1864,7 +1864,7 @@
 								
 									<li><p class="col-sub-headings-sub"><b><u>SMTP Configurations</u></b></p></li>
 
-									<p class="col-para"><b>From Address</b>: specify the email address used for sending support and notification emails.</p>
+									<p class="col-para"><b>From Address</b>: specify the email address used for sending notification emails.</p>
 									<p class="col-para"><b>Email Server</b>: SMTP server for sending emails.</p>
 									<p class="col-para"><b>Mail Port</b>: SMTP server port.</p>
 									<p class="col-para"><b>Ldap Attribute</b>: LDAP attribute represent various kinds of characteristics of the entry itself.</p>
