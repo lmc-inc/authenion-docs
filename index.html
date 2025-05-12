@@ -1256,11 +1256,18 @@
 						   <li> <p class="col-para">Use the `cd` command to go to the directory where both files are present.</p></li>
 						<!-- <p class="col-sub-headings-sub"><b>Execute the Command:</b></p> -->
 						<li> <p class="col-para">Run the following command in the terminal to execute the utility and launch the Authenion UI Admin console:</p></li> 
-						<p class="col-para">
-							<code>
-								java -jar authenion-admin-xx-version.zip com.authenion.sso.authenionadmin.AuthenionAdminApplication --authority=https://hostname/TenantId/v2.0 --client_id=Applicationclientid --redirect_uri=https://&lt;authenionhostname&gt;:9898 --scope=api://&lt;Applicationid&gt;/openid --prompt=login
-							</code>
-						  </p>						  
+							
+						  <p class="col-para" style="white-space: nowrap; font-family: monospace;">
+                          <code>java -jar authenion-admin-xx-version.zip com.authenion.sso.authenionadmin.AuthenionAdminApplication </code>
+                          </p>
+						  <p class="col-para" style="white-space: nowrap; font-family: monospace;">
+                          <code>--authority=https://hostname/TenantId/v2.0 --client_id=Applicationclientid --redirect_uri</code>
+                          </p>
+						  <p class="col-para" style="white-space: nowrap; font-family: monospace;">
+                          <code>=https://&lt;authenionhostname&gt;:9898 --scope=api://&lt;Applicationid&gt;/openid --prompt=login</code>
+                          </p>
+
+				  
 					    <!-- <p class="col-sub-headings-sub"><b>Configure java -jar authenion-admin-xx-version.zip com.authenioAzure:</b></p> -->
 						<li>  <p class="col-para">Once the execution is successful, you will be redirected to the Authenion Admin Console.</p></li> 
 						 </ol>
@@ -1275,9 +1282,14 @@
                         <p class="col-sub-headings-sub"><b>Execute the Command:</b></p>
 						<ol class="col-para">
 							<li><p class="col-para">Run the following Java command to enable local authentication:</p></li> 
-							<p class="col-para">
+							<p class="col-para" style="white-space: nowrap; font-family: monospace;">
 								<code>
-									java -jar authenion-admin-xx-version.zip com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://servername:9898 --adminPassword=anypassword
+									java -jar authenion-admin-xx-version.zip com.authenion.sso.authenionadmin.AdminApplication
+								</code>
+							</p>
+							<p class="col-para" style="white-space: nowrap; font-family: monospace;">
+								<code>
+									--localAuthEnabled=true --issuerUrl=https://servername:9898 --adminPassword=anypassword
 								</code>
 							</p>
 							
