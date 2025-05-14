@@ -3092,96 +3092,97 @@
 					<p class="col-sub-headings">13. User-Customized Templates</p>
 					<p class="col-sub-headings-sub"><b><u>Email Page Templates</u></b></p>
 					<p class="col-para">
-						Authenion allows customization of user-facing pages through HTML templates, CSS, JavaScript, and localization support. HTMLTemplates Located in &lt;authenion_install_dir&gt;/config/html/emailTemplates and &lt;authenion_install_dir&gt;/config/html/locale/messages_en.properties, these templates are used for communication with users, such as emails or forms. Templates include dynamic placeholders for values like localized messages and user-specific information.
-					</p>
+                    Authenion enables customization of user-facing pages, such as emails and forms, using HTML, CSS, JavaScript, and localization files with dynamic placeholders for messages and user-specific data.Templates are located in  <authenion_install_dir>/config/html/emailTemplates and localization messages in <authenion_install_dir>/config/html/locale/messages_en.properties.
+                    </p>
 
 					 <p class="col-sub-headings-sub"><b>1. email-forgotUsername.html</b></p>
 					 
-							<p class="col-para"><b>Purpose</b>:This email template is sent to users who have forgotten their username</p>
-							<p class="col-para"><b>Use</b>:When a user requests help to recover their account, this email provides the username(s) associated with their registered email address. It helps them log in again without creating a new account.</p>
+							<p class="col-para"><b>Purpose</b>:This email template is sent to users who have forgotten their username.</p>
+							<p class="col-para"><b>Use</b>:This email is sent when a user requests account recovery. It provides the username(s) associated with the registered email address, enabling the user to log in without creating a new account.</p>
 
 					<p class="col-sub-headings-sub"><b>2. email-otpMessage.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:This email template is used to send a One-Time Password (OTP) to users during login or verification.</p>
-							<p class="col-para"><b>Use</b>:It is part of multi-factor authentication (MFA), this email helps ensure that the person trying to log in is the real account owner. The OTP is a temporary code that the user must enter to complete the login process securely.</p>
+							<p class="col-para"><b>Purpose</b>:This email template is used to send a One-Time Password (OTP) to users during login process.</p>
+							<p class="col-para"><b>Use</b>: As part of multi-factor authentication (MFA), this email sends a one-time password (OTP) to verify the user’s identity and ensure secure login.</p>
 
                     <p class="col-sub-headings-sub"><b>3. email-passwordChanged.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:This email template is sent to inform users that their password has been successfully changed.</p>
-							<p class="col-para"><b>Use</b>:It acts as a confirmation for the user and helps detect unauthorized changes. If the user didn’t request a password change, this email alerts them so they can take immediate action to secure their account.</p>
+							<p class="col-para"><b>Purpose</b>:This email template is sent to confirm that the user’s password has been successfully changed.</p>
+							<p class="col-para"><b>Use</b>:This email confirms the password change and helps detect unauthorized activity. If the password change wasn’t requested, it alerts the user to take immediate action to secure their account.</p>
 
                     <p class="col-sub-headings-sub"><b>4. email-resetPassword.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:This email template is used to send a password reset link to the user’s registered email.</p>
-							<p class="col-para"><b>Use</b>:When a user forgets their password or wants to create a new one, this email contains a time-sensitive link that guides them through the password reset process safely and easily.</p>
+							<p class="col-para"><b>Purpose</b>:This email template is used to send a password reset link to the user’s registered email address.</p>
+							<p class="col-para"><b>Use</b>:This email provides a time-sensitive link to help users securely reset their password when a user forget their password or want to create a new one.</p>
 
 					<p class="col-sub-headings-sub"><b><u>Login Page Templates</u></b></p>
 					<p class="col-para">
-						Login page templates in Authenion are located at &lt;authenion_install_dir&gt;/config/html/. These templates are used to display user-facing pages like the login screen, forgot password form, and logout confirmation. They define how users interact with the system during authentication. You can customize these templates to match your UI branding and support multiple languages through message properties in the locale folder &lt;authenion_install_dir&gt;/config/html/locale/messages_en.properties.
+						Login page templates in Authenion are located at &lt;authenion_install_dir&gt;/config/html/. These templates control the appearance of user-facing pages such as the login screen, forgot password form, and logout confirmation. You can customize these templates to match your branding and support multiple languages using message properties in the &lt;authenion_install_dir&gt;/config/html/locale/messages_en.properties file.
 					</p>
 					<p class="col-sub-headings-sub"><b>1. login.html</b></p>
 
 							<p class="col-para"><b>Purpose</b>:This is the main login page where users enter their LDAP username and password.</p>
-							<p class="col-para"><b>Use</b>:Authenticates users by submitting credentials to the server. It also provides links to reset a forgotten password or recover a username.</p>
+							<p class="col-para"><b>Use</b>:This page authenticates users by submitting their credentials to the server and provides links to reset a forgotten password or recover a username.</p>
 
                      <p class="col-sub-headings-sub"><b>2. forgotPwd.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:A password recovery page where users can request a reset link by entering their username.</p>
-							<p class="col-para"><b>Use</b>:It sends a reset password email to the user with a time-limited link, allowing them to securely update their password.</p>
+							<p class="col-para"><b>Purpose</b>:This page allows users to request a password reset link by entering their username.</p>
+							<p class="col-para"><b>Use</b>:It sends a password reset email to the user with a time-limited link, allowing them to securely update their password.</p>
 
                     <p class="col-sub-headings-sub"><b>3. signout.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:A logout confirmation page displayed after the user successfully logs out.</p>
-							<p class="col-para"><b>Use</b>:It confirms to the user that they have logged out Sucessfully and provides a link to return to the homepage.</p>
+							<p class="col-para"><b>Purpose</b>:This page is displayed after the user successfully logs out, confirming the logout action.</p>
+							<p class="col-para"><b>Use</b>:It confirms the successful logout and provides a link to return to the homepage.</p>
 
 
                     <p class="col-sub-headings-sub"><b>4. updatePassword.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:A password update page where users set a new password after clicking the reset link sent to their email</p>
-							<p class="col-para"><b>Use</b>:It allows users to securely update their password. It checks if both passwords match before submission and sends the data to the server using AJAX. CSRF protection is included to ensure the request is valid and secure.</p>
+							<p class="col-para"><b>Purpose</b>:This page allows users to set a new password after clicking the reset link sent to their email.</p>
+							<p class="col-para"><b>Use</b>: It enables users to securely update their password, verifies that both passwords match, and submits the data to the server via AJAX. CSRF protection is included to ensure the request is secure and valid.</p>
                     
 							<p class="col-sub-headings-sub"><b>5. forgotUsername.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:This forgotUsername page allows users to recover their forgotten username by entering their email address.</p>
+							<p class="col-para"><b>Purpose</b>:This page allows users to recover their forgotten username by entering their email address.</p>
 							<p class="col-para"><b>Use</b>:The user submits their email address, and the system sends their registered username to the provided email address.</p>
 
                     <p class="col-sub-headings-sub"><b>6. changedPwd.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:This changedPassword page is displayed after the user successfully changes their password.</p>
-							<p class="col-para"><b>Use</b>:It informs the user that their password has been successfully updated and provides a link to redirect them to the login page.</p>
+							<p class="col-para"><b>Purpose</b>:This page is displayed after the user successfully changes their password.</p>
+							<p class="col-para"><b>Use</b>:It notifies the user that their password has been successfully updated and provides a link to redirect them to the login page.</p>
 
                     <p class="col-sub-headings-sub"><b>7. changePwd.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:This changePassword template page provides users with a form to change their password. Users must input their current password, new password, and confirm the new password. It includes validation to ensure the new passwords match.</p>
-							<p class="col-para"><b>Use</b>:It allows users to update their password. After successful submission, the password is changed. Error and success messages are shown based on the result of the submission.</p>
+							<p class="col-para"><b>Purpose</b>:This page provides a form for users to change their password by entering their current password, new password, and confirming the new one. It includes validation to ensure the new passwords match.</p>
+							<p class="col-para"><b>Use</b>:It allows users to update their password. After submission, the password is changed if successful, and appropriate success or error messages are displayed.</p>
 
 
                     <p class="col-sub-headings-sub"><b>8. deviceRegistered.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:This deviceRegistered template page displays a confirmation message to the user after successfully registering an authenticator app for two-factor authentication (2FA). The page includes a checkmark icon, a success message, and a "Close Window" button.</p>
-							<p class="col-para"><b>Use</b>:This page is shown once the authenticator app is successfully linked to the user account. It informs the user that the registration process has been completed and prompts them to close the window. The "Close Window" button allows the user to exit the confirmation page and continue with their application.</p>
+							<p class="col-para"><b>Purpose</b>:This page confirms successful registration of an authenticator app for two-factor authentication (2FA). It displays a checkmark icon, a success message, and a "Close Window" button.</p>
+							<p class="col-para"><b>Use</b>:This page appears after the authenticator app is successfully linked to the user account. It confirms completion of the registration and includes a "Close Window" button for the user to exit and continue using the application.</p>
 							
 
                     <p class="col-sub-headings-sub"><b>9. deviceOtp.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:This deviceOtp template page renders a secure and interactive OTP (One-Time Password) input page for verifying a user's identity during multi-factor authentication (MFA). It supports both TOTP and device-based methods (e.g., SMS or email), with masked information displayed to indicate the delivery method.</p>
-							<p class="col-para"><b>Use</b>:The page is displayed when the user is required to enter a 6-digit OTP sent to their registered device or generated by an authenticator app. The user enters the code in separate input fields, Upon submission, the entered OTP and associated device ID are sent via AJAX to the server for verification.If verification is successful.A 201 Created response redirects the user to the /mfa/registered confirmation page.Other responses redirect to /mfa/commit.</p>
+							<p class="col-para"><b>Purpose</b>:This page provides a secure OTP input form for verifying a user’s identity during multi-factor authentication (MFA). It supports TOTP and device-based methods like SMS or email, showing masked details to indicate the delivery method.</p>
+							<p class="col-para"><b>Use</b>:This page appears when the user needs to enter a 6-digit OTP sent to their registered device or generated by an authenticator app. The user enters the code in separate fields, and upon submission, the OTP and device ID are sent to the server via AJAX for verification. If successful, the user is redirected to the /mfa/registered confirmation page; otherwise, they are redirected to /mfa/commit.</p>
 
                     <p class="col-sub-headings-sub"><b>10. deviceSelection.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:This deviceSelection template page presents a page where users can select a method for Multi-Factor Authentication (MFA). It shows a list of available MFA options, such as SMS, Email, TOTP (Time-based One-Time Password), and FIDO biometric authentication. When a user clicks on an option, the selected method is stored and the "Proceed" button appears, allowing the user to continue.</p>
-							<p class="col-para"><b>Use</b>:This page is used during the authentication process to let users choose their MFA method. Once a method is selected, the form is submitted with the chosen device's ID to verify the MFA method and proceed to the next step.</p>
+							<p class="col-para"><b>Purpose</b>:This page allows users to select a method for Multi-Factor Authentication (MFA), such as SMS, Email, TOTP. Once an option is selected, it is stored and a "Proceed" button appears for the user to continue.</p>
+							<p class="col-para"><b>Use</b>:This page is part of the authentication process, allowing users to choose their MFA method. After selection, the form is submitted with the device ID to verify the method and continue to the next step.
+</p>
 
                     <p class="col-sub-headings-sub"><b>11. enrollDevice.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:This enrollDevice template page is used for enrolling a user in Multi-Factor Authentication (MFA). It presents the user with a QR code that can be scanned by an authenticator app. Alternatively, the user can manually enter a secret key. Once the user has either scanned the QR code or entered the key, they can proceed by submitting the form to verify their OTP.</p>
-							<p class="col-para"><b>Use</b>:This page is displayed during the MFA enrollment process, allowing users to set up an authenticator app. The user scans the QR code or enters the secret key to configure MFA. After setting up, the user proceeds to verify their OTP as part of completing the enrollment.</p>
+							<p class="col-para"><b>Purpose</b>:This page is used to enroll a user in Multi-Factor Authentication (MFA). It displays a QR code for scanning with an authenticator app or allows manual entry of a secret key. After scanning or entering the key, the user submits the form to verify their OTP.</p>
+							<p class="col-para"><b>Use</b>:This page is shown during the MFA enrollment process, where users set up an authenticator app by scanning the QR code or entering the secret key. After setup, the user proceeds to verify their OTP to complete the enrollment.</p>
 							
 
                     <p class="col-sub-headings-sub"><b>12. error.html</b></p>
 
-							<p class="col-para"><b>Purpose</b>:This error template page displays a simple error message to the user when an unexpected error occurs. It informs the user that there is an issue and encourages them to try again later. It is a basic fallback page shown when something goes wrong in the system.</p>
-							<p class="col-para"><b>Use</b>:This page is used to handle unexpected errors or system issues, providing a clear message to the user that something went wrong, and they should try again later. It serves as a generic error page when no specific error message is available.</p>		
+							<p class="col-para"><b>Purpose</b>:This page displays a basic error message when an unexpected issue occurs, informing the user of the problem and advising them to try again later. It serves as a fallback page when something goes wrong in the system.</p>
+							<p class="col-para"><b>Use</b>:This page handles unexpected errors or system issues, informing the user that something went wrong and advising them to try again later. It serves as a generic error page when no specific error message is available.</p>		
 
 				</div>
 				<br />
