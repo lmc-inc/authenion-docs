@@ -349,6 +349,12 @@
 				  </a>
 			  </li>
 
+			  <li>
+				<a href="#Keycloak as the Token Provider" class="nav-link-sub collapsed">
+					<!--<i class="bi bi-circle"></i>--><span>Keycloak as the Token Provider</span>
+				</a>
+			</li>
+
 		  </ul>
 	  </li><!-- End Icons Nav -->
 
@@ -2615,6 +2621,171 @@
 							<li><p class="col-para">The user data can be added as claims using the OIDC userinfo endpoint. Any attributes that are required by the target application can be added as claims in the userinfo endpoint.</p></li>
 						</ol><br /> -->
 
+
+						<!--keycloak as IdP-->
+						<a style="padding: 38px" name="Keycloak as the Token Provider"></a>
+						<p class="col-sub-headings">3. Keycloak as the Token Provider</p>
+						<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>Pre-requisites</u></b></p>
+						<!-- <ul class="col-para"> -->
+						<ul style="margin-left:30px;" class="col-para">
+							<li><p class="col-para" style="background-color:#f5f5f6">Admin access to the Keycloak Administration Console.</p></li>
+							<li><p class="col-para" style="background-color:#f5f5f6">Create Realm for your application (optional).</p></li>
+							<li><p class="col-para" style="background-color:#f5f5f6">If using HTTPS, a valid SSL certificate is configured to secure communications (recommended for production).</p></li>
+						</ul>
+						<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>OAuth / OIDC Configurations</u></b></p>
+						<p class="col-para">&emsp;This setup will manage the configurations related to the OAuth client.</p>
+						<ol class="col-para">
+							<li><p class="col-para">Create a new Client in Keycloak for Authenion-EIK.</p></li>
+
+							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6">
+								<tr>
+									<th class="symcomponent">Configurations</th>
+									<th class="symcomponent">&emsp;Values</th>
+								</tr>
+
+								<tbody class="tbody">
+									<!--Client Type-->
+									<tr>
+										<td>
+											<p class="col-para-table">Client Type</p>
+										</td>
+										<td>
+											<ul>
+												<li class="li"><p class="col-para-table">Select OpenID Connect</li>
+											</ul>
+										</td>
+									</tr>
+									<!--Client ID-->
+									<tr>
+										<td>
+											<p class="col-para-table">Client ID</p>
+										</td>
+										<td>
+											<ul>
+												<li class="li"><p class="col-para-table">Unique value to identify clients in keycloak</li>
+											</ul>
+										</td>
+									</tr>
+									<!--Client Name-->
+									<tr>
+										<td>
+											<p class="col-para-table">Name</p>
+										</td>
+										<td>
+											<ul>
+												<li class="li"><p class="col-para-table">Value to identify Client in Keycloak</li>
+											</ul>
+										</td>
+									</tr>
+									<!--Client authentication-->
+									<tr>
+										<td>
+											<p class="col-para-table">Client authentication</p>
+										</td>
+										<td>
+											<ul>
+												<li class="li"><p class="col-para-table">Enable the toggle to client as a confidential client</li>
+											</ul>
+										</td>
+									</tr>
+									
+									<!--Authorization-->
+									<tr>
+										<td>
+											<p class="col-para-table">Authorization</p>
+										</td>
+										<td>
+											<ul>
+												<li class="li"><p class="col-para-table">Enable/Disable fine-grained authorization support for a client</li>
+											</ul>
+										</td>
+									</tr>
+									<!--Authentication flow-->
+									<tr>
+										<td>
+											<p class="col-para-table">Authentication flow</p>
+										</td>
+										<td>
+											<ul>
+												<li class="li"><p class="col-para-table">Select <strong>Standard Flow</strong> (Authorization Code Grant)</li>
+											</ul>
+										</td>
+									</tr>
+									<!--Valid redirect URIs-->
+									<tr>
+										<td>
+											<p class="col-para-table">Valid redirect URIs</p>
+										</td>
+										<td>
+											<ul>
+												<li class="li"><p class="col-para-table">https://&lt;hostname&gt;:&lt;port&gt;/EBSAuth/handler&emsp;</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br />
+
+							<li><p class="col-para">Review the Client configurations and click <b>Save</b>.</p></li>
+							<li><p class="col-para">After saving the client configuration, Keycloak will generate a Client ID and a Client Secret.</p></li>
+							<li><p class="col-para">Navigate to the Credentials tab to obtain the Client Secret, which is used for secure backend communication with the OIDC application in Keycloak.</p></li>
+
+
+                    <!--Image For Keycloak client1 -->
+						<img src="assets/img/keycloak_client1.png" alt="" style="width:60%;height:40%;cursor:pointer;" onclick="openModal('modalContainer31', 'modalImage31')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContainer31" class="modal-container" onclick="closeModal('modalContainer31')">
+						        <img id="modalImage31" class="modal-image" src="assets/img/keycloak_client1.png" alt="">
+						</div>
+						<br />
+						<!--Image For Keycloak client2-->
+						<img src="assets/img/Keycloak_client2.png" alt="" style="width:60%;height:40%;cursor:pointer;" onclick="openModal('modalContainer32', 'modalImage32')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContainer32" class="modal-container" onclick="closeModal('modalContainer32')">
+						        <img id="modalImage32" class="modal-image" src="assets/img/Keycloak_client2.png" alt="">
+						</div>
+						<br />
+						<!--Image For Keycloak client3-->
+						<img src="assets/img/keycloak_client3.png" alt="" style="width:60%;height:40%;cursor:pointer;" onclick="openModal('modalContainer33', 'modalImage33')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContainer33" class="modal-container" onclick="closeModal('modalContainer33')">
+						        <img id="modalImage33" class="modal-image" src="assets/img/keycloak_client3.png" alt="">
+						</div>
+						<br />
+						<!--Image For Keycloak screat-->
+						<img src="assets/img/keycloak_screat.png" alt="" style="width:60%;height:40%;cursor:pointer;" onclick="openModal('modalContainer34', 'modalImage34')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContainer34" class="modal-container" onclick="closeModal('modalContainer34')">
+						        <img id="modalImage34" class="modal-image" src="assets/img/keycloak_screat.png" alt="">
+						</div>
+						<br />
+						<p class="col-sub-headings-sub"><b>&nbsp;&nbsp;<u>Mapping User Attributes to Tokens in Keycloak</u></b></p>
+						<ol class="col-para">
+							<li><p class="col-para">In the Keycloak Admin Console, go to <strong>Client Scopes</strong>. Either select an existing scope (e.g., profile) or create a new custom scope if needed.</p></li>
+                            <li><p class="col-para">Under the selected Client Scope, open the <strong>Mappers </strong>tab and add a new mapper for each attribute.</p></li>
+							<p class="col-para"> <strong>Example – Add Email Attribute </strong></p>
+							<ul style="margin-left:30px;" class="col-para">
+								<li>Set Mapper Type to <strong>User Attribute</strong></li>
+								<li>Set Token Claim Name to <strong>email</strong></li>
+								<li>Enable inclusion in <strong>ID token</strong>, <strong>Access token</strong>, and <strong>User Info</strong> (optional)</li>
+							</ul>
+							<br />
+						<!--Image For Keycloak user attribute-->
+						<img src="assets/img/keycloakuserattribute.png" alt="" style="width:60%;height:40%;cursor:pointer;" onclick="openModal('modalContainer35', 'modalImage35')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContainer35" class="modal-container" onclick="closeModal('modalContainer35')">
+						        <img id="modalImage35" class="modal-image" src="assets/img/keycloakuserattribute.png" alt="">
+						</div>
+						<br />
+							<li><p class="col-para"></p>Go to <strong>Clients</strong>, select your client, and assign the scope under either <strong>Default Client Scopes</strong> or <strong>Optional Client Scopes</strong>.</li>
+						</ol>
+						
+						<!--Image For Keycloak client scope-->
+						<img src="assets/img/keycloackclientscope.png" alt="" style="width:60%;height:40%;cursor:pointer;" onclick="openModal('modalContainer36', 'modalImage36')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContainer36" class="modal-container" onclick="closeModal('modalContainer36')">
+						        <img id="modalImage36" class="modal-image" src="assets/img/keycloackclientscope.png" alt="">
+						</div>
 
 					</div>
 					<!--Configure identity provider-->
