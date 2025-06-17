@@ -1342,6 +1342,7 @@
 						<a style="padding: 35px" name="Console Interactions & Configurations"></a>
 						<h4 style="font-family:sans-serif; font-size:26px; font-weight: 600; color: #00297A">Console Interactions & Configurations</h4>
 						<p class="col-para">This section describes the UI of Authenion (Admin Console) and its interactions and provides steps for accessing and configuring it. Access the Authenion UI by clicking <a href="https://launch.authenion.com">Administrative Console</a>.</p>
+						<p class="col-para"><i>(Optional)</i>If you are running a local instance of the Authenion UI console, you can access it directly using the local URL: https://servername:9898.</p>
 
 
 						<a style="padding: 35px" name="Applications / Dashboard page"></a>
@@ -1441,7 +1442,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"<p class="col-para-table">https://idp.example.com/authorize</li>
+										<li class="li" style="list-style-type: none" ><p class="col-para-table">https://idp.example.com/authorize</li>
 									</ul>
 								</td>
 								</tr>
@@ -1452,7 +1453,7 @@
 								</td>
 								<td>
 									<ul>
-										<li class="li" style="list-style-type: none"></li><p class="col-para-table">https://idp.example.com/token</li>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">https://idp.example.com/token</li>
 									</ul>
 								</td>
 								</tr>
@@ -1644,7 +1645,7 @@
 						<p class="col-para"><b>Multi-Factor Authentication</b>: MFA is a security method that requires users to provide two or more verification factors to access a resource. MFA enhances security by reducing the risk of unauthorized access beyond just using a username and password.</p>
                         </div>
 						<br>
-
+                        
 						<p class="col-sub-headings-sub"><b>Adding LDAP Authentication Provider Configuration</b></p>
 						<ol class="col-para">
 							<li><p class="col-para">Click LDAP Authentication Provider Configuration in the Dashboard page.</p></li>
@@ -1829,8 +1830,21 @@
 								</tr>
 								</tbody>
 								</table>
+								</ul>
 								<br>    
-                    <p class="col-para"><i> Note: Commonly supported LDAP providers are PingDirectory, Microsoft Active Directory, etc.</i></p>
+                           <li><p class="col-para">Commonly supported LDAP providers are:</p></li>
+                           <ul>
+                            <li>PingDirectory</li>
+                            <li>Microsoft Active Directory</li>
+                            <li>OpenLDAP</li>
+                            <li>Oracle Internet Directory</li>
+                            <li>Apache Directory Server</li>
+                            <li>Red Hat Directory Server</li>
+                            <li>OpenDJ</li>
+                            <li>SunLdap</li>
+                           </ul>
+
+                    
 					
 					<!-- Image with onclick event -->
 					<img src="assets/img/authenion-3.0/LdapAuthenticationprovider.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerLdapAuthenticationprovider1', 'modalImageLdapAuthenticationprovider1')" class="col-images-intro" />
@@ -1841,7 +1855,8 @@
 					</div>
 					<br>
 					
-						<li><p class="col-sub-headings-sub"><b><u>MFA Settings</u></b></p></li>
+					    <ul class="col-para">
+						<li><p class="col-sub-headings-sub"><b><u>MFA Settings</u>(Optional)</b></p></li>
 						<p class="col-para"><b>Email</b>: When this checkbox is enabled, a one-time password is sent to the user's registered email address for authentication.</p>
 						<p class="col-para"><b>SMS</b>: When this checkbox is enabled, users receive a one-time password via SMS, using Twilio integration for message delivery.</p>
 						<p class="col-para"><b>TOTP</b>: When this checkbox is enabled, users can authenticate using time-based one-time passwords through apps like Google or Microsoft Authenticat</p>
@@ -1888,9 +1903,10 @@
 								</tr>
 								</tbody>
 								</table>
+								</ul>
 								
 
-								
+								<ul class="col-para">
 									<li><p class="col-sub-headings-sub"><b><u>SMTP Configurations</u></b></p></li>
 
 									<p class="col-para"><b>From Address</b>: specify the email address used for sending notification emails.</p>
@@ -2017,7 +2033,7 @@
 											</tr>
 											</tbody>
 											</table>
-								
+								        </ul>
 
 					<!-- Image with onclick event -->
 					<img src="assets/img/authenion-3.0/LdapAuthenticationprovider2.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerLdapAuthenticationprovider2', 'modalImageLdapAuthenticationprovider2')" class="col-images-intro" />
@@ -2027,7 +2043,7 @@
 						<img id="modalImageLdapAuthenticationprovider2" class="modal-image" src="assets/img/authenion-3.0/LdapAuthenticationprovider2.png" alt="">
 					</div>
 					<br>
-
+                    <ul class="col-para">
 					<li><p class="col-sub-headings-sub"><b><u>Twilio Settings</u></b></p></li>
 
 					<p class="col-para"><b>Account SID</b>: A Twilio Account SID is a 34-character alphanumeric identifier unique key that is used to identify a specific Twilio Parent Account or Subaccount.</p>
@@ -2099,7 +2115,9 @@
 											</tr>
 											</tbody>
 											</table>
+											</ul>
 											<br>
+											<ul class="col-para">
 											<li><p class="col-sub-headings-sub"><b><u>TOTP Settings</u></b></p></li>
 
 											<p class="col-para"><b>Grace Time</b>: Refers to the period after a TOTP code has technically expired during which it can still be used for authentication, allowing for minor delays in code entry. The default grace time is either 30 or 60 seconds.</p>
@@ -2148,6 +2166,7 @@
 											</tr>
 											</tbody>
 											</table>
+											</ul>
 										</br>
 					<!-- Image with onclick event -->
 					<img src="assets/img/authenion-3.0/LdapAuthenticationprovider3.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainerLdapAuthenticationprovider3', 'modalImageLdapAuthenticationprovider3')" class="col-images-intro" />
@@ -2184,14 +2203,14 @@
 
 					</div>
 					<div>
-						<img src="assets/img/sidebar.png" alt="" style="width:40%;height:40%;cursor:pointer;margin-top:-320px;margin-left:350px;" onclick="openModal('modalContainer5', 'modalImage5')" class="col-images-intro" />
+						<img src="assets/img/authenion-3.0/Sidebar.png" alt="" style="width:60%;height:40%;cursor:pointer" onclick="openModal('modalContainer5', 'modalImage5')" class="col-images-intro" />
 
 					</div>
 
 
 					<!-- Modal container -->
 					<div id="modalContainer5" class="modal-container" onclick="closeModal('modalContainer5')">
-						<img id="modalImage5" class="modal-image" src="assets/img/sidebar.png" alt="">
+						<img id="modalImage5" class="modal-image" src="assets/img/authenion-3.0/Sidebar.png" alt="">
 					</div>
 					<br>
 
@@ -3523,10 +3542,10 @@
 						   <li>  <p class="col-para">Example URL: `https://servername:9898`</p></li>
 						</ol>
 						<!--IMAGE FOR Redirect URI-->
-						<img src="assets/img/Authenion-3.0/AzureRedirect.png" alt="" style="width:60%;height:40%;cursor:pointer;" onclick="openModal('modalContainer31', 'modalImage31')" class="col-images-pf" />
+						<img src="assets/img/azure_redirect.png" alt="" style="width:60%;height:40%;cursor:pointer;" onclick="openModal('modalContainer031', 'modalImage031')" class="col-images-pf" />
 						<!-- Modal container -->
-						<div id="modalContainer31" class="modal-container" onclick="closeModal('modalContainer31')">
-						        <img id="modalImage31" class="modal-image" src="assets/img/Authenion-3.0/AzureRedirect.png" alt="">
+						<div id="modalContainer031" class="modal-container" onclick="closeModal('modalContainer031')">
+						        <img id="modalImage031" class="modal-image" src="assets/img/azure_redirect.png" alt="">
 						</div>
 						<br />
 						
