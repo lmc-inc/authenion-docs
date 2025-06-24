@@ -3940,8 +3940,7 @@
 						<br />
 						<p class="col-sub-headings-sub"><b>1. Pre-requisites</b></p>
 						<ol class="col-para">
-							<li><p class="col-para">Install an Apache Tomcat / Weblogic application or any application server of your choice in a dedicated physical / virtual server</p></li>
-							<li><p class="col-para">Configure the application server for SSL with a listen port (for example, 8443)</p></li>
+							<li><p class="col-para">Recommended Java installed on the server</p></li>
 							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
 						</ol>
 						<br />
@@ -3981,7 +3980,7 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">EIK plugin should be deployed in the Apache Tomcat / Weblogic server or any other application server with necessary config files with it</p>
+										<p class="col-para-table">Authenion-EIK plugin should be deployed in the server with necessary config files with it</p>
 
 									</td>
 								</tr>
@@ -4109,7 +4108,7 @@
 										<td>
 											<ul>
 												<p class="col-para-table">Callback URL for Authenion-EIK. For example,</p>
-												<p class="col-para-table"><i><b>https://eik.example.com:8443/EBSAuth/handler&emsp;</b></i></p>
+												<p class="col-para-table"><i><b>https://eik.example.com:8842/EBSAuth/handler&emsp;</b></i></p>
 											</ul>
 										</td>
 									</tr>
@@ -4175,7 +4174,7 @@
 							<br />
 
 							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button. This will download a file named <i><b>'EIKAuth.config'</b></i>.</p></li>
-							<li><p class="col-para">Copy the downloaded <i>'EIKAuth.config'</i> file to a temporary location in the Apache tomcat / Weblogic server. This file will be used in the EIK deployment section later.</p></li>
+							<li><p class="col-para">Copy the downloaded <i>'EIKAuth.config'</i> file to a temporary location in the server. This file will be used in the EIK deployment section later.</p></li>
 						</ol>
 						<br />
 
@@ -4394,59 +4393,71 @@
 							<br />
 
 							<li><p class="col-para">After entering the above values, the EIKUSER will be registered. A new file named <i><b>'EIK.dbcx'</b></i> will be generated in the same directory.</p></li>
-							<li><p class="col-para">Copy this file to a temporary location in the Apache tomcat / Weblogic server. This file will be used in the EIK deployment section.</p></li>
+							<li><p class="col-para">Copy this file to a temporary location in the server. This file will be used in the EIK deployment section.</p></li>
 						</ol>
 						<br />
 
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Deploy Authenion-EIK</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">This section guides you through the deployment steps for Authenion - EBS Integration Kit. This guide will show the deployment steps in an <i>'Apache Tomcat / Weblogic'</i> application server.</p>
+						<p class="col-para" style="margin-left: 20px;">This section guides you through the deployment steps for Authenion - EBS Integration Kit.</p>
 						<ol class="col-para">
 							<li><p class="col-para">Login to the <a href="https://support.likemindsconsulting.com"> <u>Like Minds Support Portal</u></a> and download the required binaries to complete the EIK deployment.</p></li>
 							<li><p class="col-para">The following are the list of files that will be downloaded as part of the installation package.</p></li>
 							<ul style="margin-left:30px;" class="col-para">
-								<li><p class="col-para"><i>EBSAuth.war</i></p></li>
+								<li><p class="col-para"><i>authenion-eik.jar</i></p></li>
 								<li><p class="col-para"><i>security.properties</i></p></li>
 								<li><p class="col-para"><i>log4j2.xml</i></p></li>
 								<li><p class="col-para"><i>EBSdatasource.jar</i></p></li>
+								<li><p class="col-para"><i>startup.properties</i></p></li>
 							</ul>
-
-							<li><p class="col-para">Login to the server where <i>Apache Tomcat / Weblogic</i> or your preferred application server has been installed and copy all the above files into a temporary location.</p></li>
-							<!-- <li><p class="col-para">Navigate to the tomcat installation directory ($CATALINA_HOME) in a terminal (linux) or command prompt(windows).</p></li> -->
-							<li><p class="col-para">Set an environment variable <i><b>'EIK_HOME'</b></i> resolving the path to the application server installation directory.</p></li>
-							<ul style="margin-left:30px;" class="col-para">
-								<p class="col-para">Following is the example for a Linux system:</p>
-								<p class="col-para"><u>Linux:</u><i><b> export EIK_HOME=&lt;path to Apache tomcat / Weblogic installation directory&gt;</b></i></p>
-								<p>Add the above command to the .bash_profile file and source it.</p>
-								<p class="col-para">Following is the example for a Windows system:</p>
-								<p class="col-para"><u>Windows:</u> Open the <i>'Environment variables'</i> option in System Properties. Add the system variable as <i><b>EIK_HOME</b></i> and set its value to the <i>Apache tomcat / Weblogic installation directory.</i></p>
-							</ul>
-							<li><p class="col-para">Navigate to $EIK_HOME directory. Create a new directory named <i><b>'EBSAuth'</b></i>. Assign <i>read & write</i> privileges to the <i>EBSAuth</i> directory.</p></li>
-							<li><p class="col-para">Obtain or download the Authenion-EIK license from the Like Minds Support portal. Copy the license file <i><b>'ebsauth.lic'</b></i> and move it to a temporary location in the Apache tomcat / Weblogic server.</p></li>
+							<li><p class="col-para">Login to the server and Create a folder named 'EBSAuth'(Should match with the context path) and copy all the above files into EBSAuth folder.</p></li>
+								
+							   <p style="margin-left:30px;" class="col-para"><i>Eg: /home/appuser/EBSAuth/</i></p>
+								
+							<li><p class="col-para">Obtain or download the Authenion-EIK license from the Like Minds Support portal. Copy the license file <i><b>'ebsauth.lic'</b></i> and move it to EBSAuth folder.</p></li>
 							<li><p class="col-para">Copy the license file to the following directory:</i></p></li>
 							<ul style="margin-left:30px;" class="col-para">
-								<p class="col-para"><i>$EIK_HOME/EBSAuth/</i></p>
-							</ul>
-							<li><p class="col-para">Locate the <i>EIKAuth.config</i> & <i>EIK.dbcx</i> files from the temporary location (Generated and copied to Apache tomcat / Weblogic server in the previous sections).</p> <p>Copy both the files to the following directory:</p></li>
-							<ul style="margin-left:30px;" class="col-para">
-								<p class="col-para"><i>$EIK_HOME/EBSAuth/</i></p>
+
+								<p class="col-para"><i>/home/appuser/EBSAuth/</i></p>
 							</ul>
 							<li><p class="col-para">Locate the <i>security.properties</i> & <i>log4j2.xml</i> files from the temporary location. Copy both the files to the following directory:</p></li>
 							<ul style="margin-left:30px;" class="col-para">
-								<p class="col-para"><i>$EIK_HOME/EBSAuth/</i></p>
+								<p class="col-para"><i>/home/appuser/EBSAuth/</i></p>
 							</ul>
-							<li><p class="col-para">Locate the <i>EBSAuth.war</i> file from the temporary location. Copy the file to the following directory:</p></li>
-							<ul style="margin-left:30px;" class="col-para">
-								<p class="col-para"><i>$CATALINA_HOME/webapps/</i></p>
-							</ul>
-							<li><p class="col-para">Restart the <i>Apache Tomcat / Weblogic</i> services.</p></li>
-							<li><p class="col-para">This completes the deployment of Authenion-EIK in the Apache Tomcat / Weblogic application server.</p></li>
-							<li><p class="col-para">Repeat the steps above in all the servers, if Apache Tomcat / Weblogic is configured for H/A.</p></li>
-							<!--<br />-->
-							<p class="col-para"><i> Note: A single Authenion-EIK deployment will connect with only one Oracle EBS Application for SSO. However, if you have requirements to connect with multiple Oracle EBS environments for SSO, you can deploy multiple instances of Authenion-EIK in the same Apache Tomcat / Weblogic server by changing the <b>'Context Path'</b>. For example, you can follow the above steps 1 to 14 and deploy plugins by changing the .war filename to <b>'EBSAuth_DEV.war'</b> & <b>'EBSAuth_PRD.war'</b> in the Apache tomcat / Weblogic servers and point to appropriate Oralce EBS application environments.</i></p>
+							<li><p class="col-para">Locate the <i>authenion-eik.jar</i> file and Copy the file to the following directory</p></li>
+							<ul style="margin-left:30px;" class="col-para"><i>/home/appuser/EBSAuth</i></ul>
+							
+							<li><p class="col-para">Follow the below steps to deploy Authenion-EIK in https </p></li>
+								
+								<li><p class="col-para">To enable https get a keystore.p12 file and place it in installation directory. </p></li>
+									 <p style="margin-left:30px;" class="col-para"><i>Eg: /home/appuser/EBSAuth/</i></p>
+
+								<li><p class="col-para"> Open startup.properties file and add the below following lines </p></li>	
+								<ul style="margin-left:30px;" class="col-para">
+								<i><p class="col-para">server.ssl.key-store= (path to)/keystore.p12</p>
+													   <p class="col-para">server.ssl.key-store-password=keystore-password</p>
+													   <p class="col-para">server.ssl.key-store-type=PKCS12</p>
+													   <p class="col-para">server.ssl.key-alias=mycert</p>
+													   <p class="col-para">server.ssl.enabled=true</p>
+													   <p class="col-para">server.ssl.protocol=TLS</p>
+													   <p class="col-para">server.tomcat.redirect-http-to-https=true</p></i></ul>
+																																					
+								<li><p class="col-para"><i> Execute the below jar file command </i></p></li>
+								<p class="col-para"><i><b>java -jar authenion-eik.jar --eik.config.path="path-to-authenion-eik.jar-file"/</b></i></p>
+								
+								<li><p class="col-para"> Verify the Authenion EIK (https) port is listening </p></li>	 
+								
+
+								<li><p class="col-para">This completes the deployment of Authenion-EIK in the server.</p></li>
+							<li><p class="col-para">Repeat the steps above in all the servers, if you have H/A environment setup.</p></li>	
+													<!--<br />-->
+							<p class="col-para"><i><b>Note:</b></i> A single Authenion-EIK deployment will connect with only one Oracle EBS Application for SSO. However, if you have requirements to connect with multiple Oracle EBS environments for SSO, you can deploy multiple instances of Authenion-EIK in the same server by changing the <i>'Context Path'</i>. For example, you can follow the above steps 1 to 14 by adding new folder with different contextpath name like EBSAuthDEV & EBSAuthPRD and point to appropriate Oralce EBS application environments.</p>
 							<br />
 						</ol>
 
+										<td>
+											<ul>
+												
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Configure Oracle EBS System Profile options</u></b></p>
 						<p class="col-para" style="margin-left: 20px;">This section will guide you to configure the system profile options that enable Single Sign-On to the Oracle E-Business Suite application. These system profile options are Oracle recommended for enabling SSO with any providers.</p>
 						<ol class="col-para">
@@ -4480,7 +4491,7 @@
 										<td>
 											<ul>
 												<p class="col-para-table">For example,</p>
-												<p class="col-para-table"><i><b>https://eik.example.com:8443/EBSAuth&emsp;</b></i></p>
+												<p class="col-para-table"><i><b>https://eik.example.com:8842/EBSAuth&emsp;</b></i></p>
 											</ul>
 										</td>
 									</tr>
