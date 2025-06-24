@@ -1052,7 +1052,7 @@
 							</div>
 							<br>
 							<li><p class="col-para">Read and accept the Software Terms & Conditions. This will complete the setup process.</li>
-							<p class="col-para"><i> Note: In case if the process fails to complete the setup, you can re-run the setup script to complete it.</i></p>
+							<p class="col-para"><i> <b>Note:</b> In case if the process fails to complete the setup, you can re-run the setup script to complete it.</i></p>
 						</ol>
 
 						<!-- WINDOWS ENVIRONMENT-->
@@ -1075,7 +1075,7 @@
 							</div>
 							<br>
 							<li><p class="col-para">Read and accept the Software Terms & Conditions. This will complete the setup process.</li>
-							<p class="col-para"><i> Note: In case if the process fails to complete the setup, you can re-run the setup script to complete it.</i></p>
+							<p class="col-para"><i> <b>Note:</b> In case if the process fails to complete the setup, you can re-run the setup script to complete it.</i></p>
 						</ol>
 
 
@@ -1109,7 +1109,7 @@
 										<div class="div-table3-col">#]&emsp;./status.sh</div>
 									</div>
 								</div>
-								<p class="col-para"><i> Note: In Authenion-3.0, we have the option to start and stop each service individually.</i></p>
+								<p class="col-para"><i> <b>Note:</b> In Authenion-3.0, we have the option to start and stop each service individually.</i></p>
 
 						</ol>
 						
@@ -1140,7 +1140,7 @@
 										 <div class="div-table3-col">#]&emsp;status.bat</div>
 									 </div>
 								 </div>
-								  <p class="col-para"><i> Note: In Authenion-3.0, we have the option to start and stop each service individually.</i></p>
+								  <p class="col-para"><i> <b>Note:</b> In Authenion-3.0, we have the option to start and stop each service individually.</i></p>
 
 						 </ol>
                     
@@ -1262,7 +1262,7 @@
 							<br>
 							<li><p class="col-para">Copy the .crt & .key extracted in the previous step and place it in “&lt;authenion_install_dir&gt;/server/conf/certs” directory.<p></li>
 							<li><p class="col-para">The above steps can be repeated during the Authenion certificate renewal process.<p></li>
-							<p class="col-para"><i> Note: This setup is optional. The Certificates can also be installed on load-balancer servers.</i></p>
+							<p class="col-para"><i> <b>Note:</b> This setup is optional. The Certificates can also be installed on load-balancer servers.</i></p>
 						</ol>
 						<br>
 					</div> <!-- ### INSTALLATION ### -->
@@ -1309,7 +1309,7 @@
 				  
 					    <!-- <p class="col-sub-headings-sub"><b>Configure java -jar authenion-admin-xx-version.zip com.authenioAzure:</b></p> -->
 						<li>  <p class="col-para">Once the execution is successful, you will be redirected to the Authenion Admin Console.</p></li> 
-					 <p class="col-para"><i> Note: Please ensure that the redirect_uri used in the command is configured in the OIDC provider.</i></p>
+					 <p class="col-para"><i> <b>Note:</b> Please ensure that the redirect_uri used in the command is configured in the OIDC provider.</i></p>
 	 
 					</ol>
                           
@@ -1335,7 +1335,7 @@
 							<p class="col-para"><b>Username</b>:Administrator</p>
                             <p class="col-para"><b>Password</b>:The password you specified in the command (e.g., anypassword)</p>
 							
-							<p class="col-para"><i> Note: You can set the password using an environment variable. Ensure the password is strong, including special characters like % or $ for enhanced security.</i></p>
+							<p class="col-para"><i> <b>Note:</b> You can set the password using an environment variable. Ensure the password is strong, including special characters like % or $ for enhanced security.</i></p>
 							
                         </ol>
 						 
@@ -3135,7 +3135,7 @@
 							changes which are not pushed from the UI to Authenion server will not be reflected until Sync operation is triggered
 							manually.
 						</p>
-						<p class="col-para"><i> Note:  Add the JWKS endpoint to the 'agent-authorization.properties' file in the '/config/' directory.</i></p>
+						<p class="col-para" style="margin-left: 20px;"><i> <b>Note:</b>  Add the JWKS endpoint to the 'agent-authorization.properties' file in the '/config/' directory.</i></p>
 					</br>
 						
 						<!-- <img  src="assets/img/sync.png" alt="" class="col-images-intro" /> <br> -->
@@ -3528,7 +3528,7 @@
 							</ol>
 							<li><p class="col-para">Click on <i>Add</i>.</p></li>
 						</ol>
-						<p class="col-para"><i> Note: In case a dialogue appears, check the box which says Microsoft graph.</i></p>
+						<p class="col-para" style="margin-left: 20px;"><i> <b>Note:</b> In case a dialogue appears, check the box which says Microsoft graph.</i></p>
 
 						<!--IMAGE FOR TOKEN CONFIGURATION-->
 
@@ -4433,17 +4433,20 @@
 									 <p style="margin-left:30px;" class="col-para"><i>Eg: /home/appuser/EBSAuth/</i></p>
 
 								<li><p class="col-para"> Open startup.properties file and add the below following lines </p></li>	
+								
 								<ul style="margin-left:30px;" class="col-para">
-								<i><p class="col-para">server.ssl.key-store= (path to)/keystore.p12</p>
+								                    <i><p class="col-para">server.ssl.key-store= (path to)/keystore.p12</p>
 													   <p class="col-para">server.ssl.key-store-password=keystore-password</p>
 													   <p class="col-para">server.ssl.key-store-type=PKCS12</p>
 													   <p class="col-para">server.ssl.key-alias=mycert</p>
 													   <p class="col-para">server.ssl.enabled=true</p>
 													   <p class="col-para">server.ssl.protocol=TLS</p>
-													   <p class="col-para">server.tomcat.redirect-http-to-https=true</p></i></ul>
+													   <p class="col-para">server.tomcat.redirect-http-to-https=true</p>
+													</i>
+												</ul>
 																																					
 								<li><p class="col-para"><i> Execute the below jar file command </i></p></li>
-								<p class="col-para"><i><b>java -jar authenion-eik.jar --eik.config.path="path-to-authenion-eik.jar-file"/</b></i></p>
+								<p class="col-para"><i><b>java -jar authenion-eik.jar --eik.config.path="path-to-authenion-eik.jar-file"</b></i></p>
 								
 								<li><p class="col-para"> Verify the Authenion EIK (https) port is listening </p></li>	 
 								
@@ -4451,7 +4454,8 @@
 								<li><p class="col-para">This completes the deployment of Authenion-EIK in the server.</p></li>
 							<li><p class="col-para">Repeat the steps above in all the servers, if you have H/A environment setup.</p></li>	
 													<!--<br />-->
-							<p class="col-para"><i><b>Note:</b></i> A single Authenion-EIK deployment will connect with only one Oracle EBS Application for SSO. However, if you have requirements to connect with multiple Oracle EBS environments for SSO, you can deploy multiple instances of Authenion-EIK in the same server by changing the <i>'Context Path'</i>. For example, you can follow the above steps 1 to 14 by adding new folder with different contextpath name like EBSAuthDEV & EBSAuthPRD and point to appropriate Oralce EBS application environments.</p>
+							<p class="col-para"><i><b>Note:</b> A single Authenion-EIK deployment will connect with only one Oracle EBS Application for SSO. However, if you have requirements to connect with multiple Oracle EBS environments for SSO, you can deploy multiple instances of Authenion-EIK in the same server by changing the <i>'Context Path'</i>. For example, you can follow the above steps 1 to 14 by adding new folder with different contextpath name like EBSAuthDEV & EBSAuthPRD and point to appropriate Oralce EBS application environments.</i></p>
+							
 							<br />
 						</ol>
 
