@@ -4423,7 +4423,21 @@
 							</ul>
 							<li><p class="col-para">Get VIS.dbc file from the EBS DB Team and place the file in config folder</p></li>
 							<li><p class="col-para">Locate dbConfig.properties file and place it in config folder</p></li>
-							
+							<li><p class="col-para">Open dbConfig.properties and update with the below Database parameters</p></li>
+							<ul style="margin-left:30px;" class="col-para">
+													   <li><p class="col-para">eik.username=(EIK Username with Schema Connect Role)</p></li>
+													   <li><p class="col-para">eik.password=(EIK Username password)</p></li>
+													   <li><p class="col-para">db.maxConnections=(Maximum number of DB Connections in Pool)</p></li>
+													   <li><p class="col-para">db.minConnections=(Minimum number of DB Connections in Pool)</p></li>
+													   <li><p class="col-para">db.initialConnections=(Db Connection pool size to start with)</p></li>
+													   <li><p class="col-para">db.connectionTimeout=(Db Connection pool timeout in seconds)</p></li>
+													   <li><p class="col-para">db.validateOnBorrow=(Db Connection health validation true/false)</p></li>
+													   <li><p class="col-para">db.validateOnBorrow=(Db Connection health validation interval)</p></li>
+													   <li><p class="col-para">db.validationInterval=(timeInterval (in seconds) between checks to enforce the timeout properties)</p></li>
+													   <li><p class="col-para">db.connectionFactory=(Jdbc connection factory name defaults to oracle.jdbc.pool.OracleDataSource)</p></li>
+													</i>
+												</ul>
+
 							<li><p class="col-para">Open startup.properties and update with the below settings </p></li>
 							<ul style="margin-left:30px;" class="col-para">
 													<li><i><p class="col-para">app.context = /EBSAuth(User defined context path)</p></li>
@@ -4431,7 +4445,7 @@
 													<li><i><p class="col-para">tcp.ip.port = 8842(User defined port, make sure that port is not blocked by a firewall and is not used by another service)</p></li>
 							</ul>
 							<li><p class="col-para">Locate the <i>authenion-eik.jar</i> file and Copy the file in any preferred location and execute the below command</p></li>
-								<p style="margin-left:70px;" class="col-para"> <i><b>java -jar authenion-eik.jar --Deik.config.path="path-to-Config folder"</b></i></p>
+								<p style="margin-left:70px;" class="col-para"> <i><b>java -jar --Deik.config.path="path-to-Config folder" authenion-eik.jar </b></i></p>
 
 							    <li><p class="col-para">Verify Authenion EIK port is listening</p></li>		
 								<li><p class="col-para">This completes the deployment of Authenion-EIK in the server.</p></li>
@@ -4457,7 +4471,7 @@
 												</ul>
 																																					
 								<li><p class="col-para"><i> Execute the below jar file command </i></p></li>
-								<p style="margin-left:70px;"class="col-para"><i><b>java -jar authenion-eik.jar --eik.config.path="path-to-Config folder"</b></i></p>
+								<p style="margin-left:70px;"class="col-para"><i><b>java -jar --Deik.config.path="path-to-Config folder" authenion-eik.jar</b></i></p>
 								
 								<li><p class="col-para"> Verify the Authenion EIK (https) port is listening </p></li>	 
 								
