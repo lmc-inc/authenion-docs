@@ -3937,7 +3937,7 @@
 						<br />
 						<p class="col-sub-headings-sub"><b>1. Pre-requisites</b></p>
 						<ol class="col-para">
-							<li><p class="col-para">Recommended Java installed on the server</p></li>
+							<p class="col-para">Install Recommended Java(see System Requirements) on the server</p>
 							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
 						</ol>
 						<br />
@@ -3963,7 +3963,7 @@
 								</tr>
 								<tr>
 									<td>
-										<p class="col-para-table">Generate EIK.dbcx file</p>
+										<p class="col-para-table">Generate EIK.dbcx file(Optional)</p>
 									</td>
 									<td>
 
@@ -4175,7 +4175,7 @@
 						</ol>
 						<br />
 
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Generate EIK.dbcx File</u></b></p>
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Generate EIK.dbcx File(Optional)</u></b></p>
 						<p class="col-para" style="margin-left: 20px;">You can generate the EIK.dbcx file through a command line utility. The utility <i><b>'EBSdatasource.jar'</b></i> will be provided along with the Authenion-EIK installation package. The following steps will guide you through in executing the utility and generate the EIK.dbcx file.</p>
 						<ol class="col-para">
 							<li><p class="col-para">The below pre-requisites need to be done before executing the utility.</p></li>
@@ -4404,51 +4404,63 @@
 								<li><p class="col-para"><i>authenion-eik.jar</i></p></li>
 								<li><p class="col-para"><i>security.properties</i></p></li>
 								<li><p class="col-para"><i>log4j2.xml</i></p></li>
-								<li><p class="col-para"><i>EBSdatasource.jar</i></p></li>
-								<li><p class="col-para"><i>startup.properties</i></p></li>
+						        <li><p class="col-para"><i>startup.properties</i></p></li>
+								<li><p class="col-para"><i>dbConfig.properties</i></p></li>
 							</ul>
-							<li><p class="col-para">Login to the server and Create a folder named 'EBSAuth'(Should match with the context path) and copy all the above files into EBSAuth folder.</p></li>
+							
+							<li><p class="col-para">Login to the server and Create a folder named 'EBSAuth' which is Config folder to place all config files for Authenion-EIK implementation.</p></li>
 								
 							   <p style="margin-left:30px;" class="col-para"><i>Eg: /home/appuser/EBSAuth/</i></p>
 								
 							<li><p class="col-para">Obtain or download the Authenion-EIK license from the Like Minds Support portal. Copy the license file <i><b>'ebsauth.lic'</b></i> and move it to EBSAuth folder.</p></li>
-							<li><p class="col-para">Copy the license file to the following directory:</i></p></li>
-							<ul style="margin-left:30px;" class="col-para">
+								<ul style="margin-left:30px;" class="col-para">
 
 								<p class="col-para"><i>/home/appuser/EBSAuth/</i></p>
 							</ul>
-							<li><p class="col-para">Locate the <i>security.properties</i> & <i>log4j2.xml</i> files from the temporary location. Copy both the files to the following directory:</p></li>
+							<li><p class="col-para">Locate the <i>security.properties , <i>startup.properties</i> & <i>log4j2.xml</i> files and Copy the mentioned files to the Config folder</p></li>
 							<ul style="margin-left:30px;" class="col-para">
 								<p class="col-para"><i>/home/appuser/EBSAuth/</i></p>
 							</ul>
-							<li><p class="col-para">Locate the <i>authenion-eik.jar</i> file and Copy the file to the following directory</p></li>
-							<ul style="margin-left:30px;" class="col-para"><i>/home/appuser/EBSAuth</i></ul>
+							<li><p class="col-para">Get VIS.dbc file from the EBS DB Team and place the file in config folder</p></li>
+							<li><p class="col-para">Locate dbConfig.properties file and place it in config folder</p></li>
 							
-							<li><p class="col-para">Follow the below steps to deploy Authenion-EIK in https </p></li>
-								
-								<li><p class="col-para">To enable https get a keystore.p12 file and place it in installation directory. </p></li>
-									 <p style="margin-left:30px;" class="col-para"><i>Eg: /home/appuser/EBSAuth/</i></p>
+							<li><p class="col-para">Open startup.properties and update with the below settings </p></li>
+							<ul style="margin-left:30px;" class="col-para">
+													<li><i><p class="col-para">app.context = /EBSAuth(User defined context path)</p></li>
+													<li><i><p class="col-para">tcp.ip.address = 0.0.0.0(0.0.0.0 means the server will listen on all available network interfaces.If you want to bind to a specific IP,replace 0.0.0.0 with the desired IP address.)</p></li>
+													<li><i><p class="col-para">tcp.ip.port = 8842(User defined port, make sure that port is not blocked by a firewall and is not used by another service)</p></li>
+							</ul>
+							<li><p class="col-para">Locate the <i>authenion-eik.jar</i> file and Copy the file in any preferred location and execute the below command</p></li>
+								<p style="margin-left:70px;" class="col-para"> <i><b>java -jar authenion-eik.jar --Deik.config.path="path-to-Config folder"</b></i></p>
 
-								<li><p class="col-para"> Open startup.properties file and add the below following lines </p></li>	
+							    <li><p class="col-para">Verify Authenion EIK port is listening</p></li>		
+								<li><p class="col-para">This completes the deployment of Authenion-EIK in the server.</p></li>
+								<li><p class="col-para">Repeat the steps above in all the servers, if you have H/A environment setup.</p></li>
+								</ol>
+
+											<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Follow the below steps to enable Authenion-EIK in https(Optional)</b></p>
+								<ol class="col-para">
+								<li><p class="col-para">Get a keystore.p12 file and place it in Config path directory. </p></li>
+									 <p style="margin-left:30px;" class="col-para"><i>Eg:/home/appuser/EBSAuth/</i></p>
+
+								<li><p class="col-para"> Open startup.properties file and update the below following lines(to enable HTTPS) </p></li>	
 								
 								<ul style="margin-left:30px;" class="col-para">
-								                    <i><p class="col-para">server.ssl.key-store= (path to)/keystore.p12</p>
-													   <p class="col-para">server.ssl.key-store-password=keystore-password</p>
-													   <p class="col-para">server.ssl.key-store-type=PKCS12</p>
-													   <p class="col-para">server.ssl.key-alias=mycert</p>
-													   <p class="col-para">server.ssl.enabled=true</p>
-													   <p class="col-para">server.ssl.protocol=TLS</p>
-													   <p class="col-para">server.tomcat.redirect-http-to-https=true</p>
+													   <li><p class="col-para">server.ssl.key-store= (path to)/keystore.p12</p></li>
+													   <li><p class="col-para">server.ssl.key-store-password=keystore-password</p></li>
+													   <li><p class="col-para">server.ssl.key-store-type=PKCS12</p></li>
+													   <li><p class="col-para">server.ssl.key-alias=mycert</p></li>
+													   <li><p class="col-para">server.ssl.enabled=true</p></li>
+													   <li><p class="col-para">server.ssl.protocol=TLS</p></li>
+													   <li><p class="col-para">server.tomcat.redirect-http-to-https=true</p></li>
 													</i>
 												</ul>
 																																					
 								<li><p class="col-para"><i> Execute the below jar file command </i></p></li>
-								<p class="col-para"><i><b>java -jar authenion-eik.jar --eik.config.path="path-to-authenion-eik.jar-file"</b></i></p>
+								<p style="margin-left:70px;"class="col-para"><i><b>java -jar authenion-eik.jar --eik.config.path="path-to-Config folder"</b></i></p>
 								
 								<li><p class="col-para"> Verify the Authenion EIK (https) port is listening </p></li>	 
 								
-
-								<li><p class="col-para">This completes the deployment of Authenion-EIK in the server.</p></li>
 							<li><p class="col-para">Repeat the steps above in all the servers, if you have H/A environment setup.</p></li>	
 													<!--<br />-->
 							<p class="col-para"><i><b>Note:</b> A single Authenion-EIK deployment will connect with only one Oracle EBS Application for SSO. However, if you have requirements to connect with multiple Oracle EBS environments for SSO, you can deploy multiple instances of Authenion-EIK in the same server by changing the <i>'Context Path'</i>. For example, you can follow the above steps 1 to 14 by adding new folder with different contextpath name like EBSAuthDEV & EBSAuthPRD and point to appropriate Oralce EBS application environments.</i></p>
