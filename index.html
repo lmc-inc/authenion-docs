@@ -840,7 +840,10 @@
 										<li><p class="col-para-table">Red Hat Enterprise Linux 9</p></li>
 										<!--<li><p class="col-para-table">CentOS 7 & above</p></li>-->
 										<li><p class="col-para-table">Oracle Enterprise Linux 9</p></li>
-										<li><p class="col-para-table">Windows Server </p></li>
+										<li><p class="col-para-table">Windows Server 2025</p></li>
+										<li><p class="col-para-table">Windows Server 2022</p></li>
+										<li><p class="col-para-table">Windows Server 2019</p></li>
+										<li><p class="col-para-table">Windows Server 2016</p></li>
 									</ul>
 								</td>
 
@@ -946,6 +949,9 @@
 						<!-- INSTALL AUTHENION SECTION -->
 						<a style="padding:32px" name="install-authenion section"></a>
 						<p class="col-sub-headings">2. Install Authenion</p>
+						<p class="col-para" style="margin-left: 20px;">Authenion installation can be done on both Linux and Windows environment. Below are the steps for each:</p>
+						<!--LINUX ENVIRONMENT-->
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Linux Environment :</b></p>
 						<ol class="col-para">
 							<li><p class="col-para">Request or download the Authenion product distribution file and a valid license from the Authenion support portal or by contacting your account manager at LikeMinds.</p></li>
 							<li><p class="col-para">Install Authenion by extracting the authenion-3.0.zip file into any desired user directory Eg:- <i>“/home/user”</i> directory in the Authenion server.</p></li>
@@ -1018,13 +1024,87 @@
 
 							<li><p class="col-para">Copy the obtained license file <i>“authenion.lic”</i> to the Authenion server and place it in the <i>&lt;authenion_install_dir&gt;/config</i> directory.</p></li>
 						</ol>
+                    
+						 <!-- WINDOWS ENVIRONMENT-->
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Windows Environment :</b></p>
+						<ol class="col-para"> 
+							<li><p class="col-para">Request or download the Authenion product distribution file and a valid license from the Authenion support portal or by contacting your account manager at LikeMinds.</p></li>
+							<li><p class="col-para">Install Authenion by extracting the authenion-3.0.zip file into any desired user directory Eg:- <i>“C:\Program Files”</i> directory in the Authenion server.</p></li>
+							<li><p class="col-para">After extracting the zip file, the folder structure should appear as shown in the table below. </p></li>
 
 
+							<!-- install Authenion -->
+							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 100%">
+
+								<tr>
+									<th class="symcomponent">Authenion Components</th>
+									<th class="symcomponent">&emsp;Description</th>
+								</tr>
+
+								<!--Applications-->
+								<tbody class="tbody">
+									<tr>
+										<td>
+											<p class="col-para-table">Distribution ZIP file</p>
+										</td>
+
+										<td>
+											<ul>
+
+												<li class="li"><p class="col-para-table">Download & extract the distribution zip into the installation directory <b>‘C:\Program Files’</b></li>
+
+											</ul>
+										</td>
+
+									</tr>
+									<!--File system after extraction-->
+									<tr>
+										<td>
+											<p class="col-para-table">File system after extraction</p>
+										</td>
+										<td>
+
+											<ul>
+												<li class="li"><p class="col-para-table">&lt;authenion_install_dir&gt;:&nbsp;&nbsp;<i>C:\Program Files\authenion\</i></p></li>
+
+											</ul>
+
+										</td>
+									</tr>
+
+									<!--Directory Structure-->
+									<tr>
+										<td>
+											<p class="col-para-table">Directory Structure</p>
+										</td>
+										<td>
+
+											<ul>
+												<li class="li" style="list-style-type: none"><p class="col-para-table"> <b>-</b> authenion</b></li>
+												<li class="li" style="margin-left:30px;list-style-type: none"><p class="col-para-table"> <b>-</b> bin</li>
+												<li class="li" style="margin-left:30px;list-style-type: none"> <p class="col-para-table"><b>-</b> config</li>
+												<li class="li" style="margin-left:30px;list-style-type: none"><p class="col-para-table"> <b>-</b> deploy</li>
+												<li class="li" style="margin-left:30px;list-style-type: none"><p class="col-para-table"> <b>-</b> logs</li>
+												<li class="li" style="margin-left:30px;list-style-type: none"> <p class="col-para-table"><b>-</b> server</li>
+											    <li class="li" style="margin-left:30px;list-style-type: none"> <p class="col-para-table"><b>-</b> work</li>
+											</ul>
+
+										</td>
+									</tr>
+
+
+								</tbody>
+							</table>
+							<br>
+
+							<li><p class="col-para">Copy the obtained license file <i>“authenion.lic”</i> to the Authenion server and place it in the <i>&lt;authenion_install_dir&gt;/config</i> directory.</p></li>
+						</ol>
+
+						 
 						<!-- SETUP SECTION -->
 						<a style="padding:32px" name="setup section"></a>
 						<p class="col-sub-headings">3. Setup Authenion</p>
-						<p class="col-para" style="margin-left: 20px;">Authenion installation can be done on both Linux and Windows environment. Below are the steps for each:</p>
-						<!--LINUX ENVIRONMENT-->
+						
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Linux Environment :</b></p>
 						<ol class="col-para">
 							<li><p class="col-para">Navigate to the following directory in the Authenion server.</li>
