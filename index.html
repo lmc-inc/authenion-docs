@@ -4016,7 +4016,9 @@
 						<p class="col-sub-headings-sub"><b>1. Pre-requisites</b></p>
 						<ol class="col-para">
 							<p class="col-para">Install Recommended Java(see System Requirements) on the server</p>
-							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
+							<p class="col-para">Identity Provider with OIDC configuration and Endpoints</p>
+							<p class="col-para">Oracle EBS environment</p>
+							
 						</ol>
 						<br />
 
@@ -4031,15 +4033,15 @@
 							<tbody class="tbody">
 								<tr>
 									<td>
-										<p class="col-para-table">Generate EIKAuth.config file</p>
+										<p class="col-para-table">File System Preparation</p>
 									</td>
 									<td>
 
-										<p class="col-para-table">EIKAuth.config file can be generated in Authenion Admin console with the details of the Identity Provider</p>
+										<p class="col-para-table">Create a folder with user defined name Eg;(EBSAuth) its a Config path for Authenion-EIK implementation. <br><i> Example config path --> 	/home/user/EBSAuth </i></p>
 
 									</td>
-								</tr>
-								<tr>
+									</tr>
+									<tr>
 									<td>
 										<p class="col-para-table">Generate EIK.dbcx file(Optional)</p>
 									</td>
@@ -4050,15 +4052,16 @@
 									</td>
 								</tr>
 								<tr>
-									<td>
-										<p class="col-para-table">Deployment of the EBS Integration Kit (EIK)</p>
+									<td>        
+										<p class="col-para-table">Generate DBC file & DBConfig.properties</p>
 									</td>
 									<td>
 
-										<p class="col-para-table">Authenion-EIK plugin should be deployed in the server with necessary config files with it</p>
+										<p class="col-para-table">DBC file can be generated in EBS Server(Ref:link) and dbConfig.properties file which has the parameter to establish connection with EBS Database. </p>
 
 									</td>
 								</tr>
+
 								<tr>
 									<td>
 										<p class="col-para-table">Identity Provider Configurations</p>
@@ -4069,6 +4072,28 @@
 
 									</td>
 								</tr>
+									<tr>
+									<td>
+										<p class="col-para-table">Generate EIKAuth.config file</p>
+									</td>
+									<td>
+
+										<p class="col-para-table">EIKAuth.config file can be generated in Authenion Admin console with the details of the Identity Provider configured in the above section</p>
+
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+										<p class="col-para-table">Deployment of the EBS Integration Kit (EIK)</p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Authenion-EIK plugin should be deployed in the server with necessary config files with it</p>
+
+									</td>
+								</tr>
+								
 								<tr>
 									<td>
 										<p class="col-para-table">Configure EBS System Profile parameters</p>
@@ -4085,7 +4110,10 @@
 						<br />
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Generate EIKAuth.config File</u></b></p>
+
+						<p class="col-para" style="margin-left: 20px;">The EIKAuth.config config file helps to establish connection between Authenion and the Identity Provider.</p>
 						<p class="col-para" style="margin-left: 20px;">The EIKAuth.config config file can be generated from the Authenion Admin console. You can access the Authenion Admin console through <a href="https://launch.authenion.com"> <u>https://launch.authenion.com</u> </a>(or) on-premises.</p>
+						
 						<ol class="col-para" style="margin-left: 20px;">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
 							<li><p class="col-para">On the Dashboard page, click <i><b>'EIK Configurator'</b></i> on the Sidebar menu.</p></li>
@@ -4194,7 +4222,7 @@
 										</td>
 										<td>
 											<ul>
-												<p class="col-para-table">Authenion-EIK plugin's deployment filename. The default plugin filename is <i>'EBSAuth.war'</i>. Therefore, the Context path should be,</p>
+												<p class="col-para-table">Authenion-EIK plugin's deployment filename. The plugin filename is <i>'authenion-eik.jar'</i></p>
 												<p class="col-para-table"><i><b>/EBSAuth</b></i></p>
 											</ul>
 										</td>
@@ -4261,7 +4289,7 @@
 							<ul style="margin-left:30px;" class="col-para">
 								<li><p class="col-para">Download the <i><b>'EBSdatasource.jar'</b></i> utility file from the <a href="https://support.likemindsconsulting.com"> <u>Like Minds Support Portal</u></a>. Place the utility file in a machine (or) Local-PC.</p></li>
 								<li><p class="col-para">The machine (or) Local-PC that is used to execute the utility should have a connectivity to the Oracle EBS Database server. Please do a ping/telnet test to oracledb-hostname:port to check the connectivity.</p></li>
-								<li><p class="col-para">Create an application user in the Oracle E-Business suite application. Set the Username value as <i><b>EIKUSER</b></i> and assign <i>'UMX|APPS_SCHEMA_CONNECT'</i> role to this user account.</p></li>
+								<li><p class="col-para">Create an application user in the Oracle E-Business suite application.Set the Username value as <i><b>EIKUSER</b></i> and assign <i>'UMX|APPS_SCHEMA_CONNECT'</i> role to this user account.</p></li>
 							</ul>
 							<li><p class="col-para">Open an elevated command-prompt (windows) or a terminal (linux).</p></li>
 							<li><p class="col-para">Navigate to the directory where you have placed the <i>'EBSdatasource.jar'</i> file.</p></li>
@@ -4342,7 +4370,7 @@
 										</td>
 										<td>
 											<ul>
-												<p class="col-para-table">The value should match with the EIK deployment context path. For example,</p>
+												<p class="col-para-table">Provide any user defined value For example,</p>
 												<p class="col-para-table"><i><b>EBSAuth</b></i></p>
 											</ul>
 										</td>
@@ -4473,6 +4501,29 @@
 						<br />
 
 
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Using DBC file and dbConfig.properties</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">In this section we can generate DBC file and updating DB params in properties file. These files helps to establish a connection between Authenion-EIK and EBS Database.</p>
+						<ol class="col-para">
+						<li><p class="col-para"> For generting DBC file in your EBS server, refer the link to create DBC file <a href="https://docs.oracle.com/cd/E26401_01/doc.122/e22953/T174296T174298.htm"><u>Link to create DBC file</a></u></p></li>
+						<li><p class="col-para"> Update the below parameters in dbConfig.parameters<i>Provided sample values, you can change based on your Database</i></p></li>
+							<ul style="margin-left:30px;" class="col-para">
+								<li><p class="col-para">eik.username=<i style="opacity: 0.5;">EIKUSER</i>(EIK Username with Schema Connect Role which was created earlier)</p></li>
+													   <li><p class="col-para">eik.password=<i style="opacity: 0.5;">*******</i>(EIK Username password)</p></li>
+													   <p><i style="opacity: 0.5;">Below paramter settings are optional</i></p>
+													   <li><p class="col-para">db.maxConnections=<i style="opacity: 0.5;">50</i>(Maximum number of DB Connections in Pool)</p></li>
+													   <li><p class="col-para">db.minConnections=<i style="opacity: 0.5;">10</i>(Minimum number of DB Connections in Pool)</p></li>
+													   <li><p class="col-para">db.initialConnections=<i style="opacity: 0.5;">10</i>(Db Connection pool size to start with)</p></li>
+													   <li><p class="col-para">db.connectionTimeout=<i style="opacity: 0.5;">30</i>(Db Connection pool timeout in seconds)</p></li>
+													   <li><p class="col-para">db.validateOnBorrow=<i style="opacity: 0.5;">true</i>(Db Connection health validation true/false)</p></li>
+													   <li><p class="col-para">db.validateOnBorrow=<i style="opacity: 0.5;">30</i>(Db Connection health validation interval)</p></li>
+													   <li><p class="col-para">db.validationInterval=<i style="opacity: 0.5;">30</i>(timeInterval (in seconds) between checks to enforce the timeout properties)</p></li>
+													   <li><p class="col-para">db.connectionFactory=<i style="opacity: 0.5;">oracle.jdbc.pool.OracleDataSource</i>(Jdbc connection factory name defaults to oracle.jdbc.pool.OracleDataSource)</p></li>
+													</i>
+												</ul>	
+							<li><p class="col-para">Get DBC and properties files and place it in above created Config path</p>				
+						</ol>
+
+						<ol class="col-para">
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Deploy Authenion-EIK</u></b></p>
 						<p class="col-para" style="margin-left: 20px;">This section guides you through the deployment steps for Authenion - EBS Integration Kit.</p>
 						<ol class="col-para">
@@ -4486,7 +4537,7 @@
 								<li><p class="col-para"><i>dbConfig.properties</i></p></li>
 							</ul>
 							
-							<li><p class="col-para">Login to the server and Create a folder named 'EBSAuth' which is Config folder to place all config files for Authenion-EIK implementation.</p></li>
+							<li><p class="col-para">Login to the server and move to Config path(Eg; /home/user/EBSAuth) to place config files(startup.properties,log4j2.xml,security.properties,DBC file,dbConfig.properties) for Authenion-EIK implementation.</p></li>
 								
 							   <p style="margin-left:30px;" class="col-para"><i>Eg: /home/appuser/EBSAuth/</i></p>
 								
@@ -4498,23 +4549,7 @@
 							<li><p class="col-para">Locate the <i>security.properties , <i>startup.properties</i> & <i>log4j2.xml</i> files and Copy the mentioned files to the Config folder</p></li>
 							<ul style="margin-left:30px;" class="col-para">
 								<p class="col-para"><i>/home/appuser/EBSAuth/</i></p>
-							</ul>
-							<li><p class="col-para">Get VIS.dbc file from the EBS DB Team and place the file in config folder</p></li>
-							<li><p class="col-para">Locate dbConfig.properties file and place it in config folder</p></li>
-							<li><p class="col-para">Open dbConfig.properties and update with the below Database parameters</p></li>
-							<ul style="margin-left:30px;" class="col-para">
-													   <li><p class="col-para">eik.username=(EIK Username with Schema Connect Role)</p></li>
-													   <li><p class="col-para">eik.password=(EIK Username password)</p></li>
-													   <li><p class="col-para">db.maxConnections=(Maximum number of DB Connections in Pool)</p></li>
-													   <li><p class="col-para">db.minConnections=(Minimum number of DB Connections in Pool)</p></li>
-													   <li><p class="col-para">db.initialConnections=(Db Connection pool size to start with)</p></li>
-													   <li><p class="col-para">db.connectionTimeout=(Db Connection pool timeout in seconds)</p></li>
-													   <li><p class="col-para">db.validateOnBorrow=(Db Connection health validation true/false)</p></li>
-													   <li><p class="col-para">db.validateOnBorrow=(Db Connection health validation interval)</p></li>
-													   <li><p class="col-para">db.validationInterval=(timeInterval (in seconds) between checks to enforce the timeout properties)</p></li>
-													   <li><p class="col-para">db.connectionFactory=(Jdbc connection factory name defaults to oracle.jdbc.pool.OracleDataSource)</p></li>
-													</i>
-												</ul>
+							</ul>											   
 
 							<li><p class="col-para">Open startup.properties and update with the below settings </p></li>
 							<ul style="margin-left:30px;" class="col-para">
