@@ -4266,6 +4266,18 @@
 											</ul>
 										</td>
 									</tr>
+									<tr>
+										<td>
+											<p class="col-para-table">User Column in FND_USER table(Optional)</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Column name in the FND_USER table for the User record validation</p>
+												<p class="col-para-table"><i><b>Eg: email</b></i></p>
+											</ul>
+										</td>
+									</tr>
+
 								</tbody>
 							</table>
 							<br />
@@ -4509,18 +4521,117 @@
 						<ol class="col-para">
 						<li><p class="col-para"> For generting DBC file in your EBS server, refer the link to create DBC file <a href="https://docs.oracle.com/cd/E26401_01/doc.122/e22953/T174296T174298.htm"><u>Link to create DBC file</a></u></p></li>
 						<li><p class="col-para"> Update the below parameters in dbConfig.parameters<i>Provided sample values, you can change based on your Database</i></p></li>
-							<ul style="margin-left:30px;" class="col-para">
-								<li><p class="col-para">eik.username=<i style="opacity: 0.5;">EIKUSER</i>(EIK Username with Schema Connect Role which was created earlier)</p></li>
-													   <li><p class="col-para">eik.password=<i style="opacity: 0.5;">*******</i>(EIK Username password)</p></li>
-													   <p><i style="opacity: 0.5;">Below paramter settings are optional</i></p>
-													   <li><p class="col-para">db.maxConnections=<i style="opacity: 0.5;">50</i>(Maximum number of DB Connections in Pool)</p></li>
-													   <li><p class="col-para">db.minConnections=<i style="opacity: 0.5;">10</i>(Minimum number of DB Connections in Pool)</p></li>
-													   <li><p class="col-para">db.initialConnections=<i style="opacity: 0.5;">10</i>(Db Connection pool size to start with)</p></li>
-													   <li><p class="col-para">db.connectionTimeout=<i style="opacity: 0.5;">30</i>(Db Connection pool timeout in seconds)</p></li>
-													   <li><p class="col-para">db.validateOnBorrow=<i style="opacity: 0.5;">true</i>(Db Connection health validation true/false)</p></li>
-													   <li><p class="col-para">db.validateOnBorrow=<i style="opacity: 0.5;">30</i>(Db Connection health validation interval)</p></li>
-													   <li><p class="col-para">db.validationInterval=<i style="opacity: 0.5;">30</i>(timeInterval (in seconds) between checks to enforce the timeout properties)</p></li>
-													   <li><p class="col-para">db.connectionFactory=<i style="opacity: 0.5;">oracle.jdbc.pool.OracleDataSource</i>(Jdbc connection factory name defaults to oracle.jdbc.pool.OracleDataSource)</p></li>
+						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 66%">
+								<tr>
+									<th class="symcomponent">DB Parameters</th>
+									<th class="symcomponent">&emsp;Values</th>
+								</tr>
+
+								<tbody class="tbody">
+
+									<!--connection factory class-->
+									<tr>
+										<td>
+											<p class="col-para-table"><i>eik.username</i></p>
+										</td>
+										<td>
+											<ul>
+												
+												<p class="col-para-table"><i><b><i style="opacity: 0.5;">EIKUSER</i>(EIK Username with Schema Connect Role which was created earlier)</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="col-para-table">eik.password</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table"><i><b><i style="opacity: 0.5;">*******</i>(EIK Username password)</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									
+									</tbody>
+									</table>	
+						<ul style="margin-left:30px;" class="col-para">
+								
+													   <p><i>Below parameter settings are optional</i></p>
+													   <table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 66%">
+								<tr>
+									<th class="symcomponent">DB Parameters</th>
+									<th class="symcomponent">&emsp;Values</th>
+								</tr>
+
+								<tbody class="tbody">
+
+										<tr>
+										<td>
+											<p class="col-para-table"><i>db.maxConnections</i></p>
+										</td>
+										<td>
+											<ul>
+												
+												<p class="col-para-table"><i><b><i style="opacity: 0.5;">50</i>(Maximum number of DB Connections in Pool)</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="col-para-table">db.minConnections</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table"><i><b><i style="opacity: 0.5;">10</i>(Minimum number of DB Connections in Pool)</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="col-para-table"><i>db.initialConnections</i></p>
+										</td>
+										<td>
+											<ul>
+												
+												<p class="col-para-table"><i><b><i style="opacity: 0.5;">10</i>(Db Connection pool size to start with)</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="col-para-table">db.connectionTimeout</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table"><i><b><i style="opacity: 0.5;">30</i>(Db Connection pool timeout in seconds)</b></i></p>
+											</ul>
+										</td>
+									</tr>
+<tr>
+										<td>
+											<p class="col-para-table"><i>db.validationInterval</i></p>
+										</td>
+										<td>
+											<ul>
+												
+												<p class="col-para-table"><i><b><i style="opacity: 0.5;">30</i>(timeInterval (in seconds) between checks to enforce the timeout properties)</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="col-para-table">db.connectionFactory</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table"><i><b><i style="opacity: 0.5;">oracle.jdbc.pool.OracleDataSource</i>(Jdbc connection factory name defaults to oracle.jdbc.pool.OracleDataSource)</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									
+									</tbody>
+									</table>
+													   
 													</i>
 												</ul>	
 							<li><p class="col-para">Get DBC and properties files and place it in above created Config path</p>				
@@ -4542,16 +4653,16 @@
 							
 							<li><p class="col-para">Login to the server and move to Config path(Eg; /home/user/EBSAuth) to place config files(startup.properties,log4j2.xml,security.properties,DBC file,dbConfig.properties) for Authenion-EIK implementation.</p></li>
 								
-							   <p style="margin-left:30px;" class="col-para"><i>Eg: /home/appuser/EBSAuth/</i></p>
+							   <p style="margin-left:30px;" class="col-para"><i>Eg: /home/user/EBSAuth/</i></p>
 								
 							<li><p class="col-para">Obtain or download the Authenion-EIK license from the Like Minds Support portal. Copy the license file <i><b>'ebsauth.lic'</b></i> and move it to EBSAuth folder.</p></li>
 								<ul style="margin-left:30px;" class="col-para">
 
-								<p class="col-para"><i>/home/appuser/EBSAuth/</i></p>
+								<p class="col-para"><i>/home/user/EBSAuth/</i></p>
 							</ul>
 							<li><p class="col-para">Locate the <i>security.properties , <i>startup.properties</i> & <i>log4j2.xml</i> files and Copy the mentioned files to the Config folder</p></li>
 							<ul style="margin-left:30px;" class="col-para">
-								<p class="col-para"><i>/home/appuser/EBSAuth/</i></p>
+								<p class="col-para"><i>/home/user/EBSAuth/</i></p>
 							</ul>											   
 
 							<li><p class="col-para">Open startup.properties and update with the below settings </p></li>
@@ -4562,16 +4673,15 @@
 							</ul>
 							<li><p class="col-para">Locate the <i>authenion-eik.jar</i> file and Copy the file in any preferred location and execute the below command</p></li>
 								<p style="margin-left:70px;" class="col-para"> <i><b>java -jar --Deik.config.path="path-to-Config folder" authenion-eik.jar </b></i></p>
+							    <p style="margin-left:70px;" class="col-para"> <i><b>Eg: java -jar --Deik.config.path="/home/user/EBSAuth" authenion-eik.jar </b></i></p>
 
-							    <li><p class="col-para">Verify Authenion EIK port is listening</p></li>		
-								<li><p class="col-para">This completes the deployment of Authenion-EIK in the server.</p></li>
 								<li><p class="col-para">Repeat the steps above in all the servers, if you have H/A environment setup.</p></li>
 								</ol>
 
 											<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Follow the below steps to enable Authenion-EIK in https(Optional)</b></p>
 								<ol class="col-para">
 								<li><p class="col-para">Get a keystore.p12 file and place it in Config path directory. </p></li>
-									 <p style="margin-left:30px;" class="col-para"><i>Eg:/home/appuser/EBSAuth/</i></p>
+									 <p style="margin-left:30px;" class="col-para"><i>Eg:/home/user/EBSAuth/</i></p>
 
 								<li><p class="col-para"> Open startup.properties file and update the below following lines(to enable HTTPS) </p></li>	
 								
@@ -4579,7 +4689,7 @@
 													   <li><p class="col-para">server.ssl.key-store= (path to)/keystore.p12</p></li>
 													   <li><p class="col-para">server.ssl.key-store-password=keystore-password</p></li>
 													   <li><p class="col-para">server.ssl.key-store-type=PKCS12</p></li>
-													   <li><p class="col-para">server.ssl.key-alias=mycert</p></li>
+													   <li><p class="col-para">server.ssl.key-alias=eikservercert</p></li>
 													   <li><p class="col-para">server.ssl.enabled=true</p></li>
 													   <li><p class="col-para">server.ssl.protocol=TLS</p></li>
 													   <li><p class="col-para">server.tomcat.redirect-http-to-https=true</p></li>
@@ -4588,8 +4698,8 @@
 																																					
 								<li><p class="col-para"><i> Execute the below jar file command </i></p></li>
 								<p style="margin-left:70px;"class="col-para"><i><b>java -jar --Deik.config.path="path-to-Config folder" authenion-eik.jar</b></i></p>
-								
-								<li><p class="col-para"> Verify the Authenion EIK (https) port is listening </p></li>	 
+								<p style="margin-left:70px;"class="col-para"><i><b> Eg: java -jar --Deik.config.path="/home/user/EBSAuth" authenion-eik.jar</b></i></p>
+									 
 								
 							<li><p class="col-para">Repeat the steps above in all the servers, if you have H/A environment setup.</p></li>	
 													<!--<br />-->
