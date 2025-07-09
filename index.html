@@ -4112,189 +4112,12 @@
 						<br />
 						<br />
 
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Generate EIKAuth.config File</u></b></p>
-
-						<p class="col-para" style="margin-left: 20px;">The EIKAuth.config config file helps to establish connection between Authenion and the Identity Provider.</p>
-						<p class="col-para" style="margin-left: 20px;">The EIKAuth.config config file can be generated from the Authenion Admin console. You can access the Authenion Admin console through <a href="https://launch.authenion.com"> <u>https://launch.authenion.com</u> </a>(or) on-premises.</p>
 						
-						<ol class="col-para" style="margin-left: 20px;">
-							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
-							<li><p class="col-para">On the Dashboard page, click <i><b>'EIK Configurator'</b></i> on the Sidebar menu.</p></li>
-							<br />
-							<!-- Image with onclick event -->
-							<img src="assets/img/eik-sidebar.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer;margin-left: 123px" onclick="openModal('modalContainerEIK2', 'modalImageEIK2')" class="col-images-pf" />
-							<!-- Model Container-->
-							<div id="modalContainerEIK2" class="modal-container" onclick="closeModal('modalContainerEIK2')">
-								<img id="modalImageEIK2" class="modal-image" src="assets/img/eik-sidebar.png" alt="">
-							</div>
-							<br />
-							<br />
-							<li><p class="col-para">Select the Authentication type as <i><b>'OpenID Connect Login'</b></i>.</p></li>
-							<br />
-							<!-- Image with onclick event -->
-							<img src="assets/img/eik-configurator-1.png" alt="" style="width: 41%;height:40%;cursor:pointer;margin-left: 123px" onclick="openModal('modalContainerEIK3', 'modalImageEIK3')" class="col-images-pf" />
-							<!-- Model Container-->
-							<div id="modalContainerEIK3" class="modal-container" onclick="closeModal('modalContainerEIK3')">
-								<img id="modalImageEIK3" class="modal-image" src="assets/img/eik-configurator-1.png" alt="">
-							</div>
-							<br />
-							<br />
-							<li><p class="col-para">In the <i><b>'Issuer Url'</b></i> field, enter your Identity Provider's Issuer value and click <i>'Load metadata'</i>. This will automatically load the required Authorization server endpoints.</p></li>
-							<br />
-							<!-- Image with onclick event -->
-							<img src="assets/img/eik-configurator-2.png" alt="" style="width: 41%;height:40%;cursor:pointer;margin-left: 123px" onclick="openModal('modalContainerEIK4', 'modalImageEIK4')" class="col-images-pf" />
-							<!-- Model Container-->
-							<div id="modalContainerEIK4" class="modal-container" onclick="closeModal('modalContainerEIK4')">
-								<img id="modalImageEIK4" class="modal-image" src="assets/img/eik-configurator-2.png" alt="">
-							</div>
-							<br />
-							<br />
-							<!--<li><p class="col-para">You can also enter the Authorization server details manually by clicking <i>'Show Advanced Configuration'</i> next to the 'Load metadata' button.</p></li>-->
-							<li><p class="col-para">Click <i><b>'Show Advanced Configuration'</b></i> next to the 'Load metadata' button.</p></li>
-							<li><p class="col-para">Enter the value for <i><b>'Scopes'</b></i> field. For example, <i>'openid'</i>. This field supports multiple values entered with a space as mentioned in the screenshot below.</p></li>
-							<br />
-							<!-- Image with onclick event -->
-							<img src="assets/img/eik-configurator-3.png" alt="" style="width: 41%;height:40%;cursor:pointer;margin-left: 123px" onclick="openModal('modalContainerEIK5', 'modalImageEIK5')" class="col-images-pf" />
-							<!-- Model Container-->
-							<div id="modalContainerEIK5" class="modal-container" onclick="closeModal('modalContainerEIK5')">
-								<img id="modalImageEIK5" class="modal-image" src="assets/img/eik-configurator-3.png" alt="">
-							</div>
-							<br />
-							<br />
-							<li><p class="col-para">Enter the details for rest of the fields as mentioned below in the table.</p></li>
-							<br />
-							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 66%">
-								<tr>
-									<th class="symcomponent">Configurations</th>
-									<th class="symcomponent">&emsp;Values</th>
-								</tr>
-
-								<tbody class="tbody">
-
-									<!--Client ID-->
-									<tr>
-										<td>
-											<p class="col-para-table">Client ID</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table">Unique value to identify Authenion-EIK in your Authorization server. For example,</p>
-												<p class="col-para-table"><i><b>EIKClient</b></i></p>
-											</ul>
-										</td>
-									</tr>
-									<!--Client Secret-->
-									<tr>
-										<td>
-											<p class="col-para-table">Client Secret</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table">A secret value known only to this Authenion-EIK client and your Authorization server.</p>
-											</ul>
-										</td>
-									</tr>
-									<!--Authentication Attribute-->
-									<tr>
-										<td>
-											<p class="col-para-table">Authentication Attribute</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table">User attribute name (OAuth/OIDC claim) that should be returned from your Identity Provider. For example,</p>
-												<p class="col-para-table"><i><b>userId</b></i></p>
-											</ul>
-										</td>
-									</tr>
-									<!--Redirect URI-->
-									<tr>
-										<td>
-											<p class="col-para-table">Redirect URI</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table">Callback URL for Authenion-EIK. For example,</p>
-												<p class="col-para-table"><i><b>https://eik.example.com:8842/EBSAuth/handler&emsp;</b></i></p>
-											</ul>
-										</td>
-									</tr>
-									<!--Context Path-->
-									<tr>
-										<td>
-											<p class="col-para-table">Context Path</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table">Authenion-EIK plugin's deployment filename. The plugin filename is <i>'authenion-eik.jar'</i></p>
-												<p class="col-para-table"><i><b>/EBSAuth</b></i></p>
-											</ul>
-										</td>
-									</tr>
-									<!--EBS Default Homepage-->
-									<tr>
-										<td>
-											<p class="col-para-table">EBS Default Homepage</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table">Oracle E-Business application homepage URL. The example format is,</p>
-												<p class="col-para-table"><i><b>https://ebs.example.com/OA_HTML/OA.jsp?OAFunc=OANEWHOMEPAGE</b></i></p>
-											</ul>
-										</td>
-									</tr>
-									<!--Cookie Domain-->
-									<tr>
-										<td>
-											<p class="col-para-table">Cookie Domain</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table">Domain value of the Oracle EBS application. For example,</p>
-												<p class="col-para-table"><i><b>.example.com</b></i></p>
-											</ul>
-										</td>
-									</tr>
-									<!--Just-In-Time Access-->
-									<tr>
-										<td>
-											<p class="col-para-table">Just-In-Time Access</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table">If you want EIK to perform user provisioning (Just-In-Time) to your Oracle EBS application. Default value is,</p>
-												<p class="col-para-table"><i><b>false</b></i></p>
-											</ul>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<p class="col-para-table">User Column in FND_USER table(Optional)</p>
-										</td>
-										<td>
-											<ul>
-												<p class="col-para-table">Column name in the FND_USER table for the User record validation</p>
-												<p class="col-para-table"><i><b>Eg: email</b></i></p>
-											</ul>
-										</td>
-									</tr>
-
-								</tbody>
-							</table>
-							<br />
-							<br />
-							<!-- Image with onclick event -->
-							<img src="assets/img/eik-configurator-4.png" alt="" style="width: 41%;height:40%;cursor:pointer;;margin-left: 123px" onclick="openModal('modalContainerEIK6', 'modalImageEIK6')" class="col-images-pf" />
-							<!-- Model Container-->
-							<div id="modalContainerEIK6" class="modal-container" onclick="closeModal('modalContainerEIK6')">
-								<img id="modalImageEIK6" class="modal-image" src="assets/img/eik-configurator-4.png" alt="">
-							</div>
-							<br />
-							<br />
-
-							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button. This will download a file named <i><b>'EIKAuth.config'</b></i>.</p></li>
-							<li><p class="col-para">Copy the downloaded <i>'EIKAuth.config'</i> file to a temporary location in the server. This file will be used in the EIK deployment section later.</p></li>
-						</ol>
 						<br />
+						
+<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Database User Creation</u></b></p>
+<p class="col-para" style="margin-left: 20px;"> Create an application user in the Oracle E-Business suite application. Set the Username value as <i><b>EIKUSER</b></i> and assign <i>'UMX|APPS_SCHEMA_CONNECT'</i> role to this user account.</p>
+
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Generate EIK.dbcx File(Optional)</u></b></p>
 						<p class="col-para" style="margin-left: 20px;">You can generate the EIK.dbcx file through a command line utility. The utility <i><b>'EBSdatasource.jar'</b></i> will be provided along with the Authenion-EIK installation package. The following steps will guide you through in executing the utility and generate the EIK.dbcx file.</p>
@@ -4304,7 +4127,7 @@
 							<ul style="margin-left:30px;" class="col-para">
 								<li><p class="col-para">Download the <i><b>'EBSdatasource.jar'</b></i> utility file from the <a href="https://support.likemindsconsulting.com"> <u>Like Minds Support Portal</u></a>. Place the utility file in a machine (or) Local-PC.</p></li>
 								<li><p class="col-para">The machine (or) Local-PC that is used to execute the utility should have a connectivity to the Oracle EBS Database server. Please do a ping/telnet test to oracledb-hostname:port to check the connectivity.</p></li>
-								<li><p class="col-para">Create an application user in the Oracle E-Business suite application.Set the Username value as <i><b>EIKUSER</b></i> and assign <i>'UMX|APPS_SCHEMA_CONNECT'</i> role to this user account.</p></li>
+								
 							</ul>
 							<li><p class="col-para">Open an elevated command-prompt (windows) or a terminal (linux).</p></li>
 							<li><p class="col-para">Navigate to the directory where you have placed the <i>'EBSdatasource.jar'</i> file.</p></li>
@@ -4517,10 +4340,11 @@
 
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Using DBC file and dbConfig.properties</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">In this section we can generate DBC file and updating DB params in properties file. These files helps to establish a connection between Authenion-EIK and EBS Database.</p>
+						<p class="col-para" style="margin-left: 30px;">In this section we can generate DBC file and updating DB params in properties file. These files helps to establish a connection between Authenion-EIK and EBS Database.</p>
 						<ol class="col-para">
 						<li><p class="col-para"> For generting DBC file in your EBS server, refer the link to create DBC file <a href="https://docs.oracle.com/cd/E26401_01/doc.122/e22953/T174296T174298.htm"><u>Link to create DBC file</a></u></p></li>
-						<li><p class="col-para"> Update the below parameters in dbConfig.parameters<i>Provided sample values, you can change based on your Database</i></p></li>
+						<li><p class="col-para"> Update the below parameters in dbConfig.parameters, <i> Provided sample values, you can change based on your Database</i></p></li>
+						<p class="col-para"><i> Below two parameter settings are Mandatory </i></p>
 						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 66%">
 								<tr>
 									<th class="symcomponent">DB Parameters</th>
@@ -4528,15 +4352,12 @@
 								</tr>
 
 								<tbody class="tbody">
-
-									<!--connection factory class-->
 									<tr>
 										<td>
 											<p class="col-para-table"><i>eik.username</i></p>
 										</td>
 										<td>
 											<ul>
-												
 												<p class="col-para-table"><i><b><i style="opacity: 0.5;">EIKUSER</i>(EIK Username with Schema Connect Role which was created earlier)</b></i></p>
 											</ul>
 										</td>
@@ -4554,10 +4375,10 @@
 									
 									</tbody>
 									</table>	
-						<ul style="margin-left:30px;" class="col-para">
+						<ul  class="col-para">
 								
-													   <p><i>Below parameter settings are optional</i></p>
-													   <table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 66%">
+								<p><i>Below parameter settings are optional</i></p>
+								<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 66%">
 								<tr>
 									<th class="symcomponent">DB Parameters</th>
 									<th class="symcomponent">&emsp;Values</th>
@@ -4637,6 +4458,190 @@
 							<li><p class="col-para">Get DBC and properties files and place it in above created Config path</p>				
 						</ol>
 
+<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Generate EIKAuth.config File</u></b></p>
+
+						<p class="col-para" style="margin-left: 20px;">The EIKAuth.config config file helps to establish connection between Authenion and the Identity Provider.</p>
+						<p class="col-para" style="margin-left: 20px;">The EIKAuth.config config file can be generated from the Authenion Admin console. You can access the Authenion Admin console through <a href="https://launch.authenion.com"> <u>https://launch.authenion.com</u> </a>(or) on-premises.</p>
+						
+						<ol class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
+							<li><p class="col-para">On the Dashboard page, click <i><b>'EIK Configurator'</b></i> on the Sidebar menu.</p></li>
+							<br />
+							<!-- Image with onclick event -->
+							<img src="assets/img/eik-sidebar.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer;margin-left: 123px" onclick="openModal('modalContainerEIK2', 'modalImageEIK2')" class="col-images-pf" />
+							<!-- Model Container-->
+							<div id="modalContainerEIK2" class="modal-container" onclick="closeModal('modalContainerEIK2')">
+								<img id="modalImageEIK2" class="modal-image" src="assets/img/eik-sidebar.png" alt="">
+							</div>
+							<br />
+							<br />
+							<li><p class="col-para">Select the Authentication type as <i><b>'OpenID Connect Login'</b></i>.</p></li>
+							<br />
+							<!-- Image with onclick event -->
+							<img src="assets/img/eik-configurator-1.png" alt="" style="width: 41%;height:40%;cursor:pointer;margin-left: 123px" onclick="openModal('modalContainerEIK3', 'modalImageEIK3')" class="col-images-pf" />
+							<!-- Model Container-->
+							<div id="modalContainerEIK3" class="modal-container" onclick="closeModal('modalContainerEIK3')">
+								<img id="modalImageEIK3" class="modal-image" src="assets/img/eik-configurator-1.png" alt="">
+							</div>
+							<br />
+							<br />
+							<li><p class="col-para">In the <i><b>'Issuer Url'</b></i> field, enter your Identity Provider's Issuer value and click <i>'Load metadata'</i>. This will automatically load the required Authorization server endpoints.</p></li>
+							<br />
+							<!-- Image with onclick event -->
+							<img src="assets/img/eik-configurator-2.png" alt="" style="width: 41%;height:40%;cursor:pointer;margin-left: 123px" onclick="openModal('modalContainerEIK4', 'modalImageEIK4')" class="col-images-pf" />
+							<!-- Model Container-->
+							<div id="modalContainerEIK4" class="modal-container" onclick="closeModal('modalContainerEIK4')">
+								<img id="modalImageEIK4" class="modal-image" src="assets/img/eik-configurator-2.png" alt="">
+							</div>
+							<br />
+							<br />
+							<!--<li><p class="col-para">You can also enter the Authorization server details manually by clicking <i>'Show Advanced Configuration'</i> next to the 'Load metadata' button.</p></li>-->
+							<li><p class="col-para">Click <i><b>'Show Advanced Configuration'</b></i> next to the 'Load metadata' button.</p></li>
+							<li><p class="col-para">Enter the value for <i><b>'Scopes'</b></i> field. For example, <i>'openid'</i>. This field supports multiple values entered with a space as mentioned in the screenshot below.</p></li>
+							<br />
+							<!-- Image with onclick event -->
+							<img src="assets/img/eik-configurator-3.png" alt="" style="width: 41%;height:40%;cursor:pointer;margin-left: 123px" onclick="openModal('modalContainerEIK5', 'modalImageEIK5')" class="col-images-pf" />
+							<!-- Model Container-->
+							<div id="modalContainerEIK5" class="modal-container" onclick="closeModal('modalContainerEIK5')">
+								<img id="modalImageEIK5" class="modal-image" src="assets/img/eik-configurator-3.png" alt="">
+							</div>
+							<br />
+							<br />
+							<li><p class="col-para">Enter the details for rest of the fields as mentioned below in the table.</p></li>
+							<br />
+							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 66%">
+								<tr>
+									<th class="symcomponent">Configurations</th>
+									<th class="symcomponent">&emsp;Values</th>
+								</tr>
+
+								<tbody class="tbody">
+
+									<!--Client ID-->
+									<tr>
+										<td>
+											<p class="col-para-table">Client ID</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Unique value to identify Authenion-EIK in your Authorization server. For example,</p>
+												<p class="col-para-table"><i><b>EIKClient</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									<!--Client Secret-->
+									<tr>
+										<td>
+											<p class="col-para-table">Client Secret</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">A secret value known only to this Authenion-EIK client and your Authorization server.</p>
+											</ul>
+										</td>
+									</tr>
+									<!--Authentication Attribute-->
+									<tr>
+										<td>
+											<p class="col-para-table">Authentication Attribute</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">User attribute name (OAuth/OIDC claim) that should be returned from your Identity Provider. For example,</p>
+												<p class="col-para-table"><i><b>userId</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									<!--Redirect URI-->
+									<tr>
+										<td>
+											<p class="col-para-table">Redirect URI</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Callback URL for Authenion-EIK. For example,</p>
+												<p class="col-para-table"><i><b>https://eik.example.com:8842/EBSAuth/handler&emsp;</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									<!--Context Path-->
+									<tr>
+										<td>
+											<p class="col-para-table">Context Path</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Authenion-EIK plugin's deployment filename. The plugin filename is <i>'authenion-eik.jar'</i></p>
+												<p class="col-para-table"><i><b>/EBSAuth</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									<!--EBS Default Homepage-->
+									<tr>
+										<td>
+											<p class="col-para-table">EBS Default Homepage</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Oracle E-Business application homepage URL. The example format is,</p>
+												<p class="col-para-table"><i><b>https://ebs.example.com/OA_HTML/OA.jsp?OAFunc=OANEWHOMEPAGE</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									<!--Cookie Domain-->
+									<tr>
+										<td>
+											<p class="col-para-table">Cookie Domain</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Domain value of the Oracle EBS application. For example,</p>
+												<p class="col-para-table"><i><b>.example.com</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									<!--Just-In-Time Access-->
+									<tr>
+										<td>
+											<p class="col-para-table">Just-In-Time Access</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">If you want EIK to perform user provisioning (Just-In-Time) to your Oracle EBS application. Default value is,</p>
+												<p class="col-para-table"><i><b>false</b></i></p>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="col-para-table">User Column in FND_USER table(Optional)</p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">Column name in the FND_USER table for the User record validation</p>
+												<p class="col-para-table"><i><b>Eg: email</b></i></p>
+											</ul>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+							<br />
+							<br />
+							<!-- Image with onclick event -->
+							<img src="assets/img/eik-configurator-4.png" alt="" style="width: 41%;height:40%;cursor:pointer;;margin-left: 123px" onclick="openModal('modalContainerEIK6', 'modalImageEIK6')" class="col-images-pf" />
+							<!-- Model Container-->
+							<div id="modalContainerEIK6" class="modal-container" onclick="closeModal('modalContainerEIK6')">
+								<img id="modalImageEIK6" class="modal-image" src="assets/img/eik-configurator-4.png" alt="">
+							</div>
+							<br />
+							<br />
+
+							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button. This will download a file named <i><b>'EIKAuth.config'</b></i>.</p></li>
+							<li><p class="col-para">Copy the downloaded <i>'EIKAuth.config'</i> file to a temporary location in the server. This file will be used in the EIK deployment section later.</p></li>
+						</ol>
+
+
 						<ol class="col-para">
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Deploy Authenion-EIK</u></b></p>
 						<p class="col-para" style="margin-left: 20px;">This section guides you through the deployment steps for Authenion - EBS Integration Kit.</p>
@@ -4649,7 +4654,7 @@
 								<li><p class="col-para"><i>log4j2.xml</i></p></li>
 						        <li><p class="col-para"><i>startup.properties</i></p></li>
 								<li><p class="col-para"><i>dbConfig.properties</i></p></li>
-							</ul>
+								</ul>
 							
 							<li><p class="col-para">Login to the server and move to Config path(Eg; /home/user/EBSAuth) to place config files(startup.properties,log4j2.xml,security.properties,DBC file,dbConfig.properties) for Authenion-EIK implementation.</p></li>
 								
@@ -4660,10 +4665,7 @@
 
 								<p class="col-para"><i>/home/user/EBSAuth/</i></p>
 							</ul>
-							<li><p class="col-para">Locate the <i>security.properties , <i>startup.properties</i> & <i>log4j2.xml</i> files and Copy the mentioned files to the Config folder</p></li>
-							<ul style="margin-left:30px;" class="col-para">
-								<p class="col-para"><i>/home/user/EBSAuth/</i></p>
-							</ul>											   
+							
 
 							<li><p class="col-para">Open startup.properties and update with the below settings </p></li>
 							<ul style="margin-left:30px;" class="col-para">
