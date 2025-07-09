@@ -4060,7 +4060,7 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">DBC file can be generated in EBS Server(Ref:link) and dbConfig.properties file which has the parameter to establish connection with EBS Database. </p>
+										<p class="col-para-table">DBC file can be generated in EBS Server and dbConfig.properties file which has the parameter to establish connection with EBS Database. </p>
 
 									</td>
 								</tr>
@@ -4136,6 +4136,7 @@
 								<p class="col-para"><i><b>java -jar EBSdatasource.jar</b></i></p>
 							</ul>
 							<br />
+							<li><p class="col-para">The configuration section will open as mentioned in the screenshot below:</p></li>
 							<!-- Image with onclick event -->
 							<img src="assets/img/eik-configurator-5.png" alt="" style="width: 41%;height:50%;cursor:pointer;margin-left: 123px" onclick="openModal('modalContainerEIK7', 'modalImageEIK7')" class="col-images-intro" />
 							<!-- Model Container-->
@@ -4144,7 +4145,7 @@
 							</div>
 							<br />
 							<br />
-							<li><p class="col-para">The configuration section will open as mentioned in the screenshot below:</p></li>
+							
 							<li><p class="col-para">Enter the details as mentioned below in the table.</p></li>
 							<br />
 							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 66%">
@@ -4368,7 +4369,7 @@
 										</td>
 										<td>
 											<ul>
-												<p class="col-para-table"><i><b><i style="opacity: 0.5;">*******</i>(EIK Username password)</b></i></p>
+												<p class="col-para-table"><i><b><i style="opacity: 0.5;">*******</i>(EIK Username's password)</b></i></p>
 											</ul>
 										</td>
 									</tr>
@@ -4460,8 +4461,8 @@
 
 <p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Generate EIKAuth.config File</u></b></p>
 
-						<p class="col-para" style="margin-left: 20px;">The EIKAuth.config config file helps to establish connection between Authenion and the Identity Provider.</p>
-						<p class="col-para" style="margin-left: 20px;">The EIKAuth.config config file can be generated from the Authenion Admin console. You can access the Authenion Admin console through <a href="https://launch.authenion.com"> <u>https://launch.authenion.com</u> </a>(or) on-premises.</p>
+						<p class="col-para" style="margin-left: 20px;">The EIKAuth.config file helps to establish connection between Authenion and the Identity Provider.</p>
+						<p class="col-para" style="margin-left: 20px;">The EIKAuth.config file can be generated from the Authenion Admin console. You can access the Authenion Admin console through <a href="https://launch.authenion.com"> <u>https://launch.authenion.com</u> </a>(or) on-premises.</p>
 						
 						<ol class="col-para" style="margin-left: 20px;">
 							<li><p class="col-para">Login to the Authenion Admin console.</p></li>
@@ -4638,10 +4639,16 @@
 							<br />
 
 							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button. This will download a file named <i><b>'EIKAuth.config'</b></i>.</p></li>
-							<li><p class="col-para">Copy the downloaded <i>'EIKAuth.config'</i> file to a temporary location in the server. This file will be used in the EIK deployment section later.</p></li>
+							<li><p class="col-para">Copy the downloaded <i>'EIKAuth.config'</i> file to a Config path(/home/user/EBSAuth)in the server. This file will be used in the EIK deployment section later.</p></li>
 						</ol>
-
-
+						<ol class="col-para">
+						<p class="col-sub-headings-sub" style="margin-left: 30px;"><b><u>JIT Provisioner external interface</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">This is one of the additional feature which is Just in Time provisioning externally and it allows us to create the provisioner according to the requirement.</p>
+						<ol class="col-para">
+						<li><p class="col-para"> The User details for the JIT Provisioning can be obtained through OIDC claims. </p></li>
+						<li><p class="col-para"> In OIDC provider, add the appropriate scope and map the user attributes to the scope and make it available as part of the UserInfo claims. </p></li>
+					     <li><p class="col-para">Create a folder named 'plugins' under Config path (/home/user/EBSAuth) and place the Provisioning JAR file in the ‘/plugins’ directory inside EIK and restart the application server to take effect.</p></li>		
+					</ol>
 						<ol class="col-para">
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Deploy Authenion-EIK</u></b></p>
 						<p class="col-para" style="margin-left: 20px;">This section guides you through the deployment steps for Authenion - EBS Integration Kit.</p>
@@ -4792,6 +4799,11 @@
 							<li><p class="col-para">This completes the setup for Authenion-EIK & Oracle E-Business suite integration for Single Sign-On.</p></li>
 
 						</ol>
+
+						<!--Authenion as a Proxy for EBS SSO-->
+
+						<a style="padding: 35px" name="Authenion as Proxy"></a>
+						<p class="col-sub-headings-app"><u>Authenion as Proxy for EBS kit</u></p>
 
 						<!--Oracle Apex Application-->
 
