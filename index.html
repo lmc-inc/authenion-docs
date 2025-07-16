@@ -879,7 +879,7 @@
 									<ul>
 										<li><p class="col-para-table">2 CPU/Cores recommended</p></li>
 										<li><p class="col-para-table">4 GB of RAM</p></li>
-										<li><p class="col-para-table">5 GB available space</p></li>
+										<li><p class="col-para-table">5 GB hard disk space</p></li>
 									</ul>
 
 								</td>
@@ -900,7 +900,7 @@
 										<li>
 											<p class="col-para-table">8 GB of RAM</p>
 										</li>
-										<li><p class="col-para-table">25 GB available space</p></li>
+										<li><p class="col-para-table">25 GB hard disk space</p></li>
 									</ul>
 
 								</td>
@@ -940,10 +940,41 @@
 						<!-- <ul class="col-para"> -->
 						<ol class="col-para">
 							<!--<li><p class="col-para" style="background-color:#f5f5f6">Ensure the System Requirements are met.</p></li>-->
-							<li><p class="col-para" >Install a supported Java software with the JAVA_HOME environment variable set.</p></li>
-							<li><p class="col-para" >The JAVA_HOME variable must be set representing the location of your Java installation.</p></li>
-
+							<li><p class="col-para" >Install a supported Java software .</p></li>
+							
+                        </ol>
+                  <ol class="col-para">
+						<p class="col-sub-headings-sub" style="margin-left: -15px;margin-top:-10px;margin-bottom: -5px;"><b>Setting the JAVA_HOME Environment Variable on Linux and Windows Systems:</b></p>
 						</ol>
+						<!--LINUX ENVIRONMENT-->
+                         <p class="col-sub-headings-sub" style="margin-left: 20px; margin-top:-10px;"><b>Linux Environment:</b></p>
+
+                    <ol class="col-para">
+                        <li><p class="col-para">Find your Java installation path using <b>which java</b> (e.g., <b>/home/user/java-x.x.x</b>).</p></li>
+                        <li><p class="col-para">Open the shell profile file using <b>vi .bash_profile</b>.</p></li>
+                        <li><p class="col-para">Add the following lines at the end of the file:</p>
+                           <p class="col-para"><b>export JAVA_HOME=/home/user/java-x.x.x</b></p>
+    <p class="col-para"><b>export PATH=$JAVA_HOME/bin:$PATH</b></p>
+                        </li>
+                       <li><p class="col-para">Save and close the file.</p></li>
+                       <li><p class="col-para">Apply the changes using <b>source .bash_profile</b>.</p></li>
+                       <li><p class="col-para">Verify the setup using <b>echo $JAVA_HOME</b>.</p></li>
+                       <li><p class="col-para">Confirm Java installation using <b>java -version</b>.</p></li>
+                   </ol>
+
+						 
+						<!--WINDOWS ENVIRONMENT-->
+                         <p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Windows Environment :</b></p>
+                           
+                     <ol class="col-para">
+                       <li><p class="col-para">Right-click <b>This PC</b> or <b>My Computer</b>, select <b>Properties</b>, click <b>Advanced system settings</b>, and then click <b>Environment Variables</b>.</p></li>
+                       <li><p class="col-para">Under the <b>System variables</b> section, click <b>New</b>.</p></li>
+                       <li><p class="col-para">Set the variable name as <b>JAVA_HOME</b> and the variable value as <b>C:\Program Files\Java\jdk-x.x.x</b> (replace with your actual JDK path).</p></li>
+                       <li><p class="col-para">Click <b>OK</b> to save the new variable.</p></li>
+                       <li><p class="col-para">In the <b>System variables</b> list, select <b>Path</b> and click <b>Edit</b>.</p></li>
+                       <li><p class="col-para">Click <b>New</b> and add <b>%JAVA_HOME%\bin</b>.</p></li>
+                       <li><p class="col-para">Click <b>OK</b> to close all dialogs and apply the changes.</p></li>
+                    </ol>
 
 
 						<!-- INSTALL AUTHENION SECTION -->
