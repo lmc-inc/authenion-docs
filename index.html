@@ -242,7 +242,7 @@
 				  </li>
 				  <li>
 					  <a href="#idp-cert section" class="nav-link-sub collapsed">
-						  <!--<i class="bi bi-circle"></i>--><span>Import Identiy Provider's Certificate into Authenion Trust Store</span>
+						  <!--<i class="bi bi-circle"></i>--><span>Import Identiy Provider's Certificate into Java Trust Store</span>
 					  </a>
 				  </li>
 				  <li>
@@ -950,16 +950,16 @@
                          <p class="col-sub-headings-sub" style="margin-left: 20px; margin-top:-10px;"><b>Linux Environment:</b></p>
 
                     <ol class="col-para">
-                        <li><p class="col-para">Find your Java installation path using <b>which java</b> (e.g., <b>/home/user/java-x.x.x</b>).</p></li>
-                        <li><p class="col-para">Open the shell profile file using <b>vi .bash_profile</b>.</p></li>
+                        <li><p class="col-para">Find your Java installation path using <i><b>which java</b> (e.g., <b>/home/user/java-x.x.x</b>)</i> </p></li>
+                        <li><p class="col-para">Open the shell profile file using <i><b>vi .bash_profile</b></i></p></li>
                         <li><p class="col-para">Add the following lines at the end of the file:</p>
-                           <p class="col-para"><b>export JAVA_HOME=/home/user/java-x.x.x</b></p>
-    <p class="col-para"><b>export PATH=$JAVA_HOME/bin:$PATH</b></p>
+                           <p class="col-para"><i><b>export JAVA_HOME=/home/user/java-x.x.x</b></i></p>
+                       <p class="col-para"><i><b>export PATH=$JAVA_HOME/bin:$PATH</b></i></p>
                         </li>
                        <li><p class="col-para">Save and close the file.</p></li>
-                       <li><p class="col-para">Apply the changes using <b>source .bash_profile</b>.</p></li>
-                       <li><p class="col-para">Verify the setup using <b>echo $JAVA_HOME</b>.</p></li>
-                       <li><p class="col-para">Confirm Java installation using <b>java -version</b>.</p></li>
+                       <li><p class="col-para">Apply the changes using <i><b>source .bash_profile</b></i></p></li>
+                       <li><p class="col-para">Verify the setup using <i><b>echo $JAVA_HOME</b></i> </p></li>
+                       <li><p class="col-para">Confirm Java installation using <i><b>java -version</b></i></p></li>
                    </ol>
 
 						 
@@ -967,13 +967,15 @@
                          <p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Windows Environment :</b></p>
                            
                      <ol class="col-para">
-                       <li><p class="col-para">Right-click <b>This PC</b> or <b>My Computer</b>, select <b>Properties</b>, click <b>Advanced system settings</b>, and then click <b>Environment Variables</b>.</p></li>
-                       <li><p class="col-para">Under the <b>System variables</b> section, click <b>New</b>.</p></li>
-                       <li><p class="col-para">Set the variable name as <b>JAVA_HOME</b> and the variable value as <b>C:\Program Files\Java\jdk-x.x.x</b> (replace with your actual JDK path).</p></li>
-                       <li><p class="col-para">Click <b>OK</b> to save the new variable.</p></li>
-                       <li><p class="col-para">In the <b>System variables</b> list, select <b>Path</b> and click <b>Edit</b>.</p></li>
-                       <li><p class="col-para">Click <b>New</b> and add <b>%JAVA_HOME%\bin</b>.</p></li>
-                       <li><p class="col-para">Click <b>OK</b> to close all dialogs and apply the changes.</p></li>
+                       <li><p class="col-para">Right-click <i><b>This PC</b></i> or <i><b>My Computer</b></i>, select <i><b>Properties</b></i>, click <i><b>Advanced system settings</b></i>, and then click <i><b>Environment Variables</b></i>.</p></li>
+                       <li><p class="col-para">Under the <i><b>System variables</b></i> section, click <i><b>New</b></i>.</p></li>
+                       <li><p class="col-para">Set the variable name as <i><b>JAVA_HOME</b></i> and the variable value as <b>C:\Program Files\Java\jdk-x.x.x</b></i> (replace with your actual JDK path).</p></li>
+                       <li><p class="col-para">Click <i><b>OK</b></i> to save the new variable.</p></li>
+                       <li><p class="col-para">In the <i><b>System variables</b></i> list, select <b>Path</b></i> and click <b>Edit</b></i>.</p></li>
+                       <li><p class="col-para">Click <i><b>New</b></i> and add <i><b>%JAVA_HOME%\bin</b></i>.</p></li>
+                       <li><p class="col-para">Click <i><b>OK</b></i> to close all dialogs and apply the changes.</p></li>
+					   <li><p class="col-para">Verify the setup using <i><b>echo %JAVA_HOME%</b></i></p></li>
+                       <li><p class="col-para">Confirm Java installation using <i><b>java -version</b></i></p></li>
                     </ol>
 
 
@@ -1276,7 +1278,7 @@
 						<li><p class="col-para">Navigate to the wrapper directory:<br></li>
 							<ul>
 								<li>
-							       authenion\bin\wrapper<br>	
+							       C:\Program Files\authenion\bin\wrapper<br>	
 							     </li>
 								  
 								</ul>
@@ -1339,8 +1341,8 @@
 
 
 						<a style="padding:32px" name="idp-cert section"></a>
-						<p class="col-sub-headings">7. Import Identity Provider’s Certificate into Authenion Trust Store</p>
-						<p class="col-para" style="margin-left: 20px;" >The following steps will guide you to import the Identity provider’s certificate into the Authenion trust store.</p>
+						<p class="col-sub-headings">7. Import Identity Provider’s Certificate into Java Trust Store</p>
+						<p class="col-para" style="margin-left: 20px;" >The following steps will guide you to import the Identity provider’s certificate into the Java trust store.</p>
 						<ol class="col-para">
 							<li><p class="col-para">Export the SSL Certificate from the Identity Provider (PingFederate, PingOne, AzureAD, etc.,) and place the certificate anywhere inside “&lt;authenion_install_dir&gt;” in the Authenion server.<p></li>
 							<li><p class="col-para">Run the following command in the Authenion server to install the Identity Provider’s certificate.<p></li>
@@ -1436,7 +1438,7 @@
 							<!-- TABLE3 -->
 						   <div class="div-tables3" style="margin-left: 5px;">
                                 <div class="div-table3-row1">   
-                                    <div class="div-table3-col" style="white-space: pre-wrap; word-break: break-all">java -jar authenion-admin-xx-version.jar com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://Authenionhostname:9898 --adminPassword=$ENV_PASSWORD</div><br><br>
+                                    <div class="div-table3-col" style="white-space: pre-wrap; word-break: break-all">java -jar authenion-admin-xx-version.jar com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://&lt;authenionhostname&gt;:9898 --adminPassword=%ENV_PASSWORD%</div><br><br>
                                 </div>
                           </div>
 
@@ -1444,7 +1446,7 @@
                            
                            <li><p class="col-para">After executing the command, use the following login credentials:</p></li> 
                             <p class="col-para"><b>Username</b>:Administrator</p>
-                            <p class="col-para"><b>Password</b>:Use the value you assigned to the environment variable (e.g., $ENV_PASSWORD) in the command.</p>
+                            <p class="col-para"><b>Password</b>:Use the value you assigned to the environment variable (e.g., %ENV_PASSWORD%) in the command.</p>
 							
                         </ol>
 						 
@@ -2195,7 +2197,8 @@
                     <p class="col-para"><b>Auth token</b>: Auth Token is a secret password, used to authenticate requests to the Twilio REST API.</p>
                     <p class="col-para"><b>SMS Service</b>: SMS provide or service being used.</p>
                     <p class="col-para"><b>Ldap Attribute</b>: The LDAP attribute that stores the user’s mobile number. It is used to deliver OTPs via SMS during the multi-factor authentication process.</p>
-								<!-- install Authenion -->
+								
+					                     <!-- install Authenion -->
 											<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 100%">
 												<tr>
 													<th class="symcomponent">Configurations</th>
@@ -2203,7 +2206,7 @@
 												</tr>
 			
 												<tbody class="tbody">
-													<!--Account SID-->
+										 <!--Account SID-->
 													<tr>
 														<td>
 											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Account SID</li>
@@ -2214,7 +2217,7 @@
 												</ul>
 											</td>
 											</tr>
-											<!--Auth Token-->
+										 <!--Auth Token-->
 											<tr>
 												<td>
 											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Auth Token</li>
@@ -2225,7 +2228,7 @@
 												</ul>
 											</td>
 											</tr>
-											<!--From Number-->
+										 <!--From Number-->
 											<tr>
 												<td>
 											<li style="list-style-type: none"><p class="col-para-table">From Number</li>
@@ -2236,7 +2239,7 @@
 												</ul>
 											</td>
 											</tr>
-											<!--SMS Service-->
+										 <!--SMS Service-->
 											<tr>
 												<td>
 											<li style="list-style-type: none"><p class="col-para-table">SMS Service</li>
@@ -2247,7 +2250,7 @@
 												</ul>
 											</td>
 											</tr>
-											<!--Ldap Attribute-->
+										 <!--Ldap Attribute-->
 											<tr>
 												<td>
 											<li style="list-style-type: none"><p class="col-para-table">Ldap Attribute</li>
@@ -2268,7 +2271,8 @@
 											<p class="col-para"><b>Grace Time</b>: Refers to the period after a TOTP code has technically expired during which it can still be used for authentication, allowing for minor delays in code entry. The default grace time is either 30 or 60 seconds.</p>
                                             <p class="col-para"><b>Skew Windows</b>: Refers to the allowance of a certain number of time intervals (e.g., 30-second periods) that are considered valid for authentication, even if there is a slight discrepancy between the client’s and server’s time.</p>
                                             <p class="col-para"><b>Ldap Attribute</b>: The LDAP attribute where the TOTP (Time-based One-Time Password) secret key is stored for the user. This is used to validate OTPs generated by authenticator apps like Google Authenticator or Microsoft Authenticator.</p>
-								<!-- install Authenion -->
+								  
+									 	 <!-- install Authenion -->
 											<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 100%">
 												<tr>
 													<th class="symcomponent">Configurations</th>
@@ -2276,7 +2280,8 @@
 												</tr>
 			
 												<tbody class="tbody">
-													<!--Grace Time-->
+													
+										 <!--Grace Time-->
 													<tr>
 														<td>
 											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Grace Time</li>
@@ -2287,7 +2292,7 @@
 												</ul>
 											</td>
 											</tr>
-											<!--Skew Windows-->
+										 <!--Skew Windows-->
 											<tr>
 												<td>
 											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Skew Windows</li>
@@ -2298,7 +2303,7 @@
 												</ul>
 											</td>
 											</tr>
-											<!--Ldap Attribute-->
+										 <!--Ldap Attribute-->
 											<tr>
 												<td>
 											<li style="list-style-type: none"><p class="col-para-table">Ldap Attribute</li>
@@ -2313,24 +2318,26 @@
 											</table>
 											</ul>
 										</br>
-					<!-- Image with onclick event -->
-					<img src="assets/img/authenion-3.0/LdapAuthenticationprovider3.png" alt="" style="width:60%;height:40%;cursor:pointer;margin-left: 123px" onclick="openModal('modalContainerLdapAuthenticationprovider3', 'modalImageLdapAuthenticationprovider3')" class="col-images-intro" />
 
-					<!-- Modal container -->
-					<div id="modalContainerLdapAuthenticationprovider3" class="modal-container" onclick="closeModal('modalContainerLdapAuthenticationprovider3')">
-						<img id="modalImageLdapAuthenticationprovider3" class="modal-image" src="assets/img/authenion-3.0/LdapAuthenticationprovider3.png" alt="">
-					</div>
-					</ul>
+					       <!-- Image with onclick event -->
+					       <img src="assets/img/authenion-3.0/LdapAuthenticationprovider3.png" alt="" style="width:60%;height:40%;cursor:pointer;margin-left: 123px" onclick="openModal('modalContainerLdapAuthenticationprovider3', 'modalImageLdapAuthenticationprovider3')" class="col-images-intro" />
+
+					        <!-- Modal container -->
+					       <div id="modalContainerLdapAuthenticationprovider3" class="modal-container" onclick="closeModal('modalContainerLdapAuthenticationprovider3')">
+						   <img id="modalImageLdapAuthenticationprovider3" class="modal-image" src="assets/img/authenion-3.0/LdapAuthenticationprovider3.png" alt="">
+					   </div>
+					 </ul>
 					</ol>
-
-					</div>
-					<br>
+                   </div>
+				  <br>
 
 					<!-- Sidebar-->
+
 					<div>
 						<a style="padding: 35px" name="Sidebar"></a>
 						<p class="col-sub-headings">5. Sidebar</p>
-						<!-- Image with onclick event -->
+
+					<!-- Image with onclick event -->
 
 						<p class="col-para" style="margin-left: 20px;">The Sidebar Menu has the following Configurations</p>
 						<ul style="margin-left:30px;" class="col-para">
@@ -2541,8 +2548,8 @@
 							<br />
 							<li><p class="col-para">Click <b>Save</b> to complete the configuration for a new application. </p></li>
 							<!-- <img src="assets/img/NewApplication.png" alt="" class="col-images-intro" /> <br>
-				<p>Authenion Dashboard shows the number of Applications configured. </p>
-			<img src="assets/img/NewApplication1.png" alt="" class="col-images-intro" />  -->
+				            <p>Authenion Dashboard shows the number of Applications configured. </p>
+			                <img src="assets/img/NewApplication1.png" alt="" class="col-images-intro" />  -->
 					</div>
 					<!-- <img src="assets/img/NewApplication.png" alt="" class="col-images-intro" /> <br> -->
 					<!-- Image with onclick event -->
@@ -2556,7 +2563,7 @@
 					</div>
                     <ol class="col-para">
 					<ul><li><p class="col-sub-headings-sub"><b><u>Configure Authorization rule for your Application</u></b></p></li></ul>
-								<!-- install Authenion -->
+								        <!-- install Authenion -->
 											<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;margin-left: 30px;width: 64%">
 												<tr>
 													<th class="symcomponent">Configurations</th>
@@ -2567,26 +2574,29 @@
 													<!--Enable Authorization Engine for this Application-->
 													<tr>
 														<td>
-											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Enable Authorization Engine for this Application</li>
-											</td>
-											<td>
-												<ul>
-													<li class="li" style="list-style-type: none"></li><p class="col-para-table">Toggle&emsp;&emsp;(Enable/Disable the Rules for the Application)</li>
-												</ul>
-											</td>
-											</tr>
-											<!--Rule-->
-											<tr>
-												<td>
-											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Rule</li>
-											</td>
-											<td>
-												<ul>
-													<li class="li" style="list-style-type: none"></li><p class="col-para-table">Configure Authorization Rules for the Application&emsp;&emsp;(optional)</li>
-												</ul>
-											</td>
-											</tr>
-											<!--Ldap Attribute-->
+											               <li style="list-style-type: none;position:indent;"><p class="col-para-table">Enable Authorization Engine for this Application</li>
+											            </td>
+											             <td>
+												        <ul>
+													      <li class="li" style="list-style-type: none"></li><p class="col-para-table">Toggle&emsp;&emsp;(Enable/Disable the Rules for the Application)</li>
+												        </ul>
+											        </td>
+											     </tr>
+											       
+												   <!--Rule-->
+
+											          <tr>
+												        <td>
+											              <li style="list-style-type: none;position:indent;"><p class="col-para-table">Rule</li>
+											             </td>
+											              <td>
+												           <ul>
+													        <li class="li" style="list-style-type: none"></li><p class="col-para-table">Configure Authorization Rules for the Application&emsp;&emsp;(optional)</li>
+												           </ul>
+											            </td>
+											           </tr>
+
+											       <!--Ldap Attribute-->
 											<tr>
 												<td>
 											<li style="list-style-type: none"><p class="col-para-table">Context Path</li>
@@ -2601,7 +2611,8 @@
 											</table>
 										</br>
 										<ul><li><p class="col-sub-headings-sub"><b><u>Configure Security Headers for your Application</u></b></p></li></ul>
-								<!-- install Authenion -->
+								
+										<!-- install Authenion -->
 											<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;margin-left: 30px;width: 64%">
 												<tr>
 													<th class="symcomponent">Configurations</th>
@@ -2609,18 +2620,22 @@
 												</tr>
 			
 												<tbody class="tbody">
-													<!--Override Defaults-->
+										
+										      <!--Override Defaults-->
+
 													<tr>
 														<td>
-											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Override Defaults</li>
-											</td>
-											<td>
-												<ul>
-													<li class="li" style="list-style-type: none"></li><p class="col-para-table">checkbox&emsp;&emsp;(Enable/Disable Override Defaults)</li>
-												</ul>
-											</td>
-											</tr>
+											               <li style="list-style-type: none;position:indent;"><p class="col-para-table">Override Defaults</li>
+											             </td>
+											              <td>
+												          <ul>
+													        <li class="li" style="list-style-type: none"></li><p class="col-para-table">checkbox&emsp;&emsp;(Enable/Disable Override Defaults)</li>
+												           </ul>
+											          </td>
+											       </tr>
+
 											<!--Access-Control-Allow-Headers-->
+
 											<tr>
 												<td>
 											<li style="list-style-type: none;position:indent;"><p class="col-para-table">Access-Control-Allow-Headers</li>
@@ -2631,7 +2646,9 @@
 												</ul>
 											</td>
 											</tr>
+
 											<!--Access-Control-Allow-Methods-->
+
 											<tr>
 												<td>
 											<li style="list-style-type: none"><p class="col-para-table">Access-Control-Allow-Methods</li>
@@ -2642,7 +2659,9 @@
 												</ul>
 											</td>
 											</tr>
+
 											<!--Referrer-Policy-->
+
 											<tr>
 												<td>
 											<li style="list-style-type: none"><p class="col-para-table">Referrer-Policy</li>
@@ -2653,7 +2672,9 @@
 												</ul>
 											</td>
 											</tr>
+
 											<!--Strict-Transport-Security-->
+
 											<tr>
 												<td>
 											<li style="list-style-type: none"><p class="col-para-table">Strict-Transport-Security</li>
@@ -2664,6 +2685,7 @@
 												</ul>
 											</td>
 											</tr>
+
 											<!--X-Content-Type-Options-->
 											<tr>
 												<td>
@@ -2675,6 +2697,7 @@
 												</ul>
 											</td>
 											</tr>
+
 											<!--X-Frame-Options-->
 											<tr>
 												<td>
@@ -2686,6 +2709,7 @@
 												</ul>
 											</td>
 											</tr>
+
 											<!--X-XSS-Protection-->
 											<tr>
 												<td>
@@ -2697,6 +2721,7 @@
 												</ul>
 											</td>
 											</tr>
+
 											<!--Content-Security-Policy-->
 											<tr>
 												<td>
@@ -4049,13 +4074,12 @@
 						<br />
 						<p class="col-sub-headings-sub"><b>1. Pre-requisites</b></p>
 						<ol class="col-para">
-							<p class="col-para">Install Recommended Java(see System Requirements) on the server</p>
-							<p class="col-para">Identity Provider with OIDC configuration and Endpoints</p>
-							<p class="col-para">Oracle EBS environment</p>
+							<li><p class="col-para">Install Recommended Java(see System Requirements) on the server</p></li>
+							<li><p class="col-para">Identity Provider with OIDC configuration and Endpoints</p></li>
+							<li><p class="col-para">Oracle EBS environment</p></li>
 							
 						</ol>
-						<br />
-
+						
 						<p class="col-sub-headings-sub"><b>2. SSO Integration Workflow</b></p>
 						<!-- TABLE - Task & Description -->
 							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;margin-left:32px;width: 64%">
@@ -4376,6 +4400,7 @@
 						<ol class="col-para">
 						<li><p class="col-para"> For generting DBC file in your EBS server, refer the link to create DBC file <a href="https://docs.oracle.com/cd/E26401_01/doc.122/e22953/T174296T174298.htm"><u>Link to create DBC file</a></u></p></li>
 						<li><p class="col-para"> Update the below parameters in dbConfig.parameters, <i> Provided sample values, you can change based on your Database</i></p></li>
+						
 						<p class="col-para"><i> Below two parameter settings are Mandatory </i></p>
 						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 66%">
 								<tr>
@@ -4406,10 +4431,12 @@
 									</tr>
 									
 									</tbody>
-									</table>	
-						<ul  class="col-para">
+									</table>
+
+						
 								
-								<p><i>Below parameter settings are optional</i></p>
+								<p class="col-para"><i>Below parameter settings are optional</i></p>
+
 								<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 66%">
 								<tr>
 									<th class="symcomponent">DB Parameters</th>
@@ -4486,7 +4513,7 @@
 									</table>
 													   
 													</i>
-												</ul>	
+													
 							<li><p class="col-para">Get DBC and properties files and place it in above created Config path</p>				
 						</ol>
 
@@ -4672,18 +4699,18 @@
 							<li><p class="col-para">After entering the above values, click the <i><b>'Save'</b></i> button. This will download a file named <i><b>'EIKAuth.config'</b></i>.</p></li>
 							<li><p class="col-para">Copy the downloaded <i>'EIKAuth.config'</i> file to a Config path(/home/user/EBSAuth)in the server. This file will be used in the EIK deployment section later.</p></li>
 						</ol>
-						<ol class="col-para">
-						<p class="col-sub-headings-sub" style="margin-left: 30px;"><b><u>JIT Provisioner external interface</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">This is one of the additional feature which is Just in Time provisioning externally and it allows us to create the provisioner according to the requirement.</p>
-						<ol class="col-para">
+						
+						<p class="col-sub-headings-sub" style="margin-left: 30px;"></p><b><u>JIT Provisioner external interface</u></b></p>
+						<p class="col-para" style="margin-left: 30px;">This is one of the additional feature which is Just in Time provisioning externally and it allows us to create the provisioner according to the requirement.</p>
+						<ol style="margin-left: 20px;" class="col-para">
 						<li><p class="col-para"> The User details for the JIT Provisioning can be obtained through OIDC claims. </p></li>
 						<li><p class="col-para"> In OIDC provider, add the appropriate scope and map the user attributes to the scope and make it available as part of the UserInfo claims. </p></li>
 					     <li><p class="col-para">Create a folder named 'plugins' under Config path (/home/user/EBSAuth) and place the Provisioning JAR file in the ‘/plugins’ directory inside EIK and restart the application server to take effect.</p></li>		
+					
 					</ol>
-						<ol class="col-para">
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Deploy Authenion-EIK</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">This section guides you through the deployment steps for Authenion - EBS Integration Kit.</p>
-						<ol class="col-para">
+						<p class="col-para" style="margin-left: 30px;">This section guides you through the deployment steps for Authenion - EBS Integration Kit.</p>
+						<ol  style="margin-left: 20px;" class="col-para">
 							<li><p class="col-para">Login to the <a href="https://support.likemindsconsulting.com"> <u>Like Minds Support Portal</u></a> and download the required binaries to complete the EIK deployment.</p></li>
 							<li><p class="col-para">The following are the list of files that will be downloaded as part of the installation package.</p></li>
 							<ul style="margin-left:30px;" class="col-para">
@@ -4692,24 +4719,21 @@
 								<li><p class="col-para"><i>log4j2.xml</i></p></li>
 						        <li><p class="col-para"><i>startup.properties</i></p></li>
 								<li><p class="col-para"><i>dbConfig.properties</i></p></li>
-								</ul>
+							</ul>
 							
 							<li><p class="col-para">Login to the server and move to Config path(Eg; /home/user/EBSAuth) to place config files(startup.properties,log4j2.xml,security.properties,DBC file,dbConfig.properties) for Authenion-EIK implementation.</p></li>
 								
 							   <p style="margin-left:30px;" class="col-para"><i>Eg: /home/user/EBSAuth/</i></p>
 								
 							<li><p class="col-para">Obtain or download the Authenion-EIK license from the Like Minds Support portal. Copy the license file <i><b>'ebsauth.lic'</b></i> and move it to EBSAuth folder.</p></li>
-								<ul style="margin-left:30px;" class="col-para">
-
-								<p class="col-para"><i>/home/user/EBSAuth/</i></p>
-							</ul>
+								
+								<p style="margin-left:30px;" class="col-para"><i>Eg: /home/user/EBSAuth/</i></p>
 							
-
 							<li><p class="col-para">Open startup.properties and update with the below settings </p></li>
 							<ul style="margin-left:30px;" class="col-para">
-													<li><i><p class="col-para">app.context = /EBSAuth(User defined context path)</p></li>
-													<li><i><p class="col-para">tcp.ip.address = 0.0.0.0(0.0.0.0 means the server will listen on all available network interfaces.If you want to bind to a specific IP,replace 0.0.0.0 with the desired IP address.)</p></li>
-													<li><i><p class="col-para">tcp.ip.port = 8842(User defined port, make sure that port is not blocked by a firewall and is not used by another service)</p></li>
+													<li><p class="col-para">app.context = /EBSAuth(User defined context path)</p></li>
+													<li><p class="col-para">tcp.ip.address = 0.0.0.0(0.0.0.0 means the server will listen on all available network interfaces.If you want to bind to a specific IP,replace 0.0.0.0 with the desired IP address.)</p></li>
+													<li><p class="col-para">tcp.ip.port = 8842(User defined port, make sure that port is not blocked by a firewall and is not used by another service)</p></li>
 							</ul>
 							<li><p class="col-para">Locate the <i>authenion-eik.jar</i> file and Copy the file in any preferred location and execute the below command</p></li>
 								<p style="margin-left:70px;" class="col-para"> <i><b>java -jar --Deik.config.path="path-to-Config folder" authenion-eik.jar </b></i></p>
@@ -4718,8 +4742,8 @@
 								<li><p class="col-para">Repeat the steps above in all the servers, if you have H/A environment setup.</p></li>
 								</ol>
 
-											<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Follow the below steps to enable Authenion-EIK in https(Optional)</b></p>
-								<ol class="col-para">
+								<p class="col-sub-headings-sub" style="margin-left: 30px;"><b>Follow the below steps to enable Authenion-EIK in https(Optional)</b></p>
+								<ol style="margin-left: 20px;"  class="col-para">
 								<li><p class="col-para">Get a keystore.p12 file and place it in Config path directory. </p></li>
 									 <p style="margin-left:30px;" class="col-para"><i>Eg:/home/user/EBSAuth/</i></p>
 
@@ -4747,9 +4771,7 @@
 							
 							<br />
 						</ol>
-
-										<td>
-											<ul>
+			
 												
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Configure Oracle EBS System Profile options</u></b></p>
 						<p class="col-para" style="margin-left: 20px;">This section will guide you to configure the system profile options that enable Single Sign-On to the Oracle E-Business Suite application. These system profile options are Oracle recommended for enabling SSO with any providers.</p>
@@ -4832,14 +4854,19 @@
 						</ol>
 
 						<!--Authenion as a Proxy for EBS SSO-->
-
+                        
 						<a style="padding: 35px" name="Authenion as Proxy"></a>
 						<p class="col-sub-headings-app"><u>Authenion as Proxy for EBS kit</u></p>
+                    
+
+						
 
 						<!--Oracle Apex Application-->
-
-						<a style="padding: 35px" name="Oracle Apex"></a>
-						<p class="col-sub-headings-app" ><u>Oracle Application Express (APEX)</u></p>
+                        
+						<p class="col-para"></p>
+						<a style="padding: 35px" name="Oracle Apex">
+						</a>
+						<p class="col-sub-headings-app"><u>Oracle Application Express (APEX)</u></p>
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Oracle APEX SSO with Authenion</b></p>
 						<p class="col-para" style="margin-left: 20px;">Oracle APEX is a web-based integrated development environment which simplifies the process of building applications and pages. It supports the use of HTTP Header variables to identify a user and to create a session for the user in Oracle APEX application.</p>
@@ -5371,14 +5398,17 @@
 							</ul>
 						-->
 						</ol>
-						<p class="col-para"></p>
+						
 
 
 
 					<!--Oracle Hyperion-->
 
 					<p class="col-para"></p>
-						<a style="padding: 35px" name="Oracle Hyperion"><div id="Oracle Hyperion"></div></a></div>
+						<a style="padding: 35px" name="Oracle Hyperion">
+							<div id="Oracle Hyperion"></div>
+						</a>
+						</div>
 						<p class="col-sub-headings-app"><u>Oracle Hyperion</u></p>
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Oracle Hyperion SSO with Authenion</b></p>
