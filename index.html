@@ -832,7 +832,7 @@
 							<a style="padding:32px" name="SupportedOS"></a>
 							<tr>
 								<td>
-									<p class="col-para-table">Supported Operating Systems</p>
+									<p class="col-para-table">Supported operating Systems</p>
 								</td>
 
 								<td>
@@ -840,10 +840,11 @@
 										<li><p class="col-para-table">Red Hat Enterprise Linux 9</p></li>
 										<!--<li><p class="col-para-table">CentOS 7 & above</p></li>-->
 										<li><p class="col-para-table">Oracle Enterprise Linux 9</p></li>
-										<li><p class="col-para-table">Windows Server 2025</p></li>
+										<li><p class ="col-para-table">Microsoft Windows Server 2016, 2019, 2022 and 2025</p></li>
+										<!-- <li><p class="col-para-table">Windows Server 2025</p></li>
 										<li><p class="col-para-table">Windows Server 2022</p></li>
 										<li><p class="col-para-table">Windows Server 2019</p></li>
-										<li><p class="col-para-table">Windows Server 2016</p></li>
+										<li><p class="col-para-table">Windows Server 2016</p></li> -->
 									</ul>
 								</td>
 
@@ -854,7 +855,7 @@
 							<a style="padding:32px" name="SupportedJavaenvironment"></a>
 							<tr>
 								<td>
-									<p class="col-para-table">Supported Java environment</p>
+									<p class="col-para-table">Supported java environment</p>
 								</td>
 								<td>
 
@@ -872,14 +873,14 @@
 							<a style="padding:32px" name="MinimumHR"></a>
 							<tr>
 								<td>
-									<p class="col-para-table">Minimum Hardware requirements</p>
+									<p class="col-para-table">Minimum hardware requirements</p>
 								</td>
 								<td>
 
 									<ul>
 										<li><p class="col-para-table">2 CPU/Cores recommended</p></li>
 										<li><p class="col-para-table">4 GB of RAM</p></li>
-										<li><p class="col-para-table">5 GB hard disk space</p></li>
+										<li><p class="col-para-table">5 GB of available hard disk space</p></li>
 									</ul>
 
 								</td>
@@ -889,7 +890,7 @@
 							<a style="padding:32px" name="RecommendedHR"></a>
 							<tr>
 								<td>
-									<p class="col-para-table">Recommended Hardware requirements</p>
+									<p class="col-para-table">Recommended hardware requirements</p>
 								</td>
 								<td>
 
@@ -900,7 +901,7 @@
 										<li>
 											<p class="col-para-table">8 GB of RAM</p>
 										</li>
-										<li><p class="col-para-table">25 GB hard disk space</p></li>
+										<li><p class="col-para-table">25 GB of available hard disk spacee</p></li>
 									</ul>
 
 								</td>
@@ -909,17 +910,17 @@
 							<a style="padding:32px" name="PortRequirements"></a>
 							<tr>
 								<td>
-									<p class="col-para-table">Default Port requirements</p>
+									<p class="col-para-table">Default port requirements</p>
 								</td>
 								<td>
 
 									<ul>
 										<li>
-											<p class="col-para-table">Authenion Sync&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;HTTPS, TCP - 8090</p>
+											<p class="col-para-table">Authenion Sync Enables Port&emsp;-&emsp;HTTPS, TCP - 8090</p>
 										</li>
-										<li><p class="col-para-table">Authenion Virtual Server&emsp; -&emsp;HTTP (or) HTTPS, TCP - 0 to 65535</p></li>
-									    <li><p class="col-para-table">Authenion SSO&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;8333</p></li>
-										
+										<li><p class="col-para-table">Authenion Virtual Server&emsp;&emsp;&emsp;-&emsp;HTTP (or) HTTPS, TCP - 0 to 65535</p></li>
+									    <li><p class="col-para-table">Authenion SSO&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;8333</p></li>
+										<li class="li" style="list-style-type: none;font-size:12px;max-width:500px;"><p class="col-para-table"><i><b>Note:</b> When the Sync button is clicked in the Authenion Admin Console, port 8090 is automatically enabled on the authenion server upon successful sync.</i>
 									</ul>
 
 								</td>
@@ -934,21 +935,21 @@
 						<!-- <a name="install-authenion section"></a> -->
 						<a style="padding:32px" name="Installation"></a>
 						<h4 style="font-family:sans-serif; font-size:26px; font-weight: 600; color: #00297A">Installation</h4>
-						<p class="col-para" style="margin-left: 20px;">This section provides instructions for installing, configuring & starting/stopping Authenion product. Authenion can be installed on the Linux servers. For the System requirements, please visit System Requirements section.</p>
+						<p class="col-para" style="margin-left: 20px;">This section provides instructions for installing, configuring & starting/stopping Authenion product. Authenion can be installed on the Linux and Windows servers. For the System requirements, please visit System Requirements section.</p>
 						<a style="padding:32px" name="pre-reqs section"></a>
 						<p class="col-sub-headings">1. Pre-requisites</p>
 						<!-- <ul class="col-para"> -->
 						<ol class="col-para">
 							<!--<li><p class="col-para" style="background-color:#f5f5f6">Ensure the System Requirements are met.</p></li>-->
-							<li><p class="col-para" >Install a supported Java software .</p></li>
+							<li><p class="col-para" >Download and install the chosen supported Java version (OpenJDK 17 to 23) from its respective source.</p></li>
 							
                         </ol>
                   <ol class="col-para">
-						<p class="col-sub-headings-sub" style="margin-left: -15px;margin-top:-10px;margin-bottom: -5px;"><b>Setting the JAVA_HOME Environment Variable on Linux and Windows Systems:</b></p>
+						<p class="col-sub-headings-sub" style="margin-left: -15px;margin-top:-10px;margin-bottom: -5px;"><b>Set JAVA_HOME Environment Variable (Linux and Windows):</b></p>
 						</ol>
 						<!--LINUX ENVIRONMENT-->
                          <p class="col-sub-headings-sub" style="margin-left: 20px; margin-top:-10px;"><b>Linux Environment:</b></p>
-
+<!-- 
                     <ol class="col-para">
                         <li><p class="col-para">Find your Java installation path using <i><b>which java</b> (e.g., <b>/home/user/java-x.x.x</b>)</i> </p></li>
                         <li><p class="col-para">Open the shell profile file using <i><b>vi .bash_profile</b></i></p></li>
@@ -960,6 +961,80 @@
                        <li><p class="col-para">Apply the changes using <i><b>source .bash_profile</b></i></p></li>
                        <li><p class="col-para">Verify the setup using <i><b>echo $JAVA_HOME</b></i> </p></li>
                        <li><p class="col-para">Confirm Java installation using <i><b>java -version</b></i></p></li>
+                   </ol> -->
+
+				   <ol class="col-para">
+                        <li><p class="col-para">Find your Java installation path.</p></li>
+						<p>Run the following command in your terminal:</p>
+						<!-- TABLE3 -->
+							<div class="div-table3" style="margin-left: -3px;">
+								<div class="div-table3-row">
+									<div class="div-table3-col" >#]&emsp;which java</div>
+								</div>
+							</div>
+							<p>Example output:</p>
+                             <div class="div-table3" style="margin-left: -3px;">
+                                <div class="div-table3-row">
+                                     <div class="div-table3-col">/home/user/java-x.x.x</div>
+                                     </div>
+                                  </div>
+							
+                        <li><p class="col-para">Open the shell profile file and set Java environment variables. </p>
+						<p>Open the .bash_profile file in your home directory:</p>
+						<!-- TABLE3 -->
+							<div class="div-table3" style="margin-left: -3px;">
+								<div class="div-table3-row">
+									<div class="div-table3-col" >#]&emsp;vi ~/.bash_profile</div>
+								</div>
+							</div>
+							
+                        <p class="col-para">Add the following lines at the end of the file:</p>
+    
+					   <div class="div-tables3" style="margin-left: -3px;">
+									<div class="div-table3-row1">
+										<div class="div-table3-col">#]&emsp;export JAVA_HOME=/home/user/java-x.x.x</div>
+										<div class="div-table3-col">#]&emsp;export PATH=$JAVA_HOME/bin:$PATH</div>
+									</div>
+								</div>
+								
+                        </li>
+						<p class="col-para"><i> <b>Note:</b> Make sure to replace /home/user/java-x.x.x in the JAVA_HOME variable with the actual path you received from the which java command.</i></p>
+						
+                       <li><p class="col-para">Save and close the file: </p></li>
+					   <ul>
+						<li>Press <b><i>Esc</i></b>, then type <b><i>:wq</i></b> and press <b><i>Enter</i></b> .</li>
+					   </ul>
+                       <li><p class="col-para">Apply the changes and verify the Java setup</p></li>
+					   <!-- TABLE3 -->
+							<div class="div-table3" style="margin-left: -3px;">
+								<div class="div-table3-row">
+									<div class="div-table3-col" >#]&emsp;source .bash_profile</div>
+								</div>
+							</div>
+							<br>
+                       <li><p class="col-para">Verify the JAVA_HOME environment variable: </p></li>
+					   <!-- TABLE3 -->
+							<div class="div-table3" style="margin-left: -3px;">
+								<div class="div-table3-row">
+									<div class="div-table3-col" >#]&emsp;echo $JAVA_HOME</div>
+								</div>
+							</div>
+							<p>Example output:</p>
+                             <div class="div-table3" style="margin-left: -3px;">
+                                <div class="div-table3-row">
+                                     <div class="div-table3-col">/home/user/java-x.x.x</div>
+                                     </div>
+                                  </div>
+						
+							<br>
+                       <li><p class="col-para">Check if Java is properly installed:</p></li>
+					   <!-- TABLE3 -->
+							<div class="div-table3" style="margin-left: -3px;">
+								<div class="div-table3-row">
+									<div class="div-table3-col" >#]&emsp;java -version</div>
+								</div>
+							</div>
+							<br>
                    </ol>
 
 						 
