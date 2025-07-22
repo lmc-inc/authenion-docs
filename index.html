@@ -1588,8 +1588,7 @@
 							     </li>
 							</ul>
                         </p>
-						
-						</ol>
+					</ol>
 
                     <!-- Authenion Health-check -->
 						<a style="padding:32px" name="health-check section"></a>
@@ -1611,9 +1610,25 @@
 						<p class="col-sub-headings">7. Import Identity Provider’s Certificate into Java Trust Store</p>
 						<p class="col-para" style="margin-left: 20px;" >The following steps will guide you to import the Identity provider’s certificate into the Java trust store.</p>
 						<ol class="col-para">
-							<li><p class="col-para">Export the SSL Certificate from the Identity Provider (PingFederate, PingOne, AzureAD, etc.,) and place the certificate anywhere inside “&lt;authenion_install_dir&gt;” in the Authenion server.<p></li>
-							<li><p class="col-para">Run the following command in the Authenion server to install the Identity Provider’s certificate.<p></li>
-						</ol>
+							<li><p class="col-para">Export the SSL Certificate from the Identity Provider (PingFederate, PingOne, AzureAD, etc.,) and Place the exported certificate file anywhere inside a directory on the Authenion server.<p></li>
+							<li><p class="col-para">Navigate to the Java binary directory:<p></li>
+						     <ul>
+								<li>
+									Open your terminal and run the following command .
+								</li>
+							 
+							</ul>
+							 <div class="div-table3" style="margin-left: 34px;">
+							<div class="div-table3-row">
+								<div  class="div-table3-col">#]&emsp; cd $JAVA_HOME/bin</div>
+							</div>
+						</div>
+							
+						
+					 
+                         <li><p class="col-para">
+							Run the keytool command to import the certificate into Java's trust store (cacerts). This allows Java applications to trust the Identity Provider.
+							<p></li>
 						<!-- TABLE3 -->
 						<div class="div-table3" style="margin-left: 34px;">
 							<div class="div-table3-row">
@@ -1621,7 +1636,32 @@
 									<br> -file &lt;/path-to-IdentityProvider-cert&gt;</div>
 							</div>
 						</div>
-						<br>
+                         
+						<p class="col-para" style="margin-left: 40px;">Example:</p>
+						<div class="div-table3" style="margin-left: 34px;">
+							<div class="div-table3-row">
+								<div  class="div-table3-col">./keytool -import -alias authenion -keystore /home/user/jdk-x.x.x/lib/security/cacerts -file /home/user/certificate.crt</div>
+							</div>
+						</div>
+						 </ol>
+						<ol class="col-para">
+                          <p class="col-para" style="margin-left: 30px;" ><i> <b>Note:</b></i></p>
+						<ul>
+						 <li> <p class="col-para" >
+								The certificate used in this example is located at: /home/user/certificate.crt.
+							</p>
+						 </li>
+						 <li> <p class="col-para" >
+								<i>
+                                <b>JAVA_HOME</b>
+								</i> refers to the base JDK installation directory. For example: /home/user/jdk-x.x.x/
+							</p>
+						 </li>
+						 
+						</ul>
+						</ol>
+                    
+                         
 
 						<a style="padding:32px" - name="ssl-cert section"></a>
 						<p class="col-sub-headings">8. Import SSL Certificates for Authenion (optional)</p>
