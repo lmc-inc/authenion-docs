@@ -1391,9 +1391,63 @@
 										<div class="div-table3-col">#]&emsp;./status.sh</div>
 									</div>
 								</div>
-								<p class="col-para"><i> <b>Note:</b> In Authenion-3.0, we have the option to start and stop each service individually.</i></p>
+								<p class="col-para">Example Output:</p>
+                                 <div class="div-tables3" style="margin-left: -3px;">
+									<div class="div-table3-row1">
+										<div class="div-table3-col">#]&emsp;sso: UP</div>
+										<div class="div-table3-col">#]&emsp;agent: UP</div>
+										<div class="div-table3-col">#]&emsp;debug: UP</div>
+										<div class="div-table3-col">#]&emsp;grid: UP</div>
+										<div class="div-table3-col">#]&emsp;oidc: UP</div>
+										<div class="div-table3-col">#]&emsp;authz: UP</div>
+										<div class="div-table3-col">#]&emsp;Webserver: UP </div>
+										
+									</div>
+								</div>
+								
 
-						</ol>
+								</ol>
+								<ol class="col-para">
+								<p ><i> <b>Note:</b> In Authenion-3.0, we have the option to start and stop each services(sso,agent,debug,grid,oidc,authz and Webserver) individually.</i></p>
+                                  
+                                   <li>
+                                    <p>To start a specific service, use the following command format:</p>
+								   </li> 
+                                      
+									<div class="div-tables3" style="margin-left: -3px;">
+									<div class="div-table3-row1">
+										<div class="div-table3-col">#]&emsp;cd &lt;authenion_install_dir&gt;/bin</div>
+										<div class="div-table3-col">#]&emsp;./start-instance.sh &lt;service-name&gt;</div>
+									</div>
+								</div>
+
+                                <p>Example:</p>
+
+								<div class="div-tables3" style="margin-left: -3px;">
+									<div class="div-table3-row1">
+										
+										<div class="div-table3-col">#]&emsp;./start-instance.sh sso</div>
+									</div>
+								</div>
+                                 <li>
+								<p>To stop a specific service, use the following command format:</p>
+                                    </li>    
+									<div class="div-tables3" style="margin-left: -3px;">
+									<div class="div-table3-row1">
+										<div class="div-table3-col">#]&emsp;cd &lt;authenion_install_dir&gt;/bin</div>
+										<div class="div-table3-col">#]&emsp;./stop-instance.sh &lt;service-name&gt;</div>
+									</div>
+								</div>
+
+                                <p>Example:</p>
+
+								<div class="div-tables3" style="margin-left: -3px;">
+									<div class="div-table3-row1">
+										
+										<div class="div-table3-col">#]&emsp;./stop-instance.sh sso</div>
+									</div>
+								</div>
+                            </ol>
 						
 						<!-- WINDOWS ENVIRONMENT-->
 						 <p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Windows Environment :</b></p>
@@ -1422,9 +1476,49 @@
 										 <div class="div-table3-col">#]&emsp;status.bat</div>
 									 </div>
 								 </div>
-								  <p class="col-para"><i> <b>Note:</b> In Authenion-3.0, we have the option to start and stop each service individually.</i></p>
+								  
+                               </ol>
+								<ol class="col-para">
+								<p ><i> <b>Note:</b> In Authenion-3.0, we have the option to start and stop each services(sso,agent,debug,grid,oidc,authz and Webserver) individually.</i></p>
+                                  
+                                   <li>
+                                    <p>To start a specific service, use the following command format:</p>
+								   </li> 
+                                      
+									<div class="div-tables3" style="margin-left: -3px;">
+									<div class="div-table3-row1">
+										<div class="div-table3-col">#]&emsp;cd &lt;authenion_install_dir&gt;/bin</div>
+										<div class="div-table3-col">#]&emsp;start-instance.bat &lt;service-name&gt;</div>
+									</div>
+								</div>
 
-						 </ol>
+                                <p>Example:</p>
+
+								<div class="div-tables3" style="margin-left: -3px;">
+									<div class="div-table3-row1">
+										
+										<div class="div-table3-col">#]&emsp;start-instance.bat sso</div>
+									</div>
+								</div>
+                                 <li>
+								<p>To stop a specific service, use the following command format:</p>
+                                    </li>    
+									<div class="div-tables3" style="margin-left: -3px;">
+									<div class="div-table3-row1">
+										<div class="div-table3-col">#]&emsp;cd &lt;authenion_install_dir&gt;/bin</div>
+										<div class="div-table3-col">#]&emsp;stop-instance.bat &lt;service-name&gt;</div>
+									</div>
+								</div>
+
+                                <p>Example:</p>
+
+								<div class="div-tables3" style="margin-left: -3px;">
+									<div class="div-table3-row1">
+										
+										<div class="div-table3-col">#]&emsp;stop-instance.bat sso</div>
+									</div>
+								</div>
+								</ol>
                     
 
                      
