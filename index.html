@@ -916,10 +916,10 @@
 
 									<ul>
 										<li>
-											<p class="col-para-table">Authenion Sync Enables Port&emsp;-&emsp;HTTPS, TCP - 8090</p>
+											<p class="col-para-table">Authenion Sync&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&emsp;HTTPS, TCP - 8090</p>
 										</li>
-										<li><p class="col-para-table">Authenion Virtual Server&emsp;&emsp;&emsp;-&emsp;HTTP (or) HTTPS, TCP - 0 to 65535</p></li>
-									    <li><p class="col-para-table">Authenion SSO&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-&emsp;8333</p></li>
+										<li><p class="col-para-table">Authenion Virtual Server&emsp;&emsp;&emsp; -&emsp;HTTP (or) HTTPS, TCP - 0 to 65535</p></li>
+									    <li><p class="col-para-table">Authenion SSO&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&emsp;8333</p></li>
 										<li class="li" style="list-style-type: none;font-size:12px;max-width:500px;"><p class="col-para-table"><i><b>Note:</b> When the Sync button is clicked in the Authenion Admin Console, port 8090 is automatically enabled on the authenion server upon successful sync.</i>
 									    </ul>
 
@@ -1711,7 +1711,149 @@
                         <!-- ### Linux & WINDOWS Environment (Execution Steps) ### -->
 						<a style="padding:32px" name="AzureAuthenticationtoLaunchAuthenionConsole"></a>
 						<p class="col-sub-headings">2. OIDC Provider for Authentication to Launch Authenion Console </p>
-                        <!-- <p class="col-sub-headings-sub"><b>Navigate to the Directory:</b></p> -->
+						<p class="col-para" style="margin-left: 20px;">
+							 We are using Microsoft Entra ID (formerly Azure Active Directory) as OIDC Provider to Launch the Authenion Console.
+						</p>
+						<p class="col-sub-headings-sub" style="margin-left: 10px;"><b>&nbsp;&nbsp;<u>Pre-requisites</u></b></p>
+						<!-- <ul class="col-para"> -->
+						<ol  class="col-para">
+							<li><p class="col-para" >Azure account with valid subscription.</p></li>
+							<li><p class="col-para" >App registration.</p></li>
+							<li><p class="col-para" >Client Secrets </p></li>
+							<li><p class="col-para">Configure Redirect Url</p></li>
+							<li><p class="col-para">Configure Scope</p></li>
+						</ol>
+						
+                         <p class="col-sub-headings-sub" style="margin-left: 10px;"><b>&nbsp;&nbsp;<u>Entra ID Configurations</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">The following will register Authenion as an OAuth/OIDC client application in Microsoft Entra ID (formerly Azure Active Directory) & establish a unidirectional trust relationship between Authenion and Microsoft identity platform. When the registration finishes, the Azure portal displays the Authenion application registration’s overview pane. You can find the Application ID which will also be used as the client_id when we connect Authenion & Entra ID through OAuth/OIDC.</p>
+						<p class="col-sub-headings-sub" style="margin-left: 15px;"><b>App Registration:</b></p>
+						<ol class="col-para">
+							<li><p class="col-para">Login to the <a href="https://portal.azure.com/#home" target="_blank"><u>Azure portal</u></a>.</p></li>
+							<li><p class="col-para">In the <i>Manage Microsoft Entra ID (formerly Azure Active Directory)</i> section, click on <i>view</i>.</p></li>
+							<li><p class="col-para">Click on <i>+Add</i> and then click on <i>App Registration</i>.</p></li>
+							<ol class="col-para">
+								<li><p class="col-para">Give a display name for the app.</p></li>
+								<li><p class="col-para">Select the tenant in which you want to register the Authenion application.</p></li>
+								
+							<!-- <img src="assets/img/azure-1.png" alt="" class="col-images-pf"> -->
+							</ol>
+							<li><p class="col-para">Click on <i>Register</i>.</p></li>
+						</ol>
+						<!-- Image with onclick event -->
+						<img src="assets/img/Appreg.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer;" onclick="openModal('modalContainer29', 'modalImage29')" class="col-images-pf" />
+						
+						<!-- Modal container -->
+						<div id="modalContainer29" class="modal-container" onclick="closeModal('modalContainer29')">
+							<img id="modalImage29" class="modal-image" src="assets/img/Appreg.png" alt="">
+						</div>
+						<br />
+
+						<p class="col-sub-headings-sub" style="margin-left: 15px;"><b>Certificates & Secrets:</b></p>
+						<ol class="col-para">
+							<li><p class="col-para">From the side menu, click on <i>Certificates & secrets</i>.</p></li>
+							<li><p class="col-para">Click on <i>Client secrets</i>.</p></li>
+							<li><p class="col-para">Click on <i>+ New client secret</i>.</p></li>
+							<ol class="col-para">
+								<li><p class="col-para">Enter some description for the client.</p></li>
+								<li><p class="col-para">Set the expiry for the client.</p></li>
+							</ol>
+							<li><p class="col-para">Click on <i>Add</i>.</p></li>
+						</ol>
+
+						<!--IMAGE FOR CERTS AND SECRETS-->
+						<img src="assets/img/certificate_secret.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer;" onclick="openModal('modalContainer30', 'modalImage30')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContainer30" class="modal-container" onclick="closeModal('modalContainer30')">
+						        <img id="modalImage30" class="modal-image" src="assets/img/certificate_secret.png" alt="">
+						</div>
+						<br />
+						<br />
+
+                        <!--Configure Azure-->
+						<p class="col-sub-headings-sub" style="margin-left: 15px;"><b>Configure Redirect Url:</b></p>
+						<ol class="col-para">
+							<li>  <p class="col-para">In the Azure portal, under the registered Authenion Application, configure the redirect URL for the admin UI jar.</p></li> 
+						  
+						    <li>  <p class="col-para">From the side menu click on the Authentication, click on add a platform and select the single-page application.</p></li> 
+							
+							
+					   <!--IMAGE FOR Platform-->
+						<img src="assets/img/authenion-3.0/AzurePlatform.png" alt="" style="margin-left:120px;width: 41%;height:40%;cursor:pointer;" onclick="openModal('modalContainerAzurePlatform', 'modalImageAzurePlatform')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContainerAzurePlatform" class="modal-container" onclick="closeModal('modalContainerAzurePlatform')">
+						        <img id="modalImageAzurePlatform" class="modal-image" src="assets/img/authenion-3.0/AzurePlatform.png" alt="">
+						</div>
+						
+						 
+
+                        <!--IMAGE FOR configure Platform-->
+						<img src="assets/img/authenion-3.0/configureplatform.png" alt="" style="margin-left:120px;width: 41%;height:40%;cursor:pointer;" onclick="openModal('modalContainerconfigureplatform', 'modalImageconfigureplatform')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContainerconfigureplatform" class="modal-container" onclick="closeModal('modalContainerconfigureplatform')">
+						        <img id="modalImageconfigureplatform" class="modal-image" src="assets/img/authenion-3.0/configureplatform.png" alt="">
+						</div>
+						   <li> <p class="col-para">Add the redirect URI(https://authenionhostname:9898) and click on configure.</p></li>
+						   
+                        
+
+                        <!--IMAGE FOR Redirect URI-->
+						<img src="assets/img/authenion-3.0/redirectadd.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer" onclick="openModal('modalContainerredirectadd', 'modalImageredirectadd')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContainerredirectadd" class="modal-container" onclick="closeModal('modalContainerredirectadd')">
+						        <img id="modalImageredirectadd" class="modal-image" src="assets/img/authenion-3.0/redirectadd.png" alt="">
+						</div>
+
+						<br>
+						   
+						<br/>
+						<!--IMAGE FOR Redirect URI-->
+						<img src="assets/img/azure_redirect.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer" onclick="openModal('modalContainer031', 'modalImage031')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContainer031" class="modal-container" onclick="closeModal('modalContainer031')">
+						        <img id="modalImage031" class="modal-image" src="assets/img/azure_redirect.png" alt="">
+						</div>
+						 </ol>
+						<br />
+
+						<p class="col-sub-headings-sub" style="margin-left: 15px;"><b>Configure scope:</b></p>
+						<ol class="col-para">
+						   <li>  <p class="col-para">In the Azure portal, under the registered Authenion Application, configure the scope .</p></li> 
+
+
+						   <li>  <p class="col-para">
+							From the side menu, click on <i><b>Expose an API</b></i>, then select <i><b>Add a scope</b></i>.Add the <b><i>ApplicationID URI</i></b>.
+                             Set the  <b><i>Scope name</i></b> as <i>openid</i>, choose <i>Admins and users</i> under<b><i>Who can consent?</i></b>, and enter <i> openid</i> for both the <b><i>Admin consent display name</i></b> and the <b><i>Admin consent description</i></b>.</p></li> 
+						   
+						   
+					   <!--IMAGE FOR Expose an API-->
+						<img src="assets/img/authenion-3.0/api.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer" onclick="openModal('modalContainerapi', 'modalImageapi')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContainerapi" class="modal-container" onclick="closeModal('modalContainerapi')">
+						        <img id="modalImageapi" class="modal-image" src="assets/img/authenion-3.0/api.png" alt="">
+						</div>
+                     
+                     <br/>
+					  <br/>
+
+						<!--IMAGE FOR Expose an addscope-->
+						<img src="assets/img/authenion-3.0/addscope.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer" onclick="openModal('modalContaineraddscope', 'modalImageaddscope')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContaineraddscope" class="modal-container" onclick="closeModal('modalContaineraddscope')">
+						        <img id="modalImageaddscope" class="modal-image" src="assets/img/authenion-3.0/addscope.png" alt="">
+						</div>
+                     <br/>
+						<!--IMAGE FOR Expose an API-->
+						<img src="assets/img/authenion-3.0/addscope1.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer" onclick="openModal('modalContaineraddscope1', 'modalImageaddscope1')" class="col-images-pf" />
+						<!-- Modal container -->
+						<div id="modalContaineraddscope1" class="modal-container" onclick="closeModal('modalContaineraddscope1')">
+						        <img id="modalImageapi" class="modal-image" src="assets/img/authenion-3.0/addscope1.png" alt="">
+						</div>
+                          <br> 
+						<li> <p class="col-para">click on the Add scope.</p></li>
+						
+
+					</ol>
+                        <p class="col-sub-headings-sub" style="margin-left: 15px;"><b>To Launch the Authenion Console:</b></p>
 						<ol class="col-para">
 						   <li><p class="col-para">Open a terminal on your Linux or windows server where the `authenion-admin-xx-version.jar` file is located.</p></li> 
 						   <li> <p class="col-para">Make sure the `authenion.p12` file is in the same directory.</p></li> 
@@ -4025,20 +4167,7 @@
 						<br />
 						<br />
 
-                        <!--Configure Azure-->
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Configure Azure</b></p>
-						<ol class="col-para">
-						   <li>  <p class="col-para">In the Azure portal, under the registered Authenion Application, configure the redirect URL for the admin UI jar.</p></li> 
-						   <li>  <p class="col-para">Ensure the associated port is configured.</p></li> 
-						   <li>  <p class="col-para">Example URL: `https://servername:9898`</p></li>
-						</ol>
-						<!--IMAGE FOR Redirect URI-->
-						<img src="assets/img/azure_redirect.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer" onclick="openModal('modalContainer031', 'modalImage031')" class="col-images-pf" />
-						<!-- Modal container -->
-						<div id="modalContainer031" class="modal-container" onclick="closeModal('modalContainer031')">
-						        <img id="modalImage031" class="modal-image" src="assets/img/azure_redirect.png" alt="">
-						</div>
-						<br />
+                        
 						
 
 							<!-- <li><p class="col-para">When the registration finishes, the Azure portal displays the Authenion application registration’s overview pane. You can find the Application ID which will also be used as the client_id when we connect Authenion & Azure through OAuth/OIDC.</p></li> -->
