@@ -1400,7 +1400,7 @@
 							</p>
 							<li>
 								<p class="col-para">
-                                    If the setup fails, simply run setup.bat again and repeat the process.
+                                    If the setup fails, simply run <b><i>setup.bat</i></b>  again and repeat the process.
 								</p>
 							</li>
 							<p class="col-para"><i> <b>Note:</b> Make sure you have the correct permissions to run batch files and are running Command Prompt as Administrator, if required.</i></p>
@@ -1654,13 +1654,16 @@
 
 						<a style="padding:32px" name="idp-cert section"></a>
 						<p class="col-sub-headings">7. Import Identity Provider’s Certificate into Java Trust Store</p>
+						<!--LINUX ENVIRONMENT-->
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Linux Environment :</b></p>
+
 						<p class="col-para" style="margin-left: 20px;" >The following steps will guide you to import the Identity provider’s certificate into the Java trust store.</p>
 						<ol class="col-para">
 							<li><p class="col-para">Export the SSL Certificate from the Identity Provider (PingFederate, PingOne, AzureAD, etc.,) and Place the exported certificate file anywhere inside a directory on the Authenion server.<p></li>
 							<li><p class="col-para">Navigate to the Java binary directory:<p></li>
 						     <ul>
 								<li>
-									Open your terminal and run the following command .
+									Open your terminal:
 								</li>
 							 
 							</ul>
@@ -1669,10 +1672,9 @@
 								<div  class="div-table3-col">#]&emsp; cd $JAVA_HOME/bin</div>
 							</div>
 						</div>
+
 							
-						
-					 
-                         <li><p class="col-para">
+						<li><p class="col-para">
 							Run the keytool command to import the certificate into Java's trust store (cacerts). This allows Java applications to trust the Identity Provider.
 							<p></li>
 						<!-- TABLE3 -->
@@ -1707,7 +1709,63 @@
 						</ul>
 						</ol>
                     
+
+						<!--windows ENVIRONMENT-->
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Windows Environment :</b></p>
+
+						<p class="col-para" style="margin-left: 20px;" >The following steps will guide you to import the Identity provider’s certificate into the Java trust store.</p>
+						<ol class="col-para">
+							<li><p class="col-para">Export the SSL Certificate from the Identity Provider (PingFederate, PingOne, AzureAD, etc.,) and Place the exported certificate file anywhere inside a directory on the Authenion server.<p></li>
+							<li><p class="col-para">Navigate to the Java binary directory:<p></li>
+						     
+							  <ul>
+								<li>
+									Open Command Prompt as Administrator:
+								</li>
+							 
+							</ul>
+							 <div class="div-table3" style="margin-left: 34px;">
+							<div class="div-table3-row">
+								<div  class="div-table3-col">#]&emsp; cd %JAVA_HOME%\bin</div>
+							</div>
+						</div>
+							
+						<li><p class="col-para">
+							Run the keytool command to import the certificate into Java's trust store (cacerts). This allows Java applications to trust the Identity Provider.
+							<p></li>
+						<!-- TABLE3 -->
+						<div class="div-table3" style="margin-left: 34px;">
+							<div class="div-table3-row">
+								<div  class="div-table3-col">keytool -import -alias &lt;alias_name&gt; -keystore &lt;/path-to-java-cacerts&gt;
+									<br> -file &lt;/path-to-IdentityProvider-cert&gt;</div>
+							</div>
+						</div>
                          
+						<p class="col-para" style="margin-left: 40px;">Example:</p>
+						<div class="div-table3" style="margin-left: 34px;">
+							<div class="div-table3-row">
+								<div  class="div-table3-col">keytool -import -alias authenion -keystore C:\Program Files\Java\jdk-x.x.x\lib\security\cacerts -file C:\certificate.crt</div>
+							</div>
+						</div>
+						 </ol>
+						<ol class="col-para">
+                          <p class="col-para" style="margin-left: 30px;" ><i> <b>Note:</b></i></p>
+						<ul>
+						 <li> <p class="col-para" >
+								The certificate used in this example is located at: C:\certificate.crt.
+							</p>
+						 </li>
+						 <li> <p class="col-para" >
+								<i>
+                                <b>JAVA_HOME</b>
+								</i> refers to the base JDK installation directory. For example: C:\Program Files\Java\jdk-x.x.x
+							</p>
+						 </li>
+						 
+						</ul>
+						</ol>
+                    
+					
 
 						<a style="padding:32px" - name="ssl-cert section"></a>
 						<p class="col-sub-headings">8. Import SSL Certificates for Authenion (optional)</p>
