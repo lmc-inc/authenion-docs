@@ -1180,7 +1180,7 @@
 										<td>
 											<ul>
 
-												<li class="li"><p class="col-para-table">Download & extract the distribution zip into the installation directory <b>‘/home/user’</b></li>
+												<li class="li"><p class="col-para-table">Download & extract the distribution zip into the installation directory <b> Example:</b>‘/home/user’</li>
 
 											</ul>
 										</td>
@@ -1255,7 +1255,7 @@
 										<td>
 											<ul>
 
-												<li class="li"><p class="col-para-table">Download & extract the distribution zip into the installation directory <b>‘C:\Program Files’</b></li>
+												<li class="li"><p class="col-para-table">Download & extract the distribution zip into the installation directory <b> Example:</b>‘C:\Program Files’</li>
 
 											</ul>
 										</td>
@@ -1333,8 +1333,34 @@
 								</div>
 							</div>
 							<br>
-							<li><p class="col-para">Read and accept the Software Terms & Conditions. This will complete the setup process.</li>
-							<p class="col-para"><i> <b>Note:</b> In case if the process fails to complete the setup, you can re-run the setup script to complete it.</i></p>
+							<p class="col-para">Read and accept the Software Terms & Conditions to complete the setup process.
+								<p class="col-para">
+                                  After running the setup.sh command, you will be prompted with the following message:
+								</p>
+								
+							        <!-- <div class="div-table3" style="margin-left: -3px;">
+								<div class="div-table3-row">
+									<div class="div-table3-col">Do you accept the terms of this license agreement? Enter 'yes' to accept, 'no' to reject: yes</div>
+								</div>
+							</div> -->
+							
+						<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/setup.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer;" onclick="openModal('modalContainersetup', 'modalImagesetup')" class="col-images-pf" />
+						
+						<!-- Modal container -->
+						<div id="modalContainersetup" class="modal-container" onclick="closeModal('modalContainersetup')">
+							<img id="modalImagesetup" class="modal-image" src="assets/img/authenion-3.0/setup.png" alt="">
+						</div>
+						<br />
+							
+							<p class="col-para">
+								Enter <b><i>yes </i></b> to complete the proceed .
+							</p>
+							<li>
+								<p class="col-para">
+									If the setup fails, simply run <b><i>sudo ./setup.sh</i></b> again and repeat the process.
+								</p>
+							</li>
 						</ol>
 
 						<!-- WINDOWS ENVIRONMENT-->
@@ -1356,8 +1382,28 @@
 								</div>
 							</div>
 							<br>
-							<li><p class="col-para">Read and accept the Software Terms & Conditions. This will complete the setup process.</li>
-							<p class="col-para"><i> <b>Note:</b> In case if the process fails to complete the setup, you can re-run the setup script to complete it.</i></p>
+							<p class="col-para">Read and accept the Software Terms & Conditions to complete the setup process.
+								<p class="col-para">
+                                  After running the setup.bat command, you will be prompted with the following message:
+								</p>
+								<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/setup.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer;" onclick="openModal('modalContainersetup', 'modalImagesetup')" class="col-images-pf" />
+						
+						<!-- Modal container -->
+						<div id="modalContainersetup" class="modal-container" onclick="closeModal('modalContainersetup')">
+							<img id="modalImagesetup" class="modal-image" src="assets/img/authenion-3.0/setup.png" alt="">
+						</div>
+						<br />
+							
+							<p class="col-para">
+								Enter  <b><i>yes </i></b>  to complete the proceed .
+							</p>
+							<li>
+								<p class="col-para">
+                                    If the setup fails, simply run setup.bat again and repeat the process.
+								</p>
+							</li>
+							<p class="col-para"><i> <b>Note:</b> Make sure you have the correct permissions to run batch files and are running Command Prompt as Administrator, if required.</i></p>
 						</ol>
 
 
