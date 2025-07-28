@@ -235,11 +235,12 @@
 					</a>
 				</li>
 
-				  <li>
-					  <a href="#health-check section" class="nav-link-sub collapsed">
-						  <!--<i class="bi bi-circle"></i>--><span>Authenion Health-check</span>
-					  </a>
-				  </li>
+				  <!-- <li>
+					  <a href="#health-check section" class="nav-link-sub collapsed"> -->
+						  <!--<i class="bi bi-circle"></i>-->
+						  <!-- <span>Authenion Health-check</span> -->
+					  <!-- </a>
+				  </li> -->
 				  <li>
 					  <a href="#idp-cert section" class="nav-link-sub collapsed">
 						  <!--<i class="bi bi-circle"></i>--><span>Import Identiy Provider's Certificate into Java Trust Store</span>
@@ -355,6 +356,11 @@
 				  <!--<i class="bi bi-circle"></i>--><span>Sync & Export</span>
 			  </a>
 		  </li>
+		  <li>
+					  <a href="#health-check section" class="nav-link-sub collapsed">
+						  <!--<i class="bi bi-circle"></i>--><span>Authenion Health-check</span>
+					  </a>
+				  </li>
 		  <li>
 			<a href="#User Modified Pages" class="nav-link-sub collapsed">
 				<!--<i class="bi bi-circle"></i>--><span>User-Customized Templates</span>
@@ -1637,23 +1643,23 @@
 					</ol>
 
                     <!-- Authenion Health-check -->
-						<a style="padding:32px" name="health-check section"></a>
+						<!-- <a style="padding:32px" name="health-check section"></a>
 						<p class="col-sub-headings">6. Authenion Health-check</p>
 						<ol class="col-para">
 							<li><p class="col-para">To check the Authenion status through the heartbeat URL, enter the following URL in the browser. This can be used for monitoring the Authenion services.<p></li>
-						</ol>
+						</ol> -->
 						
 						<!-- TABLE3 -->
-							<div class="div-table3" style="margin-left: 34px;">
+							<!-- <div class="div-table3" style="margin-left: 34px;">
 								<div class="div-table3-row">
 									<div class="div-table3-col" >https://&lt;authenion-virtualserver:port&gt;/ssolibrary/oidc/heartbeat</div>
 								</div>
-							</div>
+							</div> -->
 							
 
 
 						<a style="padding:32px" name="idp-cert section"></a>
-						<p class="col-sub-headings">7. Import Identity Provider’s Certificate into Java Trust Store</p>
+						<p class="col-sub-headings">6. Import Identity Provider’s Certificate into Java Trust Store</p>
 						<!--LINUX ENVIRONMENT-->
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Linux Environment :</b></p>
 
@@ -1768,7 +1774,7 @@
 					
 
 						<a style="padding:32px" - name="ssl-cert section"></a>
-						<p class="col-sub-headings">8. Import SSL Certificates for Authenion (optional)</p>
+						<p class="col-sub-headings">7. Import SSL Certificates for Authenion (optional)</p>
 
                  	<p class="col-para" style="margin-left: 20px;">Authenion allows you to install your organization’s signed certificates. The certificates should be in the .crt & .key files format. To place your organization’s certificate in Authenion, follow the steps below.</p>
 						<ol class="col-para">
@@ -3946,11 +3952,29 @@
 							name is export.json.
 						</p>
 					</div>
+
+
+
+					 <!-- Authenion Health-check -->
+						<a style="padding:32px" name="health-check section"></a>
+						<p class="col-sub-headings">13. Authenion Health-check</p>
+						<ol class="col-para">
+							<li><p class="col-para">To check the Authenion status through the heartbeat URL, enter the following URL in the browser. This can be used for monitoring the Authenion services.<p></li>
+						</ol>
+						
+						<!-- TABLE3 -->
+							<div class="div-table3" style="margin-left: 34px;">
+								<div class="div-table3-row">
+									<div class="div-table3-col" >https://&lt;authenion-virtualserver:port&gt;/ssolibrary/oidc/heartbeat</div>
+								</div>
+							</div>
+							
+
 					
                    <!--User Modified Pages-->
 				   <div>
 					<a style="padding: 35px" name="User Modified Pages"></a>
-					<p class="col-sub-headings">13. User-Customized Templates</p>
+					<p class="col-sub-headings">14. User-Customized Templates</p>
 					<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Email Page Templates</b></p>
 					<p class="col-para" style="margin-left: 20px;">
                     Authenion enables customization of user-facing pages, such as emails and forms, using HTML, CSS, JavaScript, and localization files with dynamic placeholders for messages and user-specific data.Templates are located in  <authenion_install_dir>/config/html/emailTemplates and localization messages in <authenion_install_dir>/config/html/locale/messages_en.properties.
