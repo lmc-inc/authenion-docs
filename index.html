@@ -436,6 +436,19 @@
 		  </ul>
 	  </li><!-- End Icons Nav -->
 
+
+	   <li class="nav-item">
+			<a class="nav-link collapsed" data-bs-target="#troubleshoot" data-bs-toggle="collapse" href="#">
+				<span>Troubleshoot </span><i class="bi bi-chevron-down ms-auto"></i>
+			</a>
+			<ul id="troubleshoot" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+				<li>
+					<a href="#Logger" class="nav-link-sub collapsed">
+						<!--<i class="bi bi-circle"></i>--><span>Logger Level for Log4j2</span>
+					</a>
+				</li>
+
+			</ul>
 	  <li class="nav-heading"></li>
 
 
@@ -7015,6 +7028,89 @@
 
 	</ol>
 
+	<!-- <a  name="loggerlevel"></a>  -->
+	 <a style="padding: 38px" name="troubleshoot"></a>
+						<h4 style="font-family: sans-serif; font-size: 26px; font-weight: 600; color: #00297A">Troubleshoot</h4>
+			<!-- <p class="col-sub-headings-app" style="margin-bottom: -15px;"><u>Troubleshoot</u></p> -->
+         
+			 <a style="padding:20px" name="Logger"></a>
+			 <!-- <p class="col-sub-headings-sub"><b></b></p> -->
+			 <p class="col-sub-headings">1. Logger Level for Log4j2</p>
+             <p class="col-para" style="margin-left:30px;">
+				To enable standard DEBUG level logging in Authenion, make the following changes to the &lt;install&gt;/authenion/config/log4j2.xml file:
+			 </p>
+
+			 <p class="col-para">
+				<b>From:</b>
+			 </p>
+			  <p class="col-para" style="margin-left:30px;">
+			 
+                   &lt;Logger name="com.authenion" level="INFO" additivity="false" /&gt;
+                    </p>
+			 <p class="col-para">
+				<b>To:</b>
+			 </p>
+			 <p class="col-para" style="margin-left:30px;">
+			 
+                   &lt;Logger name="com.authenion" level="DEBUG" additivity="false" /&gt;
+             </p>
+
+			 <p class="col-para">
+				<b>From:</b>
+			 </p>
+			  <p class="col-para" style="margin-left:30px;">
+			      &lt;Logger name="com.authenion.sso.library.audit.AuthenionAuditLogger"
+                level="INFO" additivity="false" includeLocation="false" /&gt;
+                    </p>
+
+			 <p class="col-para">
+				<b>To:</b>
+			 </p>
+                <p class="col-para" style="margin-left:30px;">
+			 
+                   &lt;Logger name="com.authenion.sso.library.audit.AuthenionAuditLogger"
+                level="DEBUG" additivity="false" includeLocation="false /&gt;
+                    </p>
+
+
+			 <p class="col-para">
+				<b>From:</b>
+			 </p>
+
+			  <p class="col-para" style="margin-left:30px;">
+			     &lt;Root level="INFO" includeLocation="false">
+             </p>
+
+             <p class="col-para" style="margin-left:30px;">
+                &lt;appender-ref ref="FileAppender" /&gt;
+             </p>
+
+             <p class="col-para" style="margin-left:30px;">&lt;Root/&gt;</p>
+
+			 <p class="col-para">
+				<b>To:</b>
+			 </p>
+              
+			 <p class="col-para" style="margin-left:30px;">
+			     &lt;Root level="DEBUG" includeLocation="false">
+             </p>
+
+             <p class="col-para" style="margin-left:30px;">
+                &lt;appender-ref ref="FileAppender" /&gt;
+             </p>
+
+             <p class="col-para" style="margin-left:30px;">&lt;Root/&gt;</p>
+
+               
+           <p class="col-para" style="margin-left:30px;">Changes to log4j2.xml do not require a restart.This change should be made on all nodes in a cluster that you wish to collect more detailed logging for.
+          </p>
+
+     <p class="col-para" style="margin-left: 35px;"><i><b>Note:</b> If you make this change in a production environment, it is likely to impact performance, so should be reverted to the defaults as soon as possible.
+      </i></p>
+
+			 <br/>
+			 <br/>
+			 
 
 						<!-- REPEAT THE ABOVE ORACLE APEX FORMAT FOR ALL THE REST OF THE APPLICATIONS-->
 						<!--Oracle Hyperion Application-->
