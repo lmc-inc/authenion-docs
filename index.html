@@ -448,6 +448,12 @@
 					</a>
 				</li>
 
+				<li>
+					<a href="#AuthenionLogs" class="nav-link-sub collapsed">
+						<!--<i class="bi bi-circle"></i>--><span>Authenion Logs</span>
+					</a>
+				</li>
+
 			</ul>
 	  <li class="nav-heading"></li>
 
@@ -7142,39 +7148,54 @@
      <p class="col-para" style="margin-left: 35px;"><i><b>Note:</b> If you make this change in a production environment, it is likely to impact performance, so should be reverted to the defaults as soon as possible.
       </i></p>
 
-			 <br/>
-			 <br/>
+		
+			
+               
+			 <a style="padding:20px" name="AuthenionLogs"></a>
+			 <p class="col-sub-headings">2. Authenion Logs </p>
+			 <p class="col-para" style="margin-left:30px;">
 
-			 <!-- <p class="col-sub-headings">2. Authenion Logs </p>
+				Authenion has different log types for different uses: 
+			 </p>
             <ul class="col-para" style="margin-left: 10px;">
 
 			<li>
                   <p class="col-para">
-                   <b>authenion.engine.log:</b> 
-			       </p>
+                   <b>authenion.engine.log : </b> Writes information about the SSO login, logout transactions and Identity Provider communication for authentication.
+                  </p>
+             </li>
+
+			 <li>
+                  <p class="col-para">
+                   <b>authenion.agent.log : </b> Authenion agent log writes information about the Sync agent that is used for transporting the config data from Authenion admin console to the server &lt;authenion_install_dir&gt;/authenion/server/conf directory.
+                  </p>
              </li>
 			
 			 <li>
                <p class="col-para">
-                   <b>audit.log : </b>captures all login and SSO-related events including timestamps, usernames, request URLs, and success status. It is used for security auditing, user activity tracking, and compliance reporting. 
+                   <b>audit.log : </b>Writes information regarding the user access to the applications. Mainly used for security audit purposes.
+. 
 			   </p>
 			</li>
 			 
              <li>
 			    <p class="col-para">
-                   <b>server.log:</b> records low-level server-side events, including SSL handshake failures, client connection issues, and protocol-level errors. It's essential for identifying problems in secure communication between clients and the server
+                   <b>server.log : </b> Writes all information about the Nginx webserver transactions
 			   </p>
 			</li>
 			 
              <li>
 			     <p class="col-para">
-                   <b>access.log</b> 
+                   <b>access.log : </b> Records the Nginx webserver requests along with the HTTP result codes for that access.
+
 			    </p>
 			</li>
 			 
 			  </ul>
 
-			  -->
+			  <br/>
+			  <br/>
+			 
 
 						<!-- REPEAT THE ABOVE ORACLE APEX FORMAT FOR ALL THE REST OF THE APPLICATIONS-->
 						<!--Oracle Hyperion Application-->
