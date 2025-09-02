@@ -2058,7 +2058,7 @@
 							<!-- TABLE3 -->
 						   <div class="div-tables3" style="margin-left: 5px;">
                                 <div class="div-table3-row1">   
-                                    <div class="div-table3-col" style="white-space: pre-wrap; word-break: break-all">java -jar authenion-admin-xx-version.jar com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://&lt;authenionservername&gt;:9898 --adminPassword=%ENV_PASSWORD%</div><br><br>
+                                    <div class="div-table3-col" style="white-space: pre-wrap; word-break: break-all">java -jar authenion-admin-xx-version.jar com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://&lt;authenionservername&gt;:9898 --adminPassword=$ENV_PASSWORD</div><br><br>
                                 </div>
                           </div>
 						
@@ -2102,7 +2102,7 @@
 							<!-- TABLE3 -->
 						   <div class="div-tables3" style="margin-left: 5px;">
                                 <div class="div-table3-row1">   
-                                    <div class="div-table3-col" style="white-space: pre-wrap; word-break: break-all">java -jar authenion-admin-xx-version.jar com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://&lt;authenionservername&gt;:9898 --adminPassword=$ENV_PASSWORD</div><br><br>
+                                    <div class="div-table3-col" style="white-space: pre-wrap; word-break: break-all">java -jar authenion-admin-xx-version.jar com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://&lt;authenionservername&gt;:9898 --adminPassword=%ENV_PASSWORD%</div><br><br>
                                 </div>
                           </div>
                               
@@ -5358,7 +5358,7 @@
 							<li><p class="col-para">Copy the downloaded <i>'EIKAuth.config'</i> file to a Config path(/home/user/EBSAuth)in the server. This file will be used in the EIK deployment section later.</p></li>
 						</ol>
 						
-						<p class="col-sub-headings-sub" style="margin-left: 30px;"></p><b><u>JIT Provisioner external interface</u></b></p>
+						<p class="col-sub-headings-sub" style="margin-left: 30px;"></p><b><u>JIT Provisioner external interface (optional)</u></b></p>
 						<p class="col-para" style="margin-left: 30px;">This is one of the additional feature which is Just in Time provisioning externally and it allows us to create the provisioner according to the requirement.</p>
 						<ol style="margin-left: 20px;" class="col-para">
 						<li><p class="col-para"> The User details for the JIT Provisioning can be obtained through OIDC claims. </p></li>
@@ -7095,51 +7095,7 @@
                    &lt;Logger name="com.authenion" level="DEBUG" additivity="false" /&gt;
              </p>
 
-			 <p class="col-para" style="margin-left:30px;">
-				<b>From:</b>
-			 </p>
-			  <p class="col-para" style="margin-left:30px;">
-			      &lt;Logger name="com.authenion.sso.library.audit.AuthenionAuditLogger"
-                level="INFO" additivity="false" includeLocation="false" /&gt;
-                    </p>
-
-			 <p class="col-para" style="margin-left:30px;">
-				<b>To:</b>
-			 </p>
-                <p class="col-para" style="margin-left:30px;">
 			 
-                   &lt;Logger name="com.authenion.sso.library.audit.AuthenionAuditLogger"
-                level="DEBUG" additivity="false" includeLocation="false /&gt;
-                    </p>
-
-
-			 <p class="col-para" style="margin-left:30px;">
-				<b>From:</b>
-			 </p>
-
-			  <p class="col-para" style="margin-left:30px;">
-			     &lt;Root level="INFO" includeLocation="false">
-             </p>
-
-             <p class="col-para" style="margin-left:30px;">
-                &lt;appender-ref ref="FileAppender" /&gt;
-             </p>
-
-             <p class="col-para" style="margin-left:30px;">&lt;Root/&gt;</p>
-
-			 <p class="col-para" style="margin-left:30px;">
-				<b>To:</b>
-			 </p>
-              
-			 <p class="col-para" style="margin-left:30px;">
-			     &lt;Root level="DEBUG" includeLocation="false">
-             </p>
-
-             <p class="col-para" style="margin-left:30px;">
-                &lt;appender-ref ref="FileAppender" /&gt;
-             </p>
-
-             <p class="col-para" style="margin-left:30px;">&lt;Root/&gt;</p>
 
                
            <p class="col-para" style="margin-left:30px;">Changes to log4j2.xml do not require a restart.This change should be made on all nodes in a cluster that you wish to collect more detailed logging for.
@@ -7165,11 +7121,6 @@
                   </p>
              </li>
 
-			 <li>
-                  <p class="col-para">
-                   <b>authenion.agent.log : </b> Authenion agent log writes information about the Sync agent that is used for transporting the config data from Authenion admin console to the server &lt;authenion_install_dir&gt;/authenion/server/conf directory.
-                  </p>
-             </li>
 			
 			 <li>
                <p class="col-para">
