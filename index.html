@@ -409,7 +409,7 @@
 
 			   <li>
 				  <a href="#Oracle EBS" class="nav-link-sub collapsed">
-					  <!--<i class="bi bi-circle">--></i><span>Oracle EBS SSO with Authenion</span>
+					  <!--<i class="bi bi-circle">--></i><span>Authenion as Proxy for EBS kit</span>
 				  </a>
 			  </li>
 			  <li>
@@ -5529,7 +5529,7 @@
                         
 						<a style="padding: 35px" name="Oracle EBS"></a>
 						<p class="col-sub-headings-app"><u>Authenion as Proxy for EBS kit</u></p>
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Oracle EBS SSO with Authenion</b></p>
+						
 						<p class="col-sub-headings-eik" style="margin-left: 20px;">Configuration Steps</p>
 						<p class="col-para" style="margin-left: 20px;">Onboard EBS Integration kit as an application in Authenion-Admin console.</p>
 						<p class="col-para" style="margin-left: 20px;">Launch Authenion admin console (Refer the section) .</p>
@@ -5539,8 +5539,8 @@
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>1. Pre-requisites</b></p>
 						<ol class="col-para" style="margin-left: 20px;">
-							<li><p class="col-para">Install Authenion and ensure its services should be running. (Refer previous section)</p></li>
-							<li><p class="col-para">Deploy Authenion-EBS integration KIT in a machine and ensure their port is listening. (Refer previous section)</p></li>
+							<li><p class="col-para">Install Authenion and ensure its services should be running.<a href="#install-authenion section"> <u>Install Authenion</u></a> </p></li>
+							<li><p class="col-para">Deploy Authenion-EBS integration KIT in a machine and ensure their port is listening.<a href="#Oracle E-Business Suite"> <u>Oracle E-Business Suite</u></p></li>
 							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
 						</ol>
 						<br />
@@ -5560,7 +5560,7 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">Virtual Server in Authenion will be the user-facing URL of the Oracle EBS application. Virtual Server is defined by the hostname and port</p>
+										<p class="col-para-table">Virtual Server in Authenion will be the user-facing URL of the EIK application. Virtual Server is defined by the hostname and port</p>
 
 									</td>
 								</tr>
@@ -5571,7 +5571,7 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">Application Host details is about the server responsible for hosting the Oracle EBS application and its components</p>
+										<p class="col-para-table">Application Host details is about the server responsible for hosting the EIK application and its components</p>
 
 									</td>
 								</tr>
@@ -5582,7 +5582,7 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">Headers Mappings in Authenion are used to send one or more user attribute values to Oracle EBS application as HTTP Header variables</p>
+										<p class="col-para-table">Headers Mappings in Authenion are used to send one or more user attribute values to EIK application as HTTP Header variables</p>
 
 									</td>
 								</tr>
@@ -5593,7 +5593,7 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">Resources in Authenion are the Oracle EBS application components that requires different security levels. EBS application can be configured with <i>'Protected' & 'Excluded'</i> resources as per the requirements</p>
+										<p class="col-para-table">Resources in Authenion are the EIK application components that requires different security levels. EIK application can be configured with <i>'Protected' & 'Excluded'</i> resources as per the requirements</p>
 
 									</td>
 								</tr>
@@ -5604,18 +5604,7 @@
 									</td>
 									<td>
 
-										<p class="col-para-table">This setup in Authenion will register a unique entry for the Oracle EBS application</p>
-
-									</td>
-								</tr>
-
-								<tr>
-									<td>
-										<p class="col-para-table"><a href="#Apex SSO setup"> <u>SSO setup in Oracle EBS</u></a></p>
-									</td>
-									<td>
-
-										<p class="col-para-table">Oracle EBS configuration that needs to be done for its application modules independently inside the EBS administration workspace</p>
+										<p class="col-para-table">This setup in Authenion will register a unique entry for the EIK application</p>
 
 									</td>
 								</tr>
@@ -5625,7 +5614,7 @@
 						<br />
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Virtual Server</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of a Virtual Server for Oracle EBS application.</p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of a Virtual Server for EIK application.</p>
 						<br />
 
 						<!-- Image with onclick event -->
@@ -5639,7 +5628,7 @@
                         
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Application Host</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of an Application Host in Authenion for Oracle EBS application.</p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of an Application Host in Authenion for EIK application.</p>
 						<br />
 
 						<!-- Image with onclick event -->
@@ -5652,7 +5641,7 @@
 						<br>
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Header Mapping</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of a Header Mapping for Oracle EBS application.</p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of a Header Mapping for EIK application.</p>
 						<br />
 
 												<!-- Image with onclick event -->
@@ -5666,7 +5655,7 @@
 
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Resources</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of Protected & Excluded Resources in Authenion for Oracle EBS application.</p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of Protected & Excluded Resources in Authenion for EIK application.</p>
 						<br />
 
 							<!-- Image with onclick event -->
@@ -5678,8 +5667,8 @@
 						<br />
 						<br />
 
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Registering an Application for Oracle EBS in Authenion</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of creating an Application in Authenion for Oracle EBS.</p>
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Registering an Application for EIK in Authenion</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of creating an Application in Authenion for EIK.</p>
 
 						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;margin-left: 32px;width: 64%">
 							<tr>
@@ -5696,7 +5685,7 @@
 									</td>
 									<td>
 										<ul>
-											<p class="col-para-table">EBS</p>
+											<p class="col-para-table">EIK</p>
 										</ul>
 									</td>
 								</tr>
