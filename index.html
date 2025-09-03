@@ -406,6 +406,12 @@
 					  <!--<i class="bi bi-circle">--></i><span>Oracle E-Business Suite</span>
 				  </a>
 			  </li>
+
+			   <li>
+				  <a href="#Oracle EBS" class="nav-link-sub collapsed">
+					  <!--<i class="bi bi-circle">--></i><span>Oracle EBS SSO with Authenion</span>
+				  </a>
+			  </li>
 			  <li>
 				  <a href="#Oracle Apex" class="nav-link-sub collapsed">
 					  <!--<i class="bi bi-circle">--></i><span>Oracle APEX</span>
@@ -4644,6 +4650,14 @@
 									</p>
 								</a>
 							</div>
+<div>
+								<a href="#Oracle EBS">
+									<p class="tile-app-int" data-test="tile">
+										<b>Oracle EBS SSO with Authenion</b>
+									</p>
+								</a>
+							</div>
+
 
 							<div>
 								<a href="#Oracle Apex">
@@ -5513,9 +5527,263 @@
 
 						<!--Authenion as a Proxy for EBS SSO-->
                         
-						<a style="padding: 35px" name="Authenion as Proxy"></a>
+						<a style="padding: 35px" name="Oracle EBS"></a>
 						<p class="col-sub-headings-app"><u>Authenion as Proxy for EBS kit</u></p>
-                    
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Oracle EBS SSO with Authenion</b></p>
+						<p class="col-sub-headings-eik" style="margin-left: 20px;">Configuration Steps</p>
+						<p class="col-para" style="margin-left: 20px;">Onboard EBS Integration kit as an application in Authenion-Admin console.</p>
+						<p class="col-para" style="margin-left: 20px;">Launch Authenion admin console (Refer the section) .</p>
+						<p class="col-para" style="margin-left: 20px;">Navigate to Identity Provider Configuration section and provide your IDP endpoints and other details.</p>
+                        <p class="col-para" style="margin-left: 20px;">Navigate to Application section and Configure Virtual servers, Application hosts, Header mappings and Resources and Enable the Application. Refer the section</p>
+						
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>1. Pre-requisites</b></p>
+						<ol class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">Install Authenion and ensure its services should be running. (Refer previous section)</p></li>
+							<li><p class="col-para">Deploy Authenion-EBS integration KIT in a machine and ensure their port is listening. (Refer previous section)</p></li>
+							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
+						</ol>
+						<br />
+
+												<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>2. SSO Integration Workflow</b></p>
+						<!-- TABLE - Task & Description -->
+							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;margin-left: 32px;width: 64%">
+								<tr>
+									<th class="symcomponent">Tasks</th>
+									<th class="symcomponent">&emsp;Description</th>
+								</tr>
+
+							<tbody class="tbody">
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Virtual Servers"> <u>Create a Virtual Server</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Virtual Server in Authenion will be the user-facing URL of the Oracle EBS application. Virtual Server is defined by the hostname and port</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Application Hosts"> <u>Create an Application Host</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Application Host details is about the server responsible for hosting the Oracle EBS application and its components</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Header Mapping"> <u>Create a Header Mapping</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Headers Mappings in Authenion are used to send one or more user attribute values to Oracle EBS application as HTTP Header variables</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Resources"> <u>Create Resources</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Resources in Authenion are the Oracle EBS application components that requires different security levels. EBS application can be configured with <i>'Protected' & 'Excluded'</i> resources as per the requirements</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Applications"> <u>Create an Application</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">This setup in Authenion will register a unique entry for the Oracle EBS application</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Apex SSO setup"> <u>SSO setup in Oracle EBS</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Oracle EBS configuration that needs to be done for its application modules independently inside the EBS administration workspace</p>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						<br />
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Virtual Server</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of a Virtual Server for Oracle EBS application.</p>
+						<br />
+
+						<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/EBS-VirtualServer.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs2', 'modalImageEbs2')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerEbs2" class="modal-container" onclick="closeModal('modalContainerEbs2')">
+							<img id="modalImageEbs2" class="modal-image" src="assets/img/authenion-3.0/EBS-VirtualServer.png" alt="">
+						</div>
+						<br />
+						<br>
+                        
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Application Host</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of an Application Host in Authenion for Oracle EBS application.</p>
+						<br />
+
+						<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/EBS-Backend.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs3', 'modalImageEbs3')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerEbs3" class="modal-container" onclick="closeModal('modalContainerEbs3')">
+							<img id="modalImageEbs3" class="modal-image" src="assets/img/authenion-3.0/EBS-Backend.png" alt="">
+						</div>
+						<br />
+						<br>
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Header Mapping</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of a Header Mapping for Oracle EBS application.</p>
+						<br />
+
+												<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/EBS-Headers.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs4', 'modalImageEbs4')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerEbs4" class="modal-container" onclick="closeModal('modalContainerEbs4')">
+							<img id="modalImageEbs4" class="modal-image" src="assets/img/authenion-3.0/EBS-Headers.png" alt="">
+						</div>
+						<br />
+						<br />
+
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Resources</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of Protected & Excluded Resources in Authenion for Oracle EBS application.</p>
+						<br />
+
+							<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/EBS-Resources.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs5', 'modalImageEbs5')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerEbs5" class="modal-container" onclick="closeModal('modalContainerEbs5')">
+							<img id="modalImageEbs5" class="modal-image" src="assets/img/authenion-3.0/EBS-Resources.png" alt="">
+						</div>
+						<br />
+						<br />
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Registering an Application for Oracle EBS in Authenion</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of creating an Application in Authenion for Oracle EBS.</p>
+
+						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;margin-left: 32px;width: 64%">
+							<tr>
+								<th class="symcomponent">Configuration</th>
+								<th class="symcomponent">&emsp;Values</th>
+							</tr>
+
+							<tbody class="tbody">
+
+								<!--Name-->
+								<tr>
+									<td>
+										<p class="col-para-table">Name</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">EBS</p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Virtual Server-->
+								<tr>
+									<td>
+										<p class="col-para-table">Virtual Server</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">EIKVirtualServer</p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Header Mapping-->
+								<tr>
+									<td>
+										<p class="col-para-table">Header Mapping</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">EIKHeaders</p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Protected Resource-->
+								<tr>
+									<td>
+										<p class="col-para-table">Protected Resource</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">EIKProtected</p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Excluded Resource-->
+								<tr>
+									<td>
+										<p class="col-para-table">Excluded Resource</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">EIKExcluded</p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Application Host-->
+								<tr>
+									<td>
+										<p class="col-para-table">Application Host</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">EIKBackend</p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Authenion Instances-->
+								<tr>
+									<td>
+										<p class="col-para-table">Authenion Instances</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Auto populated</p>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br>
+						<br>
+						<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/EBS-Application.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs6', 'modalImageEbs6')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerEbs6" class="modal-container" onclick="closeModal('modalContainerEbs6')">
+							<img id="modalImageEbs6" class="modal-image" src="assets/img/authenion-3.0/EBS-Application.png" alt="">
+						</div>
+						<br />
+						<br />
 
 						
 
@@ -5529,6 +5797,7 @@
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Oracle APEX SSO with Authenion</b></p>
 						<p class="col-para" style="margin-left: 20px;">Oracle APEX is a web-based integrated development environment which simplifies the process of building applications and pages. It supports the use of HTTP Header variables to identify a user and to create a session for the user in Oracle APEX application.</p>
 						<br />
+						
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Architecture</b></p><br />
 
@@ -7131,13 +7400,13 @@
 			 
              <li>
 			    <p class="col-para">
-                   <b>server.log : </b> Writes all information about the Nginx webserver transactions
+                   <b>server.log : </b> Writes all information about the Nginx webserver transactions.The log file is located at authenion/server/logs/server.log.
 			   </p>
 			</li>
 			 
              <li>
 			     <p class="col-para">
-                   <b>access.log : </b> Records the Nginx webserver requests along with the HTTP result codes for that access.
+                   <b>access.log : </b> Records the Nginx webserver requests along with the HTTP result codes for that access.The log file is located at authenion/server/logs/server.log.
 
 			    </p>
 			</li>
