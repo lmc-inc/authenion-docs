@@ -1684,8 +1684,12 @@
 
 
 						<a style="padding:32px" name="idp-cert section"></a>
-						<p class="col-sub-headings">6. Import Identity Provider’s Certificate into Java Trust Store</p>
+						<p class="col-sub-headings">6. Import Identity Provider’s Certificate into Java Trust Store (optional)</p>
 						<!--LINUX ENVIRONMENT-->
+            <p class="col-para" style="margin-left: 20px;">
+						The IdP server certificate needs to be imported into the Java trust store only if it is self-signed or issued by a private CA.
+                        If the certificate is signed by a well-known Public Certificate Authority (CA), import is not required, since Java already trusts it by default.
+					</p>
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Linux Environment :</b></p>
 
 						<p class="col-para" style="margin-left: 20px;" >The following steps will guide you to import the Identity provider’s certificate into the Java trust store.</p>
