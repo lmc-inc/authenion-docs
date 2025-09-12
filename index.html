@@ -412,6 +412,12 @@
 					  <!--<i class="bi bi-circle">--></i><span>Authenion as Proxy for EBS kit</span>
 				  </a>
 			  </li>
+
+			  <li>
+				  <a href="#EIK Migration From 2.X to 3.X Version" class="nav-link-sub collapsed">
+					  <!--<i class="bi bi-circle">--></i><span>EIK Migration From 2.X to 3.X Version</span>
+				  </a>
+			  </li>
 			  <li>
 				  <a href="#Oracle Apex" class="nav-link-sub collapsed">
 					  <!--<i class="bi bi-circle">--></i><span>Oracle APEX</span>
@@ -5883,6 +5889,80 @@
 						</div>
 						<br />
 						<br />
+
+
+						<!--EIK Migration From 2.X to 3.X Version-->
+                        
+						<a style="padding: 35px" name="EIK Migration From 2.X to 3.X Version"></a>
+						<p class="col-sub-headings-app"><u>EIK Migration From 2.X to 3.X Version</u></p>
+						
+						<p class="col-sub-headings-eik" style="margin-left: 20px;">Configuration Steps</p>
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>1. System Requirements </b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p>For successful execution of of Authenion for EBS 3.0, ensure that the <a href="#SupportedOS">System Requirements</a> (OS version, recommended Java, etc.) are met.</p></li>
+							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
+						</ul>
+						<br />
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>2. File System Preparation</b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">Create or use an existing folder with a user-defined name (e.g., <b> EBSAuth </b>). This folder will serve as the configuration path for the Authenion-EIK implementation.</p></li>
+							<!--Table3-->
+						<div class="div-table3" style="margin-left: 5px;">
+							<div class="div-table3-row">
+								<div  class="div-table3-col">Example Config Path : /home/user/EBSAuth</div>
+							</div>
+						</div>
+						</ul>
+						<br />
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>3. EBS Database connection with Authenion-EIK</b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">A database connection between Authenion-EIK and the EBS database can be established using the <b>DBC file</b> (available in  the EBS DB) along with the <b>dbConfig.properties</b> file, which contains the required database user settings.</p></li>
+							<li><p class="col-para">Authenion  for EBS is also backward compatible with the existing <b>dbcx</b> file.</p></li>
+						</ul>
+					    <br />
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>4. Identity Provider Configurations </b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">Authenion for EBS is compatible with the existing <b>EBSAuth.config</b> which has your identity provider configuration.</p></li>
+							<li><p class="col-para"> <b>Other Dependent files:</b> </p></li>
+							<ul>
+								<li> <p> startup.properties(This is the new file which needed for Authenion-EIK 3.x version)</p></li>
+								<li> <p> ebsauth.lic</p></li>
+								<li> <p> Log4j2.xml</p></li>
+								<li> <p> Security.properties</p></li>
+							</ul>
+
+						</ul>
+					    <br />
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>5. Deployment of Authenion-EIK 3.X </b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">Authenion for EBS does not require a J2EE container for deployment. Instead, it is provided as a standalone JAR file, making the execution process straightforward and lightweight.</p></li>
+							<li><p class="col-para">Navigate to the configuration path created earlier and place all dependent files required for deployment in this path <b>(Eg; /home/user/EBSAuth)</b>.</p></li>
+							<ul>
+								<li> <p> startup.properties</p></li>
+								<li> <p> ebsauth.lic</p></li>
+								<li> <p> EIKAuth.config</p></li>
+								<li> <p> EIK.dbcx</p></li>
+								<li> <p> Log4j2.xml</p></li>
+								<li> <p> Security.properties</p></li>
+								<li> <p> DbConfig.properties</p></li>
+								<li> <p> VIS.dbc</p></li>
+							</ul>
+							<li><p class="col-para">The EIK plugin <b>(authenion-eik.jar)</b>, along with all its dependencies (mentioned above), should be executed using the following command.</p></li>
+							<!--Table3-->
+						<div class="div-table3" style="margin-left: 5px;">
+							<div class="div-table3-row">
+								<div  class="div-table3-col"> java -jar authenion-eik.jar --eik.config.path="path-to-authenion-eik.jar-file"</div>
+							</div>
+						</div>
+						</ul>
+					    <br />
+						
+
+
 
 						
 
