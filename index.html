@@ -5676,335 +5676,6 @@
 
 						</ol>
 
-						<!--Authenion as a Proxy for EBS SSO-->
-                        
-						<a style="padding: 35px" name="Oracle EBS"></a>
-						<p class="col-sub-headings-app"><u>Authenion as Proxy for EBS kit</u></p>
-						
-						<p class="col-sub-headings-eik" style="margin-left: 20px;">Configuration Steps</p>
-						<!-- <p class="col-para" style="margin-left: 20px;">Onboard EBS Integration kit as an application in Authenion-Admin console.</p>
-						<p class="col-para" style="margin-left: 20px;">Launch Authenion admin console (Refer the section) .</p>
-						<p class="col-para" style="margin-left: 20px;">Navigate to Identity Provider Configuration section and provide your IDP endpoints and other details.</p>
-                        <p class="col-para" style="margin-left: 20px;">Navigate to Application section and Configure Virtual servers, Application hosts, Header mappings and Resources and Enable the Application. Refer the section</p>
-						 -->
-
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>1. Pre-requisites</b></p>
-						<ol class="col-para" style="margin-left: 20px;">
-							<li><p class="col-para">Install Authenion and ensure its services should be running.<a href="#install-authenion section"> <u>Install Authenion</u></a> </p></li>
-							<li><p class="col-para">Deploy Authenion-EBS integration KIT in a machine and ensure their port is listening.<a href="#Oracle E-Business Suite"> <u>Oracle E-Business Suite</u></a></p></li>
-							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
-						</ol>
-						<br />
-
-												<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>2. SSO Integration Workflow</b></p>
-						<!-- TABLE - Task & Description -->
-							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;margin-left: 32px;width: 64%">
-								<tr>
-									<th class="symcomponent">Tasks</th>
-									<th class="symcomponent">&emsp;Description</th>
-								</tr>
-
-							<tbody class="tbody">
-								<tr>
-									<td>
-										<p class="col-para-table"><a href="#Virtual Servers"> <u>Create a Virtual Server</u></a></p>
-									</td>
-									<td>
-
-										<p class="col-para-table">Virtual Server in Authenion will be the user-facing URL of the EIK application. Virtual Server is defined by the hostname and port</p>
-
-									</td>
-								</tr>
-
-								<tr>
-									<td>
-										<p class="col-para-table"><a href="#Application Hosts"> <u>Create an Application Host</u></a></p>
-									</td>
-									<td>
-
-										<p class="col-para-table">Application Host details is about the server responsible for hosting the EIK application and its components</p>
-
-									</td>
-								</tr>
-
-								<tr>
-									<td>
-										<p class="col-para-table"><a href="#Header Mapping"> <u>Create a Header Mapping</u></a></p>
-									</td>
-									<td>
-
-										<p class="col-para-table">Headers Mappings in Authenion are used to send one or more user attribute values to EIK application as HTTP Header variables</p>
-
-									</td>
-								</tr>
-
-								<tr>
-									<td>
-										<p class="col-para-table"><a href="#Resources"> <u>Create Resources</u></a></p>
-									</td>
-									<td>
-
-										<p class="col-para-table">Resources in Authenion are the EIK application components that requires different security levels. EIK application can be configured with <i>'Protected' & 'Excluded'</i> resources as per the requirements</p>
-
-									</td>
-								</tr>
-
-								<tr>
-									<td>
-										<p class="col-para-table"><a href="#Applications"> <u>Create an Application</u></a></p>
-									</td>
-									<td>
-
-										<p class="col-para-table">This setup in Authenion will register a unique entry for the EIK application</p>
-
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<br />
-						<br />
-
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Virtual Server</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of a Virtual Server for EIK application.</p>
-						<br />
-
-						<!-- Image with onclick event -->
-						<img src="assets/img/authenion-3.0/EBS-VirtualServer.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs2', 'modalImageEbs2')" class="col-images-intro" />
-						<!-- Model Container-->
-						<div id="modalContainerEbs2" class="modal-container" onclick="closeModal('modalContainerEbs2')">
-							<img id="modalImageEbs2" class="modal-image" src="assets/img/authenion-3.0/EBS-VirtualServer.png" alt="">
-						</div>
-						<br />
-						<br>
-                        
-
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Application Host</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of an Application Host in Authenion for EIK application.</p>
-						<br />
-
-						<!-- Image with onclick event -->
-						<img src="assets/img/authenion-3.0/EBS-Backend.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs3', 'modalImageEbs3')" class="col-images-intro" />
-						<!-- Model Container-->
-						<div id="modalContainerEbs3" class="modal-container" onclick="closeModal('modalContainerEbs3')">
-							<img id="modalImageEbs3" class="modal-image" src="assets/img/authenion-3.0/EBS-Backend.png" alt="">
-						</div>
-						<br />
-						<br>
-
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Header Mapping</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of a Header Mapping for EIK application.</p>
-						<br />
-
-												<!-- Image with onclick event -->
-						<img src="assets/img/authenion-3.0/EBS-Headers.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs4', 'modalImageEbs4')" class="col-images-intro" />
-						<!-- Model Container-->
-						<div id="modalContainerEbs4" class="modal-container" onclick="closeModal('modalContainerEbs4')">
-							<img id="modalImageEbs4" class="modal-image" src="assets/img/authenion-3.0/EBS-Headers.png" alt="">
-						</div>
-						<br />
-						<br />
-
-
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Resources</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of Protected & Excluded Resources in Authenion for EIK application.</p>
-						<br />
-
-							<!-- Image with onclick event -->
-						<img src="assets/img/authenion-3.0/EBS-Resources.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs5', 'modalImageEbs5')" class="col-images-intro" />
-						<!-- Model Container-->
-						<div id="modalContainerEbs5" class="modal-container" onclick="closeModal('modalContainerEbs5')">
-							<img id="modalImageEbs5" class="modal-image" src="assets/img/authenion-3.0/EBS-Resources.png" alt="">
-						</div>
-						<br />
-						<br />
-
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Registering an Application for EIK in Authenion</u></b></p>
-						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of creating an Application in Authenion for EIK.</p>
-
-						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;margin-left: 32px;width: 64%">
-							<tr>
-								<th class="symcomponent">Configuration</th>
-								<th class="symcomponent">&emsp;Values</th>
-							</tr>
-
-							<tbody class="tbody">
-
-								<!--Name-->
-								<tr>
-									<td>
-										<p class="col-para-table">Name</p>
-									</td>
-									<td>
-										<ul>
-											<p class="col-para-table">EIK</p>
-										</ul>
-									</td>
-								</tr>
-
-								<!--Virtual Server-->
-								<tr>
-									<td>
-										<p class="col-para-table">Virtual Server</p>
-									</td>
-									<td>
-										<ul>
-											<p class="col-para-table">EIKVirtualServer</p>
-										</ul>
-									</td>
-								</tr>
-
-								<!--Header Mapping-->
-								<tr>
-									<td>
-										<p class="col-para-table">Header Mapping</p>
-									</td>
-									<td>
-										<ul>
-											<p class="col-para-table">EIKHeaders</p>
-										</ul>
-									</td>
-								</tr>
-
-								<!--Protected Resource-->
-								<tr>
-									<td>
-										<p class="col-para-table">Protected Resource</p>
-									</td>
-									<td>
-										<ul>
-											<p class="col-para-table">EIKProtected</p>
-										</ul>
-									</td>
-								</tr>
-
-								<!--Excluded Resource-->
-								<tr>
-									<td>
-										<p class="col-para-table">Excluded Resource</p>
-									</td>
-									<td>
-										<ul>
-											<p class="col-para-table">EIKExcluded</p>
-										</ul>
-									</td>
-								</tr>
-
-								<!--Application Host-->
-								<tr>
-									<td>
-										<p class="col-para-table">Application Host</p>
-									</td>
-									<td>
-										<ul>
-											<p class="col-para-table">EIKBackend</p>
-										</ul>
-									</td>
-								</tr>
-
-								<!--Authenion Instances-->
-								<tr>
-									<td>
-										<p class="col-para-table">Authenion Instances</p>
-									</td>
-									<td>
-										<ul>
-											<p class="col-para-table">Auto populated</p>
-										</ul>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<br>
-						<br>
-						<!-- Image with onclick event -->
-						<img src="assets/img/authenion-3.0/EBS-Application.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs6', 'modalImageEbs6')" class="col-images-intro" />
-						<!-- Model Container-->
-						<div id="modalContainerEbs6" class="modal-container" onclick="closeModal('modalContainerEbs6')">
-							<img id="modalImageEbs6" class="modal-image" src="assets/img/authenion-3.0/EBS-Application.png" alt="">
-						</div>
-						<br />
-						<br />
-
-
-						<!--EIK Migration From 2.X to 3.X Version-->
-                        
-						<a style="padding: 35px" name="EIK Migration From 2.X to 3.X Version"></a>
-						<p class="col-sub-headings-app"><u>EIK Migration From 2.x to 3.x Version</u></p>
-						
-						<p class="col-sub-headings-eik" style="margin-left: 20px;">Configuration Steps</p>
-
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>1. System Requirements </b></p>
-						<ul class="col-para" style="margin-left: 20px;">
-							<li><p>For successful execution of of Authenion for EBS 3.0, ensure that the <a href="#SupportedOS">System Requirements</a> (OS version, recommended Java, etc.) are met.</p></li>
-							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
-						</ul>
-						<br />
-
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>2. File System Preparation</b></p>
-						<ul class="col-para" style="margin-left: 20px;">
-							<li><p class="col-para">Create or use an existing folder with a user-defined name (e.g., <b> EBSAuth </b>). This folder will serve as the config path for the Authenion-EIK implementation.</p></li>
-							
-							<p style="margin-left:30px;" class="col-para"><i>Eg:/home/user/EBSAuth/</i></p>
-
-						</ul>
-						<br />
-
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>3. EBS Database connection with Authenion-EIK</b></p>
-						<ul class="col-para" style="margin-left: 20px;">
-							<li><p class="col-para">A database connection between Authenion-EIK and the EBS database can be established using the <b>DBC file</b> (available in  the EBS DB) along with the <b>dbConfig.properties</b> file, which contains the required database user settings.</p></li>
-							<li><p class="col-para">
-							Upon initialization, EIK automatically generates the EIK.dbcx configuration file using the parameters defined in the .dbc file and the dbconfig.properties file. The generated .dbcx file is then used to establish the connection to the Oracle E-Business Suite (EBS) database.
-						</p></li>
-							<li><p class="col-para">Authenion  for EBS is also backward compatible with the existing <b>dbcx</b> file.</p></li>
-						</ul>
-					    <br />
-
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>4. Identity Provider Configurations </b></p>
-						<ul class="col-para" style="margin-left: 20px;">
-							<li><p class="col-para">Authenion for EBS is compatible with the existing <b>EBSAuth.config</b> which has your identity provider configuration.</p></li>
-							<li><p class="col-para"> <b>Other Dependent files:</b> </p></li>
-							<ul>
-								<li> <p> startup.properties(This is the new file which needed for Authenion-EIK 3.x version)</p></li>
-								<li> <p> ebsauth.lic</p></li>
-								<li> <p> Log4j2.xml</p></li>
-								<li> <p> Security.properties</p></li>
-							</ul>
-
-						</ul>
-					    <br />
-						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>5. Deployment of Authenion-EIK 3.X </b></p>
-						<ul class="col-para" style="margin-left: 20px;">
-							<li><p class="col-para">Authenion for EBS does not require a J2EE container for deployment. Instead, it is provided as a standalone JAR file, making the execution process straightforward and lightweight.</p></li>
-							<li><p class="col-para">Navigate to the config path created earlier and place all dependent files required for deployment in this path <b>(Eg; /home/user/EBSAuth)</b>.</p></li>
-							<ul>
-								<li> <p> startup.properties</p></li>
-								<li> <p> ebsauth.lic</p></li>
-								<li> <p> EIKAuth.config</p></li>
-								<!-- <li> <p> EIK.dbcx</p></li> -->
-								<li> <p> Log4j2.xml</p></li>
-								<li> <p> Security.properties</p></li>
-								<li> <p> dbConfig.properties</p></li>
-								<!-- <li> <p> .dbc</p></li> -->
-							</ul>
-							<li><p class="col-para">The EIK plugin <b>(authenion-eik.jar)</b>, along with all its dependencies (mentioned above), should be executed using the following command.</p></li>
-							<!--Table3-->
-						<div class="div-table3" style="margin-left: 5px;">
-							<div class="div-table3-row">
-								<div  class="div-table3-col"> java -jar authenion-eik.jar --eik.config.path="path-to-authenion-eik.jar-file"</div>
-							</div>
-						</div>
-						<li>
-							<p class="col-para">
-								Authenion for EBS has a different architecture and port which allows administrators to standup a parallel instance in the same machine without affecting existing setup. The
-load balancers can be adjusted to point to the new instance to take overtraffic.
-							</p>
-						</li>
-						</ul>
-					    <br />
-						
-
-
-
 						
 
 						<!--Oracle Apex Application-->
@@ -7522,6 +7193,340 @@ load balancers can be adjusted to point to the new instance to take overtraffic.
 
 
 	</ol>
+
+	
+	 <!--Authenion as a Proxy for EIK- 2.x to 3.x Migration -->
+                                         
+
+						<a style="padding: 35px" name="Oracle EBS"></a>
+						<!-- <h4 style="font-family: sans-serif; font-size: 26px; font-weight: 600; color: #00297A">Authenion Proxy and EIK Migration</h4> -->
+						<p class="col-sub-headings-app"><u>Authenion as Proxy for EBS kit</u></p>
+						
+						<p class="col-sub-headings-eik" style="margin-left: 20px;">Configuration Steps</p>
+						<!-- <p class="col-para" style="margin-left: 20px;">Onboard EBS Integration kit as an application in Authenion-Admin console.</p>
+						<p class="col-para" style="margin-left: 20px;">Launch Authenion admin console (Refer the section) .</p>
+						<p class="col-para" style="margin-left: 20px;">Navigate to Identity Provider Configuration section and provide your IDP endpoints and other details.</p>
+                        <p class="col-para" style="margin-left: 20px;">Navigate to Application section and Configure Virtual servers, Application hosts, Header mappings and Resources and Enable the Application. Refer the section</p>
+						 -->
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>1. Pre-requisites</b></p>
+						<ol class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">Install Authenion and ensure its services should be running.<a href="#install-authenion section"> <u>Install Authenion</u></a> </p></li>
+							<li><p class="col-para">Deploy Authenion-EBS integration KIT in a machine and ensure their port is listening.<a href="#Oracle E-Business Suite"> <u>Oracle E-Business Suite</u></a></p></li>
+							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
+						</ol>
+						<br />
+
+												<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>2. SSO Integration Workflow</b></p>
+						<!-- TABLE - Task & Description -->
+							<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;margin-left: 32px;width: 64%">
+								<tr>
+									<th class="symcomponent">Tasks</th>
+									<th class="symcomponent">&emsp;Description</th>
+								</tr>
+
+							<tbody class="tbody">
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Virtual Servers"> <u>Create a Virtual Server</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Virtual Server in Authenion will be the user-facing URL of the EIK application. Virtual Server is defined by the hostname and port</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Application Hosts"> <u>Create an Application Host</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Application Host details is about the server responsible for hosting the EIK application and its components</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Header Mapping"> <u>Create a Header Mapping</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Headers Mappings in Authenion are used to send one or more user attribute values to EIK application as HTTP Header variables</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Resources"> <u>Create Resources</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">Resources in Authenion are the EIK application components that requires different security levels. EIK application can be configured with <i>'Protected' & 'Excluded'</i> resources as per the requirements</p>
+
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<p class="col-para-table"><a href="#Applications"> <u>Create an Application</u></a></p>
+									</td>
+									<td>
+
+										<p class="col-para-table">This setup in Authenion will register a unique entry for the EIK application</p>
+
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br />
+						<br />
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Virtual Server</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of a Virtual Server for EIK application.</p>
+						<br />
+
+						<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/EBS-VirtualServer.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs2', 'modalImageEbs2')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerEbs2" class="modal-container" onclick="closeModal('modalContainerEbs2')">
+							<img id="modalImageEbs2" class="modal-image" src="assets/img/authenion-3.0/EBS-VirtualServer.png" alt="">
+						</div>
+						<br />
+						<br>
+                        
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Application Host</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of an Application Host in Authenion for EIK application.</p>
+						<br />
+
+						<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/EBS-Backend.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs3', 'modalImageEbs3')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerEbs3" class="modal-container" onclick="closeModal('modalContainerEbs3')">
+							<img id="modalImageEbs3" class="modal-image" src="assets/img/authenion-3.0/EBS-Backend.png" alt="">
+						</div>
+						<br />
+						<br>
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Header Mapping</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of a Header Mapping for EIK application.</p>
+						<br />
+
+												<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/EBS-Headers.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs4', 'modalImageEbs4')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerEbs4" class="modal-container" onclick="closeModal('modalContainerEbs4')">
+							<img id="modalImageEbs4" class="modal-image" src="assets/img/authenion-3.0/EBS-Headers.png" alt="">
+						</div>
+						<br />
+						<br />
+
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Resources</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of Protected & Excluded Resources in Authenion for EIK application.</p>
+						<br />
+
+							<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/EBS-Resources.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs5', 'modalImageEbs5')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerEbs5" class="modal-container" onclick="closeModal('modalContainerEbs5')">
+							<img id="modalImageEbs5" class="modal-image" src="assets/img/authenion-3.0/EBS-Resources.png" alt="">
+						</div>
+						<br />
+						<br />
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Registering an Application for EIK in Authenion</u></b></p>
+						<p class="col-para" style="margin-left: 20px;">Following is an example configuration of creating an Application in Authenion for EIK.</p>
+
+						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;margin-left: 32px;width: 64%">
+							<tr>
+								<th class="symcomponent">Configuration</th>
+								<th class="symcomponent">&emsp;Values</th>
+							</tr>
+
+							<tbody class="tbody">
+
+								<!--Name-->
+								<tr>
+									<td>
+										<p class="col-para-table">Name</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">EIK</p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Virtual Server-->
+								<tr>
+									<td>
+										<p class="col-para-table">Virtual Server</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">EIKVirtualServer</p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Header Mapping-->
+								<tr>
+									<td>
+										<p class="col-para-table">Header Mapping</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">EIKHeaders</p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Protected Resource-->
+								<tr>
+									<td>
+										<p class="col-para-table">Protected Resource</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">EIKProtected</p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Excluded Resource-->
+								<tr>
+									<td>
+										<p class="col-para-table">Excluded Resource</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">EIKExcluded</p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Application Host-->
+								<tr>
+									<td>
+										<p class="col-para-table">Application Host</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">EIKBackend</p>
+										</ul>
+									</td>
+								</tr>
+
+								<!--Authenion Instances-->
+								<tr>
+									<td>
+										<p class="col-para-table">Authenion Instances</p>
+									</td>
+									<td>
+										<ul>
+											<p class="col-para-table">Auto populated</p>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<br>
+						<br>
+						<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/EBS-Application.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerEbs6', 'modalImageEbs6')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerEbs6" class="modal-container" onclick="closeModal('modalContainerEbs6')">
+							<img id="modalImageEbs6" class="modal-image" src="assets/img/authenion-3.0/EBS-Application.png" alt="">
+						</div>
+						<br />
+						<br />
+
+
+						<!--EIK Migration From 2.X to 3.X Version-->
+                        
+						<a style="padding: 35px" name="EIK Migration From 2.X to 3.X Version"></a>
+						<p class="col-sub-headings-app"><u>EIK Migration From 2.x to 3.x Version</u></p>
+						
+						<p class="col-sub-headings-eik" style="margin-left: 20px;">Configuration Steps</p>
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>1. System Requirements </b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p>For successful execution of of Authenion for EBS 3.0, ensure that the <a href="#SupportedOS">System Requirements</a> (OS version, recommended Java, etc.) are met.</p></li>
+							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
+						</ul>
+						<br />
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>2. File System Preparation</b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">Create or use an existing folder with a user-defined name (e.g., <b> EBSAuth </b>). This folder will serve as the config path for the Authenion-EIK implementation.</p></li>
+							
+							<p style="margin-left:30px;" class="col-para"><i>Eg:/home/user/EBSAuth/</i></p>
+
+						</ul>
+						<br />
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>3. EBS Database connection with Authenion-EIK</b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">A database connection between Authenion-EIK and the EBS database can be established using the <b>DBC file</b> (available in  the EBS DB) along with the <b>dbConfig.properties</b> file, which contains the required database user settings.</p></li>
+							<li><p class="col-para">
+							Upon initialization, EIK automatically generates the EIK.dbcx configuration file using the parameters defined in the .dbc file and the dbconfig.properties file. The generated .dbcx file is then used to establish the connection to the Oracle E-Business Suite (EBS) database.
+						</p></li>
+							<li><p class="col-para">Authenion  for EBS is also backward compatible with the existing <b>dbcx</b> file.</p></li>
+						</ul>
+					    <br />
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>4. Identity Provider Configurations </b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">Authenion for EBS is compatible with the existing <b>EBSAuth.config</b> which has your identity provider configuration.</p></li>
+							<li><p class="col-para"> <b>Other Dependent files:</b> </p></li>
+							<ul>
+								<li> <p> startup.properties(This is the new file which needed for Authenion-EIK 3.x version)</p></li>
+								<li> <p> ebsauth.lic</p></li>
+								<li> <p> Log4j2.xml</p></li>
+								<li> <p> Security.properties</p></li>
+							</ul>
+
+						</ul>
+					    <br />
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>5. Deployment of Authenion-EIK 3.X </b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">Authenion for EBS does not require a J2EE container for deployment. Instead, it is provided as a standalone JAR file, making the execution process straightforward and lightweight.</p></li>
+							<li><p class="col-para">Navigate to the config path created earlier and place all dependent files required for deployment in this path <b>(Eg; /home/user/EBSAuth)</b>.</p></li>
+							<ul>
+								<li> <p> startup.properties</p></li>
+								<li> <p> ebsauth.lic</p></li>
+								<li> <p> EIKAuth.config</p></li>
+								<!-- <li> <p> EIK.dbcx</p></li> -->
+								<li> <p> Log4j2.xml</p></li>
+								<li> <p> Security.properties</p></li>
+								<li> <p> dbConfig.properties</p></li>
+								<!-- <li> <p> .dbc</p></li> -->
+							</ul>
+							<li><p class="col-para">The EIK plugin <b>(authenion-eik.jar)</b>, along with all its dependencies (mentioned above), should be executed using the following command.</p></li>
+							<!--Table3-->
+						<div class="div-table3" style="margin-left: 5px;">
+							<div class="div-table3-row">
+								<div  class="div-table3-col"> java -jar authenion-eik.jar --eik.config.path="path-to-authenion-eik.jar-file"</div>
+							</div>
+						</div>
+						<li>
+							<p class="col-para">
+								Authenion for EBS has a different architecture and port which allows administrators to standup a parallel instance in the same machine without affecting existing setup. The
+load balancers can be adjusted to point to the new instance to take overtraffic.
+							</p>
+						</li>
+						</ul>
+					    <br />
+						
+
+
+
+						
 
 	<!-- <a  name="loggerlevel"></a>  -->
 	 <a style="padding: 38px" name="troubleshoot"></a>
