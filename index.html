@@ -2000,12 +2000,12 @@
 							<li><p class="col-para">Login to the <a href="https://portal.azure.com/#home" target="_blank"><u>Azure portal</u></a>.</p></li>
 							<li><p class="col-para">In the <i>Manage Microsoft Entra ID (formerly Azure Active Directory)</i> section, click on <i>view</i>.</p></li>
 							<li><p class="col-para">Click on <i>+Add</i> and then click on <i>App Registration</i>.</p></li>
-							<ol class="col-para">
+							<ul class="col-para">
 								<li><p class="col-para">Give a display name for the app.</p></li>
 								<li><p class="col-para">Select the tenant in which you want to register the Authenion application.</p></li>
 								
 							<!-- <img src="assets/img/azure-1.png" alt="" class="col-images-pf"> -->
-							</ol>
+							</ul>
 							<li><p class="col-para">Click on <i>Register</i>.</p></li>
 						</ol>
 						<!-- Image with onclick event -->
@@ -2022,10 +2022,10 @@
 							<li><p class="col-para">From the side menu, click on <i>Certificates & secrets</i>.</p></li>
 							<li><p class="col-para">Click on <i>Client secrets</i>.</p></li>
 							<li><p class="col-para">Click on <i>+ New client secret</i>.</p></li>
-							<ol class="col-para">
+							<ul class="col-para">
 								<li><p class="col-para">Enter some description for the client.</p></li>
 								<li><p class="col-para">Set the expiry for the client.</p></li>
-							</ol>
+							</ul>
 							<li><p class="col-para">Click on <i>Add</i>.</p></li>
 						</ol>
 
@@ -2154,21 +2154,13 @@
                         <!-- <p class="col-sub-headings-sub"><b>Execute the Command:</b></p> -->
 						 <!--LINUX ENVIRONMENT-->
                          <p class="col-para" style="margin-left: 28px;"><i> <b>Note:</b>
-							<ul>
+							<ul style="margin-left:30px;" class="col-para">
 							
-  <li>
-    <p class="col-para">
-      <i>Before running the command, make sure the environment variables are set up properly in Linux & windows environment.
-						     </i>
-    </p>
-  </li>
-  <li>
-    <p class="col-para">
-      <i> You can set the password using an environment variable. Ensure the password is strong, including special characters like % or $ for enhanced security.</i></p>
-                           
-    </p>
-  </li>
-</ul>
+                       <li> <p class="col-para"><i>Before running the command, make sure the environment variables are set up properly in Linux & windows environment.
+						     </i> </p> </li>
+                       
+							 <li> <p class="col-para"><i> You can set the password using an environment variable. Ensure the password is strong, including special characters like % or $ for enhanced security.</i></p>
+                             </p> </li></ul>
 
 				
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Linux Environment :</b></p>
@@ -2210,7 +2202,7 @@
 						 <ol class="col-para">
                         <li>
                          <p class="col-para">Open Environment Variables:</p>
-                           <ul>
+                           <ul class="col-para">
                                <li> <p class="col-para">Right-click <b><i>This PC</i></b> or <b><i>My Computer</i></b>.</p></li>
                                <li> <p class="col-para">Select <b><i>Properties</i></b>.</p></li>
                                <li> <p class="col-para">Click <b><i>Advanced system settings</i></b>.</p></li>
@@ -2220,7 +2212,7 @@
 
                          <li>
                           <p class="col-para">Set ENV_PASSWORD:</p>
-                            <ul>
+                            <ul class="col-para">
                                 <li> <p class="col-para">Under <b><i>System variables</i></b>, click <b><i>New</i></b>.</p></li>
                                 <li> <p class="col-para">Enter the following:</p></li>
                                
@@ -4250,11 +4242,11 @@
 						<p class="col-sub-headings">1. PingFederate as the Token Provider</p>
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>&nbsp;&nbsp;<u>Pre-requisites</u></b></p>
 						<!-- <ul class="col-para"> -->
-						<ul style="margin-left:30px;" class="col-para">
+						<ol style="margin-left:30px;" class="col-para">
 							<li><p class="col-para" >PingFederate application with IdP and OAuth/OIDC roles enabled.</p></li>
 							<li><p class="col-para" >Authorization server setup in PingFederate OAuth server setting.</p></li>
 							<li><p class="col-para" >A configured Ping Federate IdP adapter and/or authentication policy contract policy if required for authentication and grant mapping.</p></li>
-						</ul>
+						</ol>
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>&nbsp;&nbsp;<u>OAuth / OIDC Configurations</u></b></p>
 						<p class="col-para" style="margin-left: 20px;">&emsp;This setup will manage the configurations related to the OAuth client.</p>
 						<ol class="col-para">
@@ -4456,11 +4448,11 @@
 						<p class="col-sub-headings">2. Microsoft Entra ID (formerly Azure Active Directory) as the Token Provider</p>
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>&nbsp;&nbsp;<u>Pre-requisites</u></b></p>
 						<!-- <ul class="col-para"> -->
-						<ul style="margin-left:30px;" class="col-para">
+						<ol style="margin-left:30px;" class="col-para">
 							<li><p class="col-para" >Azure account with valid subscription.</p></li>
 							<li><p class="col-para" >App registration.</p></li>
 							<li><p class="col-para" >Client Secrets and Claim mappings.</p></li>
-						</ul>
+						</ol>
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>&nbsp;&nbsp;<u>Entra ID Configurations</u></b></p>
 						<p class="col-para" style="margin-left: 20px;">The following will register Authenion as an OAuth/OIDC client application in Microsoft Entra ID (formerly Azure Active Directory) & establish a unidirectional trust relationship between Authenion and Microsoft identity platform. When the registration finishes, the Azure portal displays the Authenion application registration’s overview pane. You can find the Application ID which will also be used as the client_id when we connect Authenion & Entra ID through OAuth/OIDC.</p>
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>App Registration</b></p>
@@ -4562,11 +4554,11 @@
 						<p class="col-sub-headings">3. Keycloak as the Token Provider</p>
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>Pre-requisites</u></b></p>
 						<!-- <ul class="col-para"> -->
-						<ul style="margin-left:30px;" class="col-para">
+						<ol style="margin-left:30px;" class="col-para">
 							<li><p class="col-para" >Admin access to the Keycloak Administration Console.</p></li>
 							<li><p class="col-para" >Create Realm for your application (optional).</p></li>
 							<li><p class="col-para" >If using HTTPS, a valid SSL certificate is configured to secure communications (recommended for production).</p></li>
-						</ul>
+						</ol>
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b><u>OAuth / OIDC Configurations</u></b></p>
 						<p class="col-para" style="margin-left: 20px;"	>This setup will manage the configurations related to the OAuth client.</p>
 						<ol class="col-para">
@@ -5549,9 +5541,16 @@
 													<li><p class="col-para">tcp.ip.port = 8842(User defined port, make sure that port is not blocked by a firewall and is not used by another service)</p></li>
 							</ul>
 							<li><p class="col-para">Locate the <i>authenion-eik.jar</i> file and Copy the file in any preferred location and execute the below command</p></li>
-								<p style="margin-left:70px;" class="col-para"> <i><b>java -jar --Deik.config.path="path-to-Config folder" authenion-eik.jar </b></i></p>
-							    <p style="margin-left:70px;" class="col-para"> <i><b>Eg: java -jar --Deik.config.path="/home/user/EBSAuth" authenion-eik.jar </b></i></p>
+								<div class="div-table3" style="margin-left: 5px;">
+							<div class="div-table3-row">
+								<div  class="div-table3-col"> java -jar --Deik.config.path="path-to-Config folder" authenion-eik.jar</div>
+							</div>
 
+                            <div class="div-table3-row">
+								<div  class="div-table3-col">Eg: java -jar --Deik.config.path="/home/user/EBSAuth" authenion-eik.jar</div>
+							</div>
+
+						</div>
 								<li><p class="col-para">Repeat the steps above in all the servers, if you have H/A environment setup.</p></li>
 								</ol>
 
@@ -5574,9 +5573,20 @@
 												</ul>
 																																					
 								<li><p class="col-para"><i> Execute the below jar file command </i></p></li>
-								<p style="margin-left:70px;"class="col-para"><i><b>java -jar --Deik.config.path="path-to-Config folder" authenion-eik.jar</b></i></p>
-								<p style="margin-left:70px;"class="col-para"><i><b> Eg: java -jar --Deik.config.path="/home/user/EBSAuth" authenion-eik.jar</b></i></p>
-									 
+
+						<div class="div-table3" style="margin-left: 5px;">
+							<div class="div-table3-row">
+								<div  class="div-table3-col"> java -jar --Deik.config.path="path-to-Config folder" authenion-eik.jar</div>
+							</div>
+
+                            <div class="div-table3-row">
+								<div  class="div-table3-col"> Eg: java -jar --Deik.config.path="/home/user/EBSAuth" authenion-eik.jar</div>
+							</div>
+
+						</div>
+						
+
+
 								
 							<li><p class="col-para">Repeat the steps above in all the servers, if you have H/A environment setup.</p></li>	
 													<!--<br />-->
@@ -5936,13 +5946,6 @@
 							
 							<p style="margin-left:30px;" class="col-para"><i>Eg:/home/user/EBSAuth/</i></p>
 
-
-							<!--Table3-->
-						<!-- <div class="div-table3" style="margin-left: 5px;">
-							<div class="div-table3-row">
-								<div  class="div-table3-col">Example Config Path : /home/user/EBSAuth</div>
-							</div>
-						</div> -->
 						</ul>
 						<br />
 
