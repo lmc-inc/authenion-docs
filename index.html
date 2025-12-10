@@ -243,7 +243,7 @@
 				  </li> -->
 				  <li>
 					  <a href="#idp-cert section" class="nav-link-sub collapsed">
-						  <!--<i class="bi bi-circle"></i>--><span>Import Identiy Provider's Certificate into Java Trust Store</span>
+						  <!--<i class="bi bi-circle"></i>--><span>Import Identity Provider's Certificate into Java Trust Store</span>
 					  </a>
 				  </li>
 				  <li>
@@ -507,7 +507,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-     <p>Authenion Documentation</p>
+     <p>Authenion-3.0 Documentation</p>
 
     </div><!-- End Page Title -->
 
@@ -966,11 +966,12 @@
 										<li>
 											<p class="col-para-table">8 GB of RAM</p>
 										</li>
-										<li><p class="col-para-table">25 GB of available hard disk spacee</p></li>
+										<li><p class="col-para-table">25 GB of available hard disk space</p></li>
 									</ul>
 
 								</td>
 							</tr>
+
 							<!--Port requirements-->
 							<a style="padding:32px" name="PortRequirements"></a>
 							<tr>
@@ -1009,9 +1010,9 @@
 							<li><p class="col-para" >Download and install the chosen supported Java version (OpenJDK 17 to 23) from its respective source.</p></li>
 							
                         </ol>
-                  <ol class="col-para">
-						<p class="col-sub-headings-sub" style="margin-left: -15px;margin-top:-10px;margin-bottom: -5px;"><b>Set JAVA_HOME Environment Variable (Linux and Windows):</b></p>
-						</ol>
+                        <ol class="col-para">
+						     <p class="col-sub-headings-sub" style="margin-left: -15px;margin-top:-10px;margin-bottom: -5px;"><b>Set JAVA_HOME Environment Variable (Linux and Windows):</b></p>
+						  </ol>
 						<!--LINUX ENVIRONMENT-->
                          <p class="col-sub-headings-sub" style="margin-left: 20px; margin-top:-10px;"><b>Linux Environment:</b></p>
 <!-- 
@@ -1092,34 +1093,34 @@
                                   </div>
 						
 							<br>
-                       <li><p class="col-para">Check if Java is properly installed:</p></li>
-					   <!-- TABLE3 -->
+
+                          <li><p class="col-para">Check if Java is properly installed:</p></li>
+					         <!-- TABLE3 -->
 							<div class="div-table3" style="margin-left: -3px;">
 								<div class="div-table3-row">
 									<div class="div-table3-col" >#]&emsp;java -version</div>
 								</div>
 							</div>
 							
-                        </ol>
+                          </ol>
 
 						 
 						<!--WINDOWS ENVIRONMENT-->
                          <p class="col-sub-headings-sub" style="margin-left: 20px;"><b>Windows Environment :</b></p>
                            
-                     <!-- <ol class="col-para">
-                       <li><p class="col-para">Right-click <i><b>This PC</b></i> or <i><b>My Computer</b></i>, select <i><b>Properties</b></i>, click <i><b>Advanced system settings</b></i>, and then click <i><b>Environment Variables</b></i>.</p></li>
-                       <li><p class="col-para">Under the <i><b>System variables</b></i> section, click <i><b>New</b></i>.</p></li>
-                       <li><p class="col-para">Set the variable name as <i><b>JAVA_HOME</b></i> and the variable value as <b>C:\Program Files\Java\jdk-x.x.x</b></i> (replace with your actual JDK path).</p></li>
-                       <li><p class="col-para">Click <i><b>OK</b></i> to save the new variable.</p></li>
-                       <li><p class="col-para">In the <i><b>System variables</b></i> list, select <b>Path</b></i> and click <b>Edit</b></i>.</p></li>
-                       <li><p class="col-para">Click <i><b>New</b></i> and add <i><b>%JAVA_HOME%\bin</b></i>.</p></li>
-                       <li><p class="col-para">Click <i><b>OK</b></i> to close all dialogs and apply the changes.</p></li>
-					   <li><p class="col-para">Verify the setup using <i><b>echo %JAVA_HOME%</b></i></p></li>
-                       <li><p class="col-para">Confirm Java installation using <i><b>java -version</b></i></p></li>
-                    </ol> -->
+                        <!-- <ol class="col-para">
+                          <li><p class="col-para">Right-click <i><b>This PC</b></i> or <i><b>My Computer</b></i>, select <i><b>Properties</b></i>, click <i><b>Advanced system settings</b></i>, and then click <i><b>Environment Variables</b></i>.</p></li>
+                          <li><p class="col-para">Under the <i><b>System variables</b></i> section, click <i><b>New</b></i>.</p></li>
+                          <li><p class="col-para">Set the variable name as <i><b>JAVA_HOME</b></i> and the variable value as <b>C:\Program Files\Java\jdk-x.x.x</b></i> (replace with your actual JDK path).</p></li>
+                          <li><p class="col-para">Click <i><b>OK</b></i> to save the new variable.</p></li>
+                          <li><p class="col-para">In the <i><b>System variables</b></i> list, select <b>Path</b></i> and click <b>Edit</b></i>.</p></li>
+                          <li><p class="col-para">Click <i><b>New</b></i> and add <i><b>%JAVA_HOME%\bin</b></i>.</p></li>
+                          <li><p class="col-para">Click <i><b>OK</b></i> to close all dialogs and apply the changes.</p></li>
+					      <li><p class="col-para">Verify the setup using <i><b>echo %JAVA_HOME%</b></i></p></li>
+                          <li><p class="col-para">Confirm Java installation using <i><b>java -version</b></i></p></li>
+                        </ol> -->
 
-					
-
+						
 					   <ol class="col-para">
                         <li>
                          <p class="col-para">Open Environment Variables:</p>
@@ -1971,10 +1972,12 @@
 						<ol class="col-para">
 						   <li><p class="col-para">Java must be installed on the server.</p></li> 
 						   <li> <p class="col-para">Unzip the `authenion-admin-xx-version.zip` file.</p></li> 
-						   <li> <p class="col-para">After extraction, you will see two files: authenion-admin-xx-version.jar and authenion.p12 files.</p></li> 
+						   <li> <p class="col-para">After extraction, you will see the file authenion-admin-xx-version.jar.</p></li>
+						   <li> <p class="col-para">Place both authenion-admin-xx-version.jar and authenion.p12 in the same folder.You can copy the authenion.p12 file from the following location:
+                        &lt;authenion_install_dir&gt;/config .</p></li> 
+						    
 					    </ol>
 						
-
                         <!-- ### END Pre-requisites (for both Linux and Windows) ### -->
 							
                         <!-- ### Linux & WINDOWS Environment (Execution Steps) ### -->
@@ -2190,7 +2193,7 @@
 							<!-- TABLE3 -->
 						   <div class="div-tables3" style="margin-left: 5px;">
                                 <div class="div-table3-row1">   
-                                    <div class="div-table3-col" style="white-space: pre-wrap; word-break: break-all">java -jar authenion-admin-xx-version.jar com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://&lt;authenionservername&gt;:9898 --adminPassword=$ENV_PASSWORD</div><br><br>
+                                    <div class="div-table3-col" style="white-space: pre-wrap; word-break: break-all">java -jar authenion-admin-xx-version.jar com.authenion.sso.authenionadmin.AuthenionAdminApplication --localAuthEnabled=true --issuerUrl=https://&lt;authenionservername&gt;:9898 --adminPassword=$ENV_PASSWORD</div><br><br>
                                 </div>
                           </div>
 						
@@ -2234,7 +2237,7 @@
 							<!-- TABLE3 -->
 						   <div class="div-tables3" style="margin-left: 5px;">
                                 <div class="div-table3-row1">   
-                                    <div class="div-table3-col" style="white-space: pre-wrap; word-break: break-all">java -jar authenion-admin-xx-version.jar com.authenion.sso.authenionadmin.AdminApplication --localAuthEnabled=true --issuerUrl=https://&lt;authenionservername&gt;:9898 --adminPassword=%ENV_PASSWORD%</div><br><br>
+                                    <div class="div-table3-col" style="white-space: pre-wrap; word-break: break-all">java -jar authenion-admin-xx-version.jar com.authenion.sso.authenionadmin.AuthenionAdminApplication --localAuthEnabled=true --issuerUrl=https://&lt;authenionservername&gt;:9898 --adminPassword=%ENV_PASSWORD%</div><br><br>
                                 </div>
                           </div>
                               
@@ -3305,6 +3308,17 @@
 											</ul>
 										</td>
 									</tr>
+									<!--unprotected Resource  -->
+									<tr>
+										<td>
+											<p class="col-para-table">Unprotected Resource  </p>
+										</td>
+										<td>
+											<ul>
+												<p class="col-para-table">AgilepUnprotected&emsp;(Configured <a href="#Resources">Section 9</a>)</p>
+											</ul>
+										</td>
+									</tr>
 									<!--Application Host -->
 									<tr>
 										<td>
@@ -3738,7 +3752,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">MyAppBackend </li>
+												<li class="li"><p class="col-para-table">AgileHost </li>
 											</ul>
 										</td>
 									</tr>
@@ -3749,7 +3763,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">apex.likemindscloud.com:8080 &emsp;&emsp;(protected application/webserver details)</li>
+												<li class="li"><p class="col-para-table">agile.example.com:8080 &emsp;&emsp;(protected application/webserver details)</li>
 											</ul>
 										</td>
 									</tr>
@@ -3858,7 +3872,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">MyAppHeaders</li>
+												<li class="li"><p class="col-para-table">Headers</li>
 											</ul>
 										</td>
 									</tr>
@@ -3869,23 +3883,23 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">OIDC Claims</li>
+												<li class="li"><p class="col-para-table">REMOTE_USER</li>
 											</ul>
 										</td>
 									</tr>
 									<!--USER_NAME-->
 									<tr>
 										<td>
-											<p class="col-para-table">USER_NAME</p>
+											<p class="col-para-table">OIDC Claims</p>
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">username</li>
+												<li class="li"><p class="col-para-table">uid</li>
 											</ul>
 										</td>
 									</tr>
 									<!--USER_MAIL -->
-									<tr>
+									<!-- <tr>
 										<td>
 											<p class="col-para-table">USER_MAIL </p>
 										</td>
@@ -3894,7 +3908,7 @@
 												<li class="li"><p class="col-para-table">email</li>
 											</ul>
 										</td>
-									</tr>
+									</tr> -->
 								</tbody>
 							</table>
 							<br />
@@ -3967,7 +3981,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">MyAppResources</li>
+												<li class="li"><p class="col-para-table">AgileProtected</li>
 											</ul>
 										</td>
 									</tr>
@@ -3978,7 +3992,7 @@
 										</td>
 										<td>
 											<ul>
-												<li class="li"><p class="col-para-table">/ords/**&emsp;&emsp;(Resource Path starts with a ‘/’. Multiple resource paths can be added)</Resource> </li>
+												<li class="li"><p class="col-para-table">/agile/**&emsp;&emsp;(Resource Path starts with a ‘/’. Multiple resource paths can be added)</Resource> </li>
 											</ul>
 										</td>
 									</tr>
@@ -5590,7 +5604,7 @@
 								
 							<li><p class="col-para">Repeat the steps above in all the servers, if you have H/A environment setup.</p></li>	
 													<!--<br />-->
-							<p class="col-para"><i><b>Note:</b> A single Authenion-EIK deployment will connect with only one Oracle EBS Application for SSO. However, if you have requirements to connect with multiple Oracle EBS environments for SSO, you can deploy multiple instances of Authenion-EIK in the same server by changing the <i>'Context Path'</i>. For example, you can follow the above steps 1 to 14 by adding new folder with different contextpath name like EBSAuthDEV & EBSAuthPRD and point to appropriate Oralce EBS application environments.</i></p>
+							<p class="col-para"><i><b>Note:</b> A single Authenion-EIK deployment will connect with only one Oracle EBS Application for SSO. However, if you have requirements to connect with multiple Oracle EBS environments for SSO, you can deploy multiple instances of Authenion-EIK in the same server by changing the <i>'Context Path'</i>. For example, you can follow the above steps 1 to 14 by adding new folder with different contextpath name like EBSAuthDEV & EBSAuthPRD and point to appropriate Oracle EBS application environments.</i></p>
 							
 							<br />
 						</ol>
@@ -6199,8 +6213,8 @@
 							<li><p class="col-para">On the workspace homepage, click the <i><b>App Builder</b></i> icon.</p></li>
 							<li><p class="col-para">Select the APEX application for which Single Sign-On needs to be enabled.</p></li>
 							<li><p class="col-para">On the Application home page, click <i><b>Shared Components</b></i>.</p></li>
-							<li><p class="col-para">Under <i><b>Security</b></i>, select an existing scheme or cretate a new scheme.</p></li>
-							<li><p class="col-para">Modify the follwoing fields in the authentication scheme.</p></li>
+							<li><p class="col-para">Under <i><b>Security</b></i>, select an existing scheme or create a new scheme.</p></li>
+							<li><p class="col-para">Modify the following fields in the authentication scheme.</p></li>
 							<ul>
 								<li><p>Scheme Type - Select <i><b>'HTTP-Header'</b></i> variable</p></li>
 								<li><p>HTTP Header Variable Name - <i><b>'APEX_REMOTE_USER'</b></i></p></li>
@@ -6547,7 +6561,7 @@
 		<li>
 			<p class="col-para" >
 				From SSO Mechanism drop-down list, select Custom HTTP Header and then specify the name of the header that
-				the security agent passes to EPM System (‘SSO_USER’).
+				the security agent passes to EPM System (‘HYPLOGIN’).
 			</p>
 		</li>
 		<li>
