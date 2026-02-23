@@ -7557,65 +7557,49 @@ load balancers can be adjusted to point to the new instance to take overtraffic.
 <!-- Multi User Login -->
 
 <a style="padding: 35px" name="MultiUserLogin"></a>
-						<p class="col-sub-headings-app"><u>Multi User Login</u></p>
+						<p class="col-sub-headings-app"><u>MultiUser Login</u></p>
 						
-					<ul class="col-para" style="margin-left: 20px;">
-
-    <li>
-        <p>
-            <b>Step 1:</b> Open the configuration file and add the 
-            <b>fndusr_column_name</b> attribute as required.
-        </p>
-    </li>
-
-    <li>
-        <p>
-            <b>Step 2:</b> Add the <b>allowMultipleUserSelection</b> attribute 
-            and ensure it is set to <b>true</b>.
-        </p>
-    </li>
-
-    <li>
-        <p>
-            <b>Step 3:</b> Open the <b>security.properties</b> file and configure 
-            the <b>token.lifetime.seconds</b> attribute. 
-            Set the value in seconds to define how long the multi-user login page remains active before expiring.
-        </p>
-    </li>
-
-    <li>
-        <p>
-            <b>Step 4:</b> Ensure that all users involved in testing are present in the 
-            Oracle EBS application database.
-        </p>
-    </li>
-
-</ul>
-<br />
+					
 						<p class="col-sub-headings-sub" style="margin-left: 20px;">
-    <b>Configuration Updates</b>
+    <b>Configuration Steps</b>
 </p>
 <ul class="col-para" style="margin-left: 20px;">
     <li>
-        <p>
-            Include the <b>fndusr_column_name</b> and 
-            <b>allowMultipleUserSelection</b> attributes in the configuration file. 
-            Ensure that <b>allowMultipleUserSelection</b> is set to <b>true</b>.
+        Open the <b>EIKAuth.config</b> file and ensure that <b>allowMultipleUserSelection</b> is set to <b>true</b> to enable multi-user login functionality.
         </p>
     </li>
     <li>
         <p>
-            In the <b>security.properties</b> file, configure the 
-            <b>token.lifetime.seconds</b> attribute to specify the duration 
-            (in seconds) after which the multi-user login page will expire.
+			Open the <b>security.properties</b> file and configure the <b>token.lifetime.seconds</b> attribute. The default value is <b>120 seconds</b>, which defines how long the multi-user selection page remains active before it expires (optional).
         </p>
     </li>
+
+	<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/EIKAuthMultisuer.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerMul6', 'modalImageMul6')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerMul6" class="modal-container" onclick="closeModal('modalContainerMul6')">
+							<img id="modalImageMul6" class="modal-image" src="assets/img/authenion-3.0/EIKAuthMultisuer.png" alt="">
+						</div>
+						<br />
+	<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/MutluserTokentime.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerMul7', 'modalImageMul7')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerMul7" class="modal-container" onclick="closeModal('modalContainerMul7')">
+							<img id="modalImageMul7" class="modal-image" src="assets/img/authenion-3.0/MutluserTokentime.png" alt="">
+						</div>
+						<br />
     <li>
         <p>
-            Ensure that the users involved in testing are present in the 
-            Oracle EBS application database.
+            After completing the above configuration, the user selection page will be displayed, allowing users to select from multiple accounts and log in to the application.
         </p>
     </li>
+	<!-- Image with onclick event -->
+						<img src="assets/img/authenion-3.0/MultiuserSelectionpage.png" alt="" style="width:41%;height:40%;cursor:pointer;margin-left: 155px" onclick="openModal('modalContainerMul8', 'modalImageMul8')" class="col-images-intro" />
+						<!-- Model Container-->
+						<div id="modalContainerMul8" class="modal-container" onclick="closeModal('modalContainerMul8')">
+							<img id="modalImageMul8" class="modal-image" src="assets/img/authenion-3.0/MultiuserSelectionpage.png" alt="">
+						</div>
+						<br />
 </ul>
 <br />
 
