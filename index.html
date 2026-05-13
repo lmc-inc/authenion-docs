@@ -476,7 +476,12 @@
 					  <!--<i class="bi bi-circle">--></i><span>EIK Migration From 2.x to 3.x Version</span>
 				  </a>
 			  </li>
-
+ 
+			   <li>
+				  <a href="#Authenion Migration From 2.X to 3.X Version" class="nav-link-sub collapsed">
+					  <!--<i class="bi bi-circle">--></i><span>Authenion Migration From 2.x to 3.x Version</span>
+				  </a>
+			  </li>
 				  
 			  </ul>
 		  </li><!-- End Forms Nav -->
@@ -5033,10 +5038,10 @@
 							<li><p class="col-para">Identity Provider with OIDC configuration and Endpoints</p></li>
 							<li><p class="col-para">Oracle EBS environment</p></li>
 							<li><p class="col-para">The root domains that point to the EBS Application and the nodes hosting the EIK should be identical.
-</p></li>
-<p>For example:</p>
-	<p>Domain name for EBS: ebs.company.com</p>
-<p> Domain name for EIK: eik.company.com</p>
+                             </p></li>
+                             <p>For example:</p>
+	                          <p>Domain name for EBS: ebs.company.com</p>
+                              <p> Domain name for EIK: eik.company.com</p>
 							<!-- <li><p class="col-para">To support multiple instances on a single server, we recommend a minimum configuration of 8 CPU cores and 16 GB of RAM, with 50–100 GB of dedicated disk space and 4–8 GB of swap partition.</p></li>
 							 -->
 						</ol>
@@ -7677,10 +7682,10 @@
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>1. System Requirements </b></p>
 						<ul class="col-para" style="margin-left: 20px;">
-							<li><p>For successful execution of of Authenion for EBS 3.0, ensure that the <a href="#SupportedOS">System Requirements</a> (OS version, recommended Java, etc.) are met.</p></li>
+							<li><p>For successful execution of Authenion for EBS 3.0, ensure that the <a href="#SupportedOS">System Requirements</a> (OS version, recommended Java, etc.) are met.</p></li>
 							<!--<li><p class="col-para">Configure Oracle EBS application system profiles to enable Single Sign-On</p></li>-->
 						</ul>
-						<br />
+						
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>2. File System Preparation</b></p>
 						<ul class="col-para" style="margin-left: 20px;">
@@ -7689,7 +7694,7 @@
 							<p style="margin-left:30px;" class="col-para"><i>Eg:/home/user/EBSAuth/</i></p>
 
 						</ul>
-						<br />
+						
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>3. EBS Database connection with Authenion-EIK</b></p>
 						<ul class="col-para" style="margin-left: 20px;">
@@ -7699,7 +7704,7 @@
 						</p></li>
 							<li><p class="col-para">Authenion  for EBS is also backward compatible with the existing <b>dbcx</b> file.</p></li>
 						</ul>
-					    <br />
+					    
 
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>4. Identity Provider Configurations </b></p>
 						<ul class="col-para" style="margin-left: 20px;">
@@ -7713,7 +7718,7 @@
 							</ul>
 
 						</ul>
-					    <br />
+					   
 						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>5. Deployment of Authenion-EIK 3.X </b></p>
 						<ul class="col-para" style="margin-left: 20px;">
 							<li><p class="col-para">Authenion for EBS does not require a J2EE container for deployment. Instead, it is provided as a standalone JAR file, making the execution process straightforward and lightweight.</p></li>
@@ -7742,9 +7747,331 @@ load balancers can be adjusted to point to the new instance to take overtraffic.
 							</p>
 						</li>
 						</ul>
-					    <br />
+					 
 						
 						
+
+						<!--Authenion Migration From 2.X to 3.X Version-->
+                        
+						<a style="padding: 35px" name="Authenion Migration From 2.X to 3.X Version"></a>
+						<p class="col-sub-headings-app"><u>Authenion Migration From 2.x to 3.x Version</u></p>
+						
+						<!-- p class="col-sub-headings-eik" style="margin-left: 20px;">Pre-Migration & Backup</p>
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>1. Verify Stability: </b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p>Ensure the current Authenion 2.x instance is healthy and services are running without errors.</p></li>
+							
+						</ul>
+						
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>2. Export Configuration:</b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">Log into the Admin Console and export the existing configuration as a JSON file. Store this in a secure, external location.</p></li>
+							
+							<p style="margin-left:30px;" class="col-para"><i>Eg:/home/user/EBSAuth/</i></p>
+
+						</ul>
+					
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>3. Perform Full Backup:</b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">Shut down the instance briefly or use a snapshot tool to back up the entire Authenion installation folder.</p></li>
+						</ul>
+					    
+
+						<p class="col-sub-headings-sub" style="margin-left: 20px;"><b>4. Staging: </b></p>
+						<ul class="col-para" style="margin-left: 20px;">
+							<li><p class="col-para">Download and move the Authenion 3.x binaries to your server</p></li>
+						</ul>
+					  
+                     <br />< -->
+					<!--Pre-Migration & Backup-->	
+				<p class="col-sub-headings-eik" style="margin-left: 20px;">
+                      Pre-Migration & Backup
+                </p>
+				 <p class="col-para" style="margin-left: 40px;font-weight: normal;">
+						Before starting the migration, ensure prerequisites are met:</p>
+                         
+
+                  <!-- <ol class="col-para" style="margin-left: 40px; font-weight: bold;">
+
+                         <li>
+                           <p class="col-para" style="font-weight: normal;">
+                           </p>
+						   <p>
+							
+                           <b>Verify Authenion 2.x is Running:</b> Confirm that the current Authenion 2.x installation is fully operational and all services are running without errors.
+						   </p>
+                         </li>
+
+                          <li>
+                             <p class="col-para" style="font-weight: normal;">
+                             <b>Export Existing Configuration:</b> Log into the Authenion Admin Console and export the existing configuration as a JSON file. Store the file in a secure, accessible location for use during the migration process.
+                             </p>
+
+                        
+                            </li>
+
+                              <li>
+                                 <p class="col-para" style="font-weight: normal;">
+                                  <b>Take a Full Backup:</b> Ensure a complete backup of the entire Authenion installation folder has been taken, including all configuration files and data, to serve as a reliable rollback point.
+                                 </p>
+                              </li>
+
+                                <li>
+                                    <p class="col-para" style="font-weight: normal;">
+                                    <b>Confirm 3.x Binaries are Available:</b> Verify that the required Authenion 3.x binaries (package) have been downloaded and are staged in the designated installation location on the target server.
+                                     </p>
+                                </li>
+
+								<li>
+                                    <p class="col-para" style="font-weight: normal;">
+                                    <b>Confirm Admin Console Access:</b> Ensure that authorized personnel have valid and active access to the Authenion Admin Console prior to beginning the migration.
+                                     </p>
+                                </li>
+
+								<li>
+                                    <p class="col-para" style="font-weight: normal;">
+                                    <b>Ensure No Active User Sessions:</b>Confirm that there are no active user sessions on the system before proceeding
+                                     </p>
+                                </li>
+
+                        </ol> -->
+
+
+						 <ol class="col-para" style="margin-left: 40px; font-weight: bold;">
+
+                         <li>
+                           <p class="col-para" style="font-weight: normal;">
+                           
+							
+                           <b>Verify Authenion 2.x is Running:</b> Confirm that the current Authenion 2.x installation is fully operational and all services are running without errors.
+						   </p>
+                         </li>
+
+                          <li>
+                             <p class="col-para" style="font-weight: normal;">
+                             <b>Export Existing Configuration:</b> Log into the Authenion Admin Console and export the existing configuration as a JSON file. Store the file in a secure, accessible location for use during the migration process.
+                             </p>
+
+                        
+                            </li>
+
+                              <li>
+                                 <p class="col-para" style="font-weight: normal;">
+                                  <b>Backup:</b> Ensure backup of the entire Authenion installation folder, including all configuration files and data, to serve as a reliable rollback point.
+                                 </p>
+                              </li>
+
+                                <li>
+                                    <p class="col-para" style="font-weight: normal;">
+                                    <b>Confirm 3.x Binaries are Available:</b> Verify that the required Authenion 3.x binaries (package) are downloaded and staged in the designated installation location on the target server.
+                                     </p>
+                                </li>
+
+								<li>
+                                    <p class="col-para" style="font-weight: normal;">
+                                    <b>Confirm Admin Console Access:</b> Ensure that the authorized personnel have a valid and active access to the Authenion Admin Console prior to beginning the migration.
+                                     </p>
+                                </li>
+
+								<li>
+                                    <p class="col-para" style="font-weight: normal;">
+                                    <b>Ensure No Active User Sessions:</b>Confirm that there are no active user sessions on the system before proceeding
+                                     </p>
+                                </li>
+
+                        </ol>
+<!--Installation & Upgrade-->	
+			<p class="col-sub-headings-eik" style="margin-left: 20px;">
+                      Installation & Upgrade
+                </p>
+
+                  <ol class="col-para" style="margin-left: 40px; font-weight: bold;">
+
+                         <li>
+                           <p class="col-para" style="font-weight: normal;">
+                           <b>Service Shutdown:</b>Stop all Authenion services and use system monitoring tools such as Task Manager (Windows) or the ps command (Linux) to confirm that no background processes remain active.
+                         </li>
+
+                          <li>
+                             <p class="col-para" style="font-weight: normal;">
+                             <b>License Migration:</b> Locate the existing authenion.lic file from the Authenion 2.x installation directory and copy it to the appropriate folder within the Authenion 3.x package. The license file is fully compatible with version 3.x.
+                             </p>
+                          </li>
+
+                              <li>
+                                 <p class="col-para" style="font-weight: normal;">
+                                  <b>Environment Setup:</b> Execute the Authenion 3.x setup utility.  For detailed guidance, refer to the <a href="https://docs.authenion.com/#setup%20section" target="_blank">Authenion Setup Documentation</a>.</p>
+                              </li>
+
+                                <li>
+                                    <p class="col-para" style="font-weight: normal;">
+                                    <b>Service Launch:</b> Start the Authenion 3.x services. Monitor the startup logs to ensure there are no initialization failures.
+                                     </p>
+                                </li>
+
+								<li>
+                                    <p class="col-para" style="font-weight: normal;">
+                                    <b>Admin Console Configuration:</b> Launch the Authenion Admin Console using the newly provided Admin UI JAR file. For prerequisites and launch instructions, refer to the <a href="https://docs.authenion.com/#pre-reqsLaunchingAuthenionConsole" target="_blank">Authenion Admin Console Documentation</a>.</p>
+                                     </p>
+									 <p class="col-para" style="font-weight: normal;">
+										Once the Admin Console is accessible, log in using the credentials generated during the setup process and complete the following configuration tasks:
+									 </p>
+
+									 <p class="col-para" style="font-weight: normal;">
+										<b>a) Import Configuration :</b>Navigate to the Import section and upload the JSON configuration file exported from the Authenion 2.x environment. Carefully review and validate all configuration parameters to confirm they are consistent with the current infrastructure requirements.
+									 </p>
+
+									 <p class="col-para" style="font-weight: normal;">
+										<b>b) Update Resource Paths :</b> Navigate to the Resources section and update all existing resource paths by appending /** to each entry. This enables wildcard matching, which is required for Authenion 3.x to function correctly.
+									 </p>
+									 </li>
+									 <p class="col-para" style="font-weight: normal;">
+                                        <b>Example:</b>
+                                      <table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;margin-left: 32px;width: 64%">
+                                       <tr>
+                                         <th class="symcomponent">Authenion 2.x</th>
+                                         <th class="symcomponent">Authenion 3.x</th>
+                                       </tr>
+
+                                        <tbody class="tbody">
+
+                                             <!--/application-->
+                                          <tr>
+                                            <td>
+                                                 <p class="col-para-table">/application</p>
+                                            </td>
+                                            <td>
+                                              <ul>
+                                                    <p class="col-para-table">/application/**</p>
+                                                  </ul>
+                                             </td>
+                                         </tr>
+
+                                           <!--/HR-->
+                                         <tr>
+                                           <td>
+                                              <p class="col-para-table">/HR</p>
+                                           </td>
+                                            <td>
+                                             <ul>
+                                               <p class="col-para-table">/HR/**</p>
+                                             </ul>
+                                            </td>
+                                          </tr>
+
+                                         <!--/employee-->
+                                         <tr>
+                                          <td>
+                                            <p class="col-para-table">/employee</p>
+                                          </td>
+                                          <td>
+                                            <ul>
+                                               <p class="col-para-table">/employee/**</p>
+                                            </ul>
+                                          </td>
+                                          </tr>
+
+                                       </tbody>
+                                   </table>
+                                   <br>
+                                
+
+								<li>
+                                    <p class="col-para" style="font-weight: normal;">
+                                    <b>Synchronization:</b> Trigger a SYNC operation from the Admin Console to apply and propagate all updated configurations and resource mappings to the Authenion server. After performing the SYNC operation, ensure that a success confirmation message is displayed before proceeding.
+                                     </p>
+                                </li>
+
+								<li>
+                                    <p class="col-para" style="font-weight: normal;">
+                                    <b>Sanity Check:</b> Perform a comprehensive health check of the Authenion environment to confirm all services are running as expected. Execute a test SSO login transaction to validate end-to-end authentication and verify that the migration has been completed successfully.
+                                     </p>
+                                </li>
+
+                        </ol>
+
+<!-- Post-Migration Validation -->
+				<p class="col-sub-headings-eik" style="margin-left: 20px;">
+                      Post-Migration Validation
+                       </p>
+				
+                <p class="col-para" style="margin-left: 40px;font-weight: normal;">
+						After the upgrade is complete, perform the following validation checks to confirm a successful migration.</p>
+                         
+                  <ol class="col-para" style="margin-left: 40px; font-weight: bold;">
+                      
+						<li>
+                           <p class="col-para" style="font-weight: normal;">
+                           <b>Service Status:</b> Verify that all Authenion services are running without errors.
+                           </p>
+                         </li>
+
+                          <!-- <li>
+                             <p class="col-para" style="font-weight: normal;">
+                             <b>Resource Path Updates:</b>Confirm that all resource path updates have been applied successfully.
+                             </p>
+
+                            </li>
+
+                              <li>
+                                 <p class="col-para" style="font-weight: normal;">
+                                  <b> Synchronization Status:</b> Confirm that the SYNC operation has completed without errors.
+                                 </p>
+                              </li> -->
+
+                                <li>
+                                    <p class="col-para" style="font-weight: normal;">
+                                    <b>SSO Transaction Verification:</b> Test and validate an SSO login transaction to ensure end-to-end authentication is functioning correctly.
+                                     </p>
+                                </li>
+
+                        </ol>
+<!-- Rollback Plan -->
+						<p class="col-sub-headings-eik" style="margin-left: 20px;">
+                      Rollback Plan
+                       </p>
+				
+                       <p class="col-para" style="margin-left: 40px;font-weight: normal;">
+						In the event of a migration failure, perform the following steps to restore the Authenion 2.x environment:
+					</p>
+                         
+                  <ol class="col-para" style="margin-left: 40px; font-weight: bold;">
+                      
+						<li>
+                           <p class="col-para" style="font-weight: normal;">
+                           <b>Stop Authenion 3.x Services:</b> Immediately stop all running Authenion 3.x services and ensure no background processes remain active.
+                           </p>
+                         </li>
+
+                          <li>
+                             <p class="col-para" style="font-weight: normal;">
+                             <b> Restore from Backup:</b>Restore the application, configuration files, and data from the Authenion 2.x backup taken prior to the migration.
+                             </p>
+
+                            </li>
+
+                              <li>
+                                 <p class="col-para" style="font-weight: normal;">
+                                  <b> Revert to Version 2.x Package:</b> Replace the Authenion 3.x package with the original Authenion 2.x package to fully revert the installation to the previous version.
+                                 </p>
+                              </li>
+
+							  <li>
+                                 <p class="col-para" style="font-weight: normal;">
+                                  <b>  Start Authenion 2.x Services:</b> Start all Authenion 2.x services and monitor the startup logs to confirm that all components have initialized successfully without errors.
+                                 </p>
+                              </li>
+
+                                <li>
+                                    <p class="col-para" style="font-weight: normal;">
+                                    <b>Sanity Check:</b> Perform a health check of the restored Authenion 2.x environment and execute a test SSO login transaction to verify that end-to-end authentication is functioning correctly.
+                                     </p>
+                                </li>
+
+                        </ol>
 
 	<!-- <a  name="loggerlevel"></a>  -->
 	 <a style="padding: 38px" name="troubleshoot"></a>
