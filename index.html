@@ -1013,8 +1013,8 @@
 										<li><p class="col-para-table">Authenion Virtual Server&emsp;&emsp;&emsp; -&emsp;HTTP (or) HTTPS, TCP - 0 to 65535</p></li>
 									    <li><p class="col-para-table">Authenion SSO&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&emsp;8333</p></li>
 										 <li><p class="col-para-table">Authenion Admin UI&emsp;&emsp;&emsp;&emsp;&emsp; -&emsp;9898</p></li>
-										<!-- <li><p class="col-para-table">Authenion EIK&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&emsp;8842(Customizable via startup.properties file)</p></li>
-										 -->
+										<li><p class="col-para-table">Authenion EIK&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -&emsp;8842(Customizable via startup.properties file)</p></li>
+										
 										 <li class="li" style="list-style-type: none;font-size:12px;max-width:500px;"><p class="col-para-table"><i><b>Note:</b> When the Sync button is clicked in the Authenion Admin Console, port 8090 is automatically enabled on the authenion server upon successful sync.</i>
 									    </ul>
 
@@ -1024,8 +1024,8 @@
 					</table>
 					<br>
 					
-					<!--EIK System Requirement-->
-					<p class="col-para" style="margin-left: 20px;">The following requirements should be met for Authenion-EIK </p>
+					
+					<!-- <p class="col-para" style="margin-left: 20px;">The following requirements should be met for Authenion-EIK </p>
 					<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;margin-left: 30px;width: 96%">
 
 						<tr>
@@ -1033,9 +1033,9 @@
 							<th class="symcomponent">&emsp;Requirements</th>
 						</tr>
 
-						<tbody class="tbody">
+						<tbody class="tbody"> -->
 							<!--Supported Operating Systems-->
-							<a style="padding:32px" name="EIKSupportedOS"></a>
+							<!-- <a style="padding:32px" name="EIKSupportedOS"></a>
 							<tr>
 								<td>
 									<p class="col-para-table">Supported operating Systems</p>
@@ -1047,18 +1047,15 @@
 										<li><p class="col-para-table">CentOS 8 </p></li>
 										<li><p class="col-para-table">Oracle Enterprise Linux 8,9</p></li>
 										<li><p class ="col-para-table">Microsoft Windows Server 2016, 2019, 2022 and 2025</p></li>
-										<!-- <li><p class="col-para-table">Windows Server 2025</p></li>
-										<li><p class="col-para-table">Windows Server 2022</p></li>
-										<li><p class="col-para-table">Windows Server 2019</p></li>
-										<li><p class="col-para-table">Windows Server 2016</p></li> -->
+										
 									</ul>
 								</td>
 
-							</tr>
+							</tr> -->
 						
 
 							<!--Supported Java environment-->
-							<a style="padding:32px" name="SupportedJavaenvironment"></a>
+							<!-- <a style="padding:32px" name="SupportedJavaenvironment"></a>
 							<tr>
 								<td>
 									<p class="col-para-table">Supported java environment</p>
@@ -1073,10 +1070,10 @@
 									</ul>
 
 								</td>
-							</tr>
+							</tr> -->
 
 							<!--Minimum Hardware requirements-->
-							<a style="padding:32px" name="MinimumHR"></a>
+							<!-- <a style="padding:32px" name="MinimumHR"></a>
 							<tr>
 								<td>
 									<p class="col-para-table">Minimum hardware requirements</p>
@@ -1090,10 +1087,10 @@
 									</ul>
 
 								</td>
-							</tr>
+							</tr> -->
 
 							<!--Recommended Hardware requirements-->
-							<a style="padding:32px" name="RecommendedHR"></a>
+							<!-- <a style="padding:32px" name="RecommendedHR"></a>
 							<tr>
 								<td>
 									<p class="col-para-table">Recommended hardware requirements</p>
@@ -1111,10 +1108,10 @@
 									</ul>
 
 								</td>
-							</tr>
+							</tr> -->
 
 							<!--Port requirements-->
-							<a style="padding:32px" name="PortRequirements"></a>
+							<!-- <a style="padding:32px" name="PortRequirements"></a>
 							<tr>
 								<td>
 									<p class="col-para-table">Default port requirements</p>
@@ -1135,7 +1132,7 @@
 					</table>
 					<p class="col-para" style="margin-left: 20px;"><i> <b>Note </b>: To support multiple instances on a single server, we recommend a minimum configuration of 8 CPU cores and 16 GB of RAM, with 50–100 GB of dedicated disk space and 4–8 GB of swap partition</i> </p>
 					<br>
-					
+					 -->
 
 					<!-- ### INSTALLATION ### -->
 					<div>
@@ -5701,17 +5698,21 @@
 													<li><p class="col-para">tcp.ip.address = 0.0.0.0(0.0.0.0 means the server will listen on all available network interfaces.If you want to bind to a specific IP,replace 0.0.0.0 with the desired IP address.)</p></li>
 													<li><p class="col-para">tcp.ip.port = 8842(User defined port, make sure that port is not blocked by a firewall and is not used by another service)</p></li>
 							</ul>
+
 							<li><p class="col-para">Locate the <i>authenion-eik.jar</i> file and Copy the file in any preferred location and execute the below command</p></li>
-								<div class="div-table3" style="margin-left: 5px;">
-							<div class="div-table3-row">
-								<div  class="div-table3-col"> java -jar --Deik.config.path="path-to-Config folder" authenion-eik.jar</div>
-							</div>
+								
+							<div class="div-table3" style="margin-left: 5px;">
+						
 
-                            <div class="div-table3-row">
-								<div  class="div-table3-col">Eg: java -jar --Deik.config.path="/home/user/EBSAuth" authenion-eik.jar</div>
-							</div>
+                               <div class="div-table3-row">
+                                 <div class="div-table3-col">java -jar authenion-eik.jar --eik.config.path="path-to-Config folder"</div>
+                               </div>
+                              <div class="div-table3-row">
+                             <div class="div-table3-col">Eg: java -jar authenion-eik.jar --eik.config.path=/home/user/EBSAuth/</div>
+                            </div>
+                          </div>
 
-						</div>
+
 								<li><p class="col-para">Repeat the steps above in all the servers, if you have H/A environment setup.</p></li>
 								</ol>
 
@@ -5735,20 +5736,18 @@
 																																					
 								<li><p class="col-para"><i> Execute the below jar file command </i></p></li>
 
-						<div class="div-table3" style="margin-left: 5px;">
-							<div class="div-table3-row">
-								<div  class="div-table3-col"> java -jar --Deik.config.path="path-to-Config folder" authenion-eik.jar</div>
-							</div>
-
-                            <div class="div-table3-row">
-								<div  class="div-table3-col"> Eg: java -jar --Deik.config.path="/home/user/EBSAuth" authenion-eik.jar</div>
-							</div>
-
-						</div>
+									<div class="div-table3" style="margin-left: 5px;">
+							
+                            
+                               <div class="div-table3-row">
+                                 <div class="div-table3-col">java -jar authenion-eik.jar --eik.config.path="path-to-Config folder"</div>
+                               </div>
+                              <div class="div-table3-row">
+                             <div class="div-table3-col">Eg: java -jar authenion-eik.jar --eik.config.path=/home/user/EBSAuth/</div>
+                            </div>
+                          </div>
 						
-
-
-								
+		
 							<li><p class="col-para">Repeat the steps above in all the servers, if you have H/A environment setup.</p></li>	
 													<!--<br />-->
 							<p class="col-para"><i><b>Note:</b> A single Authenion-EIK deployment will connect with only one Oracle EBS Application for SSO. However, if you have requirements to connect with multiple Oracle EBS environments for SSO, you can deploy multiple instances of Authenion-EIK in the same server by changing the <i>'Context Path'</i>. For example, you can follow the above steps 1 to 14 by adding new folder with different contextpath name like EBSAuthDEV & EBSAuthPRD and point to appropriate Oracle EBS application environments.</i></p>
@@ -7736,10 +7735,14 @@
 							<li><p class="col-para">The EIK plugin <b>(authenion-eik.jar)</b>, along with all its dependencies (mentioned above), should be executed using the following command.</p></li>
 							<!--Table3-->
 						<div class="div-table3" style="margin-left: 5px;">
-							<div class="div-table3-row">
-								<div  class="div-table3-col"> java -jar authenion-eik.jar --eik.config.path="path-to-authenion-eik.jar-file"</div>
-							</div>
-						</div>
+    <div class="div-table3-row">
+        <div class="div-table3-col">java -jar authenion-eik.jar --eik.config.path="path-to-Config folder"</div>
+    </div>
+	
+</div>
+
+
+
 						<li>
 							<p class="col-para">
 								Authenion for EBS has a different architecture and port which allows administrators to standup a parallel instance in the same machine without affecting existing setup. The
