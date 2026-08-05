@@ -281,7 +281,7 @@
 				</li>
 				<li>
 					<a href="#AzureAuthenticationtoLaunchAuthenionConsole" class="nav-link-sub collapsed">
-						<!--<i class="bi bi-circle"></i>--><span>OIDC Provider for Authentication to Launch Authenion Console</span>
+						<span>OIDC Provider for Authentication to Launch Authenion Console</span>
 					</a>
 				</li>
 				<li>
@@ -705,6 +705,20 @@
 					<h4 style="font-family: sans-serif; font-size: 26px; font-weight: 600; color: #00297A">Release Notes</h4>
                 
                     <p class="col-sub-headings">Release: 2026</p>
+
+
+					<p class="col-para"><b>Distribution</b>: July 2026</p>
+					<p class="col-para"><b>Version</b>: Authenion - 3.1.0.1</p>
+					<p class="col-para"><b>Software Download</b>: <a href="https://support.likemindsconsulting.com" target="_blank"><u>LikeMinds Helpdesk portal</u></a></p>
+
+					<p class="col-para"><b>Read</b>: <a href="https://support.likemindsconsulting.com/support/solutions/articles/48001284988-authenion-3-1-0-1-release-notes" target="_blank"><u>Release Summary</u></a>, 
+						                             <a href="https://support.likemindsconsulting.com/support/solutions/articles/48001284988-authenion-3-1-0-1-release-notes" target="_blank"><u>Features & Enhancements</u></a>, 
+													 <a href="https://support.likemindsconsulting.com/support/solutions/articles/48001284988-authenion-3-1-0-1-release-notes" target="_blank"><u>Fixes</u></a>.</p>
+
+
+													 <p class="col-sub-headings">Release: 2026</p>
+
+
 					<p class="col-para"><b>Distribution</b>: March 2026</p>
 					<p class="col-para"><b>Version</b>: Authenion - 3.1.0.0</p>
 					<p class="col-para"><b>Software Download</b>: <a href="https://support.likemindsconsulting.com" target="_blank"><u>LikeMinds Helpdesk portal</u></a></p>
@@ -2224,14 +2238,17 @@
                         <!-- ### END Pre-requisites (for both Linux and Windows) ### -->
 							
                         <!-- ### Linux & WINDOWS Environment (Execution Steps) ### -->
+						
 						<a style="padding:32px" name="AzureAuthenticationtoLaunchAuthenionConsole"></a>
 						<p class="col-sub-headings">2. OIDC Provider for Authentication to Launch Authenion Console </p>
 						<p class="col-para" style="margin-left: 20px;">
 							 We are using Microsoft Entra ID (formerly Azure Active Directory) as OIDC Provider to Launch the Authenion Console.
 						</p>
 						<p class="col-sub-headings-sub" style="margin-left: 10px;"><b>&nbsp;&nbsp;<u>Pre-requisites</u></b></p>
-						<!-- <ul class="col-para"> -->
-						<ol  class="col-para">
+						
+					
+						
+							<ol  class="col-para">
 							<li><p class="col-para" >Azure account with valid subscription.</p></li>
 							<li><p class="col-para" >App registration.</p></li>
 							<li><p class="col-para" >Client Secrets </p></li>
@@ -2250,11 +2267,13 @@
 								<li><p class="col-para">Give a display name for the app.</p></li>
 								<li><p class="col-para">Select the tenant in which you want to register the Authenion application.</p></li>
 								
-							<!-- <img src="assets/img/azure-1.png" alt="" class="col-images-pf"> -->
+							<img src="assets/img/azure-1.png" alt="" class="col-images-pf"> 
 							</ul>
 							<li><p class="col-para">Click on <i>Register</i>.</p></li>
 						</ol>
 						<!-- Image with onclick event -->
+						
+						
 						<img src="assets/img/Appreg.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer;" onclick="openModal('modalContainer29', 'modalImage29')" class="col-images-pf" />
 						
 						<!-- Modal container -->
@@ -2276,8 +2295,11 @@
 						</ol>
 
 						<!--IMAGE FOR CERTS AND SECRETS-->
+						
 						<img src="assets/img/certificate_secret.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer;" onclick="openModal('modalContainer30', 'modalImage30')" class="col-images-pf" />
+						
 						<!-- Modal container -->
+						
 						<div id="modalContainer30" class="modal-container" onclick="closeModal('modalContainer30')">
 						        <img id="modalImage30" class="modal-image" src="assets/img/certificate_secret.png" alt="">
 						</div>
@@ -2294,7 +2316,9 @@
 							
 					   <!--IMAGE FOR Platform-->
 						<img src="assets/img/authenion-3.0/AzurePlatform.png" alt="" style="margin-left:120px;width: 41%;height:40%;cursor:pointer;" onclick="openModal('modalContainerAzurePlatform', 'modalImageAzurePlatform')" class="col-images-pf" />
+						
 						<!-- Modal container -->
+						
 						<div id="modalContainerAzurePlatform" class="modal-container" onclick="closeModal('modalContainerAzurePlatform')">
 						        <img id="modalImageAzurePlatform" class="modal-image" src="assets/img/authenion-3.0/AzurePlatform.png" alt="">
 						</div>
@@ -2303,8 +2327,11 @@
 						   <br />
 
                         <!--IMAGE FOR configure Platform-->
+						
 						<img src="assets/img/authenion-3.0/configureplatform.png" alt="" style="margin-left:120px;width: 41%;height:40%;cursor:pointer;" onclick="openModal('modalContainerconfigureplatform', 'modalImageconfigureplatform')" class="col-images-pf" />
+						
 						<!-- Modal container -->
+						
 						<div id="modalContainerconfigureplatform" class="modal-container" onclick="closeModal('modalContainerconfigureplatform')">
 						        <img id="modalImageconfigureplatform" class="modal-image" src="assets/img/authenion-3.0/configureplatform.png" alt="">
 						</div>
@@ -2313,8 +2340,13 @@
                         
 
                         <!--IMAGE FOR Redirect URI-->
+						
 						<img src="assets/img/authenion-3.0/redirectadd.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer" onclick="openModal('modalContainerredirectadd', 'modalImageredirectadd')" class="col-images-pf" />
+						
+						
 						<!-- Modal container -->
+						
+						
 						<div id="modalContainerredirectadd" class="modal-container" onclick="closeModal('modalContainerredirectadd')">
 						        <img id="modalImageredirectadd" class="modal-image" src="assets/img/authenion-3.0/redirectadd.png" alt="">
 						</div>
@@ -2323,7 +2355,11 @@
 						   
 						<br/>
 						<!--IMAGE FOR Redirect URI-->
+						
+						
 						<img src="assets/img/azure_redirect.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer" onclick="openModal('modalContainer031', 'modalImage031')" class="col-images-pf" />
+						
+						
 						<!-- Modal container -->
 						<div id="modalContainer031" class="modal-container" onclick="closeModal('modalContainer031')">
 						        <img id="modalImage031" class="modal-image" src="assets/img/azure_redirect.png" alt="">
@@ -2343,6 +2379,7 @@
 						   
 					   <!--IMAGE FOR Expose an API-->
 						<img src="assets/img/authenion-3.0/api.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer" onclick="openModal('modalContainerapi', 'modalImageapi')" class="col-images-pf" />
+						
 						<!-- Modal container -->
 						<div id="modalContainerapi" class="modal-container" onclick="closeModal('modalContainerapi')">
 						        <img id="modalImageapi" class="modal-image" src="assets/img/authenion-3.0/api.png" alt="">
@@ -2352,14 +2389,21 @@
 					  <br/>
 
 						<!--IMAGE FOR Expose an addscope-->
+						
 						<img src="assets/img/authenion-3.0/addscope.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer" onclick="openModal('modalContaineraddscope', 'modalImageaddscope')" class="col-images-pf" />
+						
+						
 						<!-- Modal container -->
+						
 						<div id="modalContaineraddscope" class="modal-container" onclick="closeModal('modalContaineraddscope')">
 						        <img id="modalImageaddscope" class="modal-image" src="assets/img/authenion-3.0/addscope.png" alt="">
 						</div>
                      <br/>
 						<!--IMAGE FOR Expose an API-->
+						
 						<img src="assets/img/authenion-3.0/addscope1.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer" onclick="openModal('modalContaineraddscope1', 'modalImageaddscope1')" class="col-images-pf" />
+						
+						
 						<!-- Modal container -->
 						<div id="modalContaineraddscope1" class="modal-container" onclick="closeModal('modalContaineraddscope1')">
 						        <img id="modalImageapi" class="modal-image" src="assets/img/authenion-3.0/addscope1.png" alt="">
@@ -2373,9 +2417,7 @@
 						<ol class="col-para">
 						   <li><p class="col-para">Open a terminal on your Linux or windows server where the `authenion-admin-xx-version.jar` file is located.</p></li> 
 						   <li> <p class="col-para">Make sure the `authenion.p12` file is in the same directory.</p></li> 
-						   <!-- <li> <p class="col-para">Use the `cd` command to go to the directory where both files are present.</p></li> -->
-						<!-- <p class="col-sub-headings-sub"><b>Execute the Command:</b></p> -->
-						<li> <p class="col-para">Run the following command in the terminal to execute the utility and launch the Authenion UI Admin console:</p></li> 
+						   <li> <p class="col-para">Run the following command in the terminal to execute the utility and launch the Authenion UI Admin console:</p></li> 
 							
 						<!-- TABLE3 -->
 						  <div class="div-tables3" style="margin-left: 5px;">
@@ -2385,7 +2427,6 @@
                           </div>
 
 				  
-					    <!-- <p class="col-sub-headings-sub"><b>Configure java -jar authenion-admin-xx-version.zip com.authenioAzure:</b></p> -->
 						<li>  <p class="col-para">Once the execution is successful, you will be redirected to the Authenion Admin Console.</p></li> 
 					 <p class="col-para"><i> <b>Note:</b> Please ensure that the redirect_uri used in the command is configured in the OIDC provider.</i></p>
 	 
@@ -2395,7 +2436,7 @@
                           <!-- ### END Linux & WINDOWS Environment (Execution Steps) ### -->
 
 						<a style="padding:32px" name="LocalAuthenticationtoLaunchAuthenionConsole"></a>
-						<p class="col-sub-headings">3. Using Local Authentication to Launch Authenion Console</p>
+						<p class="col-sub-headings">2. Using Local Authentication to Launch Authenion Console</p>
 						<p class="col-para" style="margin-left: 20px;">To launch the Authenion console using local authentication instead of an OIDC provider, follow these steps:</p>
                         <!-- <p class="col-sub-headings-sub"><b>Execute the Command:</b></p> -->
 						 <!--LINUX ENVIRONMENT-->
@@ -8390,7 +8431,7 @@ load balancers can be adjusted to point to the new instance to take overtraffic.
     <!-- EIK Table -->
     <p class="col-sub-headings" id="oracle-table">EBS Integration Kit (EIK)</p>
 	 
-    <p class="col-para" style="margin-left: 27px;">Currently Supported Releases: EIK 3.1.1, 3.0.1, 2.3.1.8, 2.3.1.7, 2.3.1.6, 2.3.1.5, 2.3.1.0, 2.3.0.2.</p>
+    <p class="col-para" style="margin-left: 27px;">Currently Supported Releases: EIK 3.1.1.1, 3.1.1, 3.0.1, 2.3.1.8, 2.3.1.7, 2.3.1.6, 2.3.1.5, 2.3.1.0, 2.3.0.2.</p>
 
 		<table class="systemrequiremetable" cellpadding="4" cellspacing="4" style="background-color:#f5f5f6; margin-left: 30px; width: 96%">
     <tr>
@@ -8403,6 +8444,15 @@ load balancers can be adjusted to point to the new instance to take overtraffic.
         <th class="symcomponent" style="width: 2%; vertical-align: middle;">Recommended Upgrade</th>
     </tr>
     <tbody class="tbody">
+		<tr>
+            <td style="width: 1%; white-space: nowrap;"><p class="col-para-table">EIK 3.1.1.1</p></td>
+            <td><p class="col-para-table">July 2026</p></td>
+            <td><p class="col-para-table">Active Maintenance</p></td>
+            <td><ul><p class="col-para-table">--</p></ul></td>
+            <td><ul><p class="col-para-table">--</p></ul></td>
+            <td><ul><p class="col-para-table">--</p></ul></td>
+            <td><ul><p class="col-para-table">--</p></ul></td>
+        </tr>
         <tr>
             <td style="width: 1%; white-space: nowrap;"><p class="col-para-table">EIK 3.1.1</p></td>
             <td><p class="col-para-table">Mar 2026</p></td>
@@ -8424,7 +8474,7 @@ load balancers can be adjusted to point to the new instance to take overtraffic.
 
 		<tr>
             <td style="width: 1%; white-space: nowrap;"><p class="col-para-table">EIK 2.3.1.8</p></td>
-            <td><p class="col-para-table">Jul 2026</p></td>
+            <td><p class="col-para-table">July 2026</p></td>
             <td><p class="col-para-table">End of Sale</p></td>
             <td><p class="col-para-table">31 Dec 2026</p></td>
             <td><p class="col-para-table">31 Mar 2027</p></td>
@@ -8490,11 +8540,13 @@ load balancers can be adjusted to point to the new instance to take overtraffic.
 
     <!-- Authenion Table -->
     <p class="col-sub-headings" id="Authenion-table">Authenion</p>
-    <p class="col-para" style="margin-left: 30px;">Currently Supported Releases: Authenion 3.1.1.0, 3.0.1.7, 3.0, 2.0</p>
+    <p class="col-para" style="margin-left: 30px;">Currently Supported Releases: Authenion 3.1.0.1, 3.1.1.0, 3.0.1.7, 3.0, 2.0</p>
 
 
 		<table class="systemrequiremetable" cellpadding="4" cellspacing="4" style="background-color:#f5f5f6; margin-left: 30px; width: 96%">
-    <tr>
+    
+	
+			<tr>
 
 		<th class="symcomponent" style="width: 1%; vertical-align: middle; white-space: nowrap;">Product Version</th>
          <th class="symcomponent" style="width: 1%; vertical-align: middle; white-space: nowrap;">Release Date</th>
@@ -8506,6 +8558,15 @@ load balancers can be adjusted to point to the new instance to take overtraffic.
         
     </tr>
     <tbody class="tbody">
+		<tr>
+            <td style="width: 1%; white-space: nowrap;"><p class="col-para-table">Authenion 3.1.0.1</p></td>
+            <td><p class="col-para-table">July 2026</p></td>
+            <td><p class="col-para-table">Active Maintenance</p></td>
+           <td><ul><p class="col-para-table">--</p></ul></td>
+            <td><ul><p class="col-para-table">--</p></ul></td>
+            <td><ul><p class="col-para-table">--</p></ul></td>
+            <td><ul><p class="col-para-table">--</p></ul></td>
+        </tr>
         <tr>
             <td style="width: 1%; white-space: nowrap;"><p class="col-para-table">Authenion 3.1.0.0</p></td>
             <td><p class="col-para-table">Mar 2026</p></td>
