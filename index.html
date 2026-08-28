@@ -2267,7 +2267,7 @@
 								<li><p class="col-para">Give a display name for the app.</p></li>
 								<li><p class="col-para">Select the tenant in which you want to register the Authenion application.</p></li>
 								
-							<img src="assets/img/azure-1.png" alt="" class="col-images-pf"> 
+							<!-- <img src="assets/img/azure-1.png" alt="" class="col-images-pf"> -->
 							</ul>
 							<li><p class="col-para">Click on <i>Register</i>.</p></li>
 						</ol>
@@ -2295,13 +2295,10 @@
 						</ol>
 
 						<!--IMAGE FOR CERTS AND SECRETS-->
-						
 						<img src="assets/img/certificate_secret.png" alt="" style="margin-left:150px;width: 41%;height:40%;cursor:pointer;" onclick="openModal('modalContainer30', 'modalImage30')" class="col-images-pf" />
-						
 						<!-- Modal container -->
-						
 						<div id="modalContainer30" class="modal-container" onclick="closeModal('modalContainer30')">
-						        <img id="modalImage30" class="modal-image" src="assets/img/certificate_secret.png" alt="">
+					<img id="modalImage30" class="modal-image" src="assets/img/certificate_secret.png" alt="">
 						</div>
 						<br />
 						<br />
@@ -3098,7 +3095,7 @@
 						<p class="col-para"><b>Email</b>: When this checkbox is enabled, a one-time password is sent to the user's registered email address for authentication.</p>
 						<p class="col-para"><b>SMS</b>: When this checkbox is enabled, users receive a one-time password via SMS, using Twilio integration for message delivery.</p>
 						<p class="col-para"><b>TOTP</b>: When this checkbox is enabled, users can authenticate using time-based one-time passwords through apps like Google or Microsoft Authenticat</p>
-                    <!-- install Authenion -->
+                    
 								<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 100%">
 									<tr>
 										<th class="symcomponent">Configurations</th>
@@ -3143,8 +3140,106 @@
 								</table>
 								</ul>
 								
+                 
+				 <!-- Image with onclick event -->
+                      <img src="assets/img/authenion-3.0/MFA-Rules.png"
+                           alt=""
+                        style="width:60%;height:40%;cursor:pointer;margin-left:123px"
+                      onclick="openModal('modalContainerMFA_Rules', 'modalImageMFA_Rules')"
+                        class="col-images-intro" />
 
-								<ul class="col-para">
+                       <!-- Modal container -->
+                       <div id="modalContainerMFA_Rules"
+                         class="modal-container"
+                       onclick="closeModal('modalContainerMFA_Rules')">
+                        <img id="modalImageMFA_Rules"
+                          class="modal-image"
+                            src="assets/img/authenion-3.0/MFA-Rules.png"
+                            alt="">
+                        </div>
+
+
+					<ul class="col-para">
+						<li><p class="col-sub-headings-sub"><b><u>MFA Rules</u> (Optional)</b></p></li>
+						<p class="col-para"> When MFA is enabled, MFA rules are optional. Configure them to control which users are prompted for MFA during login based on target user groups.</p>
+						<p class="col-para"><b>Available Filters:</b></p>
+						<p class="col-para"><b>OU(Organizational Unit)</b>: Groups users based on organizational hierarchy. Matches users whose accounts reside within the specified OU path.</p>
+						<p class="col-para"><b>Group</b>: A named collection of user accounts used for access management. Matches users who are members of the specified group.</p>
+					    <p class="col-para">The "isMemberOf" attribute must be included in the Return Attributes list in the LDAP configuration for it to be available for matching.</p>
+						
+						<p class="col-para"><b>Attribute</b>:A specific field on a user's directory profile. Matches users whose attribute value equals the specified criteria.</p>
+                        
+						<p class="col-para">The attribute must be included in the Return Attributes list in the LDAP configuration for it to be available for matching.</p>
+						
+                
+
+						<table class="systemrequiremetable" cellpadding="5" cellspacing="5" style="background-color:#f5f5f6;width: 100%">
+									<tr>
+										<th class="symcomponent">Criteria Type</th>
+										<th class="symcomponent">&emsp;Description</th>
+										<th class="symcomponent">&emsp;Example Value</th>
+									</tr>
+
+									<tbody class="tbody">
+										<!--OU-->
+										<tr>
+											<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">OU</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"></li><p class="col-para-table">Matches users belonging to a specific Organizational Unit</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"></li><p class="col-para-table">ou=Employees,dc=example,dc=com</li>
+									</ul>
+								</td>
+								</tr>
+								<!--Group-->
+								<tr>
+									<td>
+								<li style="list-style-type: none;position:indent;"><p class="col-para-table">Group</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"></li><p class="col-para-table">Matches users belonging to a specific Group</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"></li><p class="col-para-table">cn=mfa-users,ou=Groups,dc=example,dc=com</li>
+									</ul>
+								</td>
+								</tr>
+								<!--Attribute-->
+								<tr>
+									<td>
+								<li style="list-style-type: none"><p class="col-para-table">Attribute</li>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">Matches users with a specific attribute value</li>
+									</ul>
+								</td>
+								<td>
+									<ul>
+										<li class="li" style="list-style-type: none"><p class="col-para-table">department=Finance</li>
+									</ul>
+								</td>
+								</tr>
+								</tbody>
+								</table>
+								 <p class="col-para"> <strong>Example Scenarios:</strong></p>
+                                  <p class="col-para"><b> Only OU configured</b>:If the OU filter is set to ou=Employees,dc=example,dc=com, only users whose accounts reside under the Employees OU will be prompted for MFA. Users in other OUs such as Contractors or Vendors will proceed with normal login.</p>
+						          <p class="col-para"><b>Only Group configured</b>:If the Group filter is set to cn=mfa-users,ou=Groups,dc=example,dc=com, only members of the mfa-users group will be prompted for MFA. Users who are not members of this group will proceed with normal login.</p>
+                                  <p class="col-para"><b>Only Attribute configured</b>:If the Attribute filter is set to department=Finance, only users whose directory profile has department set to Finance will be prompted for MFA. Users in other departments will proceed with normal login.</p>
+						          <p class="col-para"><b>Multiple Rules Configured</b>: When OU, Group, and Attribute filters are all configured, MFA triggers for any user matching at least one criterion (E.g., residing in the Employees OU, belonging to the mfa-users group, OR having department=Finance). Evaluation evaluates in order and applies the first matching rule.</i></p>
+						
+					</ul>
+
+						<ul class="col-para">
 									<li><p class="col-sub-headings-sub"><b><u>SMTP Configurations</u></b></p></li>
 
 									<p class="col-para"><b>From Address</b>: specify the email address used for sending notification emails.</p>
@@ -3419,10 +3514,21 @@
 					       <div id="modalContainerLdapAuthenticationprovider3" class="modal-container" onclick="closeModal('modalContainerLdapAuthenticationprovider3')">
 						   <img id="modalImageLdapAuthenticationprovider3" class="modal-image" src="assets/img/authenion-3.0/LdapAuthenticationprovider3.png" alt="">
 					   </div>
-					 </ul>
-					</ol>
+
+					   </ul>
+					
+					   <p class="col-para"><i> <b>Note:</b></i></p>
+					  
+                         <p class="col-para"><i><b>OTP Attempt Limits:</b> To prevent brute-force attacks, users are restricted to a maximum of 3 incorrect OTP entries by default. Administrators can customize this limit by adding the mfa.otp.maxAttempts=x property in the override.properties file </i></p>
+					   
+						 <p class="col-para"><i><b>MFA Session Timeout:</b> The MFA verification process (MFA Selection and OTP Submission pages) now enforces a default 5-minute time limit. If a user does not complete the verification within this window, the session is automatically invalidated, and they are redirected to the login page. This duration can be customized by adding the mfa.session-timeout=x property (measured in seconds, e.g., mfa.session-timeout=300 for 5 minutes) in the override.properties file.
+
+ </i></p>
+					   
+						
+						
+				</ol>
                    </div>
-				  <br>
 
 					<!-- Sidebar-->
 
